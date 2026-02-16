@@ -1,0 +1,179 @@
+---
+title: "Economic Growth"
+subtitle: "Contributing to national economic growth"
+author: "SN"
+date: last-modified
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## Context
+
+This chapter tracks indicators related to the West of England's contribution to national economic growth. Up to 10 indicators can be included, covering metrics like GVA, productivity, business growth, innovation, and employment.
+
+## Worked Example: Sample Economic Indicator
+
+This example demonstrates how to create an indicator using R. It loads data, processes it, creates a chart with WECA branding, and presents findings.
+
+```{r}
+#| label: setup
+#| code-summary: "Load required packages"
+
+# Load required packages
+library(tidyverse)
+
+# Source the WECA theme and helper functions
+source(here::here("scripts", "R", "theme_weca.R"))
+source(here::here("scripts", "R", "helpers.R"))
+```
+
+```{r}
+#| label: load-data
+#| code-summary: "Load example data"
+
+# Load example indicator data
+# In your actual analysis, replace this with your real data source
+data <- load_csv(here::here("data", "examples", "example_indicator.csv"))
+
+# Preview the data structure
+head(data)
+```
+
+```{r}
+#| label: process-data
+#| code-summary: "Process and summarize data"
+
+# Filter and process the data
+# This example calculates the latest value and year-on-year change
+processed <- data %>%
+  filter(indicator_name == "Sample Economic Metric") %>%
+  arrange(year) %>%
+  mutate(
+    # Calculate year-on-year change
+    yoy_change = indicator_value - lag(indicator_value),
+    yoy_pct = (yoy_change / lag(indicator_value)) * 100
+  )
+
+# Get the latest value for summary
+latest <- processed %>%
+  filter(year == max(year)) %>%
+  pull(indicator_value)
+
+latest_year <- processed %>%
+  filter(year == max(year)) %>%
+  pull(year)
+```
+
+### Latest Value
+
+The most recent value for this indicator is **`r format_number(latest)`** (as of `r latest_year`).
+
+```{r}
+#| label: fig-trend
+#| fig-cap: "Trend in sample economic indicator over time"
+#| code-summary: "Create trend chart"
+
+# Create a line chart showing the trend over time
+ggplot(processed, aes(x = year, y = indicator_value)) +
+  geom_line(colour = weca_palette["forest_green"], linewidth = 1.2) +
+  geom_point(colour = weca_palette["forest_green"], size = 3) +
+  scale_y_continuous(labels = scales::comma) +
+  labs(
+    title = "Sample Economic Indicator Trend",
+    x = "Year",
+    y = "Indicator Value",
+    caption = "Source: Example data"
+  ) +
+  theme_weca()
+```
+
+### Key Findings
+
+- The indicator has shown [describe trend - increasing/decreasing/stable]
+- Latest year-on-year change: [insert value]
+- Policy implications: [describe what this means for the priority area]
+
+---
+
+## Indicator 1: [Your Indicator Name]
+
+**Data source:** [Specify source]
+**Last updated:** [Date]
+**Refresh schedule:** [Annual/Quarterly/Monthly]
+
+### Overview
+
+[Describe what this indicator measures and why it matters for economic growth]
+
+```{r}
+#| label: indicator-1
+#| eval: false
+#| code-summary: "Indicator 1 analysis"
+
+# Your code here
+# Follow the pattern from the worked example above:
+# 1. Load data
+# 2. Process/filter/aggregate
+# 3. Create visualization with theme_weca()
+# 4. Calculate key statistics
+```
+
+### Findings
+
+[Your narrative findings here]
+
+---
+
+## Indicator 2: [Your Indicator Name]
+
+**Data source:**
+**Last updated:**
+**Refresh schedule:**
+
+[Repeat structure above - add up to 10 indicators total]
+
+---
+
+## Summary
+
+[Summary of key findings across all indicators in this chapter. What is the overall picture for economic growth?]
+
+---
+
+## Python Example (Alternative)
+
+The example below shows how to achieve the same analysis using Python instead of R.
+
+```{python}
+#| eval: false
+#| code-summary: "Python alternative for data analysis"
+
+# import pandas as pd
+# import matplotlib.pyplot as plt
+# from pathlib import Path
+#
+# # Load data with project-relative path
+# project_root = Path(__file__).parent.parent.parent  # Navigate to project root
+# data_path = project_root / "data" / "examples" / "example_indicator.csv"
+# df = pd.read_csv(data_path)
+#
+# # Filter and process
+# economic_data = df[df['indicator_name'] == 'Sample Economic Metric'].copy()
+# economic_data = economic_data.sort_values('year')
+#
+# # Calculate year-on-year change
+# economic_data['yoy_change'] = economic_data['indicator_value'].diff()
+# economic_data['yoy_pct'] = (economic_data['yoy_change'] /
+#                              economic_data['indicator_value'].shift(1)) * 100
+#
+# # Create chart (matplotlib - theme_weca for Python to be added later)
+# fig, ax = plt.subplots(figsize=(10, 6))
+# ax.plot(economic_data['year'], economic_data['indicator_value'],
+#         marker='o', linewidth=2, color='#1D4F2B')
+# ax.set_xlabel('Year')
+# ax.set_ylabel('Indicator Value')
+# ax.set_title('Sample Economic Indicator Trend')
+# plt.show()
+```

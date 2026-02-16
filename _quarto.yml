@@ -1,0 +1,68 @@
+project:
+  type: book
+  output-dir: _output
+  execute-dir: project
+
+# 'freeze: auto' ensures that chapters are only re-rendered if their
+# source code changes, preventing R/Python environment conflicts
+# during the final assembly.
+execute:
+  freeze: auto
+  error: true       # Fail fast on errors during rendering
+  warning: false
+  message: false
+
+book:
+  title: "West of England Regional Priorities"
+  author: "Analysis Team"
+  date: last-modified
+
+  # Chapters organized by priority area
+  chapters:
+    - index.qmd
+    - part: "Economic Growth"
+      chapters:
+        - chapters/01-economy/index.qmd
+    - part: "Infrastructure & Place"
+      chapters:
+        - chapters/02-transport/index.qmd
+        - chapters/03-place/index.qmd
+    - part: "Skills & Opportunity"
+      chapters:
+        - chapters/04-skills/index.qmd
+    - part: "Green Jobs and Growth"
+      chapters:
+        - chapters/05-environment/index.qmd
+    - part: "Child Poverty"
+      chapters:
+        - chapters/06-child-poverty/index.qmd
+
+  # Sidebar styling
+  sidebar:
+    style: "floating"
+    search: true
+    collapse-level: 2
+
+format:
+  html:
+    theme: [cosmo, custom.scss]  # Apply WECA brand typography on top of cosmo
+    code-fold: true              # Allows readers to toggle code visibility
+    code-summary: "Show code"
+    toc: true              # Table of contents on the right
+    number-sections: true
+    embed-resources: false # Keep resources separate for better performance
+    fig-responsive: true   # Responsive figures for different screen sizes
+    page-layout: full      # Use full page width
+  pdf:
+    documentclass: report
+    papersize: a4
+
+# Engine Configuration
+# This ensures Quarto looks for the 'uv' virtual environment 
+# for Python chunks and the 'renv' library for R chunks.
+knitr:
+  opts_chunk:
+    message: false
+    warning: false
+
+jupyter: python3

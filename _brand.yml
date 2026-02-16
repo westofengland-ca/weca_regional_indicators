@@ -1,0 +1,33 @@
+meta:
+  name: brand.yml
+  link: https://posit-dev.github.io/brand-yml
+
+logo:
+  medium: weca_logo.jpg
+  large: weca_logo.jpg
+
+color:
+  palette:
+    black: "#1F1F1F"
+    claret: "#CE132D"
+    rich_purple: "#590075"
+    forest_green: "#1D4F2B"
+  foreground: black
+  background: white
+  primary: forest_green
+  danger: claret
+
+typography:
+  fonts:
+    - family: Open Sans
+      source: google
+    - family: Trebuchet
+      source: system  # Trebuchet MS is a Windows system font
+    - family: IBM Plex Mono
+      source: google
+
+  base: Open Sans
+  headings:
+    family: Trebuchet
+    weight: 400
+  monospace: IBM Plex Mono

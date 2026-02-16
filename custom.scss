@@ -1,0 +1,25 @@
+/*-- scss:defaults --*/
+
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=IBM+Plex+Mono&display=swap');
+
+// WECA Brand Typography (from _brand.yml)
+$font-family-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-monospace: "IBM Plex Mono", "Courier New", monospace !default;
+$headings-font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif !default;
+$headings-font-weight: 400 !default;
+
+// WECA Brand Colors (from _brand.yml)
+$primary: #1D4F2B !default;  // forest_green
+$danger: #CE132D !default;   // claret
+$body-color: #1F1F1F !default; // black
+$body-bg: #ffffff !default;
+
+/*-- scss:rules --*/
+
+// Apply heading font explicitly
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+}

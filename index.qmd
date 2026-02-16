@@ -1,0 +1,29 @@
+---
+title: "West of England Regional Priorities"
+subtitle: "Key indicators across the Combined Authority's priority areas"
+---
+
+## About This Report
+
+This report brings together key indicators across the West of England Combined Authority's regional priority areas. Each chapter presents up to 10 indicators with analysis, charts, and context to track progress against strategic goals.
+
+## Priority Areas
+
+| Chapter | Priority Area | Lead |
+|---------|--------------|------|
+| 1 | Contributing to national economic growth | SN |
+| 2 | Connecting the region through better public transport | HB |
+| 3 | Creating and building affordable/sustainable homes | CJ |
+| 4 | Empowering residents with future-ready skills | MJ |
+| 5 | Making the West of England the home for green jobs and growth | SC |
+| 6 | Lifting children and families out of poverty | MJ |
+
+## How to Use This Report
+
+- Use the **sidebar navigation** to jump to any chapter
+- Click **"Show code"** to reveal the R or Python code behind any chart or table
+- Each chapter is self-contained and can be read independently
+
+## Data Sources
+
+Indicators draw on a range of national and local data sources. Each chapter documents its specific sources within the analysis. Data refresh schedules are noted where applicable.
