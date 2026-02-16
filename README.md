@@ -14,6 +14,8 @@ This repository contains the source code and data for the integrated West of Eng
 
 The goal of this project is to produce a single, cohesive report where each analyst contributes analysis for a chapter based on their specific priority area.
 
+**Published report:** [https://westofengland-ca.github.io/weca_regional_indicators/](https://westofengland-ca.github.io/weca_regional_indicators/)
+
 ## 📂 Repository Structure
 
 We use a modular structure. Each chapter has its own directory to prevent file conflicts.
@@ -22,13 +24,13 @@ We use a modular structure. Each chapter has its own directory to prevent file c
 - `_quarto.yml`: Global configuration (Chapter order, themes, and execution settings).
 - `data/`: Shared data assets (Raw and Processed).
 - `scripts/`: Shared utility scripts (Python/R functions used across chapters).
-- **Chapters:**
-  - `01-economy/`: Contributing to national economic growth (SN)
-  - `02-transport/`: Connecting the region through better public transport (HB)
-  - `03-place/`: Creating and building affordable/sustainable homes (CJ)
-  - `04-skills/`: Empowering residents with future-ready skills (MJ)
-  - `05-environment/`: Making the West of England the home for green jobs (SC)
-  - `06-child-poverty/`: Lifting children and families out of poverty (MJ)
+- **Chapters** (under `chapters/`):
+  - `chapters/01-economy/`: Contributing to national economic growth (SN)
+  - `chapters/02-transport/`: Connecting the region through better public transport (HB)
+  - `chapters/03-place/`: Creating and building affordable/sustainable homes (CJ)
+  - `chapters/04-skills/`: Empowering residents with future-ready skills (MJ)
+  - `chapters/05-environment/`: Making the West of England the home for green jobs (SC)
+  - `chapters/06-child-poverty/`: Lifting children and families out of poverty (MJ)
 
 ## 🛠 Tech Stack
 
@@ -59,7 +61,7 @@ We use a modular structure. Each chapter has its own directory to prevent file c
 
 ### Reproducible Analytical Pipelines (RAP)
 
-- **[Government Analysis Function: RAP](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)** - UK government best practices
+- **[Government Analysis Function: RAP](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)** - UK government best practises
 - **[The Turing Way](https://the-turing-way.netlify.app/)** - Handbook for reproducible research
 - **[RAP Companion](https://ukgovdatascience.github.io/rap_companion/)** - Practical guide to implementing RAP
 

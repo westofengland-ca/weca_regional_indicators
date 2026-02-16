@@ -55,7 +55,7 @@ raw/
 
 - Data after cleaning (removed nulls, fixed datatypes)
 - Filtered datasets (e.g., only West of England authorities)
-- Aggregated or summarized data
+- Aggregated or summarised data
 - Merged datasets from multiple sources
 - Intermediate analysis outputs
 
@@ -80,12 +80,12 @@ processed/
 
 ### `examples/`
 
-**Purpose:** Small, anonymized example datasets for testing and templates.
+**Purpose:** Small, anonymised example datasets for testing and templates.
 
 **What goes here:**
 
 - Dummy data for code examples (fake but realistic)
-- Small subsets of real data (if permitted and anonymized)
+- Small subsets of real data (if permitted and anonymised)
 - Test datasets for validating analysis scripts
 
 **Rules:**
@@ -151,7 +151,7 @@ Add these when helpful:
 
 - `_cleaned` - Data after cleaning
 - `_filtered` - Subset of larger dataset
-- `_summary` - Aggregated/summarized
+- `_summary` - Aggregated/summarised
 - `_combined` - Merged from multiple sources
 - `_weca` - Filtered to WECA geography
 
@@ -186,7 +186,7 @@ example <- read_csv("data/examples/example_indicator.csv")
 
 ```r
 # ❌ Absolute path (breaks for other users)
-data <- read_csv("C:/Users/heather/projects/indicators/data/raw/file.csv")
+data <- read_csv("C:/Users/heather/projects/weca_regional_indicators/data/raw/file.csv")
 
 # ❌ Navigating up with ../.. (fragile if file moves)
 data <- read_csv("../../data/raw/file.csv")
@@ -205,7 +205,7 @@ import pandas as pd
 # Define project root
 project_root = Path(__file__).parent.parent  # Adjust based on script location
 # Or use a fixed reference point
-project_root = Path("C:/Users/steve.crawshaw/projects/weca_analysis_and_evaluation/projects/indicators")
+project_root = Path("C:/Users/steve.crawshaw/projects/weca_regional_indicators")
 
 # Load raw data
 data_path = project_root / "data" / "raw" / "bus_ridership_DfT_2024-01-15.csv"
@@ -369,7 +369,7 @@ Create a data dictionary for each dataset in your chapter:
 
 - ❌ **Never commit** personal data (names, addresses, contact info)
 - ❌ **Never commit** sensitive data (health records, financial details)
-- ✅ **Do anonymize** before using in examples
+- ✅ **Do anonymise** before using in examples
 - ✅ **Do aggregate** to area level (not individual level)
 
 ### Sensitive Information
@@ -380,7 +380,7 @@ Create a data dictionary for each dataset in your chapter:
 
 ### Data Sharing
 
-- Check data license before committing to Git
+- Cheque data licence before committing to Git
 - Some datasets may prohibit redistribution
 - When in doubt, ask the data owner or team lead
 
@@ -417,7 +417,7 @@ find data/ -type f -size +10M
 - [ ] File size is appropriate (<50 MB)
 - [ ] No personal or sensitive data
 - [ ] Data source is documented in chapter
-- [ ] Data license permits use
+- [ ] Data licence permits use
 - [ ] Large files are NOT in `examples/` (won't be committed)
 
 **Before referencing data in code:**
@@ -450,14 +450,14 @@ list.files("data/raw")
 
 **Q: Git is trying to commit my large CSV file**
 
-- Check `.gitignore` includes `*.csv` pattern
+- Cheque `.gitignore` includes `*.csv` pattern
 - File should be in `data/raw/` or `data/processed/`
 - If it's example data, move to `data/examples/` AND ensure <50 KB
 
 **Q: Data path works for me but not colleagues**
 
 - Likely using absolute path - switch to relative paths from project root
-- Check for hardcoded username in path
+- Cheque for hardcoded username in path
 - Verify file is in Git repo (not local-only location)
 
 **Q: How do I share large data files with team?**

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Installs the pre-commit hook for the indicators project.
+# Installs the pre-commit hook for the weca_regional_indicators project.
 # Run from anywhere inside the repo:
-#   bash projects/indicators/scripts/hooks/install-hooks.sh
+#   bash scripts/hooks/install-hooks.sh
 
 set -e
 
@@ -12,7 +12,7 @@ if [ -z "$REPO_ROOT" ]; then
     exit 1
 fi
 
-HOOK_DIR="$REPO_ROOT/projects/indicators/scripts/hooks"
+HOOK_DIR="$REPO_ROOT/scripts/hooks"
 
 mkdir -p "$REPO_ROOT/.git/hooks"
 cp "$HOOK_DIR/pre-commit" "$REPO_ROOT/.git/hooks/pre-commit"

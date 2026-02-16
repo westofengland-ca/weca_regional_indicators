@@ -7,7 +7,7 @@ Thank you for contributing to the West of England Regional Priorities Indicators
 ## 📂 Project Structure
 
 ```
-projects/indicators/
+weca_regional_indicators/
 ├── chapters/              # One directory per priority area
 │   ├── 01-economy/
 │   ├── 02-transport/
@@ -60,8 +60,6 @@ When you render your chapter with `freeze: auto` enabled:
 #### 1️⃣ **You:** Work on Your Chapter
 
 ```bash
-cd projects/indicators
-
 # Edit your chapter
 code chapters/05-environment/index.qmd
 
@@ -178,7 +176,7 @@ quarto render chapters/05-environment/index.qmd
 **Cause:** Someone didn't commit their `_freeze/` cache
 
 **Fix:**
-1. Check which chapter is failing
+1. Cheque which chapter is failing
 2. Ask that person to render their chapter and commit `_freeze/`
 3. Pull their changes and try again
 
@@ -198,7 +196,7 @@ quarto render chapters/XX-topic/index.qmd
 **Unlikely but possible with many large plots**
 
 **Fix:**
-- Optimize figure sizes in code chunks (`fig-width`, `fig-height`, `dpi`)
+- Optimise figure sizes in code chunks (`fig-width`, `fig-height`, `dpi`)
 - Use compressed formats (PNG instead of SVG for complex plots)
 - Consider Git LFS (ask team lead)
 
@@ -210,7 +208,7 @@ quarto render chapters/XX-topic/index.qmd
 | Render full book | `quarto render` |
 | Preview with live reload | `quarto preview` |
 | Force re-execute | `quarto render --execute-freeze refresh` |
-| Check what will run | `quarto render --dry-run` |
+| Cheque what will run | `quarto render --dry-run` |
 
 ---
 
@@ -414,7 +412,7 @@ git push origin --delete yourname/chapter-name  # Delete remote
 **Use R when:**
 
 - ✅ Working with statistical models (regression, hypothesis tests)
-- ✅ Creating publication-quality visualizations with ggplot2
+- ✅ Creating publication-quality visualisations with ggplot2
 - ✅ Following existing R patterns in the chapter
 - ✅ You're more comfortable with R
 
@@ -585,17 +583,17 @@ Use this checklist when reviewing someone else's pull request.
 - [ ] Large data files are not committed (.gitignore working)
 - [ ] Data transformations are reproducible
 
-### Visualization & Output
+### Visualisation & Output
 
 - [ ] Charts have descriptive titles
-- [ ] Axes are labeled with units
+- [ ] Axes are labelled with units
 - [ ] Data sources are cited in captions or footnotes
-- [ ] Charts use WECA color palette (when appropriate)
+- [ ] Charts use WECA colour palette (when appropriate)
 - [ ] Figures have alt text for accessibility
 
 ### Analysis Quality
 
-- [ ] Calculations are correct (spot-check a few)
+- [ ] Calculations are correct (spot-cheque a few)
 - [ ] Methodology is clearly explained
 - [ ] Key findings are highlighted
 - [ ] Limitations or caveats are noted (if applicable)
@@ -603,7 +601,7 @@ Use this checklist when reviewing someone else's pull request.
 ### Accessibility
 
 - [ ] Alt text provided for figures (`fig-cap:` in code chunks)
-- [ ] Color choices are colorblind-friendly
+- [ ] Colour choices are colorblind-friendly
 - [ ] Text is clear and jargon-free
 - [ ] Headings follow logical hierarchy
 
@@ -735,14 +733,14 @@ All indicators should meet these standards:
 
 - ✅ Clear narrative explaining what the indicator shows
 - ✅ Context provided (e.g., national comparisons)
-- ✅ Visualizations are appropriate for data type
+- ✅ Visualisations are appropriate for data type
 - ✅ Key findings are highlighted
 
 ### Accessibility
 
 - ✅ Plain English (avoid jargon)
 - ✅ Charts have alt text
-- ✅ Color choices work for colorblind readers
+- ✅ Colour choices work for colorblind readers
 - ✅ Logical heading structure
 
 ---
@@ -758,7 +756,7 @@ All indicators should meet these standards:
 ### R
 
 - [R for Data Science](https://r4ds.had.co.nz/)
-- [ggplot2 Cheat Sheet](https://rstudio.github.io/cheatsheets/data-visualization.pdf)
+- [ggplot2 Cheat Sheet](https://rstudio.github.io/cheatsheets/data-visualisation.pdf)
 - [Tidyverse Style Guide](https://style.tidyverse.org/)
 
 ### Python

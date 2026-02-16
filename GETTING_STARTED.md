@@ -45,7 +45,7 @@ cd ~/projects
 
 # Clone the repository
 git clone <repository-url>
-cd weca_analysis_and_evaluation/projects/indicators
+cd weca_regional_indicators
 ```
 
 ### 2. Install Pre-Commit Hooks
@@ -54,10 +54,10 @@ The project uses pre-commit hooks to prevent accidental commits of secrets (API 
 
 ```bash
 # Make the script executable (Git Bash)
-chmod +x scripts/install-hooks.sh
+chmod +x scripts/hooks/install-hooks.sh
 
 # Run the installer
-./scripts/install-hooks.sh
+./scripts/hooks/install-hooks.sh
 ```
 
 **What this does:**
@@ -127,16 +127,16 @@ renv::snapshot()
 
 | Package | Purpose |
 |---------|---------|
-| **tidyverse** | Meta-package containing 8 core packages: `ggplot2` (visualization), `dplyr` (data manipulation), `tidyr` (reshaping), `readr` (CSV import), `purrr` (functional programming), `tibble` (modern data frames), `stringr` (text processing), `forcats` (factor handling) |
+| **tidyverse** | Meta-package containing 8 core packages: `ggplot2` (visualisation), `dplyr` (data manipulation), `tidyr` (reshaping), `readr` (CSV import), `purrr` (functional programming), `tibble` (modern data frames), `stringr` (text processing), `forcats` (factor handling) |
 | **readxl** | Import Excel files without external dependencies |
 | **writexl** | Export data frames to Excel format |
 | **httr2** | Make HTTP requests to REST APIs (successor to `httr`) |
 | **jsonlite** | Parse JSON responses from APIs or web sources |
-| **janitor** | Clean messy data: standardize column names, find duplicates, create frequency tables |
+| **janitor** | Clean messy data: standardise column names, find duplicates, create frequency tables |
 | **glue** | Insert R expressions into strings (e.g., `glue("The mean is {mean(x)}")`) |
 | **ggtext** | Use Markdown/HTML formatting in plot titles, labels, and annotations |
 | **ggrepel** | Automatically position text labels to avoid overlapping points |
-| **plotly** | Convert ggplot2 charts to interactive web visualizations |
+| **plotly** | Convert ggplot2 charts to interactive web visualisations |
 | **here** | Build file paths relative to project root (works regardless of working directory) |
 
 **Using `here()` for robust file paths:**
@@ -272,8 +272,8 @@ pwd
 # List files in current directory
 ls
 
-# Change directory
-cd projects/indicators
+# Change directory (from home)
+cd ~/projects/weca_regional_indicators
 
 # Go up one level
 cd ..
@@ -377,7 +377,7 @@ Scanning for secrets...
 
 If the hook blocks a commit incorrectly:
 
-1. Check if it's actually sensitive data
+1. Cheque if it's actually sensitive data
 2. If truly a false positive, ask a team lead to review
 3. The hook can be updated to exclude specific patterns
 
@@ -430,7 +430,7 @@ install.packages("package-name")
 **Q: `quarto: command not found`**
 
 - Restart your terminal after installing Quarto
-- Check PATH: `echo $PATH` should include Quarto bin directory
+- Cheque PATH: `echo $PATH` should include Quarto bin directory
 
 **Q: Render fails with "Kernel error"**
 
@@ -441,7 +441,7 @@ uv pip install ipykernel --force-reinstall
 
 **Q: R code chunks don't execute**
 
-- Ensure `renv` is activated (check `.Rprofile`)
+- Ensure `renv` is activated (cheque `.Rprofile`)
 - Verify R packages are installed: `renv::status()`
 
 ### Git Issues
@@ -491,7 +491,7 @@ data <- read.csv("data/raw/myfile.csv")
 source("scripts/R/helpers.R")
 
 # ❌ Never: Absolute paths (breaks on other machines)
-data <- read.csv("C:/Users/yourname/projects/indicators/data/raw/myfile.csv")
+data <- read.csv("C:/Users/yourname/projects/weca_regional_indicators/data/raw/myfile.csv")
 ```
 
 **When to use `here::i_am()`:**
@@ -516,7 +516,7 @@ Yes! Both are supported. See `CONTRIBUTING.md` for guidance on when to use each.
 - **Quarto Documentation:** [https://quarto.org/docs/guide/](https://quarto.org/docs/guide/)
 - **Git Tutorial:** [https://git-scm.com/book/en/v2](https://git-scm.com/book/en/v2)
 - **GitHub Desktop:** [https://desktop.github.com/](https://desktop.github.com/) (GUI alternative to Git Bash)
-- **RAP Best Practices:** [https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
+- **RAP Best Practises:** [https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/)
 
 ---
 
@@ -524,7 +524,7 @@ Yes! Both are supported. See `CONTRIBUTING.md` for guidance on when to use each.
 
 - **Technical issues:** Ask in the Analysts Team Chat
 - **Git problems:** See `CONTRIBUTING.md` or ask a team lead
-- **Quarto questions:** Check [Quarto documentation](https://quarto.org) first
+- **Quarto questions:** Cheque [Quarto documentation](https://quarto.org) first
 - **Code review:** Request reviews on your pull requests
 
 **Next step:** Read `CONTRIBUTING.md` for collaboration guidelines →

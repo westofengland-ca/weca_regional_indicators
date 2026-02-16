@@ -4,31 +4,45 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-This repository contains data update pipelines and bespoke analysis projects for the West of England Combined Authority (WECA) Analysis & Evaluation team. The repository integrates with Databricks and hosts multiple analytical projects.
+This repository (`weca_regional_indicators`) contains the West of England Combined Authority (WECA) regional priorities report - a collaborative Quarto-based book where each analyst contributes a chapter.
 
-**Key projects:**
-
-- `projects/indicators/` - Collaborative Quarto-based regional priorities report
+**Published report:** [https://westofengland-ca.github.io/weca_regional_indicators/](https://westofengland-ca.github.io/weca_regional_indicators/)
 
 ## Architecture
 
-### Multi-Project Structure
+### Repository Structure
 
-The repository uses a project-based organization where each subdirectory under `projects/` represents a distinct analytical initiative:
+Everything lives at the repository root (no nested `projects/` directory):
 
 ```
-projects/
-└── indicators/          # West of England Priority Indicators report
-    ├── _quarto.yml      # Quarto configuration (chapter order, themes, execution)
-    ├── index.qmd        # Report landing page
-    ├── chapters/        # Modular chapter directories (one per analyst/priority)
-    ├── data/            # Shared data assets (raw and processed)
-    └── scripts/         # Shared utility scripts (Python/R functions)
+weca_regional_indicators/
+├── _quarto.yml          # Quarto configuration (chapter order, themes, execution)
+├── _brand.yml           # WECA branding configuration
+├── index.qmd            # Report landing page
+├── custom.scss          # Custom SCSS styling
+├── chapters/            # Modular chapter directories (one per analyst/priority)
+│   ├── 01-economy/
+│   ├── 02-transport/
+│   ├── 03-place/
+│   ├── 04-skills/
+│   ├── 05-environment/
+│   └── 06-child-poverty/
+├── data/                # Shared data assets
+│   ├── raw/             # Original data files (not committed)
+│   ├── processed/       # Cleaned/transformed data (not committed)
+│   └── examples/        # Small example datasets (committed)
+├── scripts/             # Shared utility scripts
+│   ├── R/               # R helper functions and WECA theme
+│   ├── python/          # Python utility scripts
+│   └── hooks/           # Pre-commit hook scripts
+├── _freeze/             # Quarto execution cache (committed)
+├── _output/             # Rendered HTML/PDF output (gitignored)
+├── pyproject.toml       # Python dependencies (uv-managed)
+├── renv.lock            # R package lock file
+└── .github/workflows/   # GitHub Actions (publish to GitHub Pages)
 ```
 
-Each project may use different tooling and conventions - check project-specific README files.
-
-### Indicators Project (Quarto Polyglot Report)
+### Quarto Polyglot Report
 
 **Tech Stack:**
 
@@ -45,22 +59,21 @@ Each project may use different tooling and conventions - check project-specific 
 - **Shared resources:** `data/` and `scripts/` directories contain assets used across chapters
 
 **Chapter Structure:**
-Each priority area has a dedicated chapter directory:
+Each priority area has a dedicated chapter directory under `chapters/`:
 
-- `01-economy/` - Contributing to national economic growth
-- `02-transport/` - Better public transport connectivity
-- `03-place/` - Affordable/sustainable homes
-- `04-skills/` - Future-ready skills development
-- `05-environment/` - Green jobs and growth
-- `06-child-poverty/` - Lifting families out of poverty
+- `chapters/01-economy/` - Contributing to national economic growth
+- `chapters/02-transport/` - Better public transport connectivity
+- `chapters/03-place/` - Affordable/sustainable homes
+- `chapters/04-skills/` - Future-ready skills development
+- `chapters/05-environment/` - Green jobs and growth
+- `chapters/06-child-poverty/` - Lifting families out of poverty
 
-## Working with the Indicators Project
+## Working with the Report
 
-### Rendering the Report
+### Rendering
 
 ```bash
-# Navigate to project directory
-cd projects/indicators
+# From the repository root:
 
 # Render entire book (HTML and PDF)
 quarto render
@@ -125,7 +138,7 @@ This repository integrates with Databricks for scheduled data updates. Connectio
 
 **Data locations:**
 
-- `projects/indicators/data/` - Project-specific data assets
+- `data/` - Project data assets
 - Raw data sources should be documented in chapter READMEs
 - Processed data should be reproducible via documented scripts
 
@@ -133,18 +146,18 @@ This repository integrates with Databricks for scheduled data updates. Connectio
 
 Rendered reports are written to:
 
-- `projects/indicators/_output/` (configured in `_quarto.yml`)
+- `_output/` (configured in `_quarto.yml`)
 
-This directory is typically gitignored - only source files are version controlled.
+This directory is gitignored - only source files are version controlled. The report is published to GitHub Pages via GitHub Actions.
 
 ## Security: Secret Scanning
 
-A pre-commit hook scans staged files under `projects/indicators/` for secrets (API keys, tokens, credentials, `.env` files). All hook scripts live in `projects/indicators/scripts/hooks/`.
+A pre-commit hook scans staged files for secrets (API keys, tokens, credentials, `.env` files). All hook scripts live in `scripts/hooks/`.
 
 **Setup (run once per clone):**
 
 ```bash
-bash projects/indicators/scripts/hooks/install-hooks.sh
+bash scripts/hooks/install-hooks.sh
 ```
 
 **What the hook scans for:**

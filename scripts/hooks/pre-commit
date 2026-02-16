@@ -1,16 +1,16 @@
 #!/bin/bash
 
-# Pre-commit hook: scans for secrets in projects/indicators/ files only.
-# Install with: projects/indicators/scripts/hooks/install-hooks.sh
+# Pre-commit hook: scans staged files for secrets.
+# Install with: scripts/hooks/install-hooks.sh
 
 REPO_ROOT=$(git rev-parse --show-toplevel)
-HOOK_DIR="$REPO_ROOT/projects/indicators/scripts/hooks"
+HOOK_DIR="$REPO_ROOT/scripts/hooks"
 
-# Only run when indicators files are staged
-INDICATORS_FILES=$(git diff --cached --name-only --diff-filter=ACM 2>/dev/null | grep "^projects/indicators/")
+# Only run when relevant files are staged
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM 2>/dev/null)
 
-if [[ -n "$INDICATORS_FILES" ]]; then
-    echo "Scanning staged indicators files for secrets..."
+if [[ -n "$STAGED_FILES" ]]; then
+    echo "Scanning staged files for secrets..."
     "$HOOK_DIR/scan_secrets.sh" "$REPO_ROOT" --staged
     exit $?
 else
