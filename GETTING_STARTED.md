@@ -377,7 +377,7 @@ Scanning for secrets...
 
 If the hook blocks a commit incorrectly:
 
-1. Cheque if it's actually sensitive data
+1. Check if it's actually sensitive data
 2. If truly a false positive, ask a team lead to review
 3. The hook can be updated to exclude specific patterns
 
@@ -430,7 +430,7 @@ install.packages("package-name")
 **Q: `quarto: command not found`**
 
 - Restart your terminal after installing Quarto
-- Cheque PATH: `echo $PATH` should include Quarto bin directory
+- Check PATH: `echo $PATH` should include Quarto bin directory
 
 **Q: Render fails with "Kernel error"**
 
@@ -441,7 +441,7 @@ uv pip install ipykernel --force-reinstall
 
 **Q: R code chunks don't execute**
 
-- Ensure `renv` is activated (cheque `.Rprofile`)
+- Ensure `renv` is activated (check `.Rprofile`)
 - Verify R packages are installed: `renv::status()`
 
 ### Git Issues
@@ -524,7 +524,7 @@ Yes! Both are supported. See `CONTRIBUTING.md` for guidance on when to use each.
 
 - **Technical issues:** Ask in the Analysts Team Chat
 - **Git problems:** See `CONTRIBUTING.md` or ask a team lead
-- **Quarto questions:** Cheque [Quarto documentation](https://quarto.org) first
+- **Quarto questions:** Check [Quarto documentation](https://quarto.org) first
 - **Code review:** Request reviews on your pull requests
 
 **Next step:** Read `CONTRIBUTING.md` for collaboration guidelines →

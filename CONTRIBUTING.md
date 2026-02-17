@@ -68,6 +68,7 @@ quarto render chapters/05-environment/index.qmd
 ```
 
 **What happens:**
+
 - Quarto runs your Python/R code with your local data
 - Generates plots, tables, calculations
 - Saves results to `_freeze/html/chapters/05-environment/`
@@ -94,6 +95,7 @@ quarto render  # Render full book
 ```
 
 **What happens:**
+
 - Quarto sees your `_freeze/` cache is up to date
 - Uses your cached outputs instead of re-executing your code
 - Assembles all chapters into complete book
@@ -129,6 +131,7 @@ quarto render chapters/05-environment/index.qmd --execute-freeze refresh
 **Symptom:** Rendering fails with "data file not found" for their chapter
 
 **Fix:** Ask them to:
+
 ```bash
 quarto render chapters/XX-topic/index.qmd
 git add _freeze/
@@ -155,16 +158,19 @@ git commit -m "Resolve freeze cache conflict"
 ### Checking Cache Status
 
 **Preview what will re-execute:**
+
 ```bash
 quarto render --dry-run
 ```
 
 **Force re-render everything:**
+
 ```bash
 quarto render --execute-freeze refresh
 ```
 
 **Render just your chapter for testing:**
+
 ```bash
 quarto render chapters/05-environment/index.qmd
 ```
@@ -176,7 +182,8 @@ quarto render chapters/05-environment/index.qmd
 **Cause:** Someone didn't commit their `_freeze/` cache
 
 **Fix:**
-1. Cheque which chapter is failing
+
+1. Check which chapter is failing
 2. Ask that person to render their chapter and commit `_freeze/`
 3. Pull their changes and try again
 
@@ -185,6 +192,7 @@ quarto render chapters/05-environment/index.qmd
 **Cause:** Source file timestamp changed (e.g., git operations)
 
 **Fix:**
+
 ```bash
 # Clear cache and re-render once
 rm -rf _freeze/html/chapters/XX-topic/
@@ -196,6 +204,7 @@ quarto render chapters/XX-topic/index.qmd
 **Unlikely but possible with many large plots**
 
 **Fix:**
+
 - Optimise figure sizes in code chunks (`fig-width`, `fig-height`, `dpi`)
 - Use compressed formats (PNG instead of SVG for complex plots)
 - Consider Git LFS (ask team lead)
@@ -208,7 +217,7 @@ quarto render chapters/XX-topic/index.qmd
 | Render full book | `quarto render` |
 | Preview with live reload | `quarto preview` |
 | Force re-execute | `quarto render --execute-freeze refresh` |
-| Cheque what will run | `quarto render --dry-run` |
+| check what will run | `quarto render --dry-run` |
 
 ---
 
@@ -593,7 +602,7 @@ Use this checklist when reviewing someone else's pull request.
 
 ### Analysis Quality
 
-- [ ] Calculations are correct (spot-cheque a few)
+- [ ] Calculations are correct (spot-check a few)
 - [ ] Methodology is clearly explained
 - [ ] Key findings are highlighted
 - [ ] Limitations or caveats are noted (if applicable)
