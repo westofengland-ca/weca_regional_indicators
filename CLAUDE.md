@@ -131,10 +131,16 @@ The report uses code folding to keep output clean:
 - R chunks use the `renv` library
 - Jupyter kernel: `python3`
 
-## Data Integration
+## R Documentation (btw MCP)
 
-**Databricks Connection:**
-This repository integrates with Databricks for scheduled data updates. Connection details and pipeline configurations should be stored securely (never commit credentials).
+An MCP server for the `btw` R package is available. Use it when writing or reviewing R code in chapters:
+
+- **`mcp__r-btw__btw_tool_docs_help_page`** — fetch full help pages (usage, arguments, examples) for any R function
+- **`mcp__r-btw__btw_tool_docs_available_vignettes`** / **`btw_tool_docs_vignette`** — list and read package vignettes
+- **`mcp__r-btw__btw_tool_docs_package_help_topics`** — list all topics in a package
+- **`mcp__r-btw__list_r_sessions`** — inspect active R sessions (requires `mcptools::mcp_session()` running in R)
+
+Use these tools instead of guessing R function signatures. Particularly valuable for ggplot2, dplyr, tidyr, and other tidyverse packages used in chapters.
 
 **Data locations:**
 
@@ -149,10 +155,6 @@ Rendered reports are written to:
 - `_output/` (configured in `_quarto.yml`)
 
 This directory is gitignored - only source files are version controlled. The report is published to GitHub Pages via GitHub Actions.
-
-## Security: Secret Scanning
-
-A pre-commit hook scans staged files for secrets (API keys, tokens, credentials, `.env` files). All hook scripts live in `scripts/hooks/`.
 
 **Setup (run once per clone):**
 
@@ -171,6 +173,3 @@ bash scripts/hooks/install-hooks.sh
 1. Remove the secret from the file
 2. Move credentials to environment variables or `.env` files (gitignored)
 3. For false positives, update exclude patterns in `scripts/hooks/scan_secrets.sh`
-
-**Databricks credentials:**
-Never commit Databricks connection strings, tokens, or passwords. Use environment variables or secure configuration management.

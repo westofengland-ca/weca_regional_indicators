@@ -1,0 +1,17 @@
+{
+    "mcpServers": {
+        "r-btw": {
+            "type": "stdio",
+            "command": "Rscript",
+            "args": [
+                "-e",
+                "btw::btw_mcp_server(tools = 'docs')"
+            ],
+            "env": {}
+        },
+        "context7": {
+            "type": "http",
+            "url": "https://mcp.context7.com/mcp"
+        }
+    }
+}
