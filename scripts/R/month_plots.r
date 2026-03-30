@@ -89,5 +89,3 @@ epc_a_c_tbl %>%
     ) +
     expand_limits(y = c(0, 100)) +
     theme_weca()
-
-show_weca_palette()
