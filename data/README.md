@@ -8,6 +8,7 @@ This directory contains all data files used in the West of England Regional Prio
 
 ```
 data/
+├── common_project_data/  # meta data about indicators (Committed to Git)
 ├── raw/              # Original, unmodified data files (NOT committed to Git)
 ├── processed/        # Cleaned/transformed data ready for analysis (NOT committed to Git)
 └── examples/         # Small example datasets for templates (COMMITTED to Git)

@@ -1,0 +1,31 @@
+area,year,indicator_name,indicator_value,target_value,national_average
+Bristol,2015,Employment Rate,72.3,75.0,73.1
+Bristol,2016,Employment Rate,73.5,75.0,73.8
+Bristol,2017,Employment Rate,74.2,75.0,74.2
+Bristol,2018,Employment Rate,75.1,75.0,74.9
+Bristol,2019,Employment Rate,76.3,75.0,75.4
+Bristol,2020,Employment Rate,73.8,75.0,74.1
+Bristol,2021,Employment Rate,74.5,75.0,74.8
+Bristol,2022,Employment Rate,75.9,75.0,75.3
+Bristol,2023,Employment Rate,76.8,75.0,75.9
+Bristol,2024,Employment Rate,77.2,75.0,76.2
+South Gloucestershire,2015,Employment Rate,78.5,75.0,73.1
+South Gloucestershire,2016,Employment Rate,79.1,75.0,73.8
+South Gloucestershire,2017,Employment Rate,79.8,75.0,74.2
+South Gloucestershire,2018,Employment Rate,80.2,75.0,74.9
+South Gloucestershire,2019,Employment Rate,81.0,75.0,75.4
+South Gloucestershire,2020,Employment Rate,78.9,75.0,74.1
+South Gloucestershire,2021,Employment Rate,79.5,75.0,74.8
+South Gloucestershire,2022,Employment Rate,80.3,75.0,75.3
+South Gloucestershire,2023,Employment Rate,81.2,75.0,75.9
+South Gloucestershire,2024,Employment Rate,81.7,75.0,76.2
+Bath and North East Somerset,2015,Employment Rate,75.2,75.0,73.1
+Bath and North East Somerset,2016,Employment Rate,76.0,75.0,73.8
+Bath and North East Somerset,2017,Employment Rate,76.8,75.0,74.2
+Bath and North East Somerset,2018,Employment Rate,77.5,75.0,74.9
+Bath and North East Somerset,2019,Employment Rate,78.1,75.0,75.4
+Bath and North East Somerset,2020,Employment Rate,76.2,75.0,74.1
+Bath and North East Somerset,2021,Employment Rate,76.9,75.0,74.8
+Bath and North East Somerset,2022,Employment Rate,77.8,75.0,75.3
+Bath and North East Somerset,2023,Employment Rate,78.5,75.0,75.9
+Bath and North East Somerset,2024,Employment Rate,79.1,75.0,76.2

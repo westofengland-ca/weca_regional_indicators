@@ -215,14 +215,19 @@ __marimo__/
 .claude/
 
 # Data files (keep example data whitelisted)
+*.csv
+*.xlsx
+*.xls
+
 data/raw/*
 data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
-!data/examples/
-*.csv
-*.xlsx
-*.xls
+!data/examples/*.csv
+!data/common_project_data/*.xlsx
+!data/common_project_data/*.csv
+!data/common_project_data/*.rds
+
 
 # Quarto outputs
 _output/

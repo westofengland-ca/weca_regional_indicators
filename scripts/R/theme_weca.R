@@ -25,7 +25,7 @@ weca_colors <- c(
   claret = "#CE132D",
   rich_purple = "#590075",
   black = "#1F1F1F",
-  west_green = "#40A832",    # Extended palette
+  west_green = "#40A832", # Extended palette
   park_green = "#007D00",
   soft_green = "#8FCC87",
   soft_purple = "#9C66AB",
@@ -58,7 +58,7 @@ theme_weca <- function(base_size = 11, base_family = "Arial") {
     theme(
       # Text elements
       plot.title = element_text(
-        family = "Trebuchet MS",  # Use full Windows font name
+        family = "Trebuchet MS", # Use full Windows font name
         size = rel(1.3),
         face = "bold",
         colour = weca_colors["forest_green"],
@@ -170,8 +170,11 @@ scale_fill_weca <- function(...) {
 get_weca_color <- function(color_name) {
   if (!color_name %in% names(weca_colors)) {
     stop(paste0(
-      "Color '", color_name, "' not found. ",
-      "Available colors: ", paste(names(weca_colors), collapse = ", ")
+      "Color '",
+      color_name,
+      "' not found. ",
+      "Available colors: ",
+      paste(names(weca_colors), collapse = ", ")
     ))
   }
   weca_colors[[color_name]]
@@ -197,10 +200,21 @@ show_weca_palette <- function() {
 
   ggplot(palette_df, aes(x = color, y = y, fill = color)) +
     geom_tile(width = 0.9, height = 0.8) +
-    geom_text(aes(label = hex), colour = "white", fontface = "bold", vjust = 2) +
-    geom_text(aes(label = color), colour = "white", fontface = "bold", vjust = -1) +
+    geom_text(
+      aes(label = hex),
+      colour = "white",
+      fontface = "bold",
+      vjust = 2
+    ) +
+    geom_text(
+      aes(label = color),
+      colour = "white",
+      fontface = "bold",
+      vjust = -1
+    ) +
     scale_fill_manual(values = weca_colors) +
     theme_void() +
     theme(legend.position = "none") +
+    coord_flip() +
     labs(title = "WECA Brand Color Palette")
 }
