@@ -34,9 +34,6 @@ source("renv/activate.R") # UNCOMMENT AFTER RUNNING renv::init()
 # PROJECT SETTINGS
 # ============================================================================
 
-# Load here package for project-relative paths
-library(here)
-
 # Set CRAN mirror (UK mirror for faster package downloads)
 options(repos = c(CRAN = "https://cran.rstudio.com/"))
 
