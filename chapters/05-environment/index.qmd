@@ -25,6 +25,8 @@ library(tidyverse)
 # Source the WECA theme and helper functions
 source(here::here("scripts", "R", "theme_weca.R"))
 source(here::here("scripts", "R", "helpers.R"))
+source(here::here("scripts", "R", "db_connect.R"))
+source(here::here("scripts", "R", "load_pins.R"))
 ```
 
 ---

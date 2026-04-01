@@ -246,6 +246,7 @@ renv/local/
 .Rhistory
 .RData
 .Rproj.user
+.Rproj
 
 # Large data files
 *.rds
