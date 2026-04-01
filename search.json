@@ -286,7 +286,7 @@
     "href": "chapters/05-environment/index.html#setup",
     "title": "6  Green Jobs and Growth",
     "section": "6.2 Setup",
-    "text": "6.2 Setup\n\n\nLoad required packages\n# Load required packages\nlibrary(tidyverse)\n\n# Source the WECA theme and helper functions\nsource(here::here(\"scripts\", \"R\", \"theme_weca.R\"))\nsource(here::here(\"scripts\", \"R\", \"helpers.R\"))",
+    "text": "6.2 Setup\n\n\nLoad required packages\n# Load required packages\nlibrary(tidyverse)\n\n# Source the WECA theme and helper functions\nsource(here::here(\"scripts\", \"R\", \"theme_weca.R\"))\nsource(here::here(\"scripts\", \"R\", \"helpers.R\"))\nsource(here::here(\"scripts\", \"R\", \"db_connect.R\"))\n\n\nError:\n! invalid integer value \"NA\" for connection option \"port\"\n\n\nLoad required packages\nsource(here::here(\"scripts\", \"R\", \"load_pins.R\"))\n\n\nError in `board_s3()`:\n! The package \"paws.storage\" is required.",
     "crumbs": [
       "Green Jobs and Growth",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
