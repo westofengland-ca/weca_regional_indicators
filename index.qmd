@@ -1,7 +1,10 @@
 ---
-title: "West of England Regional Priorities"
-subtitle: "Key indicators across the Combined Authority's priority areas"
+number-sections: false
 ---
+
+# West of England Regional Priorities {.unnumbered}
+
+*Key indicators across the Combined Authority's priority areas*
 
 ## About This Report
 

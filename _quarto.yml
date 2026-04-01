@@ -53,9 +53,9 @@ format:
     embed-resources: false # Keep resources separate for better performance
     fig-responsive: true   # Responsive figures for different screen sizes
     page-layout: full      # Use full page width
-  pdf:
-    documentclass: report
-    papersize: a4
+  # pdf:
+  #   documentclass: report
+  #   papersize: a4
 
 # Engine Configuration
 # This ensures Quarto looks for the 'uv' virtual environment 
