@@ -21,7 +21,7 @@ Before you begin, install the following software:
 
 ### Verify Installation
 
-Open **Git Bash** and run:
+Open **Git Bash** (The Terminal in Rstudio or Positron) and run:
 
 ```bash
 # Check versions
@@ -39,12 +39,14 @@ uv --version
 
 ### 1. Clone the Repository
 
+From the Terminal:
+
 ```bash
 # Navigate to your projects folder
 cd ~/projects
 
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/westofengland-ca/weca_regional_indicators.git
 cd weca_regional_indicators
 ```
 
@@ -54,7 +56,7 @@ The project uses pre-commit hooks to prevent accidental commits of secrets (API 
 
 ```bash
 # Make the script executable (Git Bash)
-chmod +x scripts/hooks/install-hooks.sh
+# (Only needed for Linux!) chmod +x scripts/hooks/install-hooks.sh
 
 # Run the installer
 ./scripts/hooks/install-hooks.sh
@@ -69,12 +71,7 @@ chmod +x scripts/hooks/install-hooks.sh
 ### 3. Set Up Python Environment
 
 ```bash
-# Create and activate virtual environment
-uv venv
-source .venv/bin/activate  # Git Bash
-# .venv\Scripts\activate   # Windows CMD (if needed)
-
-# Install dependencies
+# You should have a pyproject.toml file so just install dependencies
 uv sync
 ```
 
@@ -85,59 +82,16 @@ uv sync
 Open **Positron** and run in the R console:
 
 ```r
-# Install renv (if not already installed)
-install.packages("renv")
-
 # Initialize renv for this project (first time only)
 renv::init()
+# Then option 1
 
-# Install core packages
-install.packages(c(
-  # Data wrangling ecosystem
-  "tidyverse",    # Meta-package: includes ggplot2, dplyr, tidyr, readr, purrr, tibble, stringr, forcats
-
-  # Data import/export
-  "readxl",       # Read Excel files (.xlsx, .xls)
-  "writexl",      # Write Excel files (lightweight, no Java dependency)
-
-  # API and web data
-  "httr2",        # Modern HTTP client for API requests
-  "jsonlite",     # Parse and generate JSON data
-
-  # Data cleaning
-  "janitor",      # Clean column names, remove duplicates, tabulate frequencies
-
-  # String manipulation
-  "glue",         # String interpolation and formatting
-
-  # Advanced visualization
-  "ggtext",       # Markdown/HTML formatting in ggplot2 labels
-  "ggrepel",      # Smart label positioning (avoid overlaps)
-  "plotly",       # Interactive plots and dashboards
-
-  # Project management
-  "here"          # Robust file path construction (already documented in project)
-))
+# Confirm installation
+renv::status()
 
 # Save the package state
 renv::snapshot()
 ```
-
-**What these packages do:**
-
-| Package | Purpose |
-|---------|---------|
-| **tidyverse** | Meta-package containing 8 core packages: `ggplot2` (visualisation), `dplyr` (data manipulation), `tidyr` (reshaping), `readr` (CSV import), `purrr` (functional programming), `tibble` (modern data frames), `stringr` (text processing), `forcats` (factor handling) |
-| **readxl** | Import Excel files without external dependencies |
-| **writexl** | Export data frames to Excel format |
-| **httr2** | Make HTTP requests to REST APIs (successor to `httr`) |
-| **jsonlite** | Parse JSON responses from APIs or web sources |
-| **janitor** | Clean messy data: standardise column names, find duplicates, create frequency tables |
-| **glue** | Insert R expressions into strings (e.g., `glue("The mean is {mean(x)}")`) |
-| **ggtext** | Use Markdown/HTML formatting in plot titles, labels, and annotations |
-| **ggrepel** | Automatically position text labels to avoid overlapping points |
-| **plotly** | Convert ggplot2 charts to interactive web visualisations |
-| **here** | Build file paths relative to project root (works regardless of working directory) |
 
 **Using `here()` for robust file paths:**
 
@@ -153,8 +107,6 @@ source(here::here("scripts", "R", "helpers.R"))
 
 **Edit `.Rprofile`:** Uncomment the line `source("renv/activate.R")` to auto-activate renv.
 
-**Note on knitr:** Positron has built-in support for Quarto rendering, so `knitr` is not explicitly required in your package library. Quarto will handle code chunk execution automatically.
-
 ---
 
 ## 🎯 Your First Indicator
@@ -163,9 +115,11 @@ Follow this step-by-step tutorial to add an indicator to a chapter.
 
 ### Step 1: Create a Branch
 
+From the Terminal.
+
 ```bash
 # Create a new branch (use your name and chapter)
-git checkout -b yourname/transport
+git checkout -b stevecrawshaw/05_environment
 
 # Verify you're on the new branch
 git branch
@@ -236,6 +190,8 @@ quarto render chapters/02-transport/index.qmd
 
 ### Step 5: Commit Your Changes
 
+From the Terminal.
+
 ```bash
 # Check what's changed
 git status
@@ -247,15 +203,16 @@ git add chapters/02-transport/index.qmd
 git commit -m "Add bus ridership indicator to transport chapter"
 
 # Push to remote
-git push -u origin yourname/transport
+git push -u origin stevecrawshaw/05_environment
 ```
 
 ### Step 6: Create a Pull Request
 
-1. Go to GitHub repository
+1. Go to weca_regional_indicators [GitHub repository](https://github.com/westofengland-ca/weca_regional_indicators)
 2. Click **"Compare & pull request"**
 3. Fill in the PR template (see `CONTRIBUTING.md`)
-4. Request a review from a team member
+4. Request a review from a Steve
+5. Steve will review this change and if it's all good will "merge" your changes to the main branch
 
 ---
 
@@ -301,8 +258,8 @@ git checkout main
 git add filename.qmd
 git add .                    # Add all changes (be careful!)
 
-# Commit changes
-git commit -m "Your message"
+# Commit changes - this will fire the pre commit hook to check for secrets
+git commit -m "Your message - be descriptive to be helpful!"
 
 # Push to remote
 git push
