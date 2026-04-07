@@ -296,18 +296,18 @@
     "href": "chapters/05-environment/index.html#setup",
     "title": "5  Green Jobs and Growth",
     "section": "5.2 Setup",
-    "text": "5.2 Setup\n\n\nLoad required packages\n# Load required packages\nlibrary(tidyverse)\n\n# Source the WECA theme and helper functions\nsource(here::here(\"scripts\", \"R\", \"theme_weca.R\"))\nsource(here::here(\"scripts\", \"R\", \"helpers.R\"))\nsource(here::here(\"scripts\", \"R\", \"db_connect.R\"))\n\n\nError:\n! could not translate host name \"weca-pg-gis-dev.postgres.database.azure.com\" to address: Name or service not known\n\n\nLoad required packages\nsource(here::here(\"scripts\", \"R\", \"load_pins.R\"))",
+    "text": "5.2 Setup",
     "crumbs": [
       "Green Jobs and Growth",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
     ]
   },
   {
-    "objectID": "chapters/05-environment/index.html#indicator-1-your-green-economy-indicator",
-    "href": "chapters/05-environment/index.html#indicator-1-your-green-economy-indicator",
+    "objectID": "chapters/05-environment/index.html#indicator-1-greenhouse-gas-emissions",
+    "href": "chapters/05-environment/index.html#indicator-1-greenhouse-gas-emissions",
     "title": "5  Green Jobs and Growth",
-    "section": "5.3 Indicator 1: [Your Green Economy Indicator]",
-    "text": "5.3 Indicator 1: [Your Green Economy Indicator]\nData source: [Specify source] Last updated: [Date] Refresh schedule: [Annual/Quarterly/Monthly]\n\n5.3.1 Overview\n[Describe what this indicator measures and why it matters for green jobs and growth]\n\n\nIndicator 1 analysis\n# Your code here\n# See chapters/01-economy/index.qmd for a worked example pattern:\n# 1. Load data using load_csv()\n# 2. Process/filter/aggregate data\n# 3. Create visualization with theme_weca()\n# 4. Calculate key statistics using format_number()\n\n\n\n\n5.3.2 Findings\n[Your narrative findings here]",
+    "section": "5.3 Indicator 1: Greenhouse Gas Emissions",
+    "text": "5.3 Indicator 1: Greenhouse Gas Emissions\nData source: Department for Energy Security and Net Zero (DESNZ) - Sub-national GHG emissions Last updated: 2026-04-07 Refresh schedule: Annual Indicator ID: RI_5_ghg_emissions Period covered: 2023 Indicator value: 4410 Kt CO2e Change since last period: -3.7%\n\n5.3.1 Overview\nRegional GHG emissions from transport, domestic, commercial, industrial and public sectors. This tracks the region’s progress toward the net zero target by 2030 and identifies key sectors for emissions reduction.\n\n\nRI_5_ghg_emissions analysis\n# Your code here\nRI_5_plot\n\n\n\n\n\n\n\n\n\nRI_5_ghg_emissions analysis\n# See chapters/01-economy/index.qmd for a worked example pattern:\n# 1. Load data using load_csv()\n# 2. Process/filter/aggregate data\n# 3. Create visualization with theme_weca()\n# 4. Calculate key statistics using format_number()\n\n\n\n\n5.3.2 Findings\nEmissions have declined steadily over several years: -26.1% since 2014. Transport and domestic sectors dominate. The region is currently not on track to meet the 2030 net zero target, indicating a need for accelerated action in key sectors. Demand reduction for personal car use and the introduction of low - carbon heating for homes remain key priorities for the region.",
     "crumbs": [
       "Green Jobs and Growth",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
