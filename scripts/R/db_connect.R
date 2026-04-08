@@ -13,3 +13,5 @@ con <- dbConnect(
 
 # Test connection
 dbGetQuery(con, "SELECT current_database(), current_user, version()")
+# read spatial data - eg the lep boundary
+# lep_bound <- st_read(con, query = " SELECT * FROM os.bdline_ua_lep_diss")

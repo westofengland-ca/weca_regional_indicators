@@ -32,6 +32,23 @@ weca_colors <- c(
   soft_claret = "#ED8073"
 )
 
+ua_colors_by_name <-
+  c(
+    "Bristol" = "#CE132D",
+    "South Gloucestershire" = "#1D4F2B",
+    "Bath and North East Somerset" = "#590075",
+    "North Somerset" = "#1F1F1F"
+  )
+
+ua_colors_by_code <-
+  c(
+    "E06000023" = "#CE132D",
+    "E06000025" = "#1D4F2B",
+    "E06000022" = "#590075",
+    "E06000024" = "#1F1F1F"
+  )
+
+
 # Named palette for easy access
 weca_palette <- function() {
   weca_colors

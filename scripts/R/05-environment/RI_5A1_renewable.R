@@ -3,12 +3,14 @@
 # totals plus photovoltaics and households for RI_5A2_domestic_renewable
 
 # libraries ---------------------
-pacman::p_load(tidyverse, janitor, glue, tidyxl, readxl)
-
+pacman::p_load(tidyverse, janitor, glue, tidyxl, readxl, sf)
+# connect to the POSTGIS database - imports a connection object "con" into the environment
+source(here::here("scripts", "R", "db_connect.R"))
+source(here::here("scripts", "R", "theme_weca.R"))
 # spreadsheet https://assets.publishing.service.gov.uk/media/68da76d2c487360cc70c9e9d/Renewable_electricity_by_local_authority_2014_-_2024.xlsx
 
 RI_5A1_current_spreadsheet <- "Renewable_electricity_by_local_authority_2014_-_2024.xlsx"
-
+period_years <- 10
 # metadata
 RI_51A_contents <-
     xlsx_cells(
@@ -186,11 +188,70 @@ RI_51A_renewable_tbl <- reduce(
         RI_51A_sites_pv_tbl
     ),
     .f = inner_join
-)
+) |>
+    mutate(
+        la_name = if_else(str_starts(la_name, "Bristol"), "Bristol", la_name)
+    )
 
 # filter for weca UA's
 RI_51A_weca_renewable_tbl <- RI_51A_renewable_tbl |>
     filter(
-        la_code %in% c("E06000022", "E06000023", "E06000024", "E06000025")
+        la_code %in% c("E06000022", "E06000023", "E06000024", "E06000025"),
+        year >= (max(year) - period_years + 1)
     ) |>
     glimpse()
+
+# Get the area in KM^2 for the RI_5A2_domestic_renewable indicator
+
+lep_area_km2 <- as.integer(
+    (st_read(con, query = "SELECT * FROM os.bdline_ua_lep_diss") |>
+        st_area(lep_bound)) /
+        (1e6)
+)
+
+dbDisconnect(con)
+
+# Make the plot for  RI_51A
+RI_51A_renewable_plot <- RI_51A_weca_renewable_tbl |>
+    ggplot(aes(x = year, y = capacity_mw, fill = la_name)) +
+    geom_col() +
+    scale_fill_manual(values = ua_colors_by_name) +
+    labs(
+        title = "Renewable Electricity: Installed Capacity",
+        subtitle = "All sources: Megawatts",
+        y = "MW",
+        x = "Year",
+        fill = "Local authority",
+        caption = "Source: DESNZ"
+    ) +
+    theme_weca() +
+    theme(axis.title.y = element_text(angle = 0, vjust = 0.5))
+
+RI_51A_renewable_plot
+
+RI_51A_kpi_vector <-
+    RI_51A_weca_renewable_tbl |>
+    group_by(year) |>
+    summarise(
+        total_installed_capacity_mwh = sum(capacity_mw),
+        .groups = "drop"
+    ) |>
+    filter(year == max(year) | year == min(year) | year == max(year) - 1) |>
+    pull(total_installed_capacity_mwh) |>
+    set_names(c("first", "previous", "latest"))
+
+RI_51A_kpi <- RI_51A_kpi_vector["latest"]
+
+RI_51A_latest_previous_change_pc <- (RI_51A_kpi_vector[
+    "latest"
+] /
+    RI_51A_kpi_vector["previous"] -
+    1) *
+    100
+
+RI_51A_latest_first_change_pc <- (RI_51A_kpi_vector[
+    "latest"
+] /
+    RI_51A_kpi_vector["first"] -
+    1) *
+    100
