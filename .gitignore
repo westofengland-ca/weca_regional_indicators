@@ -227,6 +227,10 @@ data/processed/*
 !data/common_project_data/*.xlsx
 !data/common_project_data/*.csv
 !data/common_project_data/*.rds
+# FACT table: per-indicator observation CSVs are committed
+!data/fact/
+!data/fact/*.csv
+!data/fact/.gitkeep
 
 
 # Quarto outputs
