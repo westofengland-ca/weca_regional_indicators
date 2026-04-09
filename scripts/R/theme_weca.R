@@ -1,6 +1,6 @@
 # WECA Branding Theme for ggplot2
 #
-# This file provides WECA-branded styling for data visualizations.
+# This file provides WECA-branded styling for data visualisations.
 # Usage: Add `+ theme_weca()` to your ggplot2 charts
 #
 # Example:
@@ -18,8 +18,8 @@ here::i_am("scripts/R/theme_weca.R")
 
 library(ggplot2)
 
-# WECA Color Palette (from _brand.yml)
-# These colors align with WECA's official brand guidelines
+# WECA Colour Palette (from _brand.yml)
+# These colours align with WECA's official brand guidelines
 weca_colors <- c(
   forest_green = "#1D4F2B",
   claret = "#CE132D",
@@ -208,6 +208,46 @@ get_weca_color <- function(color_name) {
 #' show_weca_palette()
 #'
 #' @export
+#' WECA Unitary Authority Theme
+#'
+#' Extends theme_weca() with a compact legend suited to charts that use
+#' the four West of England unitary authority names as category labels.
+#' Long names such as "Bath and North East Somerset" and "South
+#' Gloucestershire" are displayed in a single vertical column so they
+#' are never clipped.
+#'
+#' @param base_size Base font size (default: 11)
+#' @param base_family Base font family (default: "Arial")
+#'
+#' @return A ggplot2 theme object
+#'
+#' @examples
+#' ggplot(df, aes(x = year, y = value, fill = local_authority)) +
+#'   geom_col() +
+#'   scale_fill_manual(values = ua_colors_by_name) +
+#'   theme_ua()
+#'
+#' @export
+theme_ua <- function(base_size = 11, base_family = "Arial") {
+  theme_weca(base_size = base_size, base_family = base_family) +
+    theme(
+      legend.position = "bottom",
+      legend.direction = "vertical",
+      legend.text = element_text(
+        colour = weca_colors["black"],
+        size = rel(0.85)
+      ),
+      legend.title = element_text(
+        colour = weca_colors["black"],
+        size = rel(0.9),
+        face = "bold"
+      ),
+      legend.key.size = unit(0.4, "cm"),
+      legend.spacing.y = unit(0.15, "cm"),
+      legend.margin = margin(4, 0, 0, 0)
+    )
+}
+
 show_weca_palette <- function() {
   palette_df <- data.frame(
     color = names(weca_colors),

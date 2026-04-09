@@ -197,8 +197,7 @@ RI_5A1_weca_renewable_tbl <- RI_5A1_renewable_tbl |>
     filter(
         la_code %in% c("E06000022", "E06000023", "E06000024", "E06000025"),
         year >= (max(year) - period_years + 1)
-    ) |>
-    glimpse()
+    )
 
 # Get the area in KM^2 for the RI_5A2_domestic_renewable indicator
 
@@ -223,7 +222,8 @@ RI_5A1_renewable_plot <- RI_5A1_weca_renewable_tbl |>
         fill = "Local authority",
         caption = "Source: DESNZ"
     ) +
-    theme_weca() +
+    theme_ua() +
+    guides(fill = guide_legend(ncol = 2)) +
     theme(axis.title.y = element_text(angle = 0, vjust = 0.5))
 
 RI_5A1_renewable_plot
@@ -242,4 +242,40 @@ RI_5A1_fact_tbl <- RI_5A1_weca_renewable_tbl |>
 
 RI_5A1_fact_tbl |>
     build_fact("RI_5A1_renewable_capacity_km2") |>
+    save_fact()
+
+# We also process RI_5A2_domestic_renewable here as it
+# is sourced from the same data
+
+RI_5A2_domestic_renewable_plot <- RI_5A1_weca_renewable_tbl |>
+    ggplot(aes(x = year, y = photovoltaics_sites, fill = la_name)) +
+    geom_col() +
+    scale_fill_manual(values = ua_colors_by_name) +
+    labs(
+        title = "Photovoltaic (PV) sites",
+        y = "Count",
+        x = "Year",
+        fill = "Local authority",
+        caption = "Source: DESNZ"
+    ) +
+    theme_ua() +
+    guides(fill = guide_legend(ncol = 2)) +
+    theme(axis.title.y = element_text(angle = 0, vjust = 0.5))
+
+RI_5A2_domestic_renewable_fact_tbl <-
+    RI_5A1_weca_renewable_tbl |>
+    group_by(year) |>
+    summarise(
+        pv_sites = sum(photovoltaics_sites),
+        households = sum(households),
+        .groups = "drop"
+    ) |>
+    transmute(
+        period_start = dmy(glue::glue("01-01-{year}")),
+        period_end = dmy(glue::glue("31-12-{year}")),
+        value = pv_sites / households
+    )
+
+RI_5A2_domestic_renewable_fact_tbl |>
+    build_fact("RI_5A2_domestic_renewable") |>
     save_fact()

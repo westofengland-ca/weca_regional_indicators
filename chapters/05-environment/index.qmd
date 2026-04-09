@@ -11,13 +11,11 @@ execute:
 
 ## Context
 
-This chapter tracks indicators related to green economy and environmental sustainability across the West of England. Up to 10 indicators can be included, covering metrics like green jobs, renewable energy, carbon emissions, electric vehicle uptake, and green business growth.
-
-## Setup
+This chapter tracks indicators related to green economy and environmental sustainability across the West of England. Topics include carbon emissions, renewable energy, water pollution, climate resilience and public health.
 
 ```{r}
 #| label: setup
-#| code-summary: "Load required packages"
+#| code-summary: "Load required packages and source files"
 #| eval: true
 #| message: false
 #| warning: false
@@ -53,21 +51,13 @@ format_indicator_summary(
 
 ### Overview
 
-Regional GHG emissions from transport, domestic, commercial, industrial and public sectors. This tracks the region's progress toward the net zero target by 2030 and identifies key sectors for emissions reduction.
-
+Regional greenhouse gas emissions from transport, domestic, commercial, industrial and public sectors. This tracks the region's progress toward the net zero target by 2030 and identifies key sectors for emissions reduction.
 
 ```{r}
 #| label: RI_5_ghg_emissions
 #| eval: true
 #| code-summary: "RI_5_ghg_emissions analysis"
-
-# Your code here
 RI_5_plot
-# See chapters/01-economy/index.qmd for a worked example pattern:
-# 1. Load data using load_csv()
-# 2. Process/filter/aggregate data
-# 3. Create visualization with theme_weca()
-# 4. Calculate key statistics using format_number()
 ```
 
 ### Findings
@@ -96,9 +86,13 @@ format_indicator_summary(
 ```
 ### Overview
 
-Potential for renewable energy capacity is strongly influenced by land availability and price, hence this indicator is expressed in terms of Megawatts per square kilometre to enable future comparison with other regions.
+Potential for renewable energy capacity is strongly influenced by land availability and price, hence this indicator is expressed in terms of Megawatts per square Kilometre to enable future comparison with other regions.
 
 ```{r}
+#| label: RI_5A1_renewable_plot
+#| eval: true
+#| code-summary: "RI_5A1_renewable plot bar chart"
+
 RI_5A1_renewable_plot
 ```
 
@@ -108,6 +102,43 @@ Installed capacity has climbed steadily over the last 10 years, reflecting centr
 
 ---
 
+## Indicator 3: Domestic Renewable Energy
+
+```{r}
+#| label: RI_5A2_domestic_renewable_gt
+#| eval: true
+#| code-summary: "RI_5A2_domestic_renewable summary"
+
+collate_fact() |>
+  build_reporting_view() |> 
+format_indicator_summary(
+  "RI_5A2_domestic_renewable",
+  title = "Domestic Renewable Energy",
+  subtitle = "Photovoltaic sites",
+  units = "Sites per household"
+)
+
+```
+### Overview
+
+Solar photovoltaic (PV) installations are a key aspect of energy security and net zero. This indicator tracks installations per household in the region.
+
+```{r}
+#| label: RI_5A2_domestic_renewable_plot
+#| eval: true
+#| code-summary: "RI_5A2_domestic_renewable plot bar chart"
+RI_5A2_domestic_renewable_plot
+
+```
+
+### Findings
+
+Installations of PV panels have increased steadily over the last 10 years.
+
+---
+
 ## Summary
 
-[Summary of key findings across all green economy indicators. What is the overall picture for green jobs and growth?]
+Summary of key findings across all green economy indicators. What is the overall picture for green jobs and growth?
+
+---
