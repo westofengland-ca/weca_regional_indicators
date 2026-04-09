@@ -24,9 +24,8 @@ This example demonstrates how to create an indicator using R. It loads data, pro
 # Load required packages
 library(tidyverse)
 
-# Source the WECA theme and helper functions
-source(here::here("scripts", "R", "theme_weca.R"))
-source(here::here("scripts", "R", "helpers.R"))
+# Source shared helpers (theme, helpers, fact_helpers, collate_fact)
+source(here::here("scripts", "R", "_common.R"))
 ```
 
 ```{r}

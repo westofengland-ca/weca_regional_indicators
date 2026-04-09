@@ -22,9 +22,8 @@ This chapter tracks indicators related to public transport connectivity across t
 # Load required packages
 library(tidyverse)
 
-# Source the WECA theme and helper functions
-source(here::here("scripts", "R", "theme_weca.R"))
-source(here::here("scripts", "R", "helpers.R"))
+# Source shared helpers (theme, helpers, fact_helpers, collate_fact)
+source(here::here("scripts", "R", "_common.R"))
 ```
 
 ---

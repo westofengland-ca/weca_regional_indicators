@@ -27,24 +27,28 @@ This chapter tracks indicators related to green economy and environmental sustai
 library(tidyverse)
 
 # Source the WECA theme and helper functions
-source(here::here("scripts", "R", "theme_weca.R"))
-source(here::here("scripts", "R", "helpers.R"))
-# source(here::here("scripts", "R", "db_connect.R"))
+source(here::here("scripts", "R", "_common.R"))
 source(here::here("scripts", "R", "load_pins.R"))
-source(here::here("scripts", "R", "05-environment","RI_5_ghg_emissions.r"))
+source(here::here("scripts", "R", "05-environment","RI_5_ghg_emissions.R"))
 ```
 
 ---
 
 ## Indicator 1: Greenhouse Gas Emissions
 
-**Data source:** Department for Energy Security and Net Zero (DESNZ) - [Sub-national GHG emissions](https://www.gov.uk/government/collections/uk-territorial-greenhouse-gas-emissions-statistics)<br>
-**Last updated:** 2026-04-07<br>
-**Refresh schedule:** Annual<br>
-**Indicator ID:** RI_5_ghg_emissions<br>
-**Period covered:** 2023<br>
-**Indicator value:** `r round(RI_5_kpi, 0)` Kt CO2e<br>
-**Change since last period:** `r round(RI_5_latest_previous_change_pc, 1)`%<br>
+```{r}
+#| label: RI_5_ghg_emissions_gt
+#| eval: true
+#| code-summary: "RI_5_ghg_emissions KPI summary"
+collate_fact() |>
+  build_reporting_view() |> 
+format_indicator_summary(
+  "RI_5_ghg_emissions",
+  title = "Greenhouse Gas Emissions",
+  subtitle = "Transport, Commercial, Industry, Public sector, Domestic",
+  units = "Kt CO2e"
+)
+```
 
 ### Overview
 
@@ -67,7 +71,7 @@ RI_5_plot
 
 ### Findings
 
-Emissions have declined steadily over several years: `r round(RI_5_latest_first_change_pc, 1)`% since `r year(RI_5_start_date)`. Transport and domestic sectors dominate. The region is currently not on track to meet the 2030 net zero target, indicating a need for accelerated action in key sectors.
+Emissions have declined steadily over several years. Transport and domestic sectors dominate. The region is currently not on track to meet the 2030 net zero target, indicating a need for accelerated action in key sectors.
 Demand reduction for personal car use and the introduction of low - carbon heating for homes remain key priorities for the region.
 
 ---
