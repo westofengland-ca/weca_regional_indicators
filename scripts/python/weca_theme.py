@@ -139,6 +139,7 @@ def reset_theme() -> None:
 # Plotly theme
 # ---------------------------------------------------------------------------
 
+
 def plotly_weca_layout(**kwargs: object) -> dict:
     """Return a Plotly layout dict with WECA branding.
 

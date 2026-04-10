@@ -96,7 +96,9 @@ def format_number(
     return formatted
 
 
-def pct_change(new_value: float, old_value: float, as_decimal: bool = False) -> float | None:
+def pct_change(
+    new_value: float, old_value: float, as_decimal: bool = False
+) -> float | None:
     """Calculate percentage change between two values.
 
     Args:
