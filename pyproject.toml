@@ -26,6 +26,11 @@ dependencies = [
     "pyzmq>=27.1.0",       # Communication with Jupyter/Positron
 ]
 
+[dependency-groups]
+dev = [
+    "ruff>=0.4",
+]
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
@@ -35,11 +40,6 @@ packages = []
 
 [tool.uv]
 package = false
-
-[tool.black]
-line-length = 88
-target-version = ["py313"]
-include = '\.pyi?$'
 
 [tool.ruff]
 line-length = 88
