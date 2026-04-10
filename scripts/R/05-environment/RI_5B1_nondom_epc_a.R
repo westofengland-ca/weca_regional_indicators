@@ -1,6 +1,6 @@
-pacman::p_load(arrow, tidyverse, glue, janitor, here)
+pacman::p_load(tidyverse, glue, janitor, here)
 source(here::here("scripts", "R", "_common.R"))
-source(here::here("scripts", "R", "theme_weca.R"))
+
 
 RI_5B1_nondom_epc_a_url <-
   "https://opendata.westofengland-ca.gov.uk/api/explore/v2.1/catalog/datasets/epc_non_domestic_lep_ods/exports/csv/?lang=en&select=asset_rating_band%2C+lodgement_date%2C+certificate_number&timezone=Europe%2FLondon"

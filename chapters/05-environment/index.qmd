@@ -31,6 +31,8 @@ source(here::here("scripts", "R", "load_pins.R"))
 source(here::here("scripts", "R", "05-environment","RI_5_ghg_emissions.R"))
 source(here::here("scripts", "R", "05-environment","RI_5A1_renewable.R"))
 source(here::here("scripts", "R", "05-environment","RI_5B1_nondom_epc_a.R"))
+source(here::here("scripts", "R", "05-environment","RI_5E1_heat_stress_deaths.R"))
+
 ```
 
 ---
@@ -175,26 +177,40 @@ The improvement in the proportion of properties meeting an A or A+ standard is s
 
 ---
 
-<!-- ## Indicator -->
 
-<!-- ```{r} -->
-<!-- #| label: _gt -->
-<!-- #| eval: true -->
-<!-- #| code-summary: "summary" -->
+## Heat Associated Mortality
 
-<!-- ``` -->
+```{r}
+#| label: RI_5E1_heat_stress_deaths_gt
+#| eval: true
+#| code-summary: "summary"
 
-<!-- ### Overview -->
+collate_fact() |>
+  build_reporting_view() |> 
+format_indicator_summary(
+  "RI_5E1_heat_stress_deaths",
+  title = "Heat Associated Mortality",
+  subtitle = "Deaths per million population",
+  units = "deaths per million"
+)
 
-<!-- ```{r} -->
-<!-- #| label: _plot -->
-<!-- #| eval: true -->
-<!-- #| code-summary: " plot" -->
+```
 
+### Overview
+This indicator tracks the number of heat associated deaths per million population in the Avon Local Resilience Forum area, which largely correlates with the West of England. It provides insight into the region's vulnerability to heat stress through the lens of public health. Data for the region are only available since 2024.
 
-<!-- ``` -->
+```{r}
+#| label: _plot
+#| eval: true
+#| code-summary: "RI_5E1_heat_stress_deaths plot"
+#| 
+RI_5E1_heat_stress_deaths_plot
 
-<!-- ### Findings -->
+```
+
+### Findings
+A small increase in deaths per million for the region is likely to reflect the ongoing increase in ambient temperature arising from a warming climate. WECA has produced a [Climate Adaptation Report] (https://www.westofengland-ca.gov.uk/what-we-do/environment/climate-impact/) to help the region prepare for the impacts of a warming climate.
+
 
 
 <!-- --- -->
