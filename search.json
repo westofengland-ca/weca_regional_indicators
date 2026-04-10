@@ -285,51 +285,62 @@
     "href": "chapters/05-environment/index.html",
     "title": "5  Green Jobs and Growth",
     "section": "",
-    "text": "5.1 Context\nThis chapter tracks indicators related to green economy and environmental sustainability across the West of England. Topics include carbon emissions, renewable energy, water pollution, climate resilience and public health.\nError in `board_s3()`:\n! The package \"paws.storage\" is required.\n\n\nError in `file()`:\n! cannot open the connection\n\n\nError:\n! invalid integer value \"NA\" for connection option \"port\"\n\n\nDownloading csv file from https://opendata.westofengland-ca.gov.uk/api/explore/v2.1/catalog/datasets/epc_non_domestic_lep_ods/exports/csv/?lang=en&select=asset_rating_band%2C+lodgement_date%2C+certificate_number&timezone=Europe%2FLondon",
+    "text": "5.1 Context\nThis chapter tracks indicators related to green economy and environmental sustainability across the West of England. Topics include carbon emissions, renewable energy, water pollution, climate resilience and public health.",
     "crumbs": [
       "Green Jobs and Growth",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
     ]
   },
   {
-    "objectID": "chapters/05-environment/index.html#indicator-1-greenhouse-gas-emissions",
-    "href": "chapters/05-environment/index.html#indicator-1-greenhouse-gas-emissions",
+    "objectID": "chapters/05-environment/index.html#greenhouse-gas-emissions",
+    "href": "chapters/05-environment/index.html#greenhouse-gas-emissions",
     "title": "5  Green Jobs and Growth",
-    "section": "5.2 Indicator 1: Greenhouse Gas Emissions",
-    "text": "5.2 Indicator 1: Greenhouse Gas Emissions\n\n\nRI_5_ghg_emissions KPI summary\ncollate_fact() |&gt;\n  build_reporting_view() |&gt; \nformat_indicator_summary(\n  \"RI_5_ghg_emissions\",\n  title = \"Greenhouse Gas Emissions\",\n  subtitle = \"Transport, Commercial, Industry, Public sector, Domestic\",\n  units = \"Kt CO2e\"\n)\n\n\n\n\n\n\n\n\n\n\n\n\nGreenhouse Gas Emissions\n\n\nTransport, Commercial, Industry, Public sector, Domestic\n\n\n\n\nLatest value\n4,409.7 Kt CO2e (2023-12-31)\n\n\nPrevious value\n4,580.2 Kt CO2e (2022-12-31)\n\n\nChange vs previous\n-3.7%\n\n\nFirst value\n5,970.9 Kt CO2e (2014-12-31)\n\n\nChange since first\n-26.1%\n\n\nObservations\n10\n\n\nTrend\n\n       \n\n\n\nLast updated\n2026-04-10\n\n\n\n\n\n\n\n\n5.2.1 Overview\nRegional greenhouse gas emissions from transport, domestic, commercial, industrial and public sectors. This tracks the region’s progress toward the net zero target by 2030 and identifies key sectors for emissions reduction.\n\n\nRI_5_ghg_emissions analysis\nRI_5_plot\n\n\nError:\n! object 'RI_5_plot' not found\n\n\n\n\n5.2.2 Findings\nEmissions have declined steadily over several years. Transport and domestic sectors dominate. The region is currently not on track to meet the 2030 net zero target, indicating a need for accelerated action in key sectors. Demand reduction for personal car use and the introduction of low - carbon heating for homes remain key priorities for the region.",
+    "section": "5.2 Greenhouse Gas Emissions",
+    "text": "5.2 Greenhouse Gas Emissions\n\n\nRI_5_ghg_emissions KPI summary\ncollate_fact() |&gt;\n  build_reporting_view() |&gt; \nformat_indicator_summary(\n  \"RI_5_ghg_emissions\",\n  title = \"Greenhouse Gas Emissions\",\n  subtitle = \"Transport, Commercial, Industry, Public sector, Domestic\",\n  units = \"Kt CO2e\"\n)\n\n\n\n\n\n\n\n\n\n\n\n\nGreenhouse Gas Emissions\n\n\nTransport, Commercial, Industry, Public sector, Domestic\n\n\n\n\nLatest value\n4,409.7 Kt CO2e (2023-12-31)\n\n\nPrevious value\n4,580.2 Kt CO2e (2022-12-31)\n\n\nChange vs previous\n-3.7%\n\n\nFirst value\n5,970.9 Kt CO2e (2014-12-31)\n\n\nChange since first\n-26.1%\n\n\nObservations\n10\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-10\n\n\n\n\n\n\n\n\n5.2.1 Overview\nRegional greenhouse gas emissions from transport, domestic, commercial, industrial and public sectors. This tracks the region’s progress toward the net zero target by 2030 and identifies key sectors for emissions reduction.\n\n\nRI_5_ghg_emissions analysis\nRI_5_plot\n\n\n\n\n\n\n\n\n\n\n\n5.2.2 Findings\nEmissions have declined steadily over several years. Transport and domestic sectors dominate. The region is currently not on track to meet the 2030 net zero target, indicating a need for accelerated action in key sectors. Demand reduction for personal car use and the introduction of low - carbon heating for homes remain key priorities for the region.",
     "crumbs": [
       "Green Jobs and Growth",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
     ]
   },
   {
-    "objectID": "chapters/05-environment/index.html#indicator-2-renewable-energy",
-    "href": "chapters/05-environment/index.html#indicator-2-renewable-energy",
+    "objectID": "chapters/05-environment/index.html#renewable-energy",
+    "href": "chapters/05-environment/index.html#renewable-energy",
     "title": "5  Green Jobs and Growth",
-    "section": "5.3 Indicator 2: Renewable Energy",
-    "text": "5.3 Indicator 2: Renewable Energy\n\n\nRI_5A1_renewable summary\ncollate_fact() |&gt;\n  build_reporting_view() |&gt; \nformat_indicator_summary(\n  \"RI_5A1_renewable_capacity_km2\",\n  title = \"Renewable Electricity Installed Capacity\",\n  subtitle = \"Installed capacity per square Km\",\n  units = \"MW/km2\"\n)\n\n\n\n\n\n\n\n\n\n\n\n\nRenewable Electricity Installed Capacity\n\n\nInstalled capacity per square Km\n\n\n\n\nLatest value\n0.4 MW/km2 (2024-12-31)\n\n\nPrevious value\n0.4 MW/km2 (2023-12-31)\n\n\nChange vs previous\n+4.8%\n\n\nFirst value\n0.2 MW/km2 (2015-12-31)\n\n\nChange since first\n+110.6%\n\n\nObservations\n10\n\n\nTrend\n\n       \n\n\n\nLast updated\n2026-04-09\n\n\n\n\n\n\n\n\n5.3.1 Overview\nPotential for renewable energy capacity is strongly influenced by land availability and price, hence this indicator is expressed in terms of Megawatts per square Kilometre to enable future comparison with other regions.\n\n\nRI_5A1_renewable plot bar chart\nRI_5A1_renewable_plot\n\n\nError:\n! object 'RI_5A1_renewable_plot' not found\n\n\n\n\n5.3.2 Findings\nInstalled capacity has climbed steadily over the last 10 years, reflecting central government policy and the region’s ambitions for Net Zero. The National Energy Systems Operator (NESO) is currently developing regional energy strategic plans which may drive further growth in installed capacity.",
+    "section": "5.3 Renewable Energy",
+    "text": "5.3 Renewable Energy\n\n\nRI_5A1_renewable summary\ncollate_fact() |&gt;\n  build_reporting_view() |&gt; \nformat_indicator_summary(\n  \"RI_5A1_renewable_capacity_km2\",\n  title = \"Renewable Electricity Installed Capacity\",\n  subtitle = \"Installed capacity per square Km\",\n  units = \"MW/km2\"\n)\n\n\n\n\n\n\n\n\n\n\n\n\nRenewable Electricity Installed Capacity\n\n\nInstalled capacity per square Km\n\n\n\n\nLatest value\n0.4 MW/km2 (2024-12-31)\n\n\nPrevious value\n0.4 MW/km2 (2023-12-31)\n\n\nChange vs previous\n+4.8%\n\n\nFirst value\n0.2 MW/km2 (2015-12-31)\n\n\nChange since first\n+110.6%\n\n\nObservations\n10\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-10\n\n\n\n\n\n\n\n\n5.3.1 Overview\nPotential for renewable energy capacity is strongly influenced by land availability and price, hence this indicator is expressed in terms of Megawatts per square Kilometre to enable future comparison with other regions.\n\n\nRI_5A1_renewable plot bar chart\nRI_5A1_renewable_plot\n\n\n\n\n\n\n\n\n\n\n\n5.3.2 Findings\nInstalled capacity has climbed steadily over the last 10 years, reflecting central government policy and the region’s ambitions for Net Zero. The National Energy Systems Operator (NESO) is currently developing regional energy strategic plans which may drive further growth in installed capacity.",
     "crumbs": [
       "Green Jobs and Growth",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
     ]
   },
   {
-    "objectID": "chapters/05-environment/index.html#indicator-3-domestic-renewable-energy",
-    "href": "chapters/05-environment/index.html#indicator-3-domestic-renewable-energy",
+    "objectID": "chapters/05-environment/index.html#domestic-renewable-energy",
+    "href": "chapters/05-environment/index.html#domestic-renewable-energy",
     "title": "5  Green Jobs and Growth",
-    "section": "5.4 Indicator 3: Domestic Renewable Energy",
-    "text": "5.4 Indicator 3: Domestic Renewable Energy\n\n\nRI_5A2_domestic_renewable summary\ncollate_fact() |&gt;\n  build_reporting_view() |&gt; \nformat_indicator_summary(\n  \"RI_5A2_domestic_renewable\",\n  title = \"Domestic Renewable Energy\",\n  subtitle = \"Photovoltaic sites\",\n  units = \"Sites per household\"\n)\n\n\n\n\n\n\n\n\n\n\n\n\nDomestic Renewable Energy\n\n\nPhotovoltaic sites\n\n\n\n\nLatest value\n0.1 Sites per household (2024-12-31)\n\n\nPrevious value\n0.1 Sites per household (2023-12-31)\n\n\nChange vs previous\n+13.1%\n\n\nFirst value\n0.0 Sites per household (2015-12-31)\n\n\nChange since first\n+112.0%\n\n\nObservations\n10\n\n\nTrend\n\n       \n\n\n\nLast updated\n2026-04-09\n\n\n\n\n\n\n\n\n5.4.1 Overview\nSolar photovoltaic (PV) installations are a key aspect of energy security and net zero. This indicator tracks installations per household in the region.\n\n\nRI_5A2_domestic_renewable plot bar chart\nRI_5A2_domestic_renewable_plot\n\n\nError:\n! object 'RI_5A2_domestic_renewable_plot' not found\n\n\n\n\n5.4.2 Findings\nInstallations of PV panels have increased steadily over the last 10 years.",
+    "section": "5.4 Domestic Renewable Energy",
+    "text": "5.4 Domestic Renewable Energy\n\n\nRI_5A2_domestic_renewable summary\ncollate_fact() |&gt;\n  build_reporting_view() |&gt; \nformat_indicator_summary(\n  \"RI_5A2_domestic_renewable\",\n  title = \"Domestic Renewable Energy\",\n  subtitle = \"Photovoltaic sites\",\n  units = \"Sites per household\"\n)\n\n\n\n\n\n\n\n\n\n\n\n\nDomestic Renewable Energy\n\n\nPhotovoltaic sites\n\n\n\n\nLatest value\n0.1 Sites per household (2024-12-31)\n\n\nPrevious value\n0.1 Sites per household (2023-12-31)\n\n\nChange vs previous\n+13.1%\n\n\nFirst value\n0.0 Sites per household (2015-12-31)\n\n\nChange since first\n+112.0%\n\n\nObservations\n10\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-10\n\n\n\n\n\n\n\n\n5.4.1 Overview\nSolar photovoltaic (PV) installations are a key aspect of energy security and net zero. This indicator tracks installations per household in the region.\n\n\nRI_5A2_domestic_renewable plot bar chart\nRI_5A2_domestic_renewable_plot\n\n\n\n\n\n\n\n\n\n\n\n5.4.2 Findings\nInstallations of PV panels have increased steadily over the last 10 years.",
     "crumbs": [
       "Green Jobs and Growth",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
     ]
   },
   {
-    "objectID": "chapters/05-environment/index.html#indicator-4-non-domestic-energy-performance-certificates-epc-a-or-a",
-    "href": "chapters/05-environment/index.html#indicator-4-non-domestic-energy-performance-certificates-epc-a-or-a",
+    "objectID": "chapters/05-environment/index.html#non-domestic-energy-performance",
+    "href": "chapters/05-environment/index.html#non-domestic-energy-performance",
     "title": "5  Green Jobs and Growth",
-    "section": "5.5 Indicator 4: Non-Domestic Energy Performance Certificates (EPC) A or A+",
-    "text": "5.5 Indicator 4: Non-Domestic Energy Performance Certificates (EPC) A or A+\n\n\nsummary\ncollate_fact() |&gt;\n  build_reporting_view() |&gt; \nformat_indicator_summary(\n  \"RI_5B1_nondom_epc_a\",\n  title = \"Non - Domestic Energy Ratings\",\n  subtitle = \"Proportion of properties rated A or A+\",\n  units = \"%\"\n)\n\n\n\n\n\n\n\n\n\n\n\n\nNon - Domestic Energy Ratings\n\n\nProportion of properties rated A or A+\n\n\n\n\nLatest value\n4.6% (2026-02-28)\n\n\nPrevious value\n4.6% (2026-01-31)\n\n\nChange vs previous\n+0.0 ppts\n\n\nFirst value\n2.1% (2017-03-31)\n\n\nChange since first\n+2.5 ppts\n\n\nObservations\n108\n\n\nTrend\n\n       \n\n\n\nLast updated\n2026-04-10\n\n\n\n\n\n\n\n\n5.5.1 Overview\nThis indicator measures the energy efficiency of non - domestic property by expressing the proportion of properties with an energy rating of A or A+, in other words the best performing properties.\n\n\nRI_5B1_nondom_epc_a monthly cumulative plot\nRI_5B1_nondom_epc_a_plot\n\n\n\n\n\n\n\n\n\n\n\n5.5.2 Findings\nThe improvement in the proportion of properties meeting an A or A+ standard is slow but steady. WECA’s Low Carbon Business Support team help businesses improve their energy efficiency with assessments, advice and grants.",
+    "section": "5.5 Non-Domestic Energy Performance",
+    "text": "5.5 Non-Domestic Energy Performance\n\n\nsummary\ncollate_fact() |&gt;\n  build_reporting_view() |&gt; \nformat_indicator_summary(\n  \"RI_5B1_nondom_epc_a\",\n  title = \"Non - Domestic Energy Ratings\",\n  subtitle = \"Proportion of properties rated A or A+\",\n  units = \"%\"\n)\n\n\n\n\n\n\n\n\n\n\n\n\nNon - Domestic Energy Ratings\n\n\nProportion of properties rated A or A+\n\n\n\n\nLatest value\n4.6% (2026-02-28)\n\n\nPrevious value\n4.6% (2026-01-31)\n\n\nChange vs previous\n+0.0 ppts\n\n\nFirst value\n2.1% (2017-03-31)\n\n\nChange since first\n+2.5 ppts\n\n\nObservations\n108\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-10\n\n\n\n\n\n\n\n\n5.5.1 Overview\nThis indicator measures the energy efficiency of non - domestic property by expressing the proportion of properties which have an energy rating of A or A+, in other words the best performing properties.\n\n\nRI_5B1_nondom_epc_a monthly cumulative plot\nRI_5B1_nondom_epc_a_plot\n\n\n\n\n\n\n\n\n\n\n\n5.5.2 Findings\nThe improvement in the proportion of properties meeting an A or A+ standard is slow but steady. WECA’s Low Carbon Business Support team help businesses improve their energy efficiency with assessments, advice and grants.",
+    "crumbs": [
+      "Green Jobs and Growth",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-environment/index.html#heat-associated-mortality",
+    "href": "chapters/05-environment/index.html#heat-associated-mortality",
+    "title": "5  Green Jobs and Growth",
+    "section": "5.6 Heat Associated Mortality",
+    "text": "5.6 Heat Associated Mortality\n\n\nsummary\ncollate_fact() |&gt;\n  build_reporting_view() |&gt; \nformat_indicator_summary(\n  \"RI_5E1_heat_stress_deaths\",\n  title = \"Heat Associated Mortality\",\n  subtitle = \"Deaths per million population\",\n  units = \"deaths per million\"\n)\n\n\n\n\n\n\n\n\n\n\n\n\nHeat Associated Mortality\n\n\nDeaths per million population\n\n\n\n\nLatest value\n35.0 deaths per million (2025-12-31)\n\n\nPrevious value\n33.0 deaths per million (2024-12-31)\n\n\nChange vs previous\n+6.1%\n\n\nFirst value\n33.0 deaths per million (2024-12-31)\n\n\nChange since first\n+6.1%\n\n\nObservations\n2\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-10\n\n\n\n\n\n\n\n\n5.6.1 Overview\nThis indicator tracks the number of heat associated deaths per million population in the Avon Local Resilience Forum area, which largely correlates with the West of England. It provides insight into the region’s vulnerability to heat stress through the lens of public health. Data for the region are only available since 2024.\n\n\nRI_5E1_heat_stress_deaths plot\nRI_5E1_heat_stress_deaths_plot\n\n\n\n\n\n\n\n\n\n\n\n5.6.2 Findings\nA small increase in deaths per million for the region is likely to reflect the ongoing increase in ambient temperature arising from a warming climate. WECA has produced a [Climate Adaptation Report] (https://www.westofengland-ca.gov.uk/what-we-do/environment/climate-impact/) to help the region prepare for the impacts of a warming climate.",
     "crumbs": [
       "Green Jobs and Growth",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
@@ -339,8 +350,8 @@
     "objectID": "chapters/05-environment/index.html#summary",
     "href": "chapters/05-environment/index.html#summary",
     "title": "5  Green Jobs and Growth",
-    "section": "5.6 Summary",
-    "text": "5.6 Summary\nSummary of key findings across all green economy indicators. What is the overall picture for green jobs and growth?",
+    "section": "5.7 Summary",
+    "text": "5.7 Summary\nSummary of key findings across all green economy indicators. What is the overall picture for green jobs and growth?",
     "crumbs": [
       "Green Jobs and Growth",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
