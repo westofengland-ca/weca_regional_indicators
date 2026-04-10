@@ -3,11 +3,13 @@
 # Turn one row of the reporting view (see `build_reporting_view()` in
 # `collate_fact.R`) into a compact two-column GT table suitable for dropping
 # into a chapter. The right-hand column hosts an inline sparkline on the
-# "Trend" row, drawn as an SVG string via svglite and injected with
-# `gt::text_transform()`. Using our own SVG (rather than
-# `gtExtras::gt_plt_sparkline()`) keeps the table a clean two-column layout
-# and avoids the list-column/cols_merge interaction that previously left
-# raw list contents in the rendered output.
+# "Trend" row, drawn as a hand-built SVG string and injected with
+# `gt::text_transform()`. Generating SVG directly (rather than via a graphics
+# device such as svglite) ensures `fill="none"` is explicit on the polyline —
+# device-rendered SVG omits this attribute and browsers fill the path black.
+# Using our own SVG (rather than `gtExtras::gt_plt_sparkline()`) also keeps
+# the table a clean two-column layout and avoids the list-column/cols_merge
+# interaction that previously left raw list contents in the rendered output.
 #
 # Usage:
 #
@@ -225,42 +227,54 @@ format_indicator_summary <- function(reporting_view,
 
 #' Render a minimal sparkline as an inline SVG string
 #'
-#' Internal helper. Uses `svglite` so the output is a plain string suitable
-#' for injection into gt cells via `text_transform()`. The XML prologue and
-#' doctype are stripped because inline SVG doesn't want them.
+#' Internal helper. Generates SVG markup directly (no graphics device) so the
+#' output is a portable string suitable for injection into gt cells via
+#' `text_transform()`. Using direct SVG construction guarantees `fill="none"`
+#' on the polyline — device-rendered SVG (svglite) omits this attribute and
+#' browsers then fill the path black by default.
 #'
 #' @param vec Numeric vector (oldest to newest).
-#' @param width_in,height_in SVG dimensions in inches.
+#' @param width,height SVG viewport dimensions in pixels.
 #' @return A single character string containing `<svg>...</svg>`.
 #' @keywords internal
-.make_sparkline_svg <- function(vec, width_in = 1.6, height_in = 0.35) {
-  if (!requireNamespace("svglite", quietly = TRUE)) {
-    stop("Package 'svglite' is required to render sparklines. ",
-         "Install with renv::install('svglite').", call. = FALSE)
+.make_sparkline_svg <- function(vec, width = 150, height = 30) {
+  n <- length(vec)
+
+  # Single-point edge case: just draw the endpoint dot.
+  if (n < 2L) {
+    return(paste0(
+      '<svg xmlns="http://www.w3.org/2000/svg" width="', width,
+      '" height="', height, '">',
+      '<circle cx="', width / 2, '" cy="', height / 2,
+      '" r="2.5" fill="#c00000"/>',
+      '</svg>'
+    ))
   }
 
-  tmp <- tempfile(fileext = ".svg")
-  on.exit(unlink(tmp), add = TRUE)
+  y_rng <- range(vec, na.rm = TRUE)
+  # Avoid degenerate range (all values identical).
+  if (diff(y_rng) == 0) y_rng <- y_rng + c(-1, 1)
 
-  svglite::svglite(tmp, width = width_in, height = height_in, bg = "transparent")
-  op <- graphics::par(mar = c(0.1, 0.1, 0.1, 0.1), bg = NA)
-  graphics::plot(
-    seq_along(vec), vec,
-    type = "l",
-    axes = FALSE, xlab = "", ylab = "",
-    col  = "#1f4e79",
-    lwd  = 1.5
+  margin  <- 3
+  plot_w  <- width  - 2 * margin
+  plot_h  <- height - 2 * margin
+
+  xs <- margin + (seq_len(n) - 1L) / (n - 1L) * plot_w
+  # SVG y-axis is top-down, so invert the data direction.
+  ys <- margin + (1 - (vec - y_rng[1]) / diff(y_rng)) * plot_h
+
+  pts <- paste(round(xs, 1), round(ys, 1), sep = ",", collapse = " ")
+
+  paste0(
+    '<svg xmlns="http://www.w3.org/2000/svg" width="', width,
+    '" height="', height, '">',
+    '<polyline points="', pts,
+    '" fill="none" stroke="#1f4e79" stroke-width="1.5"',
+    ' stroke-linejoin="round" stroke-linecap="round"/>',
+    '<circle cx="', round(xs[n], 1), '" cy="', round(ys[n], 1),
+    '" r="2.5" fill="#c00000"/>',
+    '</svg>'
   )
-  n <- length(vec)
-  graphics::points(n, vec[n], pch = 19, cex = 0.7, col = "#c00000")
-  graphics::par(op)
-  grDevices::dev.off()
-
-  svg <- paste(readLines(tmp, warn = FALSE), collapse = "")
-  # Strip XML prologue / doctype so the SVG can sit inside a table cell.
-  svg <- sub("^<\\?xml[^>]*\\?>\\s*",  "", svg)
-  svg <- sub("^<!DOCTYPE[^>]*>\\s*",   "", svg)
-  svg
 }
 
 # Lightweight null-coalesce so we don't pull in rlang just for this.

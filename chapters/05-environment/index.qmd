@@ -20,6 +20,7 @@ This chapter tracks indicators related to green economy and environmental sustai
 #| message: false
 #| warning: false
 #| echo: false
+#| include: false
 
 # Load required packages
 library(tidyverse)
@@ -34,7 +35,7 @@ source(here::here("scripts", "R", "05-environment","RI_5B1_nondom_epc_a.R"))
 
 ---
 
-## Indicator 1: Greenhouse Gas Emissions
+## Greenhouse Gas Emissions
 
 ```{r}
 #| label: RI_5_ghg_emissions_gt
@@ -68,7 +69,7 @@ Demand reduction for personal car use and the introduction of low - carbon heati
 
 ---
 
-## Indicator 2: Renewable Energy
+## Renewable Energy
 
 ```{r}
 #| label: RI_5A1_renewable_gt
@@ -103,7 +104,7 @@ Installed capacity has climbed steadily over the last 10 years, reflecting centr
 
 ---
 
-## Indicator 3: Domestic Renewable Energy
+## Domestic Renewable Energy
 
 ```{r}
 #| label: RI_5A2_domestic_renewable_gt
@@ -138,7 +139,7 @@ Installations of PV panels have increased steadily over the last 10 years.
 
 ---
 
-## Indicator 4: Non-Domestic Energy Performance Certificates (EPC) A or A+
+## Non-Domestic Energy Performance
 
 ```{r}
 #| label: RI_5B1_nondom_epc_a_gt
@@ -157,12 +158,13 @@ format_indicator_summary(
 
 ### Overview
 
-This indicator measures the energy efficiency of non - domestic property by expressing the proportion of properties with an energy rating of A or A+, in other words the best performing properties.
+This indicator measures the energy efficiency of non - domestic property by expressing the proportion of properties which have an energy rating of A or A+, in other words the best performing properties.
 
 ```{r}
 #| label: RI_5B1_nondom_epc_a_plot
 #| eval: true
 #| code-summary: "RI_5B1_nondom_epc_a monthly cumulative plot"
+#| 
 RI_5B1_nondom_epc_a_plot
 
 ```
