@@ -53,6 +53,7 @@ format:
     embed-resources: false # Keep resources separate for better performance
     fig-responsive: true   # Responsive figures for different screen sizes
     page-layout: full      # Use full page width
+    link-external-newwindow: true # Open external links in a new tab
   # pdf:
   #   documentclass: report
   #   papersize: a4

@@ -13,9 +13,6 @@
 #     theme_weca() +
 #     labs(title = "My Indicator")
 
-# Establish project root anchor
-here::i_am("scripts/R/theme_weca.R")
-
 library(ggplot2)
 
 # Register fonts for Windows graphics device

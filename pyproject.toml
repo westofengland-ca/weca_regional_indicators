@@ -3,7 +3,7 @@ name = "weca-indicators"
 version = "0.1.0"
 description = "West of England Regional Priorities - Indicator Analysis"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.13"
 dependencies = [
     # Core data analysis
     "pandas>=2.0",
@@ -14,23 +14,16 @@ dependencies = [
     "plotly>=5.14",
     "seaborn>=0.12",
     # Data I/O
-    "openpyxl>=3.1", # Excel files
-    "xlrd>=2.0", # Legacy Excel support
-    "requests>=2.31", # HTTP requests
+    "openpyxl>=3.1",   # Excel files
+    "xlrd>=2.0",       # Legacy Excel support
+    "requests>=2.31",  # HTTP requests
     # Jupyter integration (for Quarto)
     "ipykernel>=6.25",
     "jupyter>=1.0",
     "nbformat>=5.9",
     # Utilities
-    "python-dotenv>=1.0", # Environment variables
-    "pyzmq>=27.1.0", # communication with jupyter \ positron
-]
-
-[project.optional-dependencies]
-dev = [
-    "pytest>=7.4",
-    "black>=23.7",
-    "ruff>=0.0.285",
+    "python-dotenv>=1.0",  # Environment variables
+    "pyzmq>=27.1.0",       # Communication with Jupyter/Positron
 ]
 
 [build-system]
@@ -42,24 +35,22 @@ packages = []
 
 [tool.uv]
 package = false
-dev-dependencies = [
-    "pytest>=7.4",
-    "black>=23.7",
-    "ruff>=0.0.285",
-]
 
 [tool.black]
 line-length = 88
-target-version = ['py310']
+target-version = ["py313"]
 include = '\.pyi?$'
 
 [tool.ruff]
 line-length = 88
-target-version = "py310"
+target-version = "py313"
+
+[tool.ruff.lint]
 select = [
     "E",  # pycodestyle errors
     "F",  # pyflakes
     "I",  # isort
+    "W",  # pycodestyle warnings
 ]
 ignore = [
     "E501",  # line too long (handled by black)

@@ -13,6 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Scan for secrets
+        run: bash scripts/hooks/scan_secrets.sh .
+
       - name: Install system dependencies
         run: |
           sudo apt-get update -y
@@ -28,9 +31,27 @@ jobs:
 
       - uses: r-lib/actions/setup-r@v2
         with:
+          r-version: "4.5"
           use-public-rspm: false
 
       - uses: r-lib/actions/setup-renv@v2
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          version: "latest"
+
+      - name: Set up Python 3.13
+        run: uv python install 3.13
+
+      - name: Install Python dependencies
+        run: uv sync
+
+      - name: Register Python kernel
+        run: uv run python -m ipykernel install --user --name python3
+
+      - name: Lint Python
+        run: uv run ruff check . && uv run black --check .
 
       - uses: quarto-dev/quarto-actions/setup@v2
         with:

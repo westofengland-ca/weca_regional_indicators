@@ -1,0 +1,47 @@
+# Chapter 04: Future-Ready Skills
+
+**Lead analyst:** MJ  
+**Priority:** Empowering residents with future-ready skills
+
+---
+
+## Indicators
+
+| ID | Name | Status | Data source | Refresh |
+|----|------|--------|-------------|---------|
+| RI_4A1 | [Indicator name] | Planned | [Source] | [Annual/Quarterly] |
+
+Add a row per indicator as they are developed.
+
+---
+
+## Data Sources
+
+| Source | URL / Location | Licence | Notes |
+|--------|----------------|---------|-------|
+| [Source name] | [URL or internal path] | [OGL / Proprietary] | [Any caveats] |
+
+---
+
+## Known Gaps and Caveats
+
+- [ ] No indicators implemented yet
+- [ ] [Add known data gaps or methodological caveats here]
+
+---
+
+## Technical Dependencies
+
+- R packages beyond `tidyverse`: none beyond `_common.R`
+- Python: none
+- External services: none
+
+---
+
+## Refresh Process
+
+1. Download updated data from [source]
+2. Save to `data/raw/` (not committed)
+3. Run processing script: `scripts/R/04-skills/[script].R`
+4. Output lands in `data/fact/` (committed)
+5. Re-render chapter: `quarto render chapters/04-skills/index.qmd`

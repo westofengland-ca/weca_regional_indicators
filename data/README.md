@@ -206,7 +206,7 @@ import pandas as pd
 # Define project root
 project_root = Path(__file__).parent.parent  # Adjust based on script location
 # Or use a fixed reference point
-project_root = Path("C:/Users/steve.crawshaw/projects/weca_regional_indicators")
+project_root = Path("/path/to/weca_regional_indicators")
 
 # Load raw data
 data_path = project_root / "data" / "raw" / "bus_ridership_DfT_2024-01-15.csv"

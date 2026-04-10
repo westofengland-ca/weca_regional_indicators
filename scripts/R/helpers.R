@@ -6,9 +6,6 @@
 # Example:
 #   source(here::here("scripts", "R", "helpers.R"))
 
-# Establish project root anchor
-here::i_am("scripts/R/helpers.R")
-
 library(readr)
 
 #' Load CSV File Safely

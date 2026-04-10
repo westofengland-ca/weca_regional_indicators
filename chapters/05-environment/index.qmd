@@ -16,23 +16,22 @@ This chapter tracks indicators related to green economy and environmental sustai
 ```{r}
 #| label: setup
 #| code-summary: "Load required packages and source files"
-#| eval: true
-#| message: false
-#| warning: false
-#| echo: false
 #| include: false
 
 # Load required packages
 library(tidyverse)
 
-# Source the WECA theme and helper functions
+# Source shared helpers (theme, helpers, fact_helpers, collate_fact)
 source(here::here("scripts", "R", "_common.R"))
+# load_pins.R is specific to this chapter's data retrieval pattern
 source(here::here("scripts", "R", "load_pins.R"))
-source(here::here("scripts", "R", "05-environment","RI_5_ghg_emissions.R"))
-source(here::here("scripts", "R", "05-environment","RI_5A1_renewable.R"))
-source(here::here("scripts", "R", "05-environment","RI_5B1_nondom_epc_a.R"))
-source(here::here("scripts", "R", "05-environment","RI_5E1_heat_stress_deaths.R"))
-
+source(here::here("scripts", "R", "05-environment", "RI_5_ghg_emissions.R"))
+source(here::here("scripts", "R", "05-environment", "RI_5A1_renewable.R"))
+source(here::here("scripts", "R", "05-environment", "RI_5B1_nondom_epc_a.R"))
+source(here::here("scripts", "R", "05-environment", "RI_5E1_heat_stress_deaths.R"))
+source(here::here("scripts", "R", "05-environment", "RI_5E2_flood_warning_index.R"))
+indicator_fact_tbl <- collate_fact() |>
+  build_reporting_view()
 ```
 
 ---
@@ -43,8 +42,7 @@ source(here::here("scripts", "R", "05-environment","RI_5E1_heat_stress_deaths.R"
 #| label: RI_5_ghg_emissions_gt
 #| eval: true
 #| code-summary: "RI_5_ghg_emissions KPI summary"
-collate_fact() |>
-  build_reporting_view() |> 
+indicator_fact_tbl |> 
 format_indicator_summary(
   "RI_5_ghg_emissions",
   title = "Greenhouse Gas Emissions",
@@ -78,8 +76,7 @@ Demand reduction for personal car use and the introduction of low - carbon heati
 #| eval: true
 #| code-summary: "RI_5A1_renewable summary"
 
-collate_fact() |>
-  build_reporting_view() |> 
+indicator_fact_tbl |> 
 format_indicator_summary(
   "RI_5A1_renewable_capacity_km2",
   title = "Renewable Electricity Installed Capacity",
@@ -113,8 +110,7 @@ Installed capacity has climbed steadily over the last 10 years, reflecting centr
 #| eval: true
 #| code-summary: "RI_5A2_domestic_renewable summary"
 
-collate_fact() |>
-  build_reporting_view() |> 
+indicator_fact_tbl |> 
 format_indicator_summary(
   "RI_5A2_domestic_renewable",
   title = "Domestic Renewable Energy",
@@ -147,8 +143,8 @@ Installations of PV panels have increased steadily over the last 10 years.
 #| label: RI_5B1_nondom_epc_a_gt
 #| eval: true
 #| code-summary: "summary"
-collate_fact() |>
-  build_reporting_view() |> 
+
+indicator_fact_tbl |> 
 format_indicator_summary(
   "RI_5B1_nondom_epc_a",
   title = "Non - Domestic Energy Ratings",
@@ -185,8 +181,7 @@ The improvement in the proportion of properties meeting an A or A+ standard is s
 #| eval: true
 #| code-summary: "summary"
 
-collate_fact() |>
-  build_reporting_view() |> 
+indicator_fact_tbl |> 
 format_indicator_summary(
   "RI_5E1_heat_stress_deaths",
   title = "Heat Associated Mortality",
@@ -200,7 +195,7 @@ format_indicator_summary(
 This indicator tracks the number of heat associated deaths per million population in the Avon Local Resilience Forum area, which largely correlates with the West of England. It provides insight into the region's vulnerability to heat stress through the lens of public health. Data for the region are only available since 2024.
 
 ```{r}
-#| label: _plot
+#| label: RI_5E1_heat_stress_deaths_plot
 #| eval: true
 #| code-summary: "RI_5E1_heat_stress_deaths plot"
 #| 
@@ -209,34 +204,45 @@ RI_5E1_heat_stress_deaths_plot
 ```
 
 ### Findings
-A small increase in deaths per million for the region is likely to reflect the ongoing increase in ambient temperature arising from a warming climate. WECA has produced a [Climate Adaptation Report] (https://www.westofengland-ca.gov.uk/what-we-do/environment/climate-impact/) to help the region prepare for the impacts of a warming climate.
+A small increase in deaths per million for the region is likely to reflect the ongoing increase in ambient temperature arising from a warming climate. WECA has produced a [Climate Adaptation Report](https://www.westofengland-ca.gov.uk/what-we-do/environment/climate-impact/) to help the region prepare for the impacts of a warming climate.
 
+---
 
+## Flood Warnings Intensity
 
-<!-- --- -->
+```{r}
+#| label: RI_5E2_flood_warning_index_gt
+#| eval: true
+#| code-summary: "summary"
 
-<!-- ## Indicator -->
+indicator_fact_tbl |> 
+format_indicator_summary(
+  "RI_5E2_flood_warning_index",
+  title = "Flood Warnings Intensity Index",
+  subtitle = "Relative to 2020 baseline",
+  units = ""
+)
 
-<!-- ```{r} -->
-<!-- #| label: _gt -->
-<!-- #| eval: true -->
-<!-- #| code-summary: "summary" -->
+```
 
-<!-- ``` -->
+### Overview
 
-<!-- ### Overview -->
+This indicator is designed to represent the risk of flooding relative to a 2020 baseline. It is a duration-weighted composite indicator tracking flood warning activity across the West of England (Bristol, Bath & North East Somerset, South Gloucestershire, North Somerset and derived from the Environment Agency's flood warnings dataset. It provides annual monitoring to support climate resilience reporting. The methodology for the indicator is described [here](https://github.com/stevecrawshaw/fwii).
 
-<!-- ```{r} -->
-<!-- #| label: _plot -->
-<!-- #| eval: true -->
-<!-- #| code-summary: " plot" -->
+```{r}
+#| label: RI_5E2_flood_warning_index_plot
+#| eval: true
+#| code-summary: "RI_5E2_flood_warning_index plot"
+#| 
+RI_5E2_flood_warning_index_plot
 
+```
 
-<!-- ``` -->
+### Findings
 
-<!-- ### Findings -->
+2024 saw the highest level of flooding relative to the 2020 baseline, but the levels of warnings subsided below the baseline in the most recent reported year. Warnings do not necessarily translate into actual floods.
 
-<!-- --- -->
+---
 
 <!-- ## Indicator -->
 
