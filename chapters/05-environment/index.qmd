@@ -29,6 +29,7 @@ source(here::here("scripts", "R", "_common.R"))
 source(here::here("scripts", "R", "load_pins.R"))
 source(here::here("scripts", "R", "05-environment","RI_5_ghg_emissions.R"))
 source(here::here("scripts", "R", "05-environment","RI_5A1_renewable.R"))
+source(here::here("scripts", "R", "05-environment","RI_5B1_nondom_epc_a.R"))
 ```
 
 ---
@@ -136,6 +137,182 @@ RI_5A2_domestic_renewable_plot
 Installations of PV panels have increased steadily over the last 10 years.
 
 ---
+
+## Indicator 4: Non-Domestic Energy Performance Certificates (EPC) A or A+
+
+```{r}
+#| label: RI_5B1_nondom_epc_a_gt
+#| eval: true
+#| code-summary: "summary"
+collate_fact() |>
+  build_reporting_view() |> 
+format_indicator_summary(
+  "RI_5B1_nondom_epc_a",
+  title = "Non - Domestic Energy Ratings",
+  subtitle = "Proportion of properties rated A or A+",
+  units = "%"
+)
+
+```
+
+### Overview
+
+This indicator measures the energy efficiency of non - domestic property by expressing the proportion of properties with an energy rating of A or A+, in other words the best performing properties.
+
+```{r}
+#| label: RI_5B1_nondom_epc_a_plot
+#| eval: true
+#| code-summary: "RI_5B1_nondom_epc_a monthly cumulative plot"
+RI_5B1_nondom_epc_a_plot
+
+```
+
+### Findings
+
+The improvement in the proportion of properties meeting an A or A+ standard is slow but steady. WECA's Low Carbon Business Support team help businesses improve their energy efficiency with assessments, advice and grants.
+
+---
+
+<!-- ## Indicator -->
+
+<!-- ```{r} -->
+<!-- #| label: _gt -->
+<!-- #| eval: true -->
+<!-- #| code-summary: "summary" -->
+
+<!-- ``` -->
+
+<!-- ### Overview -->
+
+<!-- ```{r} -->
+<!-- #| label: _plot -->
+<!-- #| eval: true -->
+<!-- #| code-summary: " plot" -->
+
+
+<!-- ``` -->
+
+<!-- ### Findings -->
+
+
+<!-- --- -->
+
+<!-- ## Indicator -->
+
+<!-- ```{r} -->
+<!-- #| label: _gt -->
+<!-- #| eval: true -->
+<!-- #| code-summary: "summary" -->
+
+<!-- ``` -->
+
+<!-- ### Overview -->
+
+<!-- ```{r} -->
+<!-- #| label: _plot -->
+<!-- #| eval: true -->
+<!-- #| code-summary: " plot" -->
+
+
+<!-- ``` -->
+
+<!-- ### Findings -->
+
+<!-- --- -->
+
+<!-- ## Indicator -->
+
+<!-- ```{r} -->
+<!-- #| label: _gt -->
+<!-- #| eval: true -->
+<!-- #| code-summary: "summary" -->
+
+<!-- ``` -->
+
+<!-- ### Overview -->
+
+<!-- ```{r} -->
+<!-- #| label: _plot -->
+<!-- #| eval: true -->
+<!-- #| code-summary: " plot" -->
+
+
+<!-- ``` -->
+
+<!-- ### Findings -->
+
+<!-- --- -->
+
+<!-- ## Indicator -->
+
+<!-- ```{r} -->
+<!-- #| label: _gt -->
+<!-- #| eval: true -->
+<!-- #| code-summary: "summary" -->
+
+<!-- ``` -->
+
+<!-- ### Overview -->
+
+<!-- ```{r} -->
+<!-- #| label: _plot -->
+<!-- #| eval: true -->
+<!-- #| code-summary: " plot" -->
+
+
+<!-- ``` -->
+
+<!-- ### Findings -->
+
+<!-- --- -->
+
+<!-- ## Indicator -->
+
+<!-- ```{r} -->
+<!-- #| label: _gt -->
+<!-- #| eval: true -->
+<!-- #| code-summary: "summary" -->
+
+<!-- ``` -->
+
+<!-- ### Overview -->
+
+<!-- ```{r} -->
+<!-- #| label: _plot -->
+<!-- #| eval: true -->
+<!-- #| code-summary: " plot" -->
+
+
+<!-- ``` -->
+
+<!-- ### Findings -->
+
+<!-- --- -->
+
+<!-- ## Indicator 4: Non-Domestic Energy Performance Certificates (EPC) A or A+ -->
+
+<!-- ```{r} -->
+<!-- #| label: _gt -->
+<!-- #| eval: true -->
+<!-- #| code-summary: "summary" -->
+
+<!-- ``` -->
+
+<!-- ### Overview -->
+
+<!-- ```{r} -->
+<!-- #| label: _plot -->
+<!-- #| eval: true -->
+<!-- #| code-summary: " plot" -->
+
+
+<!-- ``` -->
+
+<!-- ### Findings -->
+
+<!-- --- -->
+
+
 
 ## Summary
 

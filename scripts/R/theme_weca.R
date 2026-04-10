@@ -18,6 +18,14 @@ here::i_am("scripts/R/theme_weca.R")
 
 library(ggplot2)
 
+# Register fonts for Windows graphics device
+if (.Platform$OS.type == "windows") {
+  windowsFonts(
+    Arial          = windowsFont("Arial"),
+    `Trebuchet MS` = windowsFont("Trebuchet MS")
+  )
+}
+
 # WECA Colour Palette (from _brand.yml)
 # These colours align with WECA's official brand guidelines
 weca_colors <- c(

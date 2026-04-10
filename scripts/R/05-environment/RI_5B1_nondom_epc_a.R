@@ -1,5 +1,6 @@
 pacman::p_load(arrow, tidyverse, glue, janitor, here)
 source(here::here("scripts", "R", "_common.R"))
+source(here::here("scripts", "R", "theme_weca.R"))
 
 RI_5B1_nondom_epc_a_url <-
   "https://opendata.westofengland-ca.gov.uk/api/explore/v2.1/catalog/datasets/epc_non_domestic_lep_ods/exports/csv/?lang=en&select=asset_rating_band%2C+lodgement_date%2C+certificate_number&timezone=Europe%2FLondon"
@@ -10,7 +11,6 @@ RI_5B1_nondom_epc_a_path <- here::here(
   "raw",
   "RI_5B1_nondom_epc_a.csv"
 )
-
 
 f_exists <- fs::file_exists(RI_5B1_nondom_epc_a_path)
 f_modified_dttm <- fs::file_info(RI_5B1_nondom_epc_a_path)$modification_time
@@ -29,19 +29,52 @@ if ((f_exists && old_file) || !f_exists) {
   print(glue("using stored csv file from {f_modified_dttm}"))
 }
 
-max_date <- max(RI_5B1_nondom_epc_a_raw_tbl$lodgement_date)
-start_date <- max_date - (years(10))
 
-RI_5B1_nondom_epc_a_raw_tbl |>
-  arrange(lodgement_date) |>
-  mutate(is_a = if_else(asset_rating_band %in% c("A", "A+"), TRUE, FALSE)) |>
-  group_by(ym = format(lodgement_date, "%Y-%m")) |>
-  summarise(count_a = sum(is_a), cert_count = n(), .groups = "drop") |>
-  mutate(
-    prop_a = cumsum(count_a) / cumsum(cert_count),
-    period_end = ym(ym) |> rollforward(),
-    period_start = as.Date(glue("{ym}-01")),
-    ym = NULL
-  ) |>
-  filter(period_start >= start_date) |>
-  glimpse()
+max_date <- max(RI_5B1_nondom_epc_a_raw_tbl$lodgement_date)
+start_date <- max_date - (years(9))
+
+
+#' @param raw_tbl: a tibble with at least the columns specified in the function arguments: EPC data
+#' @param cat_vec: vector of EPC categories to include in the "in_cat" group
+#' @param date_col: the date column to use for ordering and grouping the data
+#' @return a tibble with monthly proportions of properties in the specified EPC categories, along with period start and end dates
+make_cumulative_prop_tbl <- function(raw_tbl, cat_vec = c("A", "A+"), date_col = lodgement_date) {
+  raw_tbl |>
+    arrange({{date_col}}) |>
+    mutate(in_cat = if_else(asset_rating_band %in% cat_vec, TRUE, FALSE)) |>
+    group_by(ym = format({{date_col}}, "%Y-%m")) |>
+    summarise(count_in_cat = sum(in_cat), cert_count = n(), .groups = "drop") |>
+    mutate(
+      period_start = as.Date(glue("{ym}-01")),
+      period_end = ym(ym) |> rollforward(),
+      value = cumsum(count_in_cat) * 100 / cumsum(cert_count),
+      ym = NULL,
+      count_in_cat = NULL,
+      cert_count = NULL
+    )
+}
+
+RI_5B1_nondom_epc_a_fact_tbl <- make_cumulative_prop_tbl(
+                              RI_5B1_nondom_epc_a_raw_tbl,
+                              cat_vec = c("A", "A+")) |>
+  filter(period_start >= start_date)
+
+RI_5B1_nondom_epc_a_plot <- RI_5B1_nondom_epc_a_fact_tbl |> 
+  ggplot(aes(x = period_end, y = value)) +
+  geom_line() +
+  labs(
+    title = "Proportion of non-domestic properties with EPC rating A or A+",
+    subtitle = "Cumulative monthly proportions",
+    x = "Date",
+    y = "%",
+    caption = "Source: MHCLG"
+  ) +
+  scale_y_continuous(labels = scales::label_percent(scale = 1),  limits = c(0, 100)) +
+  theme_weca() +
+  theme(axis.title.y = element_text(angle = 0, vjust = 0.5))
+  
+RI_5B1_nondom_epc_a_plot
+
+RI_5B1_nondom_epc_a_fact_tbl |>
+  build_fact(indicator_id = "RI_5B1_nondom_epc_a") |>
+  save_fact()

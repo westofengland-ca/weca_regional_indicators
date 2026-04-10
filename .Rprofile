@@ -27,7 +27,6 @@
 #   renv::restore()
 #
 # ============================================================================
-
 source("renv/activate.R") # UNCOMMENT AFTER RUNNING renv::init()
 
 # ============================================================================
@@ -35,7 +34,8 @@ source("renv/activate.R") # UNCOMMENT AFTER RUNNING renv::init()
 # ============================================================================
 
 # Set CRAN mirror (UK mirror for faster package downloads)
-options(repos = c(CRAN = "https://cran.rstudio.com/"))
+options(repos = c(CRAN = "https://packagemanager.posit.co/cran/latest"))
+# options(repos = c(CRAN = "https://cran.rstudio.com/"))
 
 # Increase width for better console output
 options(width = 120)
@@ -69,8 +69,9 @@ suppressPackageStartupMessages({
       # List available fonts (for debugging)
       if (requireNamespace("systemfonts", quietly = TRUE)) {
         all_fonts <- systemfonts::system_fonts()
-        weca_fonts <- all_fonts[grepl("(Open Sans|Trebuchet)",
-                                       all_fonts$family, ignore.case = TRUE), ]
+        weca_fonts <- all_fonts[
+          grepl("(Open Sans|Trebuchet)", all_fonts$family, ignore.case = TRUE),
+        ]
         if (nrow(weca_fonts) > 0) {
           cat("✓ WECA fonts detected:\n")
           for (font in unique(weca_fonts$family)) {
