@@ -11,6 +11,7 @@ execute:
   error: true       # Fail fast on errors during rendering
   warning: false
   message: false
+  echo: false
 
 book:
   title: "West of England Regional Priorities"
