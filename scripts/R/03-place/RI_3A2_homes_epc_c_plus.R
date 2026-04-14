@@ -69,7 +69,7 @@ RI_3A2_fact_tbl <- RI_3A2_in_cat_tbl |>
 RI_3A2_plot <- RI_3A2_fact_tbl |> ggplot(aes(x = period_end, y = value)) +
   geom_line() +
   labs(
-    title = "Proportion of Domestic Properties with EPC rating C or better",
+    title = "Proportion of Homes with EPC rating C or better",
     subtitle = "Cumulative monthly proportions",
     x = "Date",
     y = "%",
