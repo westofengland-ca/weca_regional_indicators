@@ -52,7 +52,7 @@ load_csv <- function(file_path, ...) {
       )
 
       message(paste0(
-        "✓ Loaded ", nrow(data), " rows and ",
+        "\u2713 Loaded ", nrow(data), " rows and ",
         ncol(data), " columns from ", basename(file_path)
       ))
 
@@ -82,7 +82,7 @@ load_csv <- function(file_path, ...) {
 #' @examples
 #' format_number(1234567)                    # "1,234,567"
 #' format_number(0.1234, type = "percent")   # "12.3%"
-#' format_number(1234.56, type = "currency") # "£1,234.56"
+#' format_number(1234.56, type = "currency") # "\u00a31,234.56"
 #'
 #' @export
 format_number <- function(x, type = "number", digits = NULL, big_mark = ",") {
@@ -114,7 +114,7 @@ format_number <- function(x, type = "number", digits = NULL, big_mark = ",") {
       "%"
     ),
     "currency" = paste0(
-      "£",
+      "\u00a3",
       format(
         round(x, digits),
         big.mark = big_mark,
@@ -260,7 +260,7 @@ check_missing <- function(data, threshold = 0) {
     arrange(desc(pct_missing))
 
   if (nrow(missing_summary) == 0) {
-    message("✓ No missing data found (or none above threshold)")
+    message("\u2713 No missing data found (or none above threshold)")
   } else {
     message(paste0(
       "Missing data found in ", nrow(missing_summary), " column(s):"
