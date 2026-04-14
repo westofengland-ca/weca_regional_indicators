@@ -7,18 +7,23 @@ cat("Testing font registration...\n\n")
 
 # Test 1: Load Open Sans from Google
 cat("1. Loading Open Sans from Google Fonts...\n")
-tryCatch({
-  font_add_google("Open Sans", "Open Sans")
-  cat("   ✓ Success\n\n")
-}, error = function(e) {
-  cat("   ✗ Error:", conditionMessage(e), "\n\n")
-})
+tryCatch(
+  {
+    font_add_google("Open Sans", "Open Sans")
+    cat("   [OK] Success\n\n")
+  },
+  error = function(e) {
+    cat("   [FAIL] Error:", conditionMessage(e), "\n\n")
+  }
+)
 
 # Test 2: Try to find Trebuchet MS in Windows fonts directory
 cat("2. Looking for Trebuchet MS font files...\n")
 windows_fonts <- "C:/Windows/Fonts"
-trebuc_files <- list.files(windows_fonts, pattern = "trebuc.*\\.ttf",
-                           ignore.case = TRUE, full.names = TRUE)
+trebuc_files <- list.files(windows_fonts,
+  pattern = "trebuc.*\\.ttf",
+  ignore.case = TRUE, full.names = TRUE
+)
 cat("   Found:", length(trebuc_files), "files\n")
 if (length(trebuc_files) > 0) {
   cat("   Files:\n")
@@ -28,16 +33,20 @@ cat("\n")
 
 # Test 3: Try registering Trebuchet using full paths
 cat("3. Attempting to register Trebuchet MS...\n")
-tryCatch({
-  font_add("Trebuchet",
-           regular = file.path(windows_fonts, "trebuc.ttf"),
-           bold = file.path(windows_fonts, "trebucbd.ttf"),
-           italic = file.path(windows_fonts, "trebucit.ttf"),
-           bolditalic = file.path(windows_fonts, "trebucbi.ttf"))
-  cat("   ✓ Success\n\n")
-}, error = function(e) {
-  cat("   ✗ Error:", conditionMessage(e), "\n\n")
-})
+tryCatch(
+  {
+    font_add("Trebuchet",
+      regular = file.path(windows_fonts, "trebuc.ttf"),
+      bold = file.path(windows_fonts, "trebucbd.ttf"),
+      italic = file.path(windows_fonts, "trebucit.ttf"),
+      bolditalic = file.path(windows_fonts, "trebucbi.ttf")
+    )
+    cat("   [OK] Success\n\n")
+  },
+  error = function(e) {
+    cat("   [FAIL] Error:", conditionMessage(e), "\n\n")
+  }
+)
 
 # Test 4: List all registered fonts
 cat("4. Currently registered font families:\n")

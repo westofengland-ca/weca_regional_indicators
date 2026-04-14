@@ -3,6 +3,39 @@
 # This file is automatically loaded when R starts in this project directory.
 # It manages the R package environment using renv for reproducibility.
 
+# Activate renv FIRST so all subsequent package loads use the project library.
+# (vscode-R init below loads languageserver/httpgd which pull in rlang — if
+# renv isn't active yet, they load from the system library and pin the wrong
+# rlang namespace for the whole session.)
+source("renv/activate.R")
+
+# vscode-R session watcher: enables workspace viewer, help panel, plot viewer
+# (must be here because project .Rprofile overrides ~/.Rprofile)
+if (interactive() && Sys.getenv("RSTUDIO") == "") {
+  local({
+    # Ensure R_HOME is set so vscode-R can resolve help file paths on Windows
+    if (nchar(Sys.getenv("R_HOME")) == 0) {
+      Sys.setenv(R_HOME = R.home())
+    }
+
+    init_script <- file.path(
+      Sys.getenv("USERPROFILE"),
+      ".vscode-R", "init.R"
+    )
+    if (file.exists(init_script)) source(init_script)
+  })
+
+  # vsc options: control where panels open and what the workspace viewer shows
+  options(
+    vsc.helpPanel      = "Two",    # help opens in editor group 2
+    vsc.view           = "Two",    # View() opens in editor group 2
+    vsc.viewer         = "Two",    # htmlwidgets open in editor group 2
+    vsc.str.max.level  = 2,        # show nested list/df structure in workspace viewer
+    vsc.show_object_size = TRUE,   # show object size in workspace viewer tooltips
+    vsc.use_httpgd     = TRUE      # consistent with r.plot.useHttpgd: true in settings
+  )
+}
+
 # ============================================================================
 # RENV SETUP (Currently Commented Out)
 # ============================================================================
@@ -27,7 +60,7 @@
 #   renv::restore()
 #
 # ============================================================================
-source("renv/activate.R") # UNCOMMENT AFTER RUNNING renv::init()
+# (renv activated at top of file)
 
 # ============================================================================
 # PROJECT SETTINGS
@@ -64,7 +97,7 @@ suppressPackageStartupMessages({
     knitr::opts_chunk$set(dev = "ragg_png")
 
     if (interactive()) {
-      cat("✓ Graphics: Using ragg device with systemfonts\n")
+      cat("[OK] Graphics: Using ragg device with systemfonts\n")
 
       # List available fonts (for debugging)
       if (requireNamespace("systemfonts", quietly = TRUE)) {
@@ -73,7 +106,7 @@ suppressPackageStartupMessages({
           grepl("(Open Sans|Trebuchet)", all_fonts$family, ignore.case = TRUE),
         ]
         if (nrow(weca_fonts) > 0) {
-          cat("✓ WECA fonts detected:\n")
+          cat("[OK] WECA fonts detected:\n")
           for (font in unique(weca_fonts$family)) {
             cat("  -", font, "\n")
           }
@@ -98,7 +131,7 @@ if (interactive()) {
 
   # Check if renv is initialized
   if (!file.exists("renv/activate.R")) {
-    cat("⚠️  renv not initialized yet\n")
+    cat("[WARN] renv not initialized yet\n")
     cat("   Run: renv::init() to set up package management\n")
     cat("   Then uncomment the activation line in .Rprofile\n")
     cat("\n")
@@ -108,11 +141,11 @@ if (interactive()) {
       readLines(".Rprofile", warn = FALSE)
     ))
   ) {
-    cat("⚠️  renv is initialized but not activated\n")
+    cat("[WARN] renv is initialized but not activated\n")
     cat("   Uncomment 'source(\"renv/activate.R\")' in .Rprofile\n")
     cat("\n")
   } else {
-    cat("✓ renv active\n")
+    cat("[OK] renv active\n")
     cat("\n")
   }
 

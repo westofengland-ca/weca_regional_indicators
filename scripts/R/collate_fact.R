@@ -50,7 +50,9 @@ collate_fact <- function(dir = here::here("data", "fact")) {
       readr::read_csv(f, col_types = col_types),
       error = function(e) {
         stop("Failed to read FACT file '", basename(f), "': ",
-             conditionMessage(e), call. = FALSE)
+          conditionMessage(e),
+          call. = FALSE
+        )
       }
     )
   })
@@ -97,26 +99,28 @@ build_reporting_view <- function(fact_tbl) {
   missing_cols <- setdiff(required, names(fact_tbl))
   if (length(missing_cols) > 0L) {
     stop("fact_tbl is missing required columns: ",
-         paste(missing_cols, collapse = ", "), call. = FALSE)
+      paste(missing_cols, collapse = ", "),
+      call. = FALSE
+    )
   }
 
   fact_tbl |>
     dplyr::arrange(indicator_id, period_end) |>
     dplyr::group_by(indicator_id) |>
     dplyr::summarise(
-      n_observations       = dplyr::n(),
-      first_period_end     = dplyr::first(period_end),
-      first_value          = dplyr::first(value),
-      previous_period_end  = dplyr::nth(period_end, -2L, default = as.Date(NA)),
-      previous_value       = dplyr::nth(value,      -2L, default = NA_real_),
-      latest_period_end    = dplyr::last(period_end),
-      latest_value         = dplyr::last(value),
-      sparkline            = list(value),
-      last_updated         = max(last_updated, na.rm = TRUE),
+      n_observations = dplyr::n(),
+      first_period_end = dplyr::first(period_end),
+      first_value = dplyr::first(value),
+      previous_period_end = dplyr::nth(period_end, -2L, default = as.Date(NA)),
+      previous_value = dplyr::nth(value, -2L, default = NA_real_),
+      latest_period_end = dplyr::last(period_end),
+      latest_value = dplyr::last(value),
+      sparkline = list(value),
+      last_updated = max(last_updated, na.rm = TRUE),
       .groups = "drop"
     ) |>
     dplyr::mutate(
       pct_change             = (latest_value / previous_value - 1) * 100,
-      pct_change_since_first = (latest_value / first_value    - 1) * 100
+      pct_change_since_first = (latest_value / first_value - 1) * 100
     )
 }

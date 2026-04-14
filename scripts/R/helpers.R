@@ -22,7 +22,6 @@ library(readr)
 #' # Load from data/raw directory
 #' data <- load_csv("data/raw/indicator_data.csv")
 #'
-#'
 #' @export
 load_csv <- function(file_path, ...) {
   # Validate file exists
@@ -47,7 +46,7 @@ load_csv <- function(file_path, ...) {
     {
       data <- readr::read_csv(
         file_path,
-        show_col_types = FALSE,  # Suppress column type messages
+        show_col_types = FALSE, # Suppress column type messages
         ...
       )
 
@@ -80,8 +79,8 @@ load_csv <- function(file_path, ...) {
 #' @return Character vector of formatted numbers
 #'
 #' @examples
-#' format_number(1234567)                    # "1,234,567"
-#' format_number(0.1234, type = "percent")   # "12.3%"
+#' format_number(1234567) # "1,234,567"
+#' format_number(0.1234, type = "percent") # "12.3%"
 #' format_number(1234.56, type = "currency") # "\u00a31,234.56"
 #'
 #' @export
@@ -147,8 +146,8 @@ format_number <- function(x, type = "number", digits = NULL, big_mark = ",") {
 #' @return Numeric percentage change
 #'
 #' @examples
-#' pct_change(110, 100)              # 10 (10% increase)
-#' pct_change(90, 100, as_decimal = TRUE)  # -0.1 (10% decrease)
+#' pct_change(110, 100) # 10 (10% increase)
+#' pct_change(90, 100, as_decimal = TRUE) # -0.1 (10% decrease)
 #'
 #' @export
 pct_change <- function(new_value, old_value, as_decimal = FALSE) {
@@ -224,8 +223,8 @@ summary_table <- function(data, group_var = NULL, value_var) {
 #' @return Numeric vector of results (NA where denominator is zero)
 #'
 #' @examples
-#' safe_divide(100, 10)   # 10
-#' safe_divide(100, 0)    # NA
+#' safe_divide(100, 10) # 10
+#' safe_divide(100, 0) # NA
 #'
 #' @export
 safe_divide <- function(numerator, denominator) {
@@ -245,7 +244,7 @@ safe_divide <- function(numerator, denominator) {
 #'
 #' @examples
 #' check_missing(data)
-#' check_missing(data, threshold = 5)  # Only show columns with >5% missing
+#' check_missing(data, threshold = 5) # Only show columns with >5% missing
 #'
 #' @export
 check_missing <- function(data, threshold = 0) {

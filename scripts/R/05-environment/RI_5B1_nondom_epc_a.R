@@ -40,9 +40,9 @@ start_date <- max_date - (years(9))
 #' @return a tibble with monthly proportions of properties in the specified EPC categories, along with period start and end dates
 make_cumulative_prop_tbl <- function(raw_tbl, cat_vec = c("A", "A+"), date_col = lodgement_date) {
   raw_tbl |>
-    arrange({{date_col}}) |>
+    arrange({{ date_col }}) |>
     mutate(in_cat = if_else(asset_rating_band %in% cat_vec, TRUE, FALSE)) |>
-    group_by(ym = format({{date_col}}, "%Y-%m")) |>
+    group_by(ym = format({{ date_col }}, "%Y-%m")) |>
     summarise(count_in_cat = sum(in_cat), cert_count = n(), .groups = "drop") |>
     mutate(
       period_start = as.Date(glue("{ym}-01")),
@@ -55,11 +55,12 @@ make_cumulative_prop_tbl <- function(raw_tbl, cat_vec = c("A", "A+"), date_col =
 }
 
 RI_5B1_nondom_epc_a_fact_tbl <- make_cumulative_prop_tbl(
-                              RI_5B1_nondom_epc_a_raw_tbl,
-                              cat_vec = c("A", "A+")) |>
+  RI_5B1_nondom_epc_a_raw_tbl,
+  cat_vec = c("A", "A+")
+) |>
   filter(period_start >= start_date)
 
-RI_5B1_nondom_epc_a_plot <- RI_5B1_nondom_epc_a_fact_tbl |> 
+RI_5B1_nondom_epc_a_plot <- RI_5B1_nondom_epc_a_fact_tbl |>
   ggplot(aes(x = period_end, y = value)) +
   geom_line() +
   labs(
@@ -69,10 +70,10 @@ RI_5B1_nondom_epc_a_plot <- RI_5B1_nondom_epc_a_fact_tbl |>
     y = "%",
     caption = "Source: MHCLG"
   ) +
-  scale_y_continuous(labels = scales::label_percent(scale = 1),  limits = c(0, 100)) +
+  scale_y_continuous(labels = scales::label_percent(scale = 1), limits = c(0, 100)) +
   theme_weca() +
   theme(axis.title.y = element_text(angle = 0, vjust = 0.5))
-  
+
 RI_5B1_nondom_epc_a_plot
 
 RI_5B1_nondom_epc_a_fact_tbl |>

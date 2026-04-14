@@ -186,7 +186,7 @@ scale_fill_weca <- function(...) {
 #' @return Hex color code
 #'
 #' @examples
-#' get_weca_color("forest_green")  # Returns "#1D4F2B"
+#' get_weca_color("forest_green") # Returns "#1D4F2B"
 #'
 #' @export
 get_weca_color <- function(color_name) {

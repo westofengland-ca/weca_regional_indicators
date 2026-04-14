@@ -3,12 +3,12 @@ library(RPostgres)
 readRenviron(".env")
 
 con <- dbConnect(
-    Postgres(),
-    host = Sys.getenv("POSTGRES_HOST"),
-    port = as.integer(Sys.getenv("POSTGRES_PORT")),
-    dbname = Sys.getenv("POSTGRES_DB"),
-    user = Sys.getenv("POSTGRES_USER"),
-    password = Sys.getenv("POSTGRES_PASSWORD")
+  Postgres(),
+  host = Sys.getenv("POSTGRES_HOST"),
+  port = as.integer(Sys.getenv("POSTGRES_PORT")),
+  dbname = Sys.getenv("POSTGRES_DB"),
+  user = Sys.getenv("POSTGRES_USER"),
+  password = Sys.getenv("POSTGRES_PASSWORD")
 )
 
 # Test connection

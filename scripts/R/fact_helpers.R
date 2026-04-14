@@ -156,13 +156,21 @@ build_fact <- function(data, indicator_id) {
 
   ps <- tryCatch(
     as.Date(data$period_start),
-    error = function(e) stop("`period_start` could not be coerced to Date: ",
-                             conditionMessage(e), call. = FALSE)
+    error = function(e) {
+      stop("`period_start` could not be coerced to Date: ",
+        conditionMessage(e),
+        call. = FALSE
+      )
+    }
   )
   pe <- tryCatch(
     as.Date(data$period_end),
-    error = function(e) stop("`period_end` could not be coerced to Date: ",
-                             conditionMessage(e), call. = FALSE)
+    error = function(e) {
+      stop("`period_end` could not be coerced to Date: ",
+        conditionMessage(e),
+        call. = FALSE
+      )
+    }
   )
 
   if (any(is.na(ps)) || any(is.na(pe))) {
