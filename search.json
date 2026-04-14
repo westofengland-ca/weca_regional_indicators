@@ -186,29 +186,18 @@
     "href": "chapters/03-place/index.html#setup",
     "title": "3  Affordable and Sustainable Homes",
     "section": "3.2 Setup",
-    "text": "3.2 Setup\n\n\nLoad required packages\n# Load required packages\nlibrary(tidyverse)\n\n# Source shared helpers (theme, helpers, fact_helpers, collate_fact)\nsource(here::here(\"scripts\", \"R\", \"_common.R\"))",
+    "text": "3.2 Setup",
     "crumbs": [
       "Infrastructure & Place",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Affordable and Sustainable Homes</span>"
     ]
   },
   {
-    "objectID": "chapters/03-place/index.html#indicator-1-your-housing-indicator",
-    "href": "chapters/03-place/index.html#indicator-1-your-housing-indicator",
+    "objectID": "chapters/03-place/index.html#energy-performance-of-homes",
+    "href": "chapters/03-place/index.html#energy-performance-of-homes",
     "title": "3  Affordable and Sustainable Homes",
-    "section": "3.3 Indicator 1: [Your Housing Indicator]",
-    "text": "3.3 Indicator 1: [Your Housing Indicator]\nData source: [Specify source] Last updated: [Date] Refresh schedule: [Annual/Quarterly/Monthly]\n\n3.3.1 Overview\n[Describe what this indicator measures and why it matters for affordable and sustainable homes]\n\n\nIndicator 1 analysis\n# Your code here\n# See chapters/01-economy/index.qmd for a worked example pattern:\n# 1. Load data using load_csv()\n# 2. Process/filter/aggregate data\n# 3. Create visualization with theme_weca()\n# 4. Calculate key statistics using format_number()\n\n\n\n\n3.3.2 Findings\n[Your narrative findings here]",
-    "crumbs": [
-      "Infrastructure & Place",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Affordable and Sustainable Homes</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/03-place/index.html#indicator-2-your-housing-indicator",
-    "href": "chapters/03-place/index.html#indicator-2-your-housing-indicator",
-    "title": "3  Affordable and Sustainable Homes",
-    "section": "3.4 Indicator 2: [Your Housing Indicator]",
-    "text": "3.4 Indicator 2: [Your Housing Indicator]\nData source: Last updated: Refresh schedule:\n[Repeat structure - add up to 10 indicators total]",
+    "section": "3.3 Energy Performance of Homes",
+    "text": "3.3 Energy Performance of Homes\n\n\nRI_3A2_homes_epc_c_plus summary\nindicator_fact_tbl |&gt;\nformat_indicator_summary(\n  \"RI_3A2_homes_epc_c_plus\",\n  title = \"Energy Performance of Homes\",\n  subtitle = \"Proportion of homes with EPC rating of C or above\",\n  units = \"%\"\n)\n\n\n\n\n\n\n\n\n\n\n\n\nEnergy Performance of Homes\n\n\nProportion of homes with EPC rating of C or above\n\n\n\n\nLatest value\n52.1% (2026-03-31)\n\n\nPrevious value\n52.0% (2026-02-28)\n\n\nChange vs previous\n+0.1 ppts\n\n\nFirst value\n37.7% (2016-03-31)\n\n\nChange since first\n+14.5 ppts\n\n\nObservations\n121\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-14\n\n\n\n\n\n\n\n\n3.3.1 Overview\nThis indicator tracks the proportion of homes in the West of England with an Energy Performance Certificate (EPC) rating of C or above. A higher proportion indicates better energy efficiency and sustainability in the housing stock. Only about 70% of homes have an EPC, so this indicator is based on the subset of homes with an EPC, which may not be fully representative of all homes in the region. This dataset is from MHCLG and is based on the recently revised scheme for EPC.\n\n\nRI_3A2_homes_epc_c_plus plot\nRI_3A2_plot\n\n\n\n\n\n\n\n\n\n\n\n3.3.2 Findings\nThe proportion of homes which have an EPC with an energy rating of C or better has risen steadily over the last 10 years. EPC ratings measure energy efficiency and are not directly related to carbon emissions. WECA runs programmes to help home owners and landlords understand retrofit options and businesses to reduce their carbon emissions.",
     "crumbs": [
       "Infrastructure & Place",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Affordable and Sustainable Homes</span>"
@@ -218,8 +207,8 @@
     "objectID": "chapters/03-place/index.html#summary",
     "href": "chapters/03-place/index.html#summary",
     "title": "3  Affordable and Sustainable Homes",
-    "section": "3.5 Summary",
-    "text": "3.5 Summary\n[Summary of key findings across all housing indicators. What is the overall picture for affordable and sustainable homes?]",
+    "section": "3.4 Summary",
+    "text": "3.4 Summary\n[Summary of key findings across all housing indicators. What is the overall picture for affordable and sustainable homes?]",
     "crumbs": [
       "Infrastructure & Place",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Affordable and Sustainable Homes</span>"
