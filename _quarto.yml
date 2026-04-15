@@ -18,7 +18,7 @@ book:
   author: "Analysis Team"
   date: last-modified
 
-  # Chapters organized by priority area
+  # Chapters organised by priority area
   chapters:
     - index.qmd
     - part: "Economic Growth"
@@ -66,5 +66,6 @@ knitr:
   opts_chunk:
     message: false
     warning: false
+    dev: ragg_png
 
 jupyter: python3

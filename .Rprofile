@@ -90,11 +90,9 @@ options(show.error.locations = TRUE)
 # ragg integrates with systemfonts to automatically find system fonts
 suppressPackageStartupMessages({
   if (requireNamespace("ragg", quietly = TRUE)) {
-    # Set ragg as the default graphics device for knitr/Quarto
+    # Set ragg as the default graphics device for interactive sessions.
+    # dev: ragg_png is set globally in _quarto.yml for rendering.
     options(bitmapType = "cairo")
-
-    # Configure knitr to use ragg device
-    knitr::opts_chunk$set(dev = "ragg_png")
 
     if (interactive()) {
       cat("[OK] Graphics: Using ragg device with systemfonts\n")

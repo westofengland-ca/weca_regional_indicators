@@ -1,0 +1,9 @@
+# .Renviron - R environment variables for this project
+#
+# Loaded before .Rprofile. Sets renv config via environment variables so they
+# are available when renv/activate.R runs.
+
+# Disable the per-startup lock-file sync check.
+# Without this, renv calls renv::status() on every R start, adding ~1.4 s.
+# Run renv::status() manually when you need to check for out-of-sync packages.
+RENV_CONFIG_SYNCHRONIZED_CHECK=FALSE

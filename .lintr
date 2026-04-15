@@ -1,6 +1,6 @@
 linters: linters_with_defaults(
     line_length_linter(120L),
-    indentation_linter(indent = 4L),
+    indentation_linter(indent = 2L),
     object_name_linter(regexes = c(
         snake_case = "^[a-z][a-z0-9_]*$",
         indicator_prefixed = "^RI_[a-zA-Z0-9_]+$"
