@@ -7,7 +7,8 @@ pacman::p_load(tidyverse, janitor, glue, tidyxl, readxl, sf)
 # connect to the POSTGIS database - imports a connection object "con" into the environment
 source(here::here("scripts", "R", "db_connect.R"))
 source(here::here("scripts", "R", "_common.R"))
-# spreadsheet https://assets.publishing.service.gov.uk/media/68da76d2c487360cc70c9e9d/Renewable_electricity_by_local_authority_2014_-_2024.xlsx
+# spreadsheet
+# https://assets.publishing.service.gov.uk/media/68da76d2c487360cc70c9e9d/Renewable_electricity_by_local_authority_2014_-_2024.xlsx
 
 RI_5A1_current_spreadsheet <- "Renewable_electricity_by_local_authority_2014_-_2024.xlsx"
 period_years <- 10
