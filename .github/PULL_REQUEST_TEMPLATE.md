@@ -22,36 +22,44 @@
 **Before submitting this PR, I have completed the following from `QA_CHECKLIST.md`:**
 
 ### Code Execution
+
 - [ ] All code chunks execute without errors
 - [ ] Required packages/libraries are documented
 - [ ] File paths use relative paths from project root (R) or `pathlib.Path()` (Python)
 
 ### Data & Calculations
+
 - [ ] Data sources are documented (location, access method, coverage)
 - [ ] Calculations are correct and reproducible
 - [ ] Assumptions and caveats are clearly stated
 
 ### Visualizations
+
 - [ ] Charts are clear, properly labeled, and use WECA branding (`theme_weca()`)
 - [ ] Alt text provided for all figures
 - [ ] Color palettes are accessible (colorblind-safe)
 
 ### Narrative & Context
+
 - [ ] Executive summary provided (key findings, implications)
 - [ ] Trends are explained (not just described)
 - [ ] Limitations and data quality issues are noted
 
 ### Accessibility
+
 - [ ] Tables have proper headers and captions
 - [ ] Color is not the only way to convey information
 - [ ] Text meets contrast requirements
+- [ ] Alt text provided for charts in code chunks
 
 ### Code Quality
+
 - [ ] Code follows project style guide (see `CONTRIBUTING.md`)
 - [ ] Inline comments explain non-obvious logic
 - [ ] No hardcoded credentials or sensitive data
 
 ### Reproducibility
+
 - [ ] Chapter renders successfully with `quarto render`
 - [ ] Dependencies are documented in environment files
 - [ ] Data refresh workflow is documented
