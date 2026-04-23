@@ -61,6 +61,16 @@ Regional greenhouse gas emissions from transport, domestic, commercial, industri
 #| label: RI_5_ghg_emissions
 #| eval: true
 #| code-summary: "RI_5_ghg_emissions analysis"
+#| fig-alt: |
+#|   Stacked bar chart of greenhouse gas emissions by sector in the West of
+#|   England Combined Authority area, 2014 to 2023. The y-axis shows emissions
+#|   in kilotonnes of CO2 equivalent; the x-axis shows year. Five sectors are
+#|   colour-coded: Transport (green, largest), Domestic (red), Commercial
+#|   (dark green), Industry (purple), and Public Sector (black). Total
+#|   emissions declined from around 6,000 kt CO2e in 2014 to approximately
+#|   4,400 kt CO2e in 2023, though the region is not on track to meet its 2030
+#|   net zero target. Transport and domestic heating remain the dominant
+#|   sectors.
 RI_5_plot
 ```
 
@@ -95,6 +105,15 @@ Potential for renewable energy capacity is strongly influenced by land availabil
 #| label: RI_5A1_renewable_plot
 #| eval: true
 #| code-summary: "RI_5A1_renewable plot bar chart"
+#| fig-alt: |
+#|   Stacked bar chart of renewable electricity installed capacity in
+#|   Megawatts by local authority in the West of England, from 2015 to 2024.
+#|   The y-axis shows capacity in MW; the x-axis shows year. South
+#|   Gloucestershire (dark green) contributes the largest share, followed by
+#|   North Somerset (black), Bristol (red), and Bath and North East Somerset
+#|   (purple). Total installed capacity grew steadily from around 250 MW in
+#|   2015 to over 525 MW in 2024, reflecting the region's ambitions for net
+#|   zero.
 
 RI_5A1_renewable_plot
 ```
@@ -129,6 +148,14 @@ Solar photovoltaic (PV) installations are a key aspect of energy security and ne
 #| label: RI_5A2_domestic_renewable_plot
 #| eval: true
 #| code-summary: "RI_5A2_domestic_renewable plot bar chart"
+#| fig-alt: |
+#|   Stacked bar chart of photovoltaic (PV) site counts by local authority in
+#|   the West of England, from 2015 to 2024. The y-axis shows the number of
+#|   sites; the x-axis shows year. North Somerset (black) has the largest
+#|   share, followed by Bristol (red), Bath and North East Somerset (purple),
+#|   and South Gloucestershire (dark green). Total PV sites increased steadily
+#|   from around 16,000 in 2015 to over 36,000 in 2024, indicating consistent
+#|   growth in domestic solar adoption.
 RI_5A2_domestic_renewable_plot
 
 ```
@@ -164,7 +191,13 @@ This indicator measures the energy efficiency of non - domestic property by expr
 #| label: RI_5B1_nondom_epc_a_plot
 #| eval: true
 #| code-summary: "RI_5B1_nondom_epc_a monthly cumulative plot"
-#|
+#| fig-alt: |
+#|   Line chart showing the cumulative monthly proportion of non-domestic
+#|   properties in the West of England with an EPC energy rating of A or A+,
+#|   from 2017 to 2026. The y-axis shows percentage from 0% to 100%; the
+#|   x-axis shows date. The line rises very gradually from under 2% to
+#|   approximately 6% by 2026, showing slow but steady improvement in the
+#|   proportion of best-performing non-domestic buildings.
 RI_5B1_nondom_epc_a_plot
 
 ```
@@ -200,7 +233,13 @@ This indicator tracks the number of heat associated deaths per million populatio
 #| label: RI_5E1_heat_stress_deaths_plot
 #| eval: true
 #| code-summary: "RI_5E1_heat_stress_deaths plot"
-#|
+#| fig-alt: |
+#|   Line and point chart showing heat-associated mortality in the Avon Local
+#|   Resilience Forum area for 2024 and 2025. The y-axis shows deaths per
+#|   million population on a scale from 0 to 50; the x-axis shows year. Two
+#|   data points are shown: approximately 33 deaths per million in 2024 rising
+#|   to around 35 in 2025. The small increase is consistent with the
+#|   continuing rise in ambient temperatures from a warming climate.
 RI_5E1_heat_stress_deaths_plot
 
 ```
@@ -235,7 +274,15 @@ This indicator is designed to represent the risk of flooding relative to a 2020 
 #| label: RI_5E2_flood_warning_index_plot
 #| eval: true
 #| code-summary: "RI_5E2_flood_warning_index plot"
-#|
+#| fig-alt: |
+#|   Line and point chart of the Flood Warning Intensity Index (FWII) for the
+#|   West of England from 2020 to 2025. The y-axis shows the composite index
+#|   value on a scale from 0 to 200; the x-axis shows year. A dashed green
+#|   horizontal line marks the 2020 baseline at 100. The index fell sharply to
+#|   around 40 in 2021 and 30 in 2022, returned to the baseline in 2023,
+#|   peaked at approximately 165 in 2024, then dropped below the baseline to
+#|   around 70 in 2025. The 2024 peak represents the highest flood warning
+#|   intensity in the series.
 RI_5E2_flood_warning_index_plot
 
 ```
@@ -270,6 +317,13 @@ This indicator tracks the extent of tree canopy cover in the region, as measured
 #| label: RI_5F1_tree_canopy_plot
 #| eval: true
 #| code-summary: "RI_5F1_tree_canopy plot"
+#| fig-alt: |
+#|   Line chart showing the percentage change in National Forest Inventory
+#|   woodland extent in the West of England from the 2020 baseline, covering
+#|   2020 to 2024. The y-axis shows percentage change on a scale from -1% to
+#|   +1%; the x-axis shows year. The line remains very close to zero
+#|   throughout, ending at approximately +0.3% by 2024, indicating a small
+#|   but positive increase in woodland cover since 2020.
 
 RI_5F1_plot
 
@@ -298,12 +352,19 @@ format_indicator_summary(
 
 ### Overview
 
-This indicator tracks the ecological health of surface waters in the catchment which most closely represents the region - [Avon Bristol and Somerset North Streams](https://environment.data.gov.uk/catchment-planning/ManagementCatchment/3005/classifications). It is expressed as the proportion of surface waters in 'Good' ecological health. The data are derived from the Environment Agency's regular water quality monitoring program. Surface water classification and sources have changed over the years, so data prior to 2019 are not comparable with recent datasets.
+This indicator tracks the ecological health of surface waters in the catchment which most closely represents the region - [Avon Bristol and Somerset North Streams](https://environment.data.gov.uk/catchment-planning/ManagementCatchment/3005/classifications). It is expressed as the proportion of surface waters in 'Good' ecological health. The data are derived from the Environment Agency's regular water quality monitoring programme. Surface water classification and sources have changed over the years, so data prior to 2019 are not comparable with recent datasets.
 
 ```{r}
 #| label: RI_5F4_water_catchment_health_plot
 #| eval: true
 #| code-summary: "RI_5F4_water_catchment_health plot"
+#| fig-alt: |
+#|   Line and point chart of the proportion of surface waters in 'Good'
+#|   ecological health in the Avon Bristol and Somerset North Streams
+#|   catchment, for 2019 and 2022. The y-axis shows percentage from 0% to
+#|   100%; the x-axis shows year. Both data points sit at approximately 14–15%,
+#|   showing virtually no change and reflecting the national picture of
+#|   persistently poor surface water quality.
 
 RI_5F4_plot
 

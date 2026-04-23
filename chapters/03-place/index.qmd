@@ -57,6 +57,13 @@ This indicator tracks the proportion of homes in the West of England with an Ene
 #| label: RI_3A2_homes_epc_c_plus_plot
 #| eval: true
 #| code-summary: "RI_3A2_homes_epc_c_plus plot"
+#| fig-alt: |
+#|   Line chart showing the cumulative monthly proportion of homes in the
+#|   West of England with an EPC energy rating of C or better, from 2016 to
+#|   2026. The y-axis shows percentage from 0% to 100%; the x-axis shows
+#|   date. The line rises steadily from around 36% in 2016 to approximately
+#|   53% in 2026, showing consistent improvement but indicating that nearly
+#|   half of assessed homes still fall below a C rating.
 
 RI_3A2_plot
 
