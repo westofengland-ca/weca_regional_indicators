@@ -36,6 +36,18 @@ indicator_fact_tbl <- collate_fact() |>
   build_reporting_view()
 ```
 
+```{r}
+#| label: priority_summary
+#| eval: true
+#| code-summary: "Priority 5 indicator summary table"
+format_priority_summary(
+  indicator_fact_tbl,
+  core_dim_data_tbl,
+  priority = 5,
+  title = "Green Jobs and Growth: Indicator Summary"
+)
+```
+
 ---
 
 ## Greenhouse Gas Emissions
@@ -45,12 +57,12 @@ indicator_fact_tbl <- collate_fact() |>
 #| eval: true
 #| code-summary: "RI_5_ghg_emissions KPI summary"
 indicator_fact_tbl |>
-format_indicator_summary(
-  "RI_5_ghg_emissions",
-  title = "Greenhouse Gas Emissions",
-  subtitle = "Transport, Commercial, Industry, Public sector, Domestic",
-  units = "Kt CO2e"
-)
+  format_indicator_summary(
+    "RI_5_ghg_emissions",
+    title = "Greenhouse Gas Emissions",
+    subtitle = "Transport, Commercial, Industry, Public sector, Domestic",
+    units = "Kt CO2e"
+  )
 ```
 
 ### Overview
@@ -89,13 +101,12 @@ Demand reduction for personal car use and the introduction of low - carbon heati
 #| code-summary: "RI_5A1_renewable summary"
 
 indicator_fact_tbl |>
-format_indicator_summary(
-  "RI_5A1_renewable_capacity_km2",
-  title = "Renewable Electricity Installed Capacity",
-  subtitle = "Installed capacity per square Km",
-  units = "MW/km2"
-)
-
+  format_indicator_summary(
+    "RI_5A1_renewable_capacity_km2",
+    title = "Renewable Electricity Installed Capacity",
+    subtitle = "Installed capacity per square Km",
+    units = "MW/km2"
+  )
 ```
 ### Overview
 
@@ -132,13 +143,12 @@ Installed capacity has climbed steadily over the last 10 years, reflecting centr
 #| code-summary: "RI_5A2_domestic_renewable summary"
 
 indicator_fact_tbl |>
-format_indicator_summary(
-  "RI_5A2_domestic_renewable",
-  title = "Domestic Renewable Energy",
-  subtitle = "Photovoltaic sites",
-  units = "Sites per household"
-)
-
+  format_indicator_summary(
+    "RI_5A2_domestic_renewable",
+    title = "Domestic Renewable Energy",
+    subtitle = "Photovoltaic sites",
+    units = "Sites per household"
+  )
 ```
 ### Overview
 
@@ -157,7 +167,6 @@ Solar photovoltaic (PV) installations are a key aspect of energy security and ne
 #|   from around 16,000 in 2015 to over 36,000 in 2024, indicating consistent
 #|   growth in domestic solar adoption.
 RI_5A2_domestic_renewable_plot
-
 ```
 
 ### Findings
@@ -174,13 +183,12 @@ Installations of PV panels have increased steadily over the last 10 years.
 #| code-summary: "summary"
 
 indicator_fact_tbl |>
-format_indicator_summary(
-  "RI_5B1_nondom_epc_a",
-  title = "Non - Domestic Energy Ratings",
-  subtitle = "Proportion of properties rated A or A+",
-  units = "%"
-)
-
+  format_indicator_summary(
+    "RI_5B1_nondom_epc_a",
+    title = "Non - Domestic Energy Ratings",
+    subtitle = "Proportion of properties rated A or A+",
+    units = "%"
+  )
 ```
 
 ### Overview
@@ -199,7 +207,6 @@ This indicator measures the energy efficiency of non - domestic property by expr
 #|   approximately 6% by 2026, showing slow but steady improvement in the
 #|   proportion of best-performing non-domestic buildings.
 RI_5B1_nondom_epc_a_plot
-
 ```
 
 ### Findings
@@ -217,13 +224,12 @@ The improvement in the proportion of properties meeting an A or A+ standard is s
 #| code-summary: "summary"
 
 indicator_fact_tbl |>
-format_indicator_summary(
-  "RI_5E1_heat_stress_deaths",
-  title = "Heat Associated Mortality",
-  subtitle = "Deaths per million population",
-  units = "deaths per million"
-)
-
+  format_indicator_summary(
+    "RI_5E1_heat_stress_deaths",
+    title = "Heat Associated Mortality",
+    subtitle = "Deaths per million population",
+    units = "deaths per million"
+  )
 ```
 
 ### Overview
@@ -241,7 +247,6 @@ This indicator tracks the number of heat associated deaths per million populatio
 #|   to around 35 in 2025. The small increase is consistent with the
 #|   continuing rise in ambient temperatures from a warming climate.
 RI_5E1_heat_stress_deaths_plot
-
 ```
 
 ### Findings
@@ -257,13 +262,12 @@ A small increase in deaths per million for the region is likely to reflect the o
 #| code-summary: "summary"
 
 indicator_fact_tbl |>
-format_indicator_summary(
-  "RI_5E2_flood_warning_index",
-  title = "Flood Warnings Intensity Index",
-  subtitle = "Relative to 2020 baseline",
-  units = ""
-)
-
+  format_indicator_summary(
+    "RI_5E2_flood_warning_index",
+    title = "Flood Warnings Intensity Index",
+    subtitle = "Relative to 2020 baseline",
+    units = ""
+  )
 ```
 
 ### Overview
@@ -284,7 +288,6 @@ This indicator is designed to represent the risk of flooding relative to a 2020 
 #|   around 70 in 2025. The 2024 peak represents the highest flood warning
 #|   intensity in the series.
 RI_5E2_flood_warning_index_plot
-
 ```
 
 ### Findings
@@ -301,12 +304,12 @@ RI_5E2_flood_warning_index_plot
 #| code-summary: "summary"
 
 indicator_fact_tbl |>
-format_indicator_summary(
-  "RI_5F1_tree_canopy",
-  title = "Tree Canopy Cover",
-  subtitle = "National Forest Inventory Woodland",
-  units = "Ha")
-
+  format_indicator_summary(
+    "RI_5F1_tree_canopy",
+    title = "Tree Canopy Cover",
+    subtitle = "National Forest Inventory Woodland",
+    units = "Ha"
+  )
 ```
 
 ### Overview
@@ -326,7 +329,6 @@ This indicator tracks the extent of tree canopy cover in the region, as measured
 #|   but positive increase in woodland cover since 2020.
 
 RI_5F1_plot
-
 ```
 
 ### Findings
@@ -342,12 +344,12 @@ The extent of woodland varies very little from year to year, but the overall tre
 #| code-summary: "RI_5F4_water_catchment_health summary"
 
 indicator_fact_tbl |>
-format_indicator_summary(
-  "RI_5F4_water_catchment_health",
-  title = "Water Catchment Health",
-  subtitle = "Proportion of surface waters in 'Good' ecological health",
-  units = "%"
-)
+  format_indicator_summary(
+    "RI_5F4_water_catchment_health",
+    title = "Water Catchment Health",
+    subtitle = "Proportion of surface waters in 'Good' ecological health",
+    units = "%"
+  )
 ```
 
 ### Overview
@@ -362,12 +364,11 @@ This indicator tracks the ecological health of surface waters in the catchment w
 #|   Line and point chart of the proportion of surface waters in 'Good'
 #|   ecological health in the Avon Bristol and Somerset North Streams
 #|   catchment, for 2019 and 2022. The y-axis shows percentage from 0% to
-#|   100%; the x-axis shows year. Both data points sit at approximately 14–15%,
+#|   100%; the x-axis shows year. Both data points sit at approximately 14-15%,
 #|   showing virtually no change and reflecting the national picture of
 #|   persistently poor surface water quality.
 
 RI_5F4_plot
-
 ```
 
 ### Findings

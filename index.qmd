@@ -21,6 +21,23 @@ This report brings together key indicators across the West of England Combined A
 | 5 | Making the West of England the home for green jobs and growth | SC |
 | 6 | Lifting children and families out of poverty | MJ |
 
+```{r}
+#| label: overall_summary
+#| eval: true
+#| echo: false
+#| warning: false
+#| message: false
+library(tidyverse)
+source(here::here("scripts", "R", "_common.R"))
+rv <- build_reporting_view(collate_fact())
+format_overall_summary(
+  rv,
+  core_dim_data_tbl,
+  title = "West of England Regional Priorities",
+  subtitle = "Latest published value per indicator"
+)
+```
+
 ## How to Use This Report
 
 - Use the **sidebar navigation** to jump to any chapter
