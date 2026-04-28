@@ -4,9 +4,9 @@
     "href": "index.html",
     "title": "West of England Regional Priorities",
     "section": "",
-    "text": "West of England Regional Priorities\nKey indicators across the Combined Authority’s priority areas",
+    "text": "Key indicators across the Combined Authority’s priority areas",
     "crumbs": [
-      "West of England Regional Priorities"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Key indicators across the Combined Authority's priority areas</span>"
     ]
   },
   {
@@ -14,9 +14,9 @@
     "href": "index.html#about-this-report",
     "title": "West of England Regional Priorities",
     "section": "About This Report",
-    "text": "About This Report\nThis report brings together key indicators across the West of England Combined Authority’s regional priority areas. Each chapter presents up to 10 indicators with analysis, charts, and context to track progress against strategic goals. Indicators are published on Connect.",
+    "text": "About This Report\nThis report brings together key indicators across the West of England Combined Authority’s regional priority areas and is informed by the West of England Growth Strategy. Each chapter presents up to 10 indicators with analysis, charts, and context to track progress against strategic goals. Indicators are published on Connect.",
     "crumbs": [
-      "West of England Regional Priorities"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Key indicators across the Combined Authority's priority areas</span>"
     ]
   },
   {
@@ -24,9 +24,9 @@
     "href": "index.html#priority-areas",
     "title": "West of England Regional Priorities",
     "section": "Priority Areas",
-    "text": "Priority Areas\n\n\n\n\n\n\n\n\nChapter\nPriority Area\nLead\n\n\n\n\n1\nContributing to national economic growth\nSN\n\n\n2\nConnecting the region through better public transport\nHB\n\n\n3\nCreating and building affordable/sustainable homes\nCJ\n\n\n4\nEmpowering residents with future-ready skills\nMJ\n\n\n5\nMaking the West of England the home for green jobs and growth\nSC\n\n\n6\nLifting children and families out of poverty\nMJ\n\n\n\n\n\n\n\n\n\n\n\nWest of England Regional Priorities\n\n\nLatest published value per indicator\n\n\nIndicator\nFrom\nTo\nLatest value\nUnits\nChange\n\n\n\n\nPriority 3\n\n\nProportion of homes with an Energy Performance Certificate rating C or above\n2026-03-01\n2026-03-31\n52.1\nPercentage\n+0.2%\n\n\nPriority 5\n\n\nRenewable energy capacity per km sq\n2024-01-01\n2024-12-31\n0.4\nMW/square km\n+4.8%\n\n\nDomestically generated renewable energy\n2024-01-01\n2024-12-31\n0.1\nNumber of sites per household for photovoltaics\n+13.1%\n\n\nShare of non-domestic buildings with an Energy Performance Certificate rating of A or A+\n2026-03-01\n2026-03-31\n4.7\nPercentage\n+0.9%\n\n\nHeat stress deaths\n2025-01-01\n2025-12-31\n35.0\nDeaths per million population\n+6.1%\n\n\nFlood Warnings Intensity Indicator\n2025-01-01\n2025-12-31\n69.6\nIndex relative to 2020 baseline.\n-58.3%\n\n\nTree canopy\n2024-01-01\n2024-12-31\n10,656.6\nHectares\n+0.2%\n\n\nHealth of water catchments\n2022-01-01\n2022-12-31\n14.4\nPercentage\n+17.6%\n\n\nRegional GHG emissions from transport, domestic, commercial, industrial and public sectors\n2023-01-01\n2023-12-31\n4,409.7\nkilotonnes CO2e\n-3.7%",
+    "text": "Priority Areas\n\n\n\nChapter\nPriority Area\n\n\n\n\n1\nContributing to national economic growth\n\n\n2\nConnecting the region through better public transport\n\n\n3\nCreating and building affordable/sustainable homes\n\n\n4\nEmpowering residents with future-ready skills\n\n\n5\nMaking the West of England the home for green jobs and growth\n\n\n6\nLifting children and families out of poverty\n\n\n\n\n\n\n\n\n\n\n\nWest of England Regional Priorities\n\n\nLatest published value per indicator\n\n\nIndicator\nFrom\nTo\nLatest value\nUnits\nChange\n\n\n\n\nPriority 3\n\n\nProportion of homes with an Energy Performance Certificate rating C or above\n2026-03-01\n2026-03-31\n52.1\nPercentage\n+0.2%\n\n\nPriority 5\n\n\nRenewable energy capacity per km sq\n2024-01-01\n2024-12-31\n0.4\nMW/square km\n+4.8%\n\n\nDomestically generated renewable energy\n2024-01-01\n2024-12-31\n0.1\nNumber of sites per household for photovoltaics\n+13.1%\n\n\nShare of non-domestic buildings with an Energy Performance Certificate rating of A or A+\n2026-03-01\n2026-03-31\n4.7\nPercentage\n+0.9%\n\n\nHeat stress deaths\n2025-01-01\n2025-12-31\n35.0\nDeaths per million population\n+6.1%\n\n\nFlood Warnings Intensity Indicator\n2025-01-01\n2025-12-31\n69.6\nIndex relative to 2020 baseline.\n-58.3%\n\n\nTree canopy\n2024-01-01\n2024-12-31\n10,656.6\nHectares\n+0.2%\n\n\nHealth of water catchments\n2022-01-01\n2022-12-31\n14.4\nPercentage\n+17.6%\n\n\nRegional GHG emissions from transport, domestic, commercial, industrial and public sectors\n2023-01-01\n2023-12-31\n4,409.7\nkilotonnes CO2e\n-3.7%",
     "crumbs": [
-      "West of England Regional Priorities"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Key indicators across the Combined Authority's priority areas</span>"
     ]
   },
   {
@@ -34,9 +34,9 @@
     "href": "index.html#how-to-use-this-report",
     "title": "West of England Regional Priorities",
     "section": "How to Use This Report",
-    "text": "How to Use This Report\n\nUse the sidebar navigation to jump to any chapter\nClick “Show code” to reveal the R or Python code behind any chart or table\nEach chapter is self-contained and can be read independently",
+    "text": "How to Use This Report\n\nUse the sidebar navigation to jump to any chapter\nEach chapter is self-contained and can be read independently",
     "crumbs": [
-      "West of England Regional Priorities"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Key indicators across the Combined Authority's priority areas</span>"
     ]
   },
   {
@@ -46,392 +46,370 @@
     "section": "Data Sources",
     "text": "Data Sources\nIndicators draw on a range of national and local data sources. Each chapter documents its specific sources within the analysis. Data refresh schedules are noted where applicable.",
     "crumbs": [
-      "West of England Regional Priorities"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Key indicators across the Combined Authority's priority areas</span>"
     ]
   },
   {
     "objectID": "chapters/01-economy/index.html",
     "href": "chapters/01-economy/index.html",
-    "title": "1  Economic Growth",
+    "title": "2  Economic Growth",
     "section": "",
-    "text": "1.1 Context\nThis chapter tracks indicators related to the West of England’s contribution to national economic growth. Up to 10 indicators can be included, covering metrics like GVA, productivity, business growth, innovation, and employment.",
+    "text": "2.1 Context\nThis chapter tracks indicators related to the West of England’s contribution to national economic growth. Up to 10 indicators can be included, covering metrics like GVA, productivity, business growth, innovation, and employment.",
     "crumbs": [
       "Economic Growth",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Economic Growth</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Economic Growth</span>"
     ]
   },
   {
     "objectID": "chapters/01-economy/index.html#worked-example-sample-economic-indicator",
     "href": "chapters/01-economy/index.html#worked-example-sample-economic-indicator",
-    "title": "1  Economic Growth",
-    "section": "1.2 Worked Example: Sample Economic Indicator",
-    "text": "1.2 Worked Example: Sample Economic Indicator\nThis example demonstrates how to create an indicator using R. It loads data, processes it, creates a chart with WECA branding, and presents findings.\n\n\nLoad required packages\n# Load required packages\nlibrary(tidyverse)\n\n# Source shared helpers (theme, helpers, fact_helpers, collate_fact)\nsource(here::here(\"scripts\", \"R\", \"_common.R\"))\n\n\n\n\nLoad example data\n# Load example indicator data\n# In your actual analysis, replace this with your real data source\ndata &lt;- load_csv(here::here(\"data\", \"examples\", \"example_indicator.csv\"))\n\n# Preview the data structure\nhead(data)\n\n\n# A tibble: 6 × 6\n  area     year indicator_name  indicator_value target_value national_average\n  &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;                     &lt;dbl&gt;        &lt;dbl&gt;            &lt;dbl&gt;\n1 Bristol  2015 Employment Rate            72.3           75             73.1\n2 Bristol  2016 Employment Rate            73.5           75             73.8\n3 Bristol  2017 Employment Rate            74.2           75             74.2\n4 Bristol  2018 Employment Rate            75.1           75             74.9\n5 Bristol  2019 Employment Rate            76.3           75             75.4\n6 Bristol  2020 Employment Rate            73.8           75             74.1\n\n\n\n\nProcess and summarize data\n# Filter and process the data\n# This example calculates the latest value and year-on-year change\nprocessed &lt;- data %&gt;%\n  filter(indicator_name == \"Sample Economic Metric\") %&gt;%\n  arrange(year) %&gt;%\n  mutate(\n    # Calculate year-on-year change\n    yoy_change = indicator_value - lag(indicator_value),\n    yoy_pct = (yoy_change / lag(indicator_value)) * 100\n  )\n\n# Get the latest value for summary\nlatest &lt;- processed %&gt;%\n  filter(year == max(year)) %&gt;%\n  pull(indicator_value)\n\nlatest_year &lt;- processed %&gt;%\n  filter(year == max(year)) %&gt;%\n  pull(year)\n\n\n\n1.2.1 Latest Value\nThe most recent value for this indicator is **** (as of ).\n\n\nCreate trend chart\n# Create a line chart showing the trend over time\nggplot(processed, aes(x = year, y = indicator_value)) +\n  geom_line(colour = weca_palette[\"forest_green\"], linewidth = 1.2) +\n  geom_point(colour = weca_palette[\"forest_green\"], size = 3) +\n  scale_y_continuous(labels = scales::comma) +\n  labs(\n    title = \"Sample Economic Indicator Trend\",\n    x = \"Year\",\n    y = \"Indicator Value\",\n    caption = \"Source: Example data\"\n  ) +\n  theme_weca()\n\n\nError in `weca_palette[\"forest_green\"]`:\n! object of type 'closure' is not subsettable\n\n\n\n\n1.2.2 Key Findings\n\nThe indicator has shown [describe trend - increasing/decreasing/stable]\nLatest year-on-year change: [insert value]\nPolicy implications: [describe what this means for the priority area]",
+    "title": "2  Economic Growth",
+    "section": "2.2 Worked Example: Sample Economic Indicator",
+    "text": "2.2 Worked Example: Sample Economic Indicator\nThis example demonstrates how to create an indicator using R. It loads data, processes it, creates a chart with WECA branding, and presents findings.\n\n\nLoad required packages\n# Load required packages\nlibrary(tidyverse)\n\n# Source shared helpers (theme, helpers, fact_helpers, collate_fact)\nsource(here::here(\"scripts\", \"R\", \"_common.R\"))\n\n\n\n\nLoad example data\n# Load example indicator data\n# In your actual analysis, replace this with your real data source\ndata &lt;- load_csv(here::here(\"data\", \"examples\", \"example_indicator.csv\"))\n\n# Preview the data structure\nhead(data)\n\n\n# A tibble: 6 × 6\n  area     year indicator_name  indicator_value target_value national_average\n  &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;                     &lt;dbl&gt;        &lt;dbl&gt;            &lt;dbl&gt;\n1 Bristol  2015 Employment Rate            72.3           75             73.1\n2 Bristol  2016 Employment Rate            73.5           75             73.8\n3 Bristol  2017 Employment Rate            74.2           75             74.2\n4 Bristol  2018 Employment Rate            75.1           75             74.9\n5 Bristol  2019 Employment Rate            76.3           75             75.4\n6 Bristol  2020 Employment Rate            73.8           75             74.1\n\n\n\n\nProcess and summarize data\n# Filter and process the data\n# This example calculates the latest value and year-on-year change\nprocessed &lt;- data %&gt;%\n  filter(indicator_name == \"Sample Economic Metric\") %&gt;%\n  arrange(year) %&gt;%\n  mutate(\n    # Calculate year-on-year change\n    yoy_change = indicator_value - lag(indicator_value),\n    yoy_pct = (yoy_change / lag(indicator_value)) * 100\n  )\n\n# Get the latest value for summary\nlatest &lt;- processed %&gt;%\n  filter(year == max(year)) %&gt;%\n  pull(indicator_value)\n\nlatest_year &lt;- processed %&gt;%\n  filter(year == max(year)) %&gt;%\n  pull(year)\n\n\n\n2.2.1 Latest Value\nThe most recent value for this indicator is **** (as of ).\n\n\nCreate trend chart\n# Create a line chart showing the trend over time\nggplot(processed, aes(x = year, y = indicator_value)) +\n  geom_line(colour = weca_palette[\"forest_green\"], linewidth = 1.2) +\n  geom_point(colour = weca_palette[\"forest_green\"], size = 3) +\n  scale_y_continuous(labels = scales::comma) +\n  labs(\n    title = \"Sample Economic Indicator Trend\",\n    x = \"Year\",\n    y = \"Indicator Value\",\n    caption = \"Source: Example data\"\n  ) +\n  theme_weca()\n\n\nError in `weca_palette[\"forest_green\"]`:\n! object of type 'closure' is not subsettable\n\n\n\n\n2.2.2 Key Findings\n\nThe indicator has shown [describe trend - increasing/decreasing/stable]\nLatest year-on-year change: [insert value]\nPolicy implications: [describe what this means for the priority area]",
     "crumbs": [
       "Economic Growth",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Economic Growth</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Economic Growth</span>"
     ]
   },
   {
     "objectID": "chapters/01-economy/index.html#indicator-1-your-indicator-name",
     "href": "chapters/01-economy/index.html#indicator-1-your-indicator-name",
-    "title": "1  Economic Growth",
-    "section": "1.3 Indicator 1: [Your Indicator Name]",
-    "text": "1.3 Indicator 1: [Your Indicator Name]\nData source: [Specify source] Last updated: [Date] Refresh schedule: [Annual/Quarterly/Monthly]\n\n1.3.1 Overview\n[Describe what this indicator measures and why it matters for economic growth]\n\n\nIndicator 1 analysis\n# Your code here\n# Follow the pattern from the worked example above:\n# 1. Load data\n# 2. Process/filter/aggregate\n# 3. Create visualization with theme_weca()\n# 4. Calculate key statistics\n\n\n\n\n1.3.2 Findings\n[Your narrative findings here]",
+    "title": "2  Economic Growth",
+    "section": "2.3 Indicator 1: [Your Indicator Name]",
+    "text": "2.3 Indicator 1: [Your Indicator Name]\nData source: [Specify source] Last updated: [Date] Refresh schedule: [Annual/Quarterly/Monthly]\n\n2.3.1 Overview\n[Describe what this indicator measures and why it matters for economic growth]\n\n\nIndicator 1 analysis\n# Your code here\n# Follow the pattern from the worked example above:\n# 1. Load data\n# 2. Process/filter/aggregate\n# 3. Create visualization with theme_weca()\n# 4. Calculate key statistics\n\n\n\n\n2.3.2 Findings\n[Your narrative findings here]",
     "crumbs": [
       "Economic Growth",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Economic Growth</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Economic Growth</span>"
     ]
   },
   {
     "objectID": "chapters/01-economy/index.html#indicator-2-your-indicator-name",
     "href": "chapters/01-economy/index.html#indicator-2-your-indicator-name",
-    "title": "1  Economic Growth",
-    "section": "1.4 Indicator 2: [Your Indicator Name]",
-    "text": "1.4 Indicator 2: [Your Indicator Name]\nData source: Last updated: Refresh schedule:\n[Repeat structure above - add up to 10 indicators total]",
+    "title": "2  Economic Growth",
+    "section": "2.4 Indicator 2: [Your Indicator Name]",
+    "text": "2.4 Indicator 2: [Your Indicator Name]\nData source: Last updated: Refresh schedule:\n[Repeat structure above - add up to 10 indicators total]",
     "crumbs": [
       "Economic Growth",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Economic Growth</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Economic Growth</span>"
     ]
   },
   {
     "objectID": "chapters/01-economy/index.html#summary",
     "href": "chapters/01-economy/index.html#summary",
-    "title": "1  Economic Growth",
-    "section": "1.5 Summary",
-    "text": "1.5 Summary\n[Summary of key findings across all indicators in this chapter. What is the overall picture for economic growth?]",
+    "title": "2  Economic Growth",
+    "section": "2.5 Summary",
+    "text": "2.5 Summary\n[Summary of key findings across all indicators in this chapter. What is the overall picture for economic growth?]",
     "crumbs": [
       "Economic Growth",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Economic Growth</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Economic Growth</span>"
     ]
   },
   {
     "objectID": "chapters/01-economy/index.html#python-example-alternative",
     "href": "chapters/01-economy/index.html#python-example-alternative",
-    "title": "1  Economic Growth",
-    "section": "1.6 Python Example (Alternative)",
-    "text": "1.6 Python Example (Alternative)\nThe example below shows how to achieve the same analysis using Python instead of R.\n\n\nPython alternative for data analysis\n# import pandas as pd\n# import matplotlib.pyplot as plt\n# from pathlib import Path\n#\n# # Load data with project-relative path\n# project_root = Path(__file__).parent.parent.parent  # Navigate to project root\n# data_path = project_root / \"data\" / \"examples\" / \"example_indicator.csv\"\n# df = pd.read_csv(data_path)\n#\n# # Filter and process\n# economic_data = df[df['indicator_name'] == 'Sample Economic Metric'].copy()\n# economic_data = economic_data.sort_values('year')\n#\n# # Calculate year-on-year change\n# economic_data['yoy_change'] = economic_data['indicator_value'].diff()\n# economic_data['yoy_pct'] = (economic_data['yoy_change'] /\n#                              economic_data['indicator_value'].shift(1)) * 100\n#\n# # Create chart (matplotlib - theme_weca for Python to be added later)\n# fig, ax = plt.subplots(figsize=(10, 6))\n# ax.plot(economic_data['year'], economic_data['indicator_value'],\n#         marker='o', linewidth=2, color='#1D4F2B')\n# ax.set_xlabel('Year')\n# ax.set_ylabel('Indicator Value')\n# ax.set_title('Sample Economic Indicator Trend')\n# plt.show()",
+    "title": "2  Economic Growth",
+    "section": "2.6 Python Example (Alternative)",
+    "text": "2.6 Python Example (Alternative)\nThe example below shows how to achieve the same analysis using Python instead of R.\n\n\nPython alternative for data analysis\n# import pandas as pd\n# import matplotlib.pyplot as plt\n# from pathlib import Path\n#\n# # Load data with project-relative path\n# project_root = Path(__file__).parent.parent.parent  # Navigate to project root\n# data_path = project_root / \"data\" / \"examples\" / \"example_indicator.csv\"\n# df = pd.read_csv(data_path)\n#\n# # Filter and process\n# economic_data = df[df['indicator_name'] == 'Sample Economic Metric'].copy()\n# economic_data = economic_data.sort_values('year')\n#\n# # Calculate year-on-year change\n# economic_data['yoy_change'] = economic_data['indicator_value'].diff()\n# economic_data['yoy_pct'] = (economic_data['yoy_change'] /\n#                              economic_data['indicator_value'].shift(1)) * 100\n#\n# # Create chart (matplotlib - theme_weca for Python to be added later)\n# fig, ax = plt.subplots(figsize=(10, 6))\n# ax.plot(economic_data['year'], economic_data['indicator_value'],\n#         marker='o', linewidth=2, color='#1D4F2B')\n# ax.set_xlabel('Year')\n# ax.set_ylabel('Indicator Value')\n# ax.set_title('Sample Economic Indicator Trend')\n# plt.show()",
     "crumbs": [
       "Economic Growth",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Economic Growth</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Economic Growth</span>"
     ]
   },
   {
     "objectID": "chapters/02-transport/index.html",
     "href": "chapters/02-transport/index.html",
-    "title": "2  Public Transport Connectivity",
+    "title": "3  Public Transport Connectivity",
     "section": "",
-    "text": "2.1 Context\nThis chapter tracks indicators related to public transport connectivity across the West of England. Up to 10 indicators can be included, covering metrics like bus ridership, punctuality, accessibility, network coverage, and passenger satisfaction.",
+    "text": "3.1 Context\nThis chapter tracks indicators related to public transport connectivity across the West of England. Up to 10 indicators can be included, covering metrics like bus ridership, punctuality, accessibility, network coverage, and passenger satisfaction.",
     "crumbs": [
       "Infrastructure & Place",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Public Transport Connectivity</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Public Transport Connectivity</span>"
     ]
   },
   {
     "objectID": "chapters/02-transport/index.html#setup",
     "href": "chapters/02-transport/index.html#setup",
-    "title": "2  Public Transport Connectivity",
-    "section": "2.2 Setup",
-    "text": "2.2 Setup\n\n\nLoad required packages\n# Load required packages\nlibrary(tidyverse)\n\n# Source shared helpers (theme, helpers, fact_helpers, collate_fact)\nsource(here::here(\"scripts\", \"R\", \"_common.R\"))",
+    "title": "3  Public Transport Connectivity",
+    "section": "3.2 Setup",
+    "text": "3.2 Setup\n\n\nLoad required packages\n# Load required packages\nlibrary(tidyverse)\n\n# Source shared helpers (theme, helpers, fact_helpers, collate_fact)\nsource(here::here(\"scripts\", \"R\", \"_common.R\"))",
     "crumbs": [
       "Infrastructure & Place",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Public Transport Connectivity</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Public Transport Connectivity</span>"
     ]
   },
   {
     "objectID": "chapters/02-transport/index.html#indicator-1-your-transport-indicator",
     "href": "chapters/02-transport/index.html#indicator-1-your-transport-indicator",
-    "title": "2  Public Transport Connectivity",
-    "section": "2.3 Indicator 1: [Your Transport Indicator]",
-    "text": "2.3 Indicator 1: [Your Transport Indicator]\nData source: [Specify source]\nLast updated: [Date]\nRefresh schedule: [Annual/Quarterly/Monthly]\n\n2.3.1 Overview\n[Describe what this indicator measures and why it matters for public transport connectivity]\n\n\nIndicator 1 analysis\n# Your code here\n# See chapters/01-economy/index.qmd for a worked example pattern:\n# 1. Load data using load_csv()\n# 2. Process/filter/aggregate data\n# 3. Create visualization with theme_weca()\n# 4. Calculate key statistics using format_number()\n\n\n\n\n2.3.2 Findings\n[Your narrative findings here]",
+    "title": "3  Public Transport Connectivity",
+    "section": "3.3 Indicator 1: [Your Transport Indicator]",
+    "text": "3.3 Indicator 1: [Your Transport Indicator]\nData source: [Specify source]\nLast updated: [Date]\nRefresh schedule: [Annual/Quarterly/Monthly]\n\n3.3.1 Overview\n[Describe what this indicator measures and why it matters for public transport connectivity]\n\n\nIndicator 1 analysis\n# Your code here\n# See chapters/01-economy/index.qmd for a worked example pattern:\n# 1. Load data using load_csv()\n# 2. Process/filter/aggregate data\n# 3. Create visualization with theme_weca()\n# 4. Calculate key statistics using format_number()\n\n\n\n\n3.3.2 Findings\n[Your narrative findings here]",
     "crumbs": [
       "Infrastructure & Place",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Public Transport Connectivity</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Public Transport Connectivity</span>"
     ]
   },
   {
     "objectID": "chapters/02-transport/index.html#indicator-2-your-transport-indicator",
     "href": "chapters/02-transport/index.html#indicator-2-your-transport-indicator",
-    "title": "2  Public Transport Connectivity",
-    "section": "2.4 Indicator 2: [Your Transport Indicator]",
-    "text": "2.4 Indicator 2: [Your Transport Indicator]\nData source: Last updated: Refresh schedule:\n[Repeat structure - add up to 10 indicators total]",
+    "title": "3  Public Transport Connectivity",
+    "section": "3.4 Indicator 2: [Your Transport Indicator]",
+    "text": "3.4 Indicator 2: [Your Transport Indicator]\nData source: Last updated: Refresh schedule:\n[Repeat structure - add up to 10 indicators total]",
     "crumbs": [
       "Infrastructure & Place",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Public Transport Connectivity</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Public Transport Connectivity</span>"
     ]
   },
   {
     "objectID": "chapters/02-transport/index.html#summary",
     "href": "chapters/02-transport/index.html#summary",
-    "title": "2  Public Transport Connectivity",
-    "section": "2.5 Summary",
-    "text": "2.5 Summary\n[Summary of key findings across all transport indicators. What is the overall picture for public transport connectivity?]",
+    "title": "3  Public Transport Connectivity",
+    "section": "3.5 Summary",
+    "text": "3.5 Summary\n[Summary of key findings across all transport indicators. What is the overall picture for public transport connectivity?]",
     "crumbs": [
       "Infrastructure & Place",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Public Transport Connectivity</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Public Transport Connectivity</span>"
     ]
   },
   {
     "objectID": "chapters/03-place/index.html",
     "href": "chapters/03-place/index.html",
-    "title": "3  Affordable and Sustainable Homes",
+    "title": "4  Affordable and Sustainable Homes",
     "section": "",
-    "text": "3.1 Context\nThis chapter tracks indicators related to housing affordability and sustainability across the West of England. Up to 10 indicators can be included, covering metrics like housing completions, affordability ratios, energy efficiency, social housing supply, and planning permissions.",
+    "text": "4.1 Context\nThis chapter tracks indicators related to housing affordability and sustainability across the West of England. Up to 10 indicators can be included, covering metrics like housing completions, affordability ratios, energy efficiency, social housing supply, and planning permissions.",
     "crumbs": [
       "Infrastructure & Place",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Affordable and Sustainable Homes</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/03-place/index.html#setup",
-    "href": "chapters/03-place/index.html#setup",
-    "title": "3  Affordable and Sustainable Homes",
-    "section": "3.2 Setup",
-    "text": "3.2 Setup",
-    "crumbs": [
-      "Infrastructure & Place",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Affordable and Sustainable Homes</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Affordable and Sustainable Homes</span>"
     ]
   },
   {
     "objectID": "chapters/03-place/index.html#energy-performance-of-homes",
     "href": "chapters/03-place/index.html#energy-performance-of-homes",
-    "title": "3  Affordable and Sustainable Homes",
-    "section": "3.3 Energy Performance of Homes",
-    "text": "3.3 Energy Performance of Homes\n\n\nRI_3A2_homes_epc_c_plus summary\nindicator_fact_tbl |&gt;\nformat_indicator_summary(\n  \"RI_3A2_homes_epc_c_plus\",\n  title = \"Energy Performance of Homes\",\n  subtitle = \"Proportion of homes with EPC rating of C or above\",\n  units = \"%\"\n)\n\n\n\n\n\n\n\n\n\n\n\n\nEnergy Performance of Homes\n\n\nProportion of homes with EPC rating of C or above\n\n\n\n\nLatest value\n52.1% (2026-03-31)\n\n\nPrevious value\n52.0% (2026-02-28)\n\n\nChange vs previous\n+0.1 ppts\n\n\nFirst value\n37.7% (2016-03-31)\n\n\nChange since first\n+14.5 ppts\n\n\nObservations\n121\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-27\n\n\n\n\n\n\n\n\n3.3.1 Overview\nThis indicator tracks the proportion of homes in the West of England with an Energy Performance Certificate (EPC) rating of C or above. A higher proportion indicates better energy efficiency and sustainability in the housing stock. Only about 70% of homes have an EPC, so this indicator is based on the subset of homes with an EPC, which may not be fully representative of all homes in the region. This dataset is from MHCLG and is based on the recently revised scheme for EPC.\n\n\nRI_3A2_homes_epc_c_plus plot\nRI_3A2_plot\n\n\n\n\n\n\n\n\n\n\n\n3.3.2 Findings\nThe proportion of homes which have an EPC with an energy rating of C or better has risen steadily over the last 10 years. EPC ratings measure energy efficiency and are not directly related to carbon emissions. WECA runs programmes to help home owners and landlords understand retrofit options and businesses to reduce their carbon emissions.",
+    "title": "4  Affordable and Sustainable Homes",
+    "section": "4.2 Energy Performance of Homes",
+    "text": "4.2 Energy Performance of Homes\n\n\nRI_3A2_homes_epc_c_plus summary\nindicator_fact_tbl |&gt;\n  format_indicator_summary(\n    \"RI_3A2_homes_epc_c_plus\",\n    title = \"Energy Performance of Homes\",\n    subtitle = \"Proportion of homes with EPC rating of C or above\",\n    units = \"%\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\nEnergy Performance of Homes\n\n\nProportion of homes with EPC rating of C or above\n\n\n\n\nLatest value\n52.1% (2026-03-31)\n\n\nPrevious value\n52.0% (2026-02-28)\n\n\nChange vs previous\n+0.1 ppts\n\n\nFirst value\n37.7% (2016-03-31)\n\n\nChange since first\n+14.5 ppts\n\n\nObservations\n121\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-28\n\n\n\n\n\n\n\n\n4.2.1 Overview\nThis indicator tracks the proportion of homes in the West of England with an Energy Performance Certificate (EPC) rating of C or above. A higher proportion indicates better energy efficiency and sustainability in the housing stock. Only about 70% of homes have an EPC, so this indicator is based on the subset of homes with an EPC, which may not be fully representative of all homes in the region. This dataset is from MHCLG and is based on the recently revised scheme for EPC.\n\n\nRI_3A2_homes_epc_c_plus plot\nRI_3A2_plot",
     "crumbs": [
       "Infrastructure & Place",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Affordable and Sustainable Homes</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Affordable and Sustainable Homes</span>"
     ]
   },
   {
     "objectID": "chapters/03-place/index.html#summary",
     "href": "chapters/03-place/index.html#summary",
-    "title": "3  Affordable and Sustainable Homes",
-    "section": "3.4 Summary",
-    "text": "3.4 Summary\n[Summary of key findings across all housing indicators. What is the overall picture for affordable and sustainable homes?]",
+    "title": "4  Affordable and Sustainable Homes",
+    "section": "4.3 Summary",
+    "text": "4.3 Summary\n[Summary of key findings across all housing indicators. What is the overall picture for affordable and sustainable homes?]",
     "crumbs": [
       "Infrastructure & Place",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Affordable and Sustainable Homes</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Affordable and Sustainable Homes</span>"
     ]
   },
   {
     "objectID": "chapters/04-skills/index.html",
     "href": "chapters/04-skills/index.html",
-    "title": "4  Future-Ready Skills",
+    "title": "5  Future-Ready Skills",
     "section": "",
-    "text": "4.1 Context\nThis chapter tracks indicators related to skills development and training across the West of England. Up to 10 indicators can be included, covering metrics like qualification levels, apprenticeships, adult learning participation, skills gaps, and employment outcomes.",
+    "text": "5.1 Context\nThis chapter tracks indicators related to skills development and training across the West of England. Up to 10 indicators can be included, covering metrics like qualification levels, apprenticeships, adult learning participation, skills gaps, and employment outcomes.",
     "crumbs": [
       "Skills & Opportunity",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Future-Ready Skills</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Future-Ready Skills</span>"
     ]
   },
   {
     "objectID": "chapters/04-skills/index.html#setup",
     "href": "chapters/04-skills/index.html#setup",
-    "title": "4  Future-Ready Skills",
-    "section": "4.2 Setup",
-    "text": "4.2 Setup\n\n\nLoad required packages\n# Load required packages\nlibrary(tidyverse)\n\n# Source shared helpers (theme, helpers, fact_helpers, collate_fact)\nsource(here::here(\"scripts\", \"R\", \"_common.R\"))",
+    "title": "5  Future-Ready Skills",
+    "section": "5.2 Setup",
+    "text": "5.2 Setup\n\n\nLoad required packages\n# Load required packages\nlibrary(tidyverse)\n\n# Source shared helpers (theme, helpers, fact_helpers, collate_fact)\nsource(here::here(\"scripts\", \"R\", \"_common.R\"))",
     "crumbs": [
       "Skills & Opportunity",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Future-Ready Skills</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Future-Ready Skills</span>"
     ]
   },
   {
     "objectID": "chapters/04-skills/index.html#indicator-1-your-skills-indicator",
     "href": "chapters/04-skills/index.html#indicator-1-your-skills-indicator",
-    "title": "4  Future-Ready Skills",
-    "section": "4.3 Indicator 1: [Your Skills Indicator]",
-    "text": "4.3 Indicator 1: [Your Skills Indicator]\nData source: [Specify source] Last updated: [Date] Refresh schedule: [Annual/Quarterly/Monthly]\n\n4.3.1 Overview\n[Describe what this indicator measures and why it matters for future-ready skills]\n\n\nIndicator 1 analysis\n# Your code here\n# See chapters/01-economy/index.qmd for a worked example pattern:\n# 1. Load data using load_csv()\n# 2. Process/filter/aggregate data\n# 3. Create visualization with theme_weca()\n# 4. Calculate key statistics using format_number()\n\n\n\n\n4.3.2 Findings\n[Your narrative findings here]",
+    "title": "5  Future-Ready Skills",
+    "section": "5.3 Indicator 1: [Your Skills Indicator]",
+    "text": "5.3 Indicator 1: [Your Skills Indicator]\nData source: [Specify source] Last updated: [Date] Refresh schedule: [Annual/Quarterly/Monthly]\n\n5.3.1 Overview\n[Describe what this indicator measures and why it matters for future-ready skills]\n\n\nIndicator 1 analysis\n# Your code here\n# See chapters/01-economy/index.qmd for a worked example pattern:\n# 1. Load data using load_csv()\n# 2. Process/filter/aggregate data\n# 3. Create visualization with theme_weca()\n# 4. Calculate key statistics using format_number()\n\n\n\n\n5.3.2 Findings\n[Your narrative findings here]",
     "crumbs": [
       "Skills & Opportunity",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Future-Ready Skills</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Future-Ready Skills</span>"
     ]
   },
   {
     "objectID": "chapters/04-skills/index.html#indicator-2-your-skills-indicator",
     "href": "chapters/04-skills/index.html#indicator-2-your-skills-indicator",
-    "title": "4  Future-Ready Skills",
-    "section": "4.4 Indicator 2: [Your Skills Indicator]",
-    "text": "4.4 Indicator 2: [Your Skills Indicator]\nData source: Last updated: Refresh schedule:\n[Repeat structure - add up to 10 indicators total]",
+    "title": "5  Future-Ready Skills",
+    "section": "5.4 Indicator 2: [Your Skills Indicator]",
+    "text": "5.4 Indicator 2: [Your Skills Indicator]\nData source: Last updated: Refresh schedule:\n[Repeat structure - add up to 10 indicators total]",
     "crumbs": [
       "Skills & Opportunity",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Future-Ready Skills</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Future-Ready Skills</span>"
     ]
   },
   {
     "objectID": "chapters/04-skills/index.html#summary",
     "href": "chapters/04-skills/index.html#summary",
-    "title": "4  Future-Ready Skills",
-    "section": "4.5 Summary",
-    "text": "4.5 Summary\n[Summary of key findings across all skills indicators. What is the overall picture for future-ready skills development?]",
+    "title": "5  Future-Ready Skills",
+    "section": "5.5 Summary",
+    "text": "5.5 Summary\n[Summary of key findings across all skills indicators. What is the overall picture for future-ready skills development?]",
     "crumbs": [
       "Skills & Opportunity",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Future-Ready Skills</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Future-Ready Skills</span>"
     ]
   },
   {
     "objectID": "chapters/05-environment/index.html",
     "href": "chapters/05-environment/index.html",
-    "title": "5  Green Jobs and Growth",
+    "title": "6  Green Jobs and Growth",
     "section": "",
-    "text": "5.1 Context\nThis chapter tracks indicators related to green economy and environmental sustainability across the West of England. Topics include carbon emissions, renewable energy, water pollution, climate resilience and public health.\nGreen Jobs and Growth: Indicator Summary\n\n\nIndicator\nFrom\nTo\nLatest value\nUnits\n\n\n\n\nRegional GHG emissions from transport, domestic, commercial, industrial and public sectors\n2023-01-01\n2023-12-31\n4,409.7\nkilotonnes CO2e\n\n\nRenewable energy capacity per km sq\n2024-01-01\n2024-12-31\n0.4\nMW/square km\n\n\nDomestically generated renewable energy\n2024-01-01\n2024-12-31\n0.1\nNumber of sites per household for photovoltaics\n\n\nShare of non-domestic buildings with an Energy Performance Certificate rating of A or A+\n2026-03-01\n2026-03-31\n4.7\nPercentage\n\n\nHeat stress deaths\n2025-01-01\n2025-12-31\n35.0\nDeaths per million population\n\n\nFlood Warnings Intensity Indicator\n2025-01-01\n2025-12-31\n69.6\nIndex relative to 2020 baseline.\n\n\nTree canopy\n2024-01-01\n2024-12-31\n10,656.6\nHectares\n\n\nHealth of water catchments\n2022-01-01\n2022-12-31\n14.4\nPercentage",
+    "text": "6.1 Context\nThis chapter tracks indicators related to green economy and environmental sustainability across the West of England. Topics include carbon emissions, renewable energy, water pollution, climate resilience and public health.\nGreen Jobs and Growth: Indicator Summary\n\n\nIndicator\nFrom\nTo\nLatest value\nUnits\n\n\n\n\nRegional GHG emissions from transport, domestic, commercial, industrial and public sectors\n2023-01-01\n2023-12-31\n4,409.7\nkilotonnes CO2e\n\n\nRenewable energy capacity per km sq\n2024-01-01\n2024-12-31\n0.4\nMW/square km\n\n\nDomestically generated renewable energy\n2024-01-01\n2024-12-31\n0.1\nNumber of sites per household for photovoltaics\n\n\nShare of non-domestic buildings with an Energy Performance Certificate rating of A or A+\n2026-03-01\n2026-03-31\n4.7\nPercentage\n\n\nHeat stress deaths\n2025-01-01\n2025-12-31\n35.0\nDeaths per million population\n\n\nFlood Warnings Intensity Indicator\n2025-01-01\n2025-12-31\n69.6\nIndex relative to 2020 baseline.\n\n\nTree canopy\n2024-01-01\n2024-12-31\n10,656.6\nHectares\n\n\nHealth of water catchments\n2022-01-01\n2022-12-31\n14.4\nPercentage",
     "crumbs": [
       "Green Jobs and Growth",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
     ]
   },
   {
     "objectID": "chapters/05-environment/index.html#greenhouse-gas-emissions",
     "href": "chapters/05-environment/index.html#greenhouse-gas-emissions",
-    "title": "5  Green Jobs and Growth",
-    "section": "5.2 Greenhouse Gas Emissions",
-    "text": "5.2 Greenhouse Gas Emissions\n\n\n\n\n\n\n\n\n\n\n\n\nGreenhouse Gas Emissions\n\n\nTransport, Commercial, Industry, Public sector, Domestic\n\n\n\n\nLatest value\n4,409.7 Kt CO2e (2023-12-31)\n\n\nPrevious value\n4,580.2 Kt CO2e (2022-12-31)\n\n\nChange vs previous\n-3.7%\n\n\nFirst value\n5,970.9 Kt CO2e (2014-12-31)\n\n\nChange since first\n-26.1%\n\n\nObservations\n10\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-27\n\n\n\n\n\n\n\n\n5.2.1 Overview\nRegional greenhouse gas emissions from transport, domestic, commercial, industrial and public sectors. This tracks the region’s progress toward the net zero target by 2030 and identifies key sectors for emissions reduction.\n\n\n\n\n\n\n\n\n\n\n\n5.2.2 Findings\nEmissions have declined steadily over several years. Transport and domestic sectors dominate. The region is currently not on track to meet the 2030 net zero target, indicating a need for accelerated action in key sectors. Demand reduction for personal car use and the introduction of low - carbon heating for homes remain key priorities for the region.",
+    "title": "6  Green Jobs and Growth",
+    "section": "6.2 Greenhouse Gas Emissions",
+    "text": "6.2 Greenhouse Gas Emissions\n\n\n\n\n\n\n\n\n\n\n\n\nGreenhouse Gas Emissions\n\n\nTransport, Commercial, Industry, Public sector, Domestic\n\n\n\n\nLatest value\n4,409.7 Kt CO2e (2023-12-31)\n\n\nPrevious value\n4,580.2 Kt CO2e (2022-12-31)\n\n\nChange vs previous\n-3.7%\n\n\nFirst value\n5,970.9 Kt CO2e (2014-12-31)\n\n\nChange since first\n-26.1%\n\n\nObservations\n10\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-28\n\n\n\n\n\n\n\n\n6.2.1 Overview\nRegional greenhouse gas emissions from transport, domestic, commercial, industrial and public sectors. This tracks the region’s progress toward the net zero target by 2030 and identifies key sectors for emissions reduction.",
     "crumbs": [
       "Green Jobs and Growth",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
     ]
   },
   {
     "objectID": "chapters/05-environment/index.html#renewable-energy",
     "href": "chapters/05-environment/index.html#renewable-energy",
-    "title": "5  Green Jobs and Growth",
-    "section": "5.3 Renewable Energy",
-    "text": "5.3 Renewable Energy\n\n\n\n\n\n\n\n\n\n\n\n\nRenewable Electricity Installed Capacity\n\n\nInstalled capacity per square Km\n\n\n\n\nLatest value\n0.4 MW/km2 (2024-12-31)\n\n\nPrevious value\n0.4 MW/km2 (2023-12-31)\n\n\nChange vs previous\n+4.8%\n\n\nFirst value\n0.2 MW/km2 (2015-12-31)\n\n\nChange since first\n+110.6%\n\n\nObservations\n10\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-27\n\n\n\n\n\n\n\n\n5.3.1 Overview\nPotential for renewable energy capacity is strongly influenced by land availability and price, hence this indicator is expressed in terms of Megawatts per square Kilometre to enable future comparison with other regions.\n\n\n\n\n\n\n\n\n\n\n\n5.3.2 Findings\nInstalled capacity has climbed steadily over the last 10 years, reflecting central government policy and the region’s ambitions for Net Zero. The National Energy Systems Operator (NESO) is currently developing regional energy strategic plans which may drive further growth in installed capacity.",
+    "title": "6  Green Jobs and Growth",
+    "section": "6.3 Renewable Energy",
+    "text": "6.3 Renewable Energy\n\n\n\n\n\n\n\n\n\n\n\n\nRenewable Electricity Installed Capacity\n\n\nInstalled capacity per square Km\n\n\n\n\nLatest value\n0.4 MW/km2 (2024-12-31)\n\n\nPrevious value\n0.4 MW/km2 (2023-12-31)\n\n\nChange vs previous\n+4.8%\n\n\nFirst value\n0.2 MW/km2 (2015-12-31)\n\n\nChange since first\n+110.6%\n\n\nObservations\n10\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-28\n\n\n\n\n\n\n\n\n6.3.1 Overview\nPotential for renewable energy capacity is strongly influenced by land availability and price, hence this indicator is expressed in terms of Megawatts per square Kilometre to enable future comparison with other regions.",
     "crumbs": [
       "Green Jobs and Growth",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
     ]
   },
   {
     "objectID": "chapters/05-environment/index.html#domestic-renewable-energy",
     "href": "chapters/05-environment/index.html#domestic-renewable-energy",
-    "title": "5  Green Jobs and Growth",
-    "section": "5.4 Domestic Renewable Energy",
-    "text": "5.4 Domestic Renewable Energy\n\n\n\n\n\n\n\n\n\n\n\n\nDomestic Renewable Energy\n\n\nPhotovoltaic sites\n\n\n\n\nLatest value\n0.1 Sites per household (2024-12-31)\n\n\nPrevious value\n0.1 Sites per household (2023-12-31)\n\n\nChange vs previous\n+13.1%\n\n\nFirst value\n0.0 Sites per household (2015-12-31)\n\n\nChange since first\n+112.0%\n\n\nObservations\n10\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-27\n\n\n\n\n\n\n\n\n5.4.1 Overview\nSolar photovoltaic (PV) installations are a key aspect of energy security and net zero. This indicator tracks installations per household in the region.\n\n\n\n\n\n\n\n\n\n\n\n5.4.2 Findings\nInstallations of PV panels have increased steadily over the last 10 years.",
+    "title": "6  Green Jobs and Growth",
+    "section": "6.4 Domestic Renewable Energy",
+    "text": "6.4 Domestic Renewable Energy\n\n\n\n\n\n\n\n\n\n\n\n\nDomestic Renewable Energy\n\n\nPhotovoltaic sites\n\n\n\n\nLatest value\n0.1 Sites per household (2024-12-31)\n\n\nPrevious value\n0.1 Sites per household (2023-12-31)\n\n\nChange vs previous\n+13.1%\n\n\nFirst value\n0.0 Sites per household (2015-12-31)\n\n\nChange since first\n+112.0%\n\n\nObservations\n10\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-28\n\n\n\n\n\n\n\n\n6.4.1 Overview\nSolar photovoltaic (PV) installations are a key aspect of energy security and net zero. This indicator tracks installations per household in the region.",
     "crumbs": [
       "Green Jobs and Growth",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
     ]
   },
   {
     "objectID": "chapters/05-environment/index.html#non-domestic-energy-performance",
     "href": "chapters/05-environment/index.html#non-domestic-energy-performance",
-    "title": "5  Green Jobs and Growth",
-    "section": "5.5 Non-Domestic Energy Performance",
-    "text": "5.5 Non-Domestic Energy Performance\n\n\n\n\n\n\n\n\n\n\n\n\nNon - Domestic Energy Ratings\n\n\nProportion of properties rated A or A+\n\n\n\n\nLatest value\n4.7% (2026-03-31)\n\n\nPrevious value\n4.6% (2026-02-28)\n\n\nChange vs previous\n+0.0 ppts\n\n\nFirst value\n2.1% (2017-04-30)\n\n\nChange since first\n+2.6 ppts\n\n\nObservations\n108\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-27\n\n\n\n\n\n\n\n\n5.5.1 Overview\nThis indicator measures the energy efficiency of non - domestic property by expressing the proportion of properties which have an energy rating of A or A+, in other words the best performing properties.\n\n\n\n\n\n\n\n\n\n\n\n5.5.2 Findings\nThe improvement in the proportion of properties meeting an A or A+ standard is slow but steady. WECA’s Low Carbon Business Support team help businesses improve their energy efficiency with assessments, advice and grants.",
+    "title": "6  Green Jobs and Growth",
+    "section": "6.5 Non-Domestic Energy Performance",
+    "text": "6.5 Non-Domestic Energy Performance\n\n\n\n\n\n\n\n\n\n\n\n\nNon - Domestic Energy Ratings\n\n\nProportion of properties rated A or A+\n\n\n\n\nLatest value\n4.7% (2026-03-31)\n\n\nPrevious value\n4.6% (2026-02-28)\n\n\nChange vs previous\n+0.0 ppts\n\n\nFirst value\n2.1% (2017-04-30)\n\n\nChange since first\n+2.6 ppts\n\n\nObservations\n108\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-28\n\n\n\n\n\n\n\n\n6.5.1 Overview\nThis indicator measures the energy efficiency of non - domestic property by expressing the proportion of properties which have an energy rating of A or A+, in other words the best performing properties.",
     "crumbs": [
       "Green Jobs and Growth",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
     ]
   },
   {
     "objectID": "chapters/05-environment/index.html#heat-associated-mortality",
     "href": "chapters/05-environment/index.html#heat-associated-mortality",
-    "title": "5  Green Jobs and Growth",
-    "section": "5.6 Heat Associated Mortality",
-    "text": "5.6 Heat Associated Mortality\n\n\n\n\n\n\n\n\n\n\n\n\nHeat Associated Mortality\n\n\nDeaths per million population\n\n\n\n\nLatest value\n35.0 deaths per million (2025-12-31)\n\n\nPrevious value\n33.0 deaths per million (2024-12-31)\n\n\nChange vs previous\n+6.1%\n\n\nFirst value\n33.0 deaths per million (2024-12-31)\n\n\nChange since first\n+6.1%\n\n\nObservations\n2\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-27\n\n\n\n\n\n\n\n\n5.6.1 Overview\nThis indicator tracks the number of heat associated deaths per million population in the Avon Local Resilience Forum area, which largely correlates with the West of England. It provides insight into the region’s vulnerability to heat stress through the lens of public health. Data for the region are only available since 2024.\n\n\n\n\n\n\n\n\n\n\n\n5.6.2 Findings\nA small increase in deaths per million for the region is likely to reflect the ongoing increase in ambient temperature arising from a warming climate. WECA has produced a Climate Adaptation Report to help the region prepare for the impacts of a warming climate.",
+    "title": "6  Green Jobs and Growth",
+    "section": "6.6 Heat Associated Mortality",
+    "text": "6.6 Heat Associated Mortality\n\n\n\n\n\n\n\n\n\n\n\n\nHeat Associated Mortality\n\n\nDeaths per million population\n\n\n\n\nLatest value\n35.0 deaths per million (2025-12-31)\n\n\nPrevious value\n33.0 deaths per million (2024-12-31)\n\n\nChange vs previous\n+6.1%\n\n\nFirst value\n33.0 deaths per million (2024-12-31)\n\n\nChange since first\n+6.1%\n\n\nObservations\n2\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-28\n\n\n\n\n\n\n\n\n6.6.1 Overview\nThis indicator tracks the number of heat associated deaths per million population in the Avon Local Resilience Forum area, which largely correlates with the West of England. It provides insight into the region’s vulnerability to heat stress through the lens of public health. Data for the region are only available since 2024.",
     "crumbs": [
       "Green Jobs and Growth",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
     ]
   },
   {
     "objectID": "chapters/05-environment/index.html#flood-warnings-intensity",
     "href": "chapters/05-environment/index.html#flood-warnings-intensity",
-    "title": "5  Green Jobs and Growth",
-    "section": "5.7 Flood Warnings Intensity",
-    "text": "5.7 Flood Warnings Intensity\n\n\n\n\n\n\n\n\n\n\n\n\nFlood Warnings Intensity Index\n\n\nRelative to 2020 baseline\n\n\n\n\nLatest value\n69.6 (2025-12-31)\n\n\nPrevious value\n167.0 (2024-12-31)\n\n\nChange vs previous\n-58.3%\n\n\nFirst value\n100.0 (2020-12-31)\n\n\nChange since first\n-30.4%\n\n\nObservations\n6\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-27\n\n\n\n\n\n\n\n\n5.7.1 Overview\nThis indicator is designed to represent the risk of flooding relative to a 2020 baseline. It is a duration-weighted composite indicator tracking flood warning activity across the West of England (Bristol, Bath & North East Somerset, South Gloucestershire, North Somerset and derived from the Environment Agency’s flood warnings dataset. It provides annual monitoring to support climate resilience reporting. The methodology for the indicator is described here.\n\n\n\n\n\n\n\n\n\n\n\n5.7.2 Findings\n2024 saw the highest level of flooding relative to the 2020 baseline, but the levels of warnings subsided below the baseline in the most recent reported year. Warnings do not necessarily translate into actual floods.",
+    "title": "6  Green Jobs and Growth",
+    "section": "6.7 Flood Warnings Intensity",
+    "text": "6.7 Flood Warnings Intensity\n\n\n\n\n\n\n\n\n\n\n\n\nFlood Warnings Intensity Index\n\n\nRelative to 2020 baseline\n\n\n\n\nLatest value\n69.6 (2025-12-31)\n\n\nPrevious value\n167.0 (2024-12-31)\n\n\nChange vs previous\n-58.3%\n\n\nFirst value\n100.0 (2020-12-31)\n\n\nChange since first\n-30.4%\n\n\nObservations\n6\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-28\n\n\n\n\n\n\n\n\n6.7.1 Overview\nThis indicator is designed to represent the risk of flooding relative to a 2020 baseline. It is a duration-weighted composite indicator tracking flood warning activity across the West of England (Bristol, Bath & North East Somerset, South Gloucestershire, North Somerset and derived from the Environment Agency’s flood warnings dataset. It provides annual monitoring to support climate resilience reporting. The methodology for the indicator is described here.",
     "crumbs": [
       "Green Jobs and Growth",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
     ]
   },
   {
     "objectID": "chapters/05-environment/index.html#tree-canopy",
     "href": "chapters/05-environment/index.html#tree-canopy",
-    "title": "5  Green Jobs and Growth",
-    "section": "5.8 Tree Canopy",
-    "text": "5.8 Tree Canopy\n\n\n\n\n\n\n\n\n\n\n\n\nTree Canopy Cover\n\n\nNational Forest Inventory Woodland\n\n\n\n\nLatest value\n10,656.6 Ha (2024-12-31)\n\n\nPrevious value\n10,632.9 Ha (2023-12-31)\n\n\nChange vs previous\n+0.2%\n\n\nFirst value\n10,621.2 Ha (2020-12-31)\n\n\nChange since first\n+0.3%\n\n\nObservations\n5\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-27\n\n\n\n\n\n\n\n\n5.8.1 Overview\nThis indicator tracks the extent of tree canopy cover in the region, as measured by the National Forest Inventory (NFI). Tree canopy cover is an important aspect of urban greening, biodiversity and climate resilience. The NFI dataset is filtered by the “Woodland” category and clipped to the boundary of the West of England to provide a regional measure of the area covered by woodland.\n\n\n\n\n\n\n\n\n\n\n\n5.8.2 Findings\nThe extent of woodland varies very little from year to year, but the overall trend is positive with a small increase in canopy cover since 2020. Several initiatives are underway to increase tree canopy cover in the region, including the Forest of Avon project which is planting trees across the region to support biodiversity and climate resilience. These are likely to show in the indicator as the newly planted trees mature and are captured in the NFI dataset.",
+    "title": "6  Green Jobs and Growth",
+    "section": "6.8 Tree Canopy",
+    "text": "6.8 Tree Canopy\n\n\n\n\n\n\n\n\n\n\n\n\nTree Canopy Cover\n\n\nNational Forest Inventory Woodland\n\n\n\n\nLatest value\n10,656.6 Ha (2024-12-31)\n\n\nPrevious value\n10,632.9 Ha (2023-12-31)\n\n\nChange vs previous\n+0.2%\n\n\nFirst value\n10,621.2 Ha (2020-12-31)\n\n\nChange since first\n+0.3%\n\n\nObservations\n5\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-28\n\n\n\n\n\n\n\n\n6.8.1 Overview\nThis indicator tracks the extent of tree canopy cover in the region, as measured by the National Forest Inventory (NFI). Tree canopy cover is an important aspect of urban greening, biodiversity and climate resilience. The NFI dataset is filtered by the “Woodland” category and clipped to the boundary of the West of England to provide a regional measure of the area covered by woodland.",
     "crumbs": [
       "Green Jobs and Growth",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
     ]
   },
   {
     "objectID": "chapters/05-environment/index.html#water-catchment-health",
     "href": "chapters/05-environment/index.html#water-catchment-health",
-    "title": "5  Green Jobs and Growth",
-    "section": "5.9 Water Catchment Health",
-    "text": "5.9 Water Catchment Health\n\n\n\n\n\n\n\n\n\n\n\n\nWater Catchment Health\n\n\nProportion of surface waters in 'Good' ecological health\n\n\n\n\nLatest value\n14.4% (2022-12-31)\n\n\nPrevious value\n12.3% (2019-12-31)\n\n\nChange vs previous\n+2.2 ppts\n\n\nFirst value\n12.3% (2019-12-31)\n\n\nChange since first\n+2.2 ppts\n\n\nObservations\n2\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-27\n\n\n\n\n\n\n\n\n5.9.1 Overview\nThis indicator tracks the ecological health of surface waters in the catchment which most closely represents the region - Avon Bristol and Somerset North Streams. It is expressed as the proportion of surface waters in ‘Good’ ecological health. The data are derived from the Environment Agency’s regular water quality monitoring programme. Surface water classification and sources have changed over the years, so data prior to 2019 are not comparable with recent datasets.\n\n\n\n\n\n\n\n\n\n\n\n5.9.2 Findings\nData from recent years show little variation and reflect the national picture on the state of surface waters. The number of water bodies sampled has not changed significantly. Several sources of pollution impact water quality including agricultural run - off and untreated sewage discharge.",
+    "title": "6  Green Jobs and Growth",
+    "section": "6.9 Water Catchment Health",
+    "text": "6.9 Water Catchment Health\n\n\n\n\n\n\n\n\n\n\n\n\nWater Catchment Health\n\n\nProportion of surface waters in 'Good' ecological health\n\n\n\n\nLatest value\n14.4% (2022-12-31)\n\n\nPrevious value\n12.3% (2019-12-31)\n\n\nChange vs previous\n+2.2 ppts\n\n\nFirst value\n12.3% (2019-12-31)\n\n\nChange since first\n+2.2 ppts\n\n\nObservations\n2\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-28\n\n\n\n\n\n\n\n\n6.9.1 Overview\nThis indicator tracks the ecological health of surface waters in the catchment which most closely represents the region - Avon Bristol and Somerset North Streams. It is expressed as the proportion of surface waters in ‘Good’ ecological health. The data are derived from the Environment Agency’s regular water quality monitoring programme. Surface water classification and sources have changed over the years, so data prior to 2019 are not comparable with recent datasets.",
     "crumbs": [
       "Green Jobs and Growth",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/05-environment/index.html#summary",
-    "href": "chapters/05-environment/index.html#summary",
-    "title": "5  Green Jobs and Growth",
-    "section": "5.10 Summary",
-    "text": "5.10 Summary\nSummary of key findings across all green economy indicators. What is the overall picture for green jobs and growth?",
-    "crumbs": [
-      "Green Jobs and Growth",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Green Jobs and Growth</span>"
     ]
   },
   {
     "objectID": "chapters/06-child-poverty/index.html",
     "href": "chapters/06-child-poverty/index.html",
-    "title": "6  Child Poverty",
+    "title": "7  Child Poverty",
     "section": "",
-    "text": "6.1 Context\nThis chapter tracks indicators related to child poverty and family wellbeing across the West of England. Up to 10 indicators can be included, covering metrics like child poverty rates, free school meals eligibility, household income, access to services, and educational outcomes.",
+    "text": "7.1 Context\nThis chapter tracks indicators related to child poverty and family wellbeing across the West of England. Up to 10 indicators can be included, covering metrics like child poverty rates, free school meals eligibility, household income, access to services, and educational outcomes.",
     "crumbs": [
       "Child Poverty",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Child Poverty</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Child Poverty</span>"
     ]
   },
   {
     "objectID": "chapters/06-child-poverty/index.html#setup",
     "href": "chapters/06-child-poverty/index.html#setup",
-    "title": "6  Child Poverty",
-    "section": "6.2 Setup",
-    "text": "6.2 Setup\n\n\nLoad required packages\n# Load required packages\nlibrary(tidyverse)\n\n# Source shared helpers (theme, helpers, fact_helpers, collate_fact)\nsource(here::here(\"scripts\", \"R\", \"_common.R\"))",
+    "title": "7  Child Poverty",
+    "section": "7.2 Setup",
+    "text": "7.2 Setup\n\n\nLoad required packages\n# Load required packages\nlibrary(tidyverse)\n\n# Source shared helpers (theme, helpers, fact_helpers, collate_fact)\nsource(here::here(\"scripts\", \"R\", \"_common.R\"))",
     "crumbs": [
       "Child Poverty",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Child Poverty</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Child Poverty</span>"
     ]
   },
   {
     "objectID": "chapters/06-child-poverty/index.html#indicator-1-your-child-poverty-indicator",
     "href": "chapters/06-child-poverty/index.html#indicator-1-your-child-poverty-indicator",
-    "title": "6  Child Poverty",
-    "section": "6.3 Indicator 1: [Your Child Poverty Indicator]",
-    "text": "6.3 Indicator 1: [Your Child Poverty Indicator]\nData source: [Specify source] Last updated: [Date] Refresh schedule: [Annual/Quarterly/Monthly]\n\n6.3.1 Overview\n[Describe what this indicator measures and why it matters for lifting children and families out of poverty]\n\n\nIndicator 1 analysis\n# Your code here\n# See chapters/01-economy/index.qmd for a worked example pattern:\n# 1. Load data using load_csv()\n# 2. Process/filter/aggregate data\n# 3. Create visualization with theme_weca()\n# 4. Calculate key statistics using format_number()\n\n\n\n\n6.3.2 Findings\n[Your narrative findings here]",
+    "title": "7  Child Poverty",
+    "section": "7.3 Indicator 1: [Your Child Poverty Indicator]",
+    "text": "7.3 Indicator 1: [Your Child Poverty Indicator]\nData source: [Specify source] Last updated: [Date] Refresh schedule: [Annual/Quarterly/Monthly]\n\n7.3.1 Overview\n[Describe what this indicator measures and why it matters for lifting children and families out of poverty]\n\n\nIndicator 1 analysis\n# Your code here\n# See chapters/01-economy/index.qmd for a worked example pattern:\n# 1. Load data using load_csv()\n# 2. Process/filter/aggregate data\n# 3. Create visualization with theme_weca()\n# 4. Calculate key statistics using format_number()\n\n\n\n\n7.3.2 Findings\n[Your narrative findings here]",
     "crumbs": [
       "Child Poverty",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Child Poverty</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Child Poverty</span>"
     ]
   },
   {
     "objectID": "chapters/06-child-poverty/index.html#indicator-2-your-child-poverty-indicator",
     "href": "chapters/06-child-poverty/index.html#indicator-2-your-child-poverty-indicator",
-    "title": "6  Child Poverty",
-    "section": "6.4 Indicator 2: [Your Child Poverty Indicator]",
-    "text": "6.4 Indicator 2: [Your Child Poverty Indicator]\nData source: Last updated: Refresh schedule:\n[Repeat structure - add up to 10 indicators total]",
+    "title": "7  Child Poverty",
+    "section": "7.4 Indicator 2: [Your Child Poverty Indicator]",
+    "text": "7.4 Indicator 2: [Your Child Poverty Indicator]\nData source: Last updated: Refresh schedule:\n[Repeat structure - add up to 10 indicators total]",
     "crumbs": [
       "Child Poverty",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Child Poverty</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Child Poverty</span>"
     ]
   },
   {
     "objectID": "chapters/06-child-poverty/index.html#summary",
     "href": "chapters/06-child-poverty/index.html#summary",
-    "title": "6  Child Poverty",
-    "section": "6.5 Summary",
-    "text": "6.5 Summary\n[Summary of key findings across all child poverty indicators. What is the overall picture for lifting children and families out of poverty?]",
+    "title": "7  Child Poverty",
+    "section": "7.5 Summary",
+    "text": "7.5 Summary\n[Summary of key findings across all child poverty indicators. What is the overall picture for lifting children and families out of poverty?]",
     "crumbs": [
       "Child Poverty",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Child Poverty</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Child Poverty</span>"
     ]
   }
 ]
