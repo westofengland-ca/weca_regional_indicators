@@ -13,8 +13,6 @@ execute:
 
 This chapter tracks indicators related to housing affordability and sustainability across the West of England. Up to 10 indicators can be included, covering metrics like housing completions, affordability ratios, energy efficiency, social housing supply, and planning permissions.
 
-## Setup
-
 ```{r}
 #| label: setup
 #| code-summary: "Load required packages and source files"
@@ -40,13 +38,12 @@ indicator_fact_tbl <- collate_fact() |>
 #| code-summary: "RI_3A2_homes_epc_c_plus summary"
 
 indicator_fact_tbl |>
-format_indicator_summary(
-  "RI_3A2_homes_epc_c_plus",
-  title = "Energy Performance of Homes",
-  subtitle = "Proportion of homes with EPC rating of C or above",
-  units = "%"
-)
-
+  format_indicator_summary(
+    "RI_3A2_homes_epc_c_plus",
+    title = "Energy Performance of Homes",
+    subtitle = "Proportion of homes with EPC rating of C or above",
+    units = "%"
+  )
 ```
 
 ### Overview
@@ -66,11 +63,7 @@ This indicator tracks the proportion of homes in the West of England with an Ene
 #|   half of assessed homes still fall below a C rating.
 
 RI_3A2_plot
-
 ```
-### Findings
-
-The proportion of homes which have an EPC with an energy rating of C or better has risen steadily over the last 10 years. EPC ratings measure energy efficiency and are not directly related to carbon emissions. WECA runs programmes to help home owners and landlords understand [retrofit](https://www.retrofitwest.co.uk/) options and [businesses to reduce their carbon emissions](https://www.westofengland-ca.gov.uk/what-we-do/environment/low-carbon-business-support/).
 
 ---
 <!-- ## Indicator -->

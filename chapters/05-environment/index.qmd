@@ -86,11 +86,6 @@ Regional greenhouse gas emissions from transport, domestic, commercial, industri
 RI_5_plot
 ```
 
-### Findings
-
-Emissions have declined steadily over several years. Transport and domestic sectors dominate. The region is currently not on track to meet the 2030 net zero target, indicating a need for accelerated action in key sectors.
-Demand reduction for personal car use and the introduction of low - carbon heating for homes remain key priorities for the region.
-
 ---
 
 ## Renewable Energy
@@ -129,10 +124,6 @@ Potential for renewable energy capacity is strongly influenced by land availabil
 RI_5A1_renewable_plot
 ```
 
-### Findings
-
-Installed capacity has climbed steadily over the last 10 years, reflecting central government policy and the region's ambitions for Net Zero. The National Energy Systems Operator (NESO) is currently developing [regional energy strategic plans](https://www.neso.energy/what-we-do/strategic-planning/regional-energy-strategic-planning-resp) which may drive further growth in installed capacity.
-
 ---
 
 ## Domestic Renewable Energy
@@ -168,10 +159,6 @@ Solar photovoltaic (PV) installations are a key aspect of energy security and ne
 #|   growth in domestic solar adoption.
 RI_5A2_domestic_renewable_plot
 ```
-
-### Findings
-
-Installations of PV panels have increased steadily over the last 10 years.
 
 ---
 
@@ -209,10 +196,6 @@ This indicator measures the energy efficiency of non - domestic property by expr
 RI_5B1_nondom_epc_a_plot
 ```
 
-### Findings
-
-The improvement in the proportion of properties meeting an A or A+ standard is slow but steady. WECA's Low Carbon Business Support team help businesses improve their energy efficiency with assessments, advice and grants.
-
 ---
 
 
@@ -248,9 +231,6 @@ This indicator tracks the number of heat associated deaths per million populatio
 #|   continuing rise in ambient temperatures from a warming climate.
 RI_5E1_heat_stress_deaths_plot
 ```
-
-### Findings
-A small increase in deaths per million for the region is likely to reflect the ongoing increase in ambient temperature arising from a warming climate. WECA has produced a [Climate Adaptation Report](https://www.westofengland-ca.gov.uk/what-we-do/environment/climate-impact/) to help the region prepare for the impacts of a warming climate.
 
 ---
 
@@ -290,10 +270,6 @@ This indicator is designed to represent the risk of flooding relative to a 2020 
 RI_5E2_flood_warning_index_plot
 ```
 
-### Findings
-
-2024 saw the highest level of flooding relative to the 2020 baseline, but the levels of warnings subsided below the baseline in the most recent reported year. Warnings do not necessarily translate into actual floods.
-
 ---
 
 ## Tree Canopy
@@ -331,11 +307,6 @@ This indicator tracks the extent of tree canopy cover in the region, as measured
 RI_5F1_plot
 ```
 
-### Findings
-
-The extent of woodland varies very little from year to year, but the overall trend is positive with a small increase in canopy cover since 2020. Several initiatives are underway to increase tree canopy cover in the region, including the [Forest of Avon](https://forestofavon.org/) project which is planting trees across the region to support biodiversity and climate resilience. These are likely to show in the indicator as the newly planted trees mature and are captured in the NFI dataset.
-
-
 ## Water Catchment Health
 
 ```{r}
@@ -370,11 +341,6 @@ This indicator tracks the ecological health of surface waters in the catchment w
 
 RI_5F4_plot
 ```
-
-### Findings
-
-Data from recent years show little variation and reflect the national picture on the state of surface waters. The number of water bodies sampled has not changed significantly. Several sources of pollution impact water quality including agricultural run - off and untreated sewage discharge.
-
 
 ---
 
@@ -423,11 +389,5 @@ Data from recent years show little variation and reflect the national picture on
 <!-- ### Findings -->
 
 <!-- --- -->
-
-
-
-## Summary
-
-Summary of key findings across all green economy indicators. What is the overall picture for green jobs and growth?
 
 ---

@@ -2,24 +2,24 @@
 number-sections: false
 ---
 
-# West of England Regional Priorities {.unnumbered}
+<!-- # West of England Regional Priorities {.unnumbered} -->
 
-*Key indicators across the Combined Authority's priority areas*
+# Key indicators across the Combined Authority's priority areas
 
 ## About This Report
 
-This report brings together key indicators across the West of England Combined Authority's regional priority areas. Each chapter presents up to 10 indicators with analysis, charts, and context to track progress against strategic goals. Indicators are published on [Connect](https://westofenglandca.sharepoint.com/:x:/r/sites/WECA_Home/_layouts/15/Doc.aspx?sourcedoc=%7B2E0A40CE-4E27-4073-8C11-48B56228B34D%7D&file=Outcomes%20Framework%20Indicators%20v1.1%20Feb2026.xlsx&action=default&mobileredirect=true).
+This report brings together key indicators across the West of England Combined Authority's regional priority areas and is informed by the [West of England Growth Strategy](https://www.westofengland-ca.gov.uk/about-us/our-strategy/west-of-england-growth-plan/). Each chapter presents up to 10 indicators with analysis, charts, and context to track progress against strategic goals. Indicators are published on [Connect](https://westofenglandca.sharepoint.com/:x:/r/sites/WECA_Home/_layouts/15/Doc.aspx?sourcedoc=%7B2E0A40CE-4E27-4073-8C11-48B56228B34D%7D&file=Outcomes%20Framework%20Indicators%20v1.1%20Feb2026.xlsx&action=default&mobileredirect=true).
 
 ## Priority Areas
 
-| Chapter | Priority Area | Lead |
-|---------|--------------|------|
-| 1 | Contributing to national economic growth | SN |
-| 2 | Connecting the region through better public transport | HB |
-| 3 | Creating and building affordable/sustainable homes | CJ |
-| 4 | Empowering residents with future-ready skills | MJ |
-| 5 | Making the West of England the home for green jobs and growth | SC |
-| 6 | Lifting children and families out of poverty | MJ |
+| Chapter | Priority Area |
+|---------|--------------|
+| 1 | Contributing to national economic growth |
+| 2 | Connecting the region through better public transport |
+| 3 | Creating and building affordable/sustainable homes |
+| 4 | Empowering residents with future-ready skills |
+| 5 | Making the West of England the home for green jobs and growth |
+| 6 | Lifting children and families out of poverty |
 
 ```{r}
 #| label: overall_summary
@@ -41,7 +41,6 @@ format_overall_summary(
 ## How to Use This Report
 
 - Use the **sidebar navigation** to jump to any chapter
-- Click **"Show code"** to reveal the R or Python code behind any chart or table
 - Each chapter is self-contained and can be read independently
 
 ## Data Sources
