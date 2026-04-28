@@ -67,7 +67,7 @@ indicator_fact_tbl |>
 
 ### Overview
 
-Regional greenhouse gas emissions from transport, domestic, commercial, industrial and public sectors. This tracks the region's progress toward the net zero target by 2030 and identifies key sectors for emissions reduction.
+Regional greenhouse gas emissions from transport, domestic, commercial, industrial and public sectors. This tracks the region's progress toward the net zero target by 2030 and identifies key sectors for emissions reduction. Source data are [UK local authority and regional greenhouse gas emissions statistics, 2005 to 2023](https://www.gov.uk/government/collections/uk-local-authority-and-regional-greenhouse-gas-emissions-statistics) from the Department for Energy Security and Net Zero.
 
 ```{r}
 #| label: RI_5_ghg_emissions
@@ -132,7 +132,7 @@ RI_5A1_renewable_plot
 #| label: RI_5A2_domestic_renewable_gt
 #| eval: true
 #| code-summary: "RI_5A2_domestic_renewable summary"
-
+# no specific R script for this analysis - it's in RI_5A1
 indicator_fact_tbl |>
   format_indicator_summary(
     "RI_5A2_domestic_renewable",
@@ -143,7 +143,7 @@ indicator_fact_tbl |>
 ```
 ### Overview
 
-Solar photovoltaic (PV) installations are a key aspect of energy security and net zero. This indicator tracks installations per household in the region.
+Solar photovoltaic (PV) installations are a key aspect of energy security and net zero. This indicator tracks installations per household in the region. Almost all domestic PV installations are rooftop, so the indicator is expressed in terms of site counts rather than capacity. The data are derived from the Department for Energy Security and Net Zero's [renewable energy by local authority spreadsheet](https://assets.publishing.service.gov.uk/media/68da76d2c487360cc70c9e9d/Renewable_electricity_by_local_authority_2014_-_2024.xlsx).
 
 ```{r}
 #| label: RI_5A2_domestic_renewable_plot
@@ -180,7 +180,7 @@ indicator_fact_tbl |>
 
 ### Overview
 
-This indicator measures the energy efficiency of non - domestic property by expressing the proportion of properties which have an energy rating of A or A+, in other words the best performing properties.
+This indicator measures the energy efficiency of non - domestic property by expressing the proportion of properties which have an energy rating of A or A+, in other words the best performing properties. Data are sourced from the [Ministry of Housing, Communities and Local Government](https://get-energy-performance-data.communities.gov.uk/).
 
 ```{r}
 #| label: RI_5B1_nondom_epc_a_plot
@@ -252,7 +252,7 @@ indicator_fact_tbl |>
 
 ### Overview
 
-This indicator is designed to represent the risk of flooding relative to a 2020 baseline. It is a duration-weighted composite indicator tracking flood warning activity across the West of England (Bristol, Bath & North East Somerset, South Gloucestershire, North Somerset and derived from the Environment Agency's flood warnings dataset. It provides annual monitoring to support climate resilience reporting. The methodology for the indicator is described [here](https://github.com/stevecrawshaw/fwii).
+This indicator is designed to represent the risk of flooding relative to a 2020 baseline. It is a duration-weighted composite indicator tracking flood warning activity across the West of England (Bristol, Bath & North East Somerset, South Gloucestershire, North Somerset and derived from the Environment Agency's [historic flood warnings dataset](https://environment.data.gov.uk/dataset/88bed270-d465-11e4-8669-f0def148f590). It provides annual monitoring to support climate resilience reporting. The methodology for the indicator is described in this [github repository](https://github.com/stevecrawshaw/fwii).
 
 ```{r}
 #| label: RI_5E2_flood_warning_index_plot
@@ -290,7 +290,7 @@ indicator_fact_tbl |>
 
 ### Overview
 
-This indicator tracks the extent of tree canopy cover in the region, as measured by the National Forest Inventory (NFI). Tree canopy cover is an important aspect of urban greening, biodiversity and climate resilience. The NFI dataset is filtered by the "Woodland" category and clipped to the boundary of the West of England to provide a regional measure of the area covered by woodland.
+This indicator tracks the extent of tree canopy cover in the region, as measured by the National Forest Inventory (NFI). Tree canopy cover is an important aspect of urban greening, biodiversity and climate resilience. The NFI source [dataset](https://data-forestry.opendata.arcgis.com/datasets/d62fd97664a64596844b9834c1737e46_0/explore) is filtered by the "Woodland" category and clipped to the boundary of the West of England to provide a regional measure of the area covered by woodland.
 
 ```{r}
 #| label: RI_5F1_tree_canopy_plot
