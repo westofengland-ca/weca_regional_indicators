@@ -61,55 +61,11 @@
     ]
   },
   {
-    "objectID": "chapters/01-economy/index.html#worked-example-sample-economic-indicator",
-    "href": "chapters/01-economy/index.html#worked-example-sample-economic-indicator",
+    "objectID": "chapters/01-economy/index.html#broadband-coverage",
+    "href": "chapters/01-economy/index.html#broadband-coverage",
     "title": "2  Economic Growth",
-    "section": "2.2 Worked Example: Sample Economic Indicator",
-    "text": "2.2 Worked Example: Sample Economic Indicator\nThis example demonstrates how to create an indicator using R. It loads data, processes it, creates a chart with WECA branding, and presents findings.\n\n\nLoad required packages\n# Load required packages\nlibrary(tidyverse)\n\n# Source shared helpers (theme, helpers, fact_helpers, collate_fact)\nsource(here::here(\"scripts\", \"R\", \"_common.R\"))\n\n\n\n\nLoad example data\n# Load example indicator data\n# In your actual analysis, replace this with your real data source\ndata &lt;- load_csv(here::here(\"data\", \"examples\", \"example_indicator.csv\"))\n\n# Preview the data structure\nhead(data)\n\n\n# A tibble: 6 × 6\n  area     year indicator_name  indicator_value target_value national_average\n  &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;                     &lt;dbl&gt;        &lt;dbl&gt;            &lt;dbl&gt;\n1 Bristol  2015 Employment Rate            72.3           75             73.1\n2 Bristol  2016 Employment Rate            73.5           75             73.8\n3 Bristol  2017 Employment Rate            74.2           75             74.2\n4 Bristol  2018 Employment Rate            75.1           75             74.9\n5 Bristol  2019 Employment Rate            76.3           75             75.4\n6 Bristol  2020 Employment Rate            73.8           75             74.1\n\n\n\n\nProcess and summarize data\n# Filter and process the data\n# This example calculates the latest value and year-on-year change\nprocessed &lt;- data %&gt;%\n  filter(indicator_name == \"Sample Economic Metric\") %&gt;%\n  arrange(year) %&gt;%\n  mutate(\n    # Calculate year-on-year change\n    yoy_change = indicator_value - lag(indicator_value),\n    yoy_pct = (yoy_change / lag(indicator_value)) * 100\n  )\n\n# Get the latest value for summary\nlatest &lt;- processed %&gt;%\n  filter(year == max(year)) %&gt;%\n  pull(indicator_value)\n\nlatest_year &lt;- processed %&gt;%\n  filter(year == max(year)) %&gt;%\n  pull(year)\n\n\n\n2.2.1 Latest Value\nThe most recent value for this indicator is **** (as of ).\n\n\nCreate trend chart\n# Create a line chart showing the trend over time\nggplot(processed, aes(x = year, y = indicator_value)) +\n  geom_line(colour = weca_palette[\"forest_green\"], linewidth = 1.2) +\n  geom_point(colour = weca_palette[\"forest_green\"], size = 3) +\n  scale_y_continuous(labels = scales::comma) +\n  labs(\n    title = \"Sample Economic Indicator Trend\",\n    x = \"Year\",\n    y = \"Indicator Value\",\n    caption = \"Source: Example data\"\n  ) +\n  theme_weca()\n\n\nError in `weca_palette[\"forest_green\"]`:\n! object of type 'closure' is not subsettable\n\n\n\n\n2.2.2 Key Findings\n\nThe indicator has shown [describe trend - increasing/decreasing/stable]\nLatest year-on-year change: [insert value]\nPolicy implications: [describe what this means for the priority area]",
-    "crumbs": [
-      "Economic Growth",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Economic Growth</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/01-economy/index.html#indicator-1-your-indicator-name",
-    "href": "chapters/01-economy/index.html#indicator-1-your-indicator-name",
-    "title": "2  Economic Growth",
-    "section": "2.3 Indicator 1: [Your Indicator Name]",
-    "text": "2.3 Indicator 1: [Your Indicator Name]\nData source: [Specify source] Last updated: [Date] Refresh schedule: [Annual/Quarterly/Monthly]\n\n2.3.1 Overview\n[Describe what this indicator measures and why it matters for economic growth]\n\n\nIndicator 1 analysis\n# Your code here\n# Follow the pattern from the worked example above:\n# 1. Load data\n# 2. Process/filter/aggregate\n# 3. Create visualization with theme_weca()\n# 4. Calculate key statistics\n\n\n\n\n2.3.2 Findings\n[Your narrative findings here]",
-    "crumbs": [
-      "Economic Growth",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Economic Growth</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/01-economy/index.html#indicator-2-your-indicator-name",
-    "href": "chapters/01-economy/index.html#indicator-2-your-indicator-name",
-    "title": "2  Economic Growth",
-    "section": "2.4 Indicator 2: [Your Indicator Name]",
-    "text": "2.4 Indicator 2: [Your Indicator Name]\nData source: Last updated: Refresh schedule:\n[Repeat structure above - add up to 10 indicators total]",
-    "crumbs": [
-      "Economic Growth",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Economic Growth</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/01-economy/index.html#summary",
-    "href": "chapters/01-economy/index.html#summary",
-    "title": "2  Economic Growth",
-    "section": "2.5 Summary",
-    "text": "2.5 Summary\n[Summary of key findings across all indicators in this chapter. What is the overall picture for economic growth?]",
-    "crumbs": [
-      "Economic Growth",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Economic Growth</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/01-economy/index.html#python-example-alternative",
-    "href": "chapters/01-economy/index.html#python-example-alternative",
-    "title": "2  Economic Growth",
-    "section": "2.6 Python Example (Alternative)",
-    "text": "2.6 Python Example (Alternative)\nThe example below shows how to achieve the same analysis using Python instead of R.\n\n\nPython alternative for data analysis\n# import pandas as pd\n# import matplotlib.pyplot as plt\n# from pathlib import Path\n#\n# # Load data with project-relative path\n# project_root = Path(__file__).parent.parent.parent  # Navigate to project root\n# data_path = project_root / \"data\" / \"examples\" / \"example_indicator.csv\"\n# df = pd.read_csv(data_path)\n#\n# # Filter and process\n# economic_data = df[df['indicator_name'] == 'Sample Economic Metric'].copy()\n# economic_data = economic_data.sort_values('year')\n#\n# # Calculate year-on-year change\n# economic_data['yoy_change'] = economic_data['indicator_value'].diff()\n# economic_data['yoy_pct'] = (economic_data['yoy_change'] /\n#                              economic_data['indicator_value'].shift(1)) * 100\n#\n# # Create chart (matplotlib - theme_weca for Python to be added later)\n# fig, ax = plt.subplots(figsize=(10, 6))\n# ax.plot(economic_data['year'], economic_data['indicator_value'],\n#         marker='o', linewidth=2, color='#1D4F2B')\n# ax.set_xlabel('Year')\n# ax.set_ylabel('Indicator Value')\n# ax.set_title('Sample Economic Indicator Trend')\n# plt.show()",
+    "section": "2.2 Broadband coverage",
+    "text": "2.2 Broadband coverage\n\n\nRI_1D1_broadband_coverage KPI summary\nindicator_fact_tbl |&gt;\nformat_indicator_summary(\n  \"RI_1D1_broadband_coverage\",\n  title = \"Superfast coverage\",\n  subtitle = \"Residential and commercial premises\",\n  units = \"percent\"\n)\n\n\n\n\n\n\n\n\n\n\n\n\nSuperfast coverage\n\n\nResidential and commercial premises\n\n\n\n\nLatest value\n97.0 percent (2025-07-01)\n\n\nPrevious value\n97.0 percent (2025-01-01)\n\n\nChange vs previous\n+0.0%\n\n\nFirst value\n94.5 percent (2020-09-01)\n\n\nChange since first\n+2.6%\n\n\nObservations\n11\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-04-29\n\n\n\n\n\n\n\n\n2.2.1 Overview\nRegional broadband coverage for residential and commercial premises. This tracks the region’s progress in relation to superfast broadband coverage (30mbps+) and gigabit broadband coverage (1000mbps+).\n\n\nRI_1D1_broadband_coverage analysis\nRI_1D1_plot",
     "crumbs": [
       "Economic Growth",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Economic Growth</span>"
