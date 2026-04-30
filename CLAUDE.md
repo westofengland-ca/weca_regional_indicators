@@ -20,6 +20,8 @@ weca_regional_indicators/
 ├── _brand.yml           # WECA branding configuration
 ├── index.qmd            # Report landing page
 ├── custom.scss          # Custom SCSS styling
+├── .Rprofile            # renv activation + vscode-R options (must load renv first)
+├── .Renviron            # Disables renv startup sync check (speeds up R start)
 ├── chapters/            # Modular chapter directories (one per analyst/priority)
 │   ├── 01-economy/
 │   ├── 02-transport/
@@ -30,9 +32,17 @@ weca_regional_indicators/
 ├── data/                # Shared data assets
 │   ├── raw/             # Original data files (not committed)
 │   ├── processed/       # Cleaned/transformed data (not committed)
+│   ├── fact/            # Per-indicator FACT CSVs (committed, one file per indicator)
 │   └── examples/        # Small example datasets (committed)
-├── scripts/             # Shared utility scripts
-│   ├── R/               # R helper functions and WECA theme
+├── scripts/
+│   ├── R/
+│   │   ├── _common.R          # Sourced by every chapter (loads all helpers below)
+│   │   ├── theme_weca.R       # WECA ggplot2 theme
+│   │   ├── helpers.R          # General data loading utilities
+│   │   ├── fact_helpers.R     # build_fact() / save_fact() — analyst FACT workflow
+│   │   ├── collate_fact.R     # collate_fact() / build_reporting_view()
+│   │   ├── reporting_table.R  # format_indicator_summary() — GT summary tables
+│   │   └── db_connect.R       # Postgres connection via .env variables
 │   ├── python/          # Python utility scripts
 │   └── hooks/           # Pre-commit hook scripts
 ├── _freeze/             # Quarto execution cache (committed)
@@ -130,6 +140,72 @@ The report uses code folding to keep output clean:
 - Python chunks use the `uv` virtual environment
 - R chunks use the `renv` library
 - Jupyter kernel: `python3`
+
+## R Environment Setup
+
+`.Rprofile` and `.Renviron` are committed to make the project portable across IDEs (RStudio, Positron, VS Code).
+
+**Critical ordering:** `.Rprofile` activates `renv` first (`source("renv/activate.R")`), then loads vscode-R session watcher. If renv activates after `languageserver`/`httpgd` load, the wrong `rlang` namespace gets pinned for the session.
+
+`.Renviron` sets `RENV_CONFIG_SYNCHRONIZED_CHECK=FALSE` to skip the per-startup lock-file sync (saves ~1.4 s). Run `renv::status()` manually when needed.
+
+## FACT Table Workflow
+
+The shared data contract for indicator observations. Each analyst writes their indicator's data to `data/fact/{indicator_id}.csv`; the report collates them at render time.
+
+**Analyst steps (in every indicator script):**
+
+```r
+source(here::here("scripts", "R", "fact_helpers.R"))  # or via _common.R
+
+# 1. Wrangle to exactly three columns: period_start, period_end, value
+my_tbl <- raw_data |>
+  transmute(
+    period_start = as.Date(paste0(year, "-01-01")),
+    period_end   = as.Date(paste0(year, "-12-31")),
+    value        = my_metric
+  )
+
+# 2. Validate and stamp with indicator_id
+fact_tbl <- build_fact(my_tbl, indicator_id = "RI_5_ghg_emissions")
+
+# 3. Write to data/fact/RI_5_ghg_emissions.csv
+save_fact(fact_tbl)
+```
+
+**At render time** (`_common.R` sources `collate_fact.R`):
+
+```r
+fact <- collate_fact()            # binds all data/fact/*.csv
+rv   <- build_reporting_view(fact) # one row per indicator: latest, previous, sparkline
+
+# Per-chapter GT summary table
+format_indicator_summary(rv, "RI_5_ghg_emissions", units = "kt CO2e")
+```
+
+**Rules enforced by `build_fact()`:** exactly `period_start`, `period_end`, `value` columns; no duplicate `period_end` per indicator; dates must coerce without NA; `period_start <= period_end`.
+
+**Sparkline note:** `format_indicator_summary()` generates SVG strings directly (not via `svglite`). Never use device rendering for inline GT sparklines — browsers fill `fill`-less polylines black.
+
+## Chapter Setup
+
+Every chapter sources `_common.R` which loads all shared helpers:
+
+```r
+source(here::here("scripts", "R", "_common.R"))
+```
+
+This provides: `theme_weca`, `load_csv()`, `build_fact()`, `save_fact()`, `collate_fact()`, `build_reporting_view()`, `format_indicator_summary()`.
+
+## Database Connection
+
+`scripts/R/db_connect.R` connects to Postgres via variables in `.env` (gitignored):
+
+```
+POSTGRES_HOST, POSTGRES_PORT, POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD
+```
+
+Call `readRenviron(".env")` before sourcing `db_connect.R` in interactive scripts.
 
 ## R Documentation (btw MCP)
 

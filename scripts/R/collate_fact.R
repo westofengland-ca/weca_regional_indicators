@@ -83,8 +83,8 @@ collate_fact <- function(dir = here::here("data", "fact")) {
 #' Build a reporting view with latest value, previous value and sparkline
 #'
 #' One row per indicator, suitable for a summary table. Includes:
-#'   - latest_value, latest_period_end
-#'   - previous_value, previous_period_end
+#'   - latest_value, latest_period_start, latest_period_end
+#'   - previous_value, previous_period_start, previous_period_end
 #'   - pct_change (latest vs previous)
 #'   - first_value, first_period_end (for longer-run context)
 #'   - pct_change_since_first
@@ -113,6 +113,8 @@ build_reporting_view <- function(fact_tbl) {
       first_value = dplyr::first(value),
       previous_period_end = dplyr::nth(period_end, -2L, default = as.Date(NA)),
       previous_value = dplyr::nth(value, -2L, default = NA_real_),
+      previous_period_start = dplyr::nth(period_start, -2L, default = as.Date(NA)),
+      latest_period_start = dplyr::last(period_start),
       latest_period_end = dplyr::last(period_end),
       latest_value = dplyr::last(value),
       sparkline = list(value),

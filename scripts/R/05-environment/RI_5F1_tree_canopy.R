@@ -1,11 +1,5 @@
-pacman::p_load(tidyverse, glue, janitor, here, sf)
+pacman::p_load(tidyverse, glue, janitor, here)
 source(here::here("scripts", "R", "_common.R"))
-source(here::here("scripts", "R", "db_connect.R"))
-
-lep_area_m <- as.integer(
-  (st_read(con, query = "SELECT * FROM os.bdline_ua_lep_diss") |>
-    st_area(lep_bound))
-)
 
 # RI_5F1_tree_canopy
 
