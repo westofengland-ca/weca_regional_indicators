@@ -239,6 +239,8 @@ _output/
 *.html
 *.pdf
 *_files/
+!chapters/**/index_files/figure-html/
+!chapters/**/index_files/figure-html/*.png
 *_cache/
 /.quarto/
 
