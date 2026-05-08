@@ -11,7 +11,7 @@ execute:
 
 ## Context
 
-This chapter tracks indicators related to green economy and environmental sustainability across the West of England. Topics include carbon emissions, renewable energy, water pollution, climate resilience and public health.
+This chapter tracks indicators related to green economy and environmental sustainability across the West of England. Topics include carbon emissions, renewable energy, water pollution, climate resilience and public health. Indicators were developed to provide high-level insights into regional trends and performance in relation to the West of England's environmental priorities, which are informed by the [Growth Strategy](https://www.westofengland-ca.gov.uk/wp-content/uploads/2025/09/WE4915-Growth-Strategy-exec-summary_aw_web_v1.pdf).
 
 ```{r}
 #| label: setup

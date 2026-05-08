@@ -223,6 +223,7 @@ data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 !data/examples/*.csv
+!data/examples/*.xlsx
 !data/common_project_data/*.xlsx
 !data/common_project_data/*.csv
 !data/common_project_data/*.rds

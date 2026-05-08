@@ -11,7 +11,7 @@ execute:
 
 ## Context
 
-This chapter tracks indicators related to housing affordability and sustainability across the West of England. Up to 10 indicators can be included, covering metrics like housing completions, affordability ratios, energy efficiency, social housing supply, and planning permissions.
+This chapter tracks indicators related to housing affordability and sustainability across the West of England. Indicators cover metrics like housing completions, affordability ratios, energy efficiency, social housing supply, and planning permissions. Indicators were developed to provide high-level insights into regional trends and performance in relation to the West of England's housing priorities as outlined in our [Growth Strategy](https://www.westofengland-ca.gov.uk/wp-content/uploads/2025/09/WE4915-Growth-Strategy-exec-summary_aw_web_v1.pdf).
 
 ```{r}
 #| label: setup
