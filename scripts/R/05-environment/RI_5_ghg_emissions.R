@@ -35,7 +35,7 @@ RI_5_max_date <- resp_max_year |>
 RI_5_start_date <- (RI_5_max_date - lubridate::years(period_years - 1)) |>
   strftime("%Y-%m-%dT%H:%M:%S")
 
-# make the API call
+# make the API call for KPI sector chart
 resp <- httr2::request(RI_5_base_url) |>
   httr2::req_url_path_append(RI_5_dataset_id, RI_5_endpoint) |>
   httr2::req_url_query(
@@ -45,7 +45,7 @@ resp <- httr2::request(RI_5_base_url) |>
     ),
     "group_by" = "la_ghg_sector AS sector,calendar_year",
     "limit" = 100
-  ) %>%
+  ) |>
   httr2::req_perform()
 
 # process the response object to get the tbl
@@ -80,18 +80,72 @@ RI_5_plot <- RI_5_kpi_sector_emissions_weca_tbl |>
     fill = sector
   )) +
   labs(
-    title = "Greenhouse Gas Emissions by Sector",
+    title = "Greenhouse Gas Emission Trends by Sector",
     subtitle = "West of England Combined Authority",
     x = "Year",
     y = "Kt CO2e",
     fill = "Sector",
-    caption = "Source DESNZ: Includes North Somerset"
+    caption = "Source DESNZ"
   ) +
   scale_fill_manual(values = fill_colors) +
   theme_weca() +
   theme(axis.title.y = element_text(angle = 0, vjust = 0.5))
 
 # RI_5_plot
+
+# Now the chart for sector emission from current year
+
+RI_5_sector_emissions_weca_current_year_tbl <- RI_5_sector_emissions_weca_tbl |>
+  filter(year == RI_5_max_date |> year())
+
+total_emissions_current_year <- RI_5_sector_emissions_weca_current_year_tbl |>
+  summarise(
+    total_emissions = sum(territorial_emissions_kt_co2e, na.rm = TRUE)
+  ) |>
+  pull(total_emissions)
+
+RI_5_sector_emissions_weca_current_year_plot_tbl <-
+  RI_5_sector_emissions_weca_current_year_tbl |>
+  mutate(
+    percent_total_emissions = round(
+      territorial_emissions_kt_co2e / total_emissions_current_year * 100
+    ),
+    sector = fct_reorder(sector, percent_total_emissions)
+  )
+
+RI_5_sector_emissions_weca_current_year_plot <-
+  RI_5_sector_emissions_weca_current_year_plot_tbl |>
+  ggplot() +
+  geom_col(
+    aes(
+      x = sector,
+      y = territorial_emissions_kt_co2e
+    ),
+    fill = get_weca_color("forest_green")
+  ) +
+  labs(
+    title = "Latest Greenhouse Gas Emissions by Sector",
+    subtitle = glue::glue(
+      "West of England Combined Authority - {RI_5_max_date |> year()}"
+    ),
+    x = "Sector",
+    y = "Total emissions (Kt CO2e)",
+    caption = "Source DESNZ"
+  ) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.1))) +
+  geom_text(
+    aes(
+      x = sector,
+      y = territorial_emissions_kt_co2e,
+      label = glue::glue("{percent_total_emissions}%")
+    ),
+    hjust = -0.3
+  ) +
+  coord_flip() +
+  theme_weca() +
+  theme(axis.title.y = element_text(angle = 0, vjust = 0.5))
+
+# RI_5_sector_emissions_weca_current_year_plot
 
 RI_5_kpi_base_data_tbl <- RI_5_kpi_sector_emissions_weca_tbl |>
   group_by(year) |>
