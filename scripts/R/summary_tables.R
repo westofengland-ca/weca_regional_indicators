@@ -28,8 +28,8 @@
 #' @return Character vector.
 #' @keywords internal
 .fmt_change <- function(value, is_percent) {
-  sign      <- dplyr::if_else(value >= 0, "+", "", missing = "")
-  suffix    <- dplyr::if_else(is_percent, " ppt", "%")
+  sign <- dplyr::if_else(value >= 0, "+", "", missing = "")
+  suffix <- dplyr::if_else(is_percent, " ppt", "%")
   formatted <- paste0(sign, formatC(value, format = "f", digits = 1), suffix)
   dplyr::if_else(is.na(value), "--", formatted)
 }
@@ -70,7 +70,7 @@ format_priority_summary <- function(reporting_view,
   }
 
   required_rv <- c("indicator_id", "latest_period_start", "latest_period_end", "latest_value")
-  missing_rv  <- setdiff(required_rv, names(reporting_view))
+  missing_rv <- setdiff(required_rv, names(reporting_view))
   if (length(missing_rv) > 0L) {
     stop("`reporting_view` is missing columns: ", paste(missing_rv, collapse = ", "),
       call. = FALSE
@@ -110,8 +110,8 @@ format_priority_summary <- function(reporting_view,
       value             = "Latest value",
       units             = "Units"
     ) |>
-    gt::cols_align(align = "left",   columns = c("indicator_summary", "units")) |>
-    gt::cols_align(align = "right",  columns = "value") |>
+    gt::cols_align(align = "left", columns = c("indicator_summary", "units")) |>
+    gt::cols_align(align = "right", columns = "value") |>
     gt::cols_align(align = "center", columns = c("period_start", "period_end")) |>
     gt::fmt_number(columns = "value", decimals = 1, use_seps = TRUE) |>
     gt::cols_width(indicator_summary ~ gt::px(360)) |>
@@ -197,8 +197,8 @@ format_overall_summary <- function(reporting_view,
       change            = "Change"
     ) |>
     gt::cols_hide(columns = "priority") |>
-    gt::cols_align(align = "left",   columns = c("indicator_summary", "units")) |>
-    gt::cols_align(align = "right",  columns = c("value", "change")) |>
+    gt::cols_align(align = "left", columns = c("indicator_summary", "units")) |>
+    gt::cols_align(align = "right", columns = c("value", "change")) |>
     gt::cols_align(align = "center", columns = c("period_start", "period_end")) |>
     gt::fmt_number(columns = "value", decimals = 1, use_seps = TRUE) |>
     gt::cols_width(indicator_summary ~ gt::px(360)) |>

@@ -96,7 +96,7 @@ The indicator is defined by subset of sectors. To calculate the proportion of to
 #|   greenhouse gas emissions in the West of England Combined Authority area for
 #|   the latest year - typically 2 years behind the current year. The y-axis shows sector; the x-axis shows
 #|   emissions in KT CO2e. The chart shows that Transport is the largest contributor followed by Domestic
-RI_5_sector_emissions_weca_current_year_plot
+RI_5_sector_current_year_plot
 ```
 ---
 

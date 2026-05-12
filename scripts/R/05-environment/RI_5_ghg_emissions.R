@@ -58,10 +58,10 @@ RI_5_sector_emissions_weca_tbl <- resp |>
     calendar_year = NULL
   )
 
-RI_5_kpi_sector_emissions_weca_tbl <- RI_5_sector_emissions_weca_tbl |>
+RI_5_kpi_sector_weca_tbl <- RI_5_sector_emissions_weca_tbl |>
   filter(sector %in% RI_5_kpi_sectors)
 
-sector_names <- RI_5_kpi_sector_emissions_weca_tbl |>
+sector_names <- RI_5_kpi_sector_weca_tbl |>
   distinct(sector) |>
   pull(sector)
 
@@ -71,7 +71,7 @@ fill_colors <-
   weca_colors[1:sector_count] |>
   set_names(sector_names)
 
-RI_5_plot <- RI_5_kpi_sector_emissions_weca_tbl |>
+RI_5_plot <- RI_5_kpi_sector_weca_tbl |>
   group_by(sector) |>
   ggplot() +
   geom_col(aes(
@@ -95,17 +95,17 @@ RI_5_plot <- RI_5_kpi_sector_emissions_weca_tbl |>
 
 # Now the chart for sector emission from current year
 
-RI_5_sector_emissions_weca_current_year_tbl <- RI_5_sector_emissions_weca_tbl |>
+RI_5_sector_current_year_tbl <- RI_5_sector_emissions_weca_tbl |>
   filter(year == RI_5_max_date |> year())
 
-total_emissions_current_year <- RI_5_sector_emissions_weca_current_year_tbl |>
+total_emissions_current_year <- RI_5_sector_current_year_tbl |>
   summarise(
     total_emissions = sum(territorial_emissions_kt_co2e, na.rm = TRUE)
   ) |>
   pull(total_emissions)
 
-RI_5_sector_emissions_weca_current_year_plot_tbl <-
-  RI_5_sector_emissions_weca_current_year_tbl |>
+RI_5_sector_current_year_plot_tbl <-
+  RI_5_sector_current_year_tbl |>
   mutate(
     percent_total_emissions = round(
       territorial_emissions_kt_co2e / total_emissions_current_year * 100
@@ -113,8 +113,8 @@ RI_5_sector_emissions_weca_current_year_plot_tbl <-
     sector = fct_reorder(sector, percent_total_emissions)
   )
 
-RI_5_sector_emissions_weca_current_year_plot <-
-  RI_5_sector_emissions_weca_current_year_plot_tbl |>
+RI_5_sector_current_year_plot <-
+  RI_5_sector_current_year_plot_tbl |>
   ggplot() +
   geom_col(
     aes(
@@ -145,9 +145,8 @@ RI_5_sector_emissions_weca_current_year_plot <-
   theme_weca() +
   theme(axis.title.y = element_text(angle = 0, vjust = 0.5))
 
-# RI_5_sector_emissions_weca_current_year_plot
 
-RI_5_kpi_base_data_tbl <- RI_5_kpi_sector_emissions_weca_tbl |>
+RI_5_kpi_base_data_tbl <- RI_5_kpi_sector_weca_tbl |>
   group_by(year) |>
   summarise(
     total_emissions_kpi_sectors = sum(
