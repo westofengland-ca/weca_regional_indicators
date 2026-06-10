@@ -34,7 +34,9 @@ RI_4A3_apprenticeship_starts_long_tbl <-
     names_to = "academic_year",
     values_to = "value"
   ) |>
-  glimpse()
+  mutate(
+    value = as.numeric(value)
+  ) |>   glimpse()
 
 # Filtering the local authorities & dates for the stacked chart
 RI_4A3_apprenticeship_starts_plot_tbl <-
@@ -79,26 +81,19 @@ RI_4A3_apprenticeship_starts_plot
 #creating fact table 
 RI_4A3_apprenticeship_starts_fact_tbl <-
   RI_4A3_apprenticeship_starts_long_tbl |>
-  filter(area == "West of England LEP")
-View(RI_4A3_apprenticeship_starts_fact_tbl)
-glimpse(RI_4A3_apprenticeship_starts_long_tbl)
-
-
-RI_4A3_apprenticeship_starts_fact_tbl <-
-  RI_4A3_apprenticeship_starts_fact_tbl |>
+  filter(area == "West of England LEP") |>
+  filter(academic_year >= "2015/16") |>
   mutate(
     start_year = readr::parse_number(academic_year),
     period_start = as.Date(glue("{start_year}-08-01")),
     period_end = as.Date(glue("{start_year + 1}-07-31"))
   ) |>
-  filter(period_start >= as.Date("2014-01-01")) |>
   select(
     period_start,
     period_end,
     value
   )
-View(RI_4A3_apprenticeship_starts_fact_tbl) 
-glimpse(RI_4A3_apprenticeship_starts_fact_tbl)
+View(RI_4A3_apprenticeship_starts_fact_tbl)
 
 #Save the fact file
 RI_4A3_apprenticeship_starts_fact_tbl |>
@@ -108,3 +103,4 @@ RI_4A3_apprenticeship_starts_fact_tbl |>
   save_fact()
 
 View(RI_4A3_apprenticeship_starts_fact_tbl)
+
