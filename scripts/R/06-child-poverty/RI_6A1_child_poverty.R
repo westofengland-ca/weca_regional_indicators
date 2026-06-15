@@ -63,7 +63,7 @@ RI_6A1_child_poverty_plot <-
     title = "Children in poverty after housing costs",
     subtitle = "West of England",
     x = "Financial year",
-    y = "Percentage",
+    y = "%",
     caption = "Source: End Child Poverty"
   ) +
   theme_weca() +
@@ -85,7 +85,8 @@ RI_6A1_child_poverty_fact_tbl <-
   mutate(
     start_year = readr::parse_number(academic_year),
     period_start = as.Date(glue("{start_year}-04-01")),
-    period_end = as.Date(glue("{start_year + 1}-03-31"))
+    period_end = as.Date(glue("{start_year + 1}-03-31")),
+    value = value * 100
   ) |>
   select(
     period_start,

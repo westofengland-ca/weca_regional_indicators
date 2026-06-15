@@ -57,7 +57,7 @@ RI_4B3_neet_16_17_plot_tbl <-
     )
   )
 
-View(RI_4B3_neet_16_17_plot_tbl)
+#View(RI_4B3_neet_16_17_plot_tbl)
 
 # Line chart
 RI_4B3_neet_16_17_plot <-
@@ -77,13 +77,17 @@ RI_4B3_neet_16_17_plot <-
     title = "16 to 17 year olds not in education, employment or training",
     subtitle = "West of England",
     x = "Year",
-    y = "Percentage",
+    y = "%",
     colour = NULL,
     caption = "Source: Department for Education"
   ) +
   theme_ua() +
   theme(
-    axis.title.y = element_text(angle = 0, vjust = 0.5)
+    axis.title.y = element_text(angle = 0, vjust = 0.5),
+    legend.position = "bottom"
+  ) +
+  guides(
+    colour = guide_legend(ncol = 2)
   )
 
 # View line chart
@@ -98,7 +102,8 @@ RI_4B3_neet_16_17_fact_tbl <-
   ) |>
   mutate(
     period_start = as.Date(glue("{year}-01-01")),
-    period_end = as.Date(glue("{year}-12-31"))
+    period_end = as.Date(glue("{year}-12-31")),
+    value = value * 100
   ) |>
   select(
     period_start,

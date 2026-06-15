@@ -97,8 +97,8 @@ RI_4B2_economic_inactivity_plot <-
   labs(
     title = "Economically inactive residents aged 16-64",
     subtitle = "West of England and Great Britain",
-    x = NULL,
-    y = "Economic inactivity rate",
+    x = "Year",
+    y = "Economic \ninactivity \nrate",
     colour = NULL,
     caption = "Source: Nomis, Annual Population Survey"
   ) +
@@ -116,6 +116,9 @@ RI_4B2_economic_inactivity_fact_tbl <-
   RI_4B2_economic_inactivity_long_tbl |>
   filter(
     area == "West of England"
+  ) |>
+  mutate(
+    value = value * 100
   ) |>
   select(
     period_start,

@@ -46,7 +46,7 @@ RI_6B2_early_years_quality_plot_tbl <-
     )
   )
 
-View(RI_6B2_early_years_quality_plot_tbl)
+head(RI_6B2_early_years_quality_plot_tbl)
 
 # Line chart
 RI_6B2_early_years_quality_plot <-
@@ -77,14 +77,18 @@ RI_6B2_early_years_quality_plot <-
   labs(
     title = "Early years settings judged good or outstanding",
     subtitle = "West of England",
-    x = "Year",
-    y = "Percentage",
+    x = "Date",
+    y = "%",
     colour = NULL,
     caption = "Source: Ofsted"
   ) +
   theme_ua() +
   theme(
-    axis.title.y = element_text(angle = 0, vjust = 0.5)
+    axis.title.y = element_text(angle = 0, vjust = 0.5),
+    legend.position = "bottom"
+  ) +
+  guides(
+    colour = guide_legend(ncol = 2)
   )
 
 # View line chart
@@ -98,7 +102,7 @@ RI_6B2_early_years_quality_fact_tbl <-
   filter(area == "West of England") |>
   mutate(
     period_start = date,
-    period_end = date
+    period_end = date,
   ) |>
   select(
     period_start,

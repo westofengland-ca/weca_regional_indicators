@@ -76,6 +76,9 @@ RI_4A1_no_qualifications_plot_tbl <-
       "South Gloucestershire",
       "West of England"
     )
+  ) |>
+  mutate(
+    year = lubridate::year(period_end)
   )
 
 View(RI_4A1_no_qualifications_plot_tbl)
@@ -85,7 +88,7 @@ RI_4A1_no_qualifications_plot <-
   RI_4A1_no_qualifications_plot_tbl |>
   ggplot(
     aes(
-      x = period_end,
+      x = year,
       y = value,
       colour = area,
       group = area
@@ -99,20 +102,31 @@ RI_4A1_no_qualifications_plot <-
       "West of England" = "#40A832"
     )
   ) +
-  scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
-  scale_y_continuous(labels = scales::percent) +
+  scale_x_continuous(
+    breaks = seq(
+      min(RI_4A1_no_qualifications_plot_tbl$year),
+      max(RI_4A1_no_qualifications_plot_tbl$year),
+      by = 1
+    )
+  ) +
+  scale_y_continuous(
+    labels = scales::percent
+  ) +
   labs(
     title = "Residents aged 16-64 with no qualifications",
     subtitle = "West of England",
-    x = NULL,
-    y = "Percentage",
+    x = "Year",
+    y = "%",
     colour = NULL,
     caption = "Source: Nomis, Annual Population Survey"
   ) +
   theme_ua() +
   theme(
-    axis.title.y = element_text(angle = 0, vjust = 0.5)
-    
+    axis.title.y = element_text(angle = 0, vjust = 0.5),
+    legend.position = "bottom"
+  ) +
+  guides(
+    colour = guide_legend(ncol = 2)
   )
 
 # View line chart
@@ -128,7 +142,8 @@ RI_4A1_no_qualifications_fact_tbl <-
     period_end >= as.Date("2022-12-31")
   ) |>
   mutate(
-    period_start = as.Date(glue("{year(period_end)}-01-01"))
+    period_start = as.Date(glue("{year(period_end)}-01-01")),
+    value = value * 100
   ) |>
   select(
     period_start,

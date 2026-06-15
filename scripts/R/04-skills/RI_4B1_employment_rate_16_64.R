@@ -92,14 +92,14 @@ RI_4B1_employment_rate_16_64_plot <-
   ) +
   scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
   scale_y_continuous(
-    labels = scales::percent,
-    breaks = seq (0, 1, by = 0.01)
-    ) +
+    labels = scales::label_percent(accuracy = 1),
+    breaks = seq(0, 1, by = 0.01)
+  ) +
   labs(
     title = "Employment rate for residents aged 16-64",
     subtitle = "West of England and Great Britain",
-    x = NULL,
-    y = "Employment rate",
+    x = "Year",
+    y = "Employment \nrate",
     colour = NULL,
     caption = "Source: Nomis, Annual Population Survey"
   ) +
@@ -120,6 +120,9 @@ RI_4B1_employment_rate_16_64_fact_tbl <-
   RI_4B1_employment_rate_16_64_long_tbl |>
   filter(
     area == "West of England"
+  ) |>
+  mutate(
+    value = value * 100
   ) |>
   select(
     period_start,

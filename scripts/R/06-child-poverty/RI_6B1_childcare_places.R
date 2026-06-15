@@ -54,7 +54,7 @@ RI_6B1_childcare_places_plot <-
     title = "Childcare places relative to population aged 0 to 4",
     subtitle = "West of England",
     x = "Year",
-    y = "Proportion",
+    y = "%",
     caption = "Source: Ofsted and ONS"
   ) +
   theme_weca() +
@@ -73,7 +73,8 @@ RI_6B1_childcare_places_fact_tbl <-
   filter(area == "West of England") |>
   mutate(
     period_start = date,
-    period_end = date
+    period_end = date,
+    value = value * 100
   ) |>
   select(
     period_start,

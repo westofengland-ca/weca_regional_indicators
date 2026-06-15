@@ -2,17 +2,17 @@
 pacman::p_load(tidyverse, janitor, glue, tidyxl, readxl, here)
 source(here::here("scripts", "R", "_common.R"))
 
-# RI_4A4_attainment8
+# RI_4A4_ks4_attainment8
 
 # Getting data
-RI_4A4_attainment8_path <- here::here(
+RI_4A4_ks4_attainment8_path <- here::here(
   "data",
   "raw",
   "4.A.4-attainment8_05.26.xlsx"
 )
 
-RI_4A4_attainment8_raw_tbl <- read_excel(
-  RI_4A4_attainment8_path,
+RI_4A4_ks4_attainment8_raw_tbl <- read_excel(
+  RI_4A4_ks4_attainment8_path,
   sheet = "attainment8",
   skip = 2
 ) |>
@@ -26,11 +26,11 @@ RI_4A4_attainment8_raw_tbl <- read_excel(
     )
   )
 
-glimpse(RI_4A4_attainment8_raw_tbl)
+glimpse(RI_4A4_ks4_attainment8_raw_tbl)
 
 # Turning year columns into rows
-RI_4A4_attainment8_long_tbl <-
-  RI_4A4_attainment8_raw_tbl |>
+RI_4A4_ks4_attainment8_long_tbl <-
+  RI_4A4_ks4_attainment8_raw_tbl |>
   pivot_longer(
     cols = -area,
     names_to = "academic_year",
@@ -40,11 +40,11 @@ RI_4A4_attainment8_long_tbl <-
     value = as.numeric(value)
   )
 
-glimpse(RI_4A4_attainment8_long_tbl)
+glimpse(RI_4A4_ks4_attainment8_long_tbl)
 
 # Filtering the areas & dates for the line chart
-RI_4A4_attainment8_plot_tbl <-
-  RI_4A4_attainment8_long_tbl |>
+RI_4A4_ks4_attainment8_plot_tbl <-
+  RI_4A4_ks4_attainment8_long_tbl |>
   filter(
     academic_year >= "2015/16"
   ) |>
@@ -58,11 +58,11 @@ RI_4A4_attainment8_plot_tbl <-
     )
   )
 
-View(RI_4A4_attainment8_plot_tbl)
+View(RI_4A4_ks4_attainment8_plot_tbl)
 
 # Line chart
-RI_4A4_attainment8_plot <-
-  RI_4A4_attainment8_plot_tbl |>
+RI_4A4_ks4_attainment8_plot <-
+  RI_4A4_ks4_attainment8_plot_tbl |>
   ggplot(aes(x = academic_year, y = value, colour = area, group = area)) +
   geom_line(linewidth = 1.2) +
   geom_point(size = 3) +
@@ -84,15 +84,17 @@ RI_4A4_attainment8_plot <-
   theme_ua() +
   theme(
     axis.title.y = element_text(angle = 0, vjust = 0.5),
-    axis.text.x = element_text(angle = 45, hjust = 1)
+    axis.text.x = element_text(angle = 0, hjust = 0.5),
+    legend.position = "bottom"
+  ) +
+  guides(
+    colour = guide_legend(ncol = 2)
   )
-
-# View line chart
-RI_4A4_attainment8_plot
+RI_4A4_ks4_attainment8_plot
 
 # Creating fact table
-RI_4A4_attainment8_fact_tbl <-
-  RI_4A4_attainment8_long_tbl |>
+RI_4A4_ks4_attainment8_fact_tbl <-
+  RI_4A4_ks4_attainment8_long_tbl |>
   filter(
     area == "West of England",
     academic_year >= "2015/16"
@@ -108,14 +110,13 @@ RI_4A4_attainment8_fact_tbl <-
     value
   )
 
-View(RI_4A4_attainment8_fact_tbl)
+# View(RI_4A4_ks4_attainment8_fact_tbl)
 
 # Save the fact file
-RI_4A4_attainment8_fact_tbl |>
+RI_4A4_ks4_attainment8_fact_tbl |>
   build_fact(
-    indicator_id = "RI_4A4_attainment8"
+    indicator_id = "RI_4A4_ks4_attainment8"
   ) |>
   save_fact()
 
-View(RI_4A4_attainment8_fact_tbl)
-
+# View(RI_4A4_ks4_attainment8_fact_tbl)

@@ -107,7 +107,7 @@ RI_6D5_pupil_semh_needs_plot <-
     title = "School pupils with social, emotional and mental health needs",
     subtitle = "West of England",
     x = "Academic year",
-    y = "Percentage",
+    y = "%",
     caption = "Source: Fingertips"
   ) +
   theme_ua() +
@@ -130,7 +130,8 @@ RI_6D5_pupil_semh_needs_fact_tbl <-
   mutate(
     start_year = readr::parse_number(academic_year),
     period_start = as.Date(glue("{start_year}-09-01")),
-    period_end = as.Date(glue("{start_year + 1}-08-31"))
+    period_end = as.Date(glue("{start_year + 1}-08-31")),
+    value = value * 100
   ) |>
   select(
     period_start,

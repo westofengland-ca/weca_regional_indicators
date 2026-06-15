@@ -52,7 +52,7 @@ RI_4A3_apprenticeship_starts_plot_tbl <-
       "South Gloucestershire"
     )
   )
-View(RI_4A3_apprenticeship_starts_plot_tbl)
+#View(RI_4A3_apprenticeship_starts_plot_tbl)
 
 #stacked bar chart 
 RI_4A3_apprenticeship_starts_plot <-
@@ -72,7 +72,11 @@ RI_4A3_apprenticeship_starts_plot <-
   theme_ua() +
   theme(
     axis.title.y = element_text(angle = 0, vjust = 0.5),
-    axis.text.x = element_text(angle = 45, hjust = 1)
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "bottom"
+  ) +
+  guides(
+    fill = guide_legend(ncol = 2)
   )
 
 #View stacked bar chart
@@ -86,7 +90,8 @@ RI_4A3_apprenticeship_starts_fact_tbl <-
   mutate(
     start_year = readr::parse_number(academic_year),
     period_start = as.Date(glue("{start_year}-08-01")),
-    period_end = as.Date(glue("{start_year + 1}-07-31"))
+    period_end = as.Date(glue("{start_year + 1}-07-31")),
+    value = as.integer(round(value, 0))
   ) |>
   select(
     period_start,
