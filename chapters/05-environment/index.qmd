@@ -11,7 +11,7 @@ execute:
 
 ## Context
 
-This chapter tracks indicators related to green economy and environmental sustainability across the West of England. Topics include carbon emissions, renewable energy, water pollution, climate resilience and public health.
+This chapter tracks indicators related to green economy and environmental sustainability across the West of England. Topics include carbon emissions, renewable energy, water pollution, climate resilience and public health. Indicators were developed to provide high-level insights into regional trends and performance in relation to the West of England's environmental priorities, which are informed by the [Growth Strategy](https://www.westofengland-ca.gov.uk/wp-content/uploads/2025/09/WE4915-Growth-Strategy-exec-summary_aw_web_v1.pdf).
 
 ```{r}
 #| label: setup
@@ -85,7 +85,19 @@ Regional greenhouse gas emissions from transport, domestic, commercial, industri
 #|   sectors.
 RI_5_plot
 ```
+The indicator is defined by subset of sectors. To calculate the proportion of total emissions contributed by each sector, the current year total emissions are calculated and then used to derive percentage contributions for the current year. This allows for alignment with other work in the combined authority supporting transport and domestic sector decarbonisation. Note that LULUCF (land use, land use change and forestry) emissions are negative due to carbon sequestration and percentages are calculated based on the final balance after removals are subtracted.
 
+```{r}
+#| label: RI_5_ghg_emissions_sector_proportions_current_year
+#| eval: true
+#| code-summary: "RI_5_ghg_emissions sector proportions current year"
+#| fig-alt: |
+#|   Bar chart showing the percentage contribution of each sector to total
+#|   greenhouse gas emissions in the West of England Combined Authority area for
+#|   the latest year - typically 2 years behind the current year. The y-axis shows sector; the x-axis shows
+#|   emissions in KT CO2e. The chart shows that Transport is the largest contributor followed by Domestic
+RI_5_sector_current_year_plot
+```
 ---
 
 ## Renewable Energy

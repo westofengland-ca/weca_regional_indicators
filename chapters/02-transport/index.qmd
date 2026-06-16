@@ -11,7 +11,7 @@ execute:
 
 ## Context
 
-This chapter tracks indicators related to public transport connectivity across the West of England. Up to 10 indicators can be included, covering metrics like bus ridership, punctuality, accessibility, network coverage, and passenger satisfaction.
+This chapter tracks indicators related to public transport connectivity across the West of England. The chapter draws on a range of national and local data sources to provide a high-level overview of regional trends and performance in relation to transport connectivity. Indicators were defined as part of the development of our [Growth Strategy](https://www.westofengland-ca.gov.uk/wp-content/uploads/2025/09/WE4915-Growth-Strategy-exec-summary_aw_web_v1.pdf).
 
 ## Setup
 
@@ -30,9 +30,9 @@ source(here::here("scripts", "R", "_common.R"))
 
 ## Indicator 1: [Your Transport Indicator]
 
-**Data source:** [Specify source]  
-**Last updated:** [Date]  
-**Refresh schedule:** [Annual/Quarterly/Monthly]  
+**Data source:** [Specify source]
+**Last updated:** [Date]
+**Refresh schedule:** [Annual/Quarterly/Monthly]
 
 
 ### Overview

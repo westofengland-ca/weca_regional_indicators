@@ -2,6 +2,8 @@
 
 Thank you for contributing to the West of England Regional Priorities Indicators project! This guide will help you collaborate effectively with the team.
 
+> **New to git or GitHub?** Start with [`chapters/04-skills/ONBOARDING.md`](chapters/04-skills/ONBOARDING.md) — a step-by-step walkthrough covering setup, authentication, branching, and your first pull request. Come back here once you have made your first contribution.
+
 ---
 
 ## 📂 Project Structure

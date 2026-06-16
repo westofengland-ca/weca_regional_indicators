@@ -88,22 +88,24 @@ options(show.error.locations = TRUE)
 
 # Configure ragg graphics device for proper font support (R 4.3+)
 # ragg integrates with systemfonts to automatically find system fonts
-if (interactive()) suppressPackageStartupMessages({
-  if (requireNamespace("ragg", quietly = TRUE)) {
-    options(bitmapType = "cairo")
-    cat("[OK] Graphics: Using ragg device with systemfonts\n")
-    if (requireNamespace("systemfonts", quietly = TRUE)) {
-      all_fonts <- systemfonts::system_fonts()
-      weca_fonts <- all_fonts[
-        grepl("(Open Sans|Trebuchet)", all_fonts$family, ignore.case = TRUE),
-      ]
-      if (nrow(weca_fonts) > 0) {
-        cat("[OK] WECA fonts detected:\n")
-        for (font in unique(weca_fonts$family)) cat("  -", font, "\n")
+if (interactive()) {
+  suppressPackageStartupMessages({
+    if (requireNamespace("ragg", quietly = TRUE)) {
+      options(bitmapType = "cairo")
+      cat("[OK] Graphics: Using ragg device with systemfonts\n")
+      if (requireNamespace("systemfonts", quietly = TRUE)) {
+        all_fonts <- systemfonts::system_fonts()
+        weca_fonts <- all_fonts[
+          grepl("(Open Sans|Trebuchet)", all_fonts$family, ignore.case = TRUE),
+        ]
+        if (nrow(weca_fonts) > 0) {
+          cat("[OK] WECA fonts detected:\n")
+          for (font in unique(weca_fonts$family)) cat("  -", font, "\n")
+        }
       }
     }
-  }
-})
+  })
+}
 
 # ============================================================================
 # STARTUP MESSAGE
