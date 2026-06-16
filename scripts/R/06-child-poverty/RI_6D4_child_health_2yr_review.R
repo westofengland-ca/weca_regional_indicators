@@ -19,8 +19,6 @@ RI_6D4_child_health_2yr_review_raw_tbl <- fingertips_data(
     )
   )
 
-glimpse(RI_6D4_child_health_2yr_review_raw_tbl)
-
 # Keep required areas -----------
 RI_6D4_child_health_2yr_review_la_tbl <-
   RI_6D4_child_health_2yr_review_raw_tbl |>
@@ -44,8 +42,6 @@ RI_6D4_child_health_2yr_review_la_tbl <-
   filter(
     financial_year >= "2021/22"
   )
-
-View(RI_6D4_child_health_2yr_review_la_tbl)
 
 # Create West of England figure
 # Use summed count / summed denominator.
@@ -78,7 +74,6 @@ RI_6D4_child_health_2yr_review_woe_tbl <-
     value
   )
 
-View(RI_6D4_child_health_2yr_review_woe_tbl)
 
 # Making the table of 4 LAs + England + West of England
 RI_6D4_child_health_2yr_review_plot_tbl <-
@@ -88,7 +83,6 @@ RI_6D4_child_health_2yr_review_plot_tbl <-
   ) |>
   arrange(timeperiod_sortable, area)
 
-View(RI_6D4_child_health_2yr_review_plot_tbl)
 
 # Bar chart: West of England -----
 RI_6D4_child_health_2yr_review_plot <-
@@ -122,7 +116,7 @@ RI_6D4_child_health_2yr_review_plot <-
   )
 
 # View
-RI_6D4_child_health_2yr_review_plot
+#RI_6D4_child_health_2yr_review_plot
 
 # Creating fact table ------------
 RI_6D4_child_health_2yr_review_fact_tbl <-
@@ -138,8 +132,6 @@ RI_6D4_child_health_2yr_review_fact_tbl <-
     period_end,
     value
   )
-
-View(RI_6D4_child_health_2yr_review_fact_tbl)
 
 # Save the fact file -------------
 RI_6D4_child_health_2yr_review_fact_tbl |>

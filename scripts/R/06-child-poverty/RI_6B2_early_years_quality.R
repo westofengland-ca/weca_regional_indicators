@@ -31,8 +31,6 @@ RI_6B2_early_years_quality_raw_tbl <- read_excel(
     value = as.numeric(value)
   )
 
-glimpse(RI_6B2_early_years_quality_raw_tbl)
-
 # Use local authorities and West of England for this line chart
 RI_6B2_early_years_quality_plot_tbl <-
   RI_6B2_early_years_quality_raw_tbl |>
@@ -45,8 +43,6 @@ RI_6B2_early_years_quality_plot_tbl <-
       "West of England"
     )
   )
-
-head(RI_6B2_early_years_quality_plot_tbl)
 
 # Line chart
 RI_6B2_early_years_quality_plot <-
@@ -92,11 +88,9 @@ RI_6B2_early_years_quality_plot <-
   )
 
 # View line chart
-RI_6B2_early_years_quality_plot
+#RI_6B2_early_years_quality_plot
 
 # Creating fact table
-# This dataset already contains point-in-time dates, so the same date is used
-# for period_start and period_end.
 RI_6B2_early_years_quality_fact_tbl <-
   RI_6B2_early_years_quality_raw_tbl |>
   filter(area == "West of England") |>
@@ -110,8 +104,6 @@ RI_6B2_early_years_quality_fact_tbl <-
     value
   )
 
-View(RI_6B2_early_years_quality_fact_tbl)
-
 # Save the fact file
 RI_6B2_early_years_quality_fact_tbl |>
   build_fact(
@@ -119,4 +111,3 @@ RI_6B2_early_years_quality_fact_tbl |>
   ) |>
   save_fact()
 
-View(RI_6B2_early_years_quality_fact_tbl)

@@ -18,7 +18,6 @@ RI_6A4_free_school_meals_raw_tbl <- read_excel(
 ) |>
   rename(area = 1) |>
   mutate(
-    # Clean area names to ensure filtering and recoding work reliably
     area = str_squish(area),
     area = recode(
       area,
@@ -27,10 +26,7 @@ RI_6A4_free_school_meals_raw_tbl <- read_excel(
     )
   )
 
-head(RI_6A4_free_school_meals_raw_tbl)
-
 # Convert data from wide format, where years are columns,
-# to long format, where year and value are separate columns
 RI_6A4_free_school_meals_long_tbl <-
   RI_6A4_free_school_meals_raw_tbl |>
   mutate(across(-area, as.character)) |>
@@ -43,8 +39,6 @@ RI_6A4_free_school_meals_long_tbl <-
     value = readr::parse_number(value)
   )
 
-glimpse(RI_6A4_free_school_meals_long_tbl)
-
 # Use West of England only for this indicator chart
 RI_6A4_free_school_meals_plot_tbl <-
   RI_6A4_free_school_meals_long_tbl |>
@@ -52,8 +46,6 @@ RI_6A4_free_school_meals_plot_tbl <-
     area == "West of England",
     academic_year >= "2015/16"
   )
-
-View(RI_6A4_free_school_meals_plot_tbl)
 
 # Bar chart
 RI_6A4_free_school_meals_plot <-
@@ -75,11 +67,9 @@ RI_6A4_free_school_meals_plot <-
   )
 
 # View bar chart
-RI_6A4_free_school_meals_plot
+#RI_6A4_free_school_meals_plot
 
 # Creating fact table
-# Free school meals data are reported by academic year
-# e.g. 2021/22 = 1 September 2021 to 31 August 2022
 RI_6A4_free_school_meals_fact_tbl <-
   RI_6A4_free_school_meals_long_tbl |>
   filter(
@@ -98,8 +88,6 @@ RI_6A4_free_school_meals_fact_tbl <-
     value
   )
 
-View(RI_6A4_free_school_meals_fact_tbl)
-
 # Save the fact file
 RI_6A4_free_school_meals_fact_tbl |>
   build_fact(
@@ -107,4 +95,3 @@ RI_6A4_free_school_meals_fact_tbl |>
   ) |>
   save_fact()
 
-View(RI_6A4_free_school_meals_fact_tbl)

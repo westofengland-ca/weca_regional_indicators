@@ -37,7 +37,6 @@ RI_4A1_no_qualifications_raw_tbl <- fetch_nomis(
     )
   )
 
-glimpse(RI_4A1_no_qualifications_raw_tbl)
 
 # Keep the columns needed for plotting, checking and the fact table
 RI_4A1_no_qualifications_long_tbl <-
@@ -59,7 +58,6 @@ RI_4A1_no_qualifications_long_tbl <-
     period_end >= as.Date("2022-12-31")
   )
 
-glimpse(RI_4A1_no_qualifications_long_tbl)
 
 # Check to make sure each area should have one row per available year
 RI_4A1_no_qualifications_long_tbl |>
@@ -80,8 +78,6 @@ RI_4A1_no_qualifications_plot_tbl <-
   mutate(
     year = lubridate::year(period_end)
   )
-
-View(RI_4A1_no_qualifications_plot_tbl)
 
 # Line chart
 RI_4A1_no_qualifications_plot <-
@@ -130,7 +126,7 @@ RI_4A1_no_qualifications_plot <-
   )
 
 # View line chart
-RI_4A1_no_qualifications_plot
+#RI_4A1_no_qualifications_plot
 
 # Creating fact table
 # This indicator is annual December data from Nomis.
@@ -151,8 +147,6 @@ RI_4A1_no_qualifications_fact_tbl <-
     value
   )
 
-View(RI_4A1_no_qualifications_fact_tbl)
-
 # Save the fact file
 RI_4A1_no_qualifications_fact_tbl |>
   build_fact(
@@ -160,4 +154,3 @@ RI_4A1_no_qualifications_fact_tbl |>
   ) |>
   save_fact()
 
-View(RI_4A1_no_qualifications_fact_tbl)

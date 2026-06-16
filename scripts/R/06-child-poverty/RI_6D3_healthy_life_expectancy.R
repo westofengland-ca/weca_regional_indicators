@@ -19,8 +19,6 @@ RI_6D3_healthy_life_expectancy_raw_tbl <- fingertips_data(
     )
   )
 
-glimpse(RI_6D3_healthy_life_expectancy_raw_tbl)
-
 # Clean and filter data 
 RI_6D3_healthy_life_expectancy_plot_tbl <-
   RI_6D3_healthy_life_expectancy_raw_tbl |>
@@ -44,8 +42,6 @@ RI_6D3_healthy_life_expectancy_plot_tbl <-
     upper_ci95_0limit
   ) |>
   arrange(sex, area, timeperiod_sortable)
-
-View(RI_6D3_healthy_life_expectancy_plot_tbl)
 
 # Male chart 
 RI_6D3_healthy_life_expectancy_male_plot <-
@@ -89,7 +85,6 @@ RI_6D3_healthy_life_expectancy_male_plot <-
     colour = guide_legend(ncol = 2)
   )
 
-RI_6D3_healthy_life_expectancy_male_plot
 
 # Female chart
 RI_6D3_healthy_life_expectancy_female_plot <-
@@ -133,49 +128,3 @@ RI_6D3_healthy_life_expectancy_female_plot <-
     colour = guide_legend(ncol = 2)
   )
 
-RI_6D3_healthy_life_expectancy_female_plot
-
-# Male fact table ----------------
-#RI_6D3_healthy_life_expectancy_male_fact_tbl <-
-  #RI_6D3_healthy_life_expectancy_plot_tbl |>
- # filter(
-  #  sex == "Male"
- # ) |>
- # transmute(
- #   area,
- #   period_start = as.Date(glue("{timeperiod_sortable %/% 10000}-01-01")),
- #   period_end = as.Date(glue("{(timeperiod_sortable %/% 10000) + 2}-12-31")),
- #   value
- # )
-
-# View(RI_6D3_healthy_life_expectancy_male_fact_tbl)
-# 
-# # Save male fact file
-# RI_6D3_healthy_life_expectancy_male_fact_tbl |>
-#   build_fact(
-#     indicator_id = "RI_6D3_healthy_life_expectancy_male"
-#   ) |>
-#   save_fact()
-# 
-# 
-# # Female fact table --------------
-# RI_6D3_healthy_life_expectancy_female_fact_tbl <-
-#   RI_6D3_healthy_life_expectancy_plot_tbl |>
-#   filter(
-#     sex == "Female"
-#   ) |>
-#   transmute(
-#     area,
-#     period_start = as.Date(glue("{timeperiod_sortable %/% 10000}-01-01")),
-#     period_end = as.Date(glue("{(timeperiod_sortable %/% 10000) + 2}-12-31")),
-#     value
-#   )
-# 
-# View(RI_6D3_healthy_life_expectancy_female_fact_tbl)
-# 
-# # Save female fact file
-# RI_6D3_healthy_life_expectancy_female_fact_tbl |>
-#   build_fact(
-#     indicator_id = "RI_6D3_healthy_life_expectancy_female"
-#   ) |>
-#   save_fact()

@@ -23,24 +23,18 @@ RI_6B1_childcare_places_raw_tbl <- read_excel(
     value = proportion
   ) |>
   mutate(
-    # Clean area names to ensure filtering and recoding work reliably
     area = str_squish(area),
     area = recode(
       area,
       "West of England+" = "West of England"
     ),
-    # Convert Excel date serial numbers into proper R dates
     date = as.Date(date, origin = "1899-12-30")
   )
-
-glimpse(RI_6B1_childcare_places_raw_tbl)
 
 # Use West of England only for this indicator chart
 RI_6B1_childcare_places_plot_tbl <-
   RI_6B1_childcare_places_raw_tbl |>
   filter(area == "West of England")
-
-View(RI_6B1_childcare_places_plot_tbl)
 
 # Line chart
 RI_6B1_childcare_places_plot <-
@@ -63,11 +57,9 @@ RI_6B1_childcare_places_plot <-
   )
 
 # View line chart
-RI_6B1_childcare_places_plot
+#RI_6B1_childcare_places_plot
 
 # Creating fact table
-# This dataset already contains point-in-time dates, so the same date is used
-# for period_start and period_end.
 RI_6B1_childcare_places_fact_tbl <-
   RI_6B1_childcare_places_raw_tbl |>
   filter(area == "West of England") |>
@@ -82,8 +74,6 @@ RI_6B1_childcare_places_fact_tbl <-
     value
   )
 
-View(RI_6B1_childcare_places_fact_tbl)
-
 # Save the fact file
 RI_6B1_childcare_places_fact_tbl |>
   build_fact(
@@ -91,4 +81,3 @@ RI_6B1_childcare_places_fact_tbl |>
   ) |>
   save_fact()
 
-View(RI_6B1_childcare_places_fact_tbl)

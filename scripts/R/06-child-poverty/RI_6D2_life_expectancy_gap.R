@@ -19,8 +19,6 @@ RI_6D2_life_expectancy_gap_raw_tbl <- fingertips_data(
     )
   )
 
-glimpse(RI_6D2_life_expectancy_gap_raw_tbl)
-
 # Clean and filter data ----------
 RI_6D2_life_expectancy_gap_plot_tbl <-
   RI_6D2_life_expectancy_gap_raw_tbl |>
@@ -44,8 +42,6 @@ RI_6D2_life_expectancy_gap_plot_tbl <-
     upper_ci95_0limit
   ) |>
   arrange(sex, area, timeperiod_sortable)
-
-View(RI_6D2_life_expectancy_gap_plot_tbl)
 
 # Male chart ---------------------
 RI_6D2_life_expectancy_gap_male_plot <-
@@ -88,8 +84,6 @@ RI_6D2_life_expectancy_gap_male_plot <-
   guides(
     colour = guide_legend(ncol = 2)
   )
-  
-RI_6D2_life_expectancy_gap_male_plot
 
 # Female chart -------------------
 RI_6D2_life_expectancy_gap_female_plot <-
@@ -132,22 +126,3 @@ RI_6D2_life_expectancy_gap_female_plot <-
   guides(
     colour = guide_legend(ncol = 2)
   )
-
-RI_6D2_life_expectancy_gap_female_plot
-
-# # Fact table (with areas and sex)
-# RI_6D2_life_expectancy_gap_fact_tbl <-
-#   RI_6D2_life_expectancy_gap_plot_tbl |>
-#   transmute(
-#     area,
-#     sex,
-#     period_start = as.Date(
-#       glue("{timeperiod_sortable %/% 10000}-01-01")
-#     ),
-#     period_end = as.Date(
-#       glue("{(timeperiod_sortable %/% 10000) + 2}-12-31")
-#     ),
-#     value
-#   )
-# 
-# View(RI_6D2_life_expectancy_gap_fact_tbl)

@@ -33,27 +33,16 @@ RI_4B1_employment_rate_16_64_raw_tbl <- fetch_nomis(
     )
   )
 
-glimpse(RI_4B1_employment_rate_16_64_raw_tbl)
-
 # Keep the columns needed for plotting, checking and the fact table
 RI_4B1_employment_rate_16_64_long_tbl <-
   RI_4B1_employment_rate_16_64_raw_tbl |>
   transmute(
     area,
-    
-    # Nomis employment-rate data are rolling 12-month periods.
-    # DATE is the end month of the period, e.g. 2015-03 means Apr 2014-Mar 2015.
     period_end = ceiling_date(ymd(paste0(date, "-01")), "month") - days(1),
-    
-    # Work back 11 months from the end month to get the start of the rolling year.
     period_start = floor_date(period_end %m-% months(11), "month"),
-    
-    # Nomis returns percentages as whole numbers, e.g. 75.4.
-    # Divide by 100 so values are stored as proportions.
     value = obs_value / 100
   )
 
-glimpse(RI_4B1_employment_rate_16_64_long_tbl)
 
 # Check each area has one row per available period
 RI_4B1_employment_rate_16_64_long_tbl |>
@@ -69,7 +58,6 @@ RI_4B1_employment_rate_16_64_plot_tbl <-
     )
   )
 
-View(RI_4B1_employment_rate_16_64_plot_tbl)
 
 # Line chart
 RI_4B1_employment_rate_16_64_plot <-
@@ -108,14 +96,9 @@ RI_4B1_employment_rate_16_64_plot <-
     axis.title.y = element_text(angle = 0, vjust = 0.5)
   )
 
-# View line chart
-RI_4B1_employment_rate_16_64_plot
+
 
 # Creating fact table
-# This indicator uses rolling 12-month APS periods.
-# Example: Apr 2014-Mar 2015 is stored as:
-# period_start = 2014-04-01
-# period_end   = 2015-03-31
 RI_4B1_employment_rate_16_64_fact_tbl <-
   RI_4B1_employment_rate_16_64_long_tbl |>
   filter(
@@ -130,8 +113,6 @@ RI_4B1_employment_rate_16_64_fact_tbl <-
     value
   )
 
-View(RI_4B1_employment_rate_16_64_fact_tbl)
-
 # Save the fact file
 RI_4B1_employment_rate_16_64_fact_tbl |>
   build_fact(
@@ -139,4 +120,3 @@ RI_4B1_employment_rate_16_64_fact_tbl |>
   ) |>
   save_fact()
 
-View(RI_4B1_employment_rate_16_64_fact_tbl)

@@ -23,8 +23,8 @@ RI_4A3_apprenticeship_starts_raw_tbl <- read_excel(
       area,
       "Bristol, City of" = "Bristol"
     )
-  ) |> 
-  glimpse()
+  ) 
+  
 
 #Turning year columns into rows
 RI_4A3_apprenticeship_starts_long_tbl <-
@@ -36,7 +36,7 @@ RI_4A3_apprenticeship_starts_long_tbl <-
   ) |>
   mutate(
     value = as.numeric(value)
-  ) |>   glimpse()
+  )
 
 # Filtering the local authorities & dates for the stacked chart
 RI_4A3_apprenticeship_starts_plot_tbl <-
@@ -80,7 +80,7 @@ RI_4A3_apprenticeship_starts_plot <-
   )
 
 #View stacked bar chart
-RI_4A3_apprenticeship_starts_plot
+#RI_4A3_apprenticeship_starts_plot
 
 #creating fact table 
 RI_4A3_apprenticeship_starts_fact_tbl <-
@@ -98,7 +98,6 @@ RI_4A3_apprenticeship_starts_fact_tbl <-
     period_end,
     value
   )
-View(RI_4A3_apprenticeship_starts_fact_tbl)
 
 #Save the fact file
 RI_4A3_apprenticeship_starts_fact_tbl |>
@@ -107,5 +106,4 @@ RI_4A3_apprenticeship_starts_fact_tbl |>
   ) |>
   save_fact()
 
-View(RI_4A3_apprenticeship_starts_fact_tbl)
 
