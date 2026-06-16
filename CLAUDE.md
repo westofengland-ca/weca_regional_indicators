@@ -249,3 +249,17 @@ bash scripts/hooks/install-hooks.sh
 1. Remove the secret from the file
 2. Move credentials to environment variables or `.env` files (gitignored)
 3. For false positives, update exclude patterns in `scripts/hooks/scan_secrets.sh`
+
+## Agent skills
+
+### Issue tracker
+
+Issues live in GitHub Issues (`westofengland-ca/weca_regional_indicators`). See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Five canonical roles mapped to default label strings. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context layout — one `CONTEXT.md` + `docs/adr/` at the repo root. See `docs/agents/domain.md`.

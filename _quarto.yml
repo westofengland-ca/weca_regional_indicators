@@ -47,7 +47,7 @@ book:
 format:
   html:
     theme: [cosmo, custom.scss]  # Apply WECA brand typography on top of cosmo
-    code-fold: true              # Allows readers to toggle code visibility
+    code-fold: false              # Allows readers to toggle code visibility
     code-summary: "Show code"
     toc: true              # Table of contents on the right
     number-sections: true
@@ -60,7 +60,7 @@ format:
   #   papersize: a4
 
 # Engine Configuration
-# This ensures Quarto looks for the 'uv' virtual environment 
+# This ensures Quarto looks for the 'uv' virtual environment
 # for Python chunks and the 'renv' library for R chunks.
 knitr:
   opts_chunk:

@@ -4,6 +4,8 @@ Thank you for contributing to the West of England Regional Priorities Indicators
 
 > **New to git or GitHub?** Start with [`chapters/04-skills/ONBOARDING.md`](chapters/04-skills/ONBOARDING.md) — a step-by-step walkthrough covering setup, authentication, branching, and your first pull request. Come back here once you have made your first contribution.
 
+> **Hitting publishing errors?** Read [`docs/WORKFLOW_LEARNING_GUIDE.md`](docs/WORKFLOW_LEARNING_GUIDE.md) — covers the freeze cache, common errors, and how to recover from them.
+
 ---
 
 ## 📂 Project Structure
@@ -80,7 +82,7 @@ quarto render chapters/05-environment/index.qmd
 ```bash
 # Critical: Commit BOTH files
 git add chapters/05-environment/index.qmd
-git add _freeze/html/chapters/05-environment/
+git add _freeze/chapters/05-environment/
 
 git commit -m "Update environment chapter: add renewable energy analysis"
 git push
@@ -116,7 +118,7 @@ quarto render chapters/05-environment/index.qmd
 
 # Commit both source and updated cache
 git add chapters/05-environment/
-git add _freeze/html/chapters/05-environment/
+git add _freeze/chapters/05-environment/
 git commit -m "Add solar panel installation trends"
 git push
 ```
@@ -418,28 +420,6 @@ git push origin --delete yourname/chapter-name  # Delete remote
 
 ## 🎨 Code Style Guide
 
-### When to Use R vs. Python
-
-**Use R when:**
-
-- ✅ Working with statistical models (regression, hypothesis tests)
-- ✅ Creating publication-quality visualisations with ggplot2
-- ✅ Following existing R patterns in the chapter
-- ✅ You're more comfortable with R
-
-**Use Python when:**
-
-- ✅ Processing large datasets (>1GB) - use `polars`
-- ✅ Web scraping or API calls
-- ✅ Machine learning or advanced data transformations
-- ✅ You're more comfortable with Python
-
-**Either is fine for:**
-
-- Basic data wrangling
-- Simple calculations
-- Reading CSV/Excel files
-
 ### R Style
 
 **General principles:**
@@ -476,48 +456,6 @@ ggplot(employment_data, aes(x = year, y = employment_rate)) +
   )
 ```
 
-### Python Style
-
-**General principles:**
-
-- Follow PEP 8 (enforced by `ruff` and `black`)
-- Use snake_case for variables and functions
-- Add type hints where helpful
-- Use `pathlib.Path` for file paths
-
-**Example:**
-
-```python
-#| label: load-data
-
-import polars as pl
-from pathlib import Path
-
-# Build project-relative path
-project_root = Path(__file__).parent.parent  # Adjust based on script location
-data_path = project_root / "data" / "raw" / "employment.csv"
-df = pl.read_csv(data_path)
-
-# Process
-employment_data = (
-    df
-    .filter(pl.col("year") >= 2015)
-    .with_columns([
-        (pl.col("employed") / pl.col("total_population") * 100)
-        .alias("employment_rate")
-    ])
-)
-
-# Visualize
-import matplotlib.pyplot as plt
-
-plt.plot(employment_data["year"], employment_data["employment_rate"])
-plt.title("Employment Rate Trend")
-plt.xlabel("Year")
-plt.ylabel("Employment Rate (%)")
-plt.show()
-```
-
 ### Quarto Code Chunk Options
 
 **Standard settings:**
@@ -531,16 +469,8 @@ plt.show()
 
 **Hide code by default** (already set globally):
 
-- `code-fold: true` is in `_quarto.yml`
-- Users can toggle code visibility
-
-**When to show code:**
-
-```r
-#| code-fold: false
-
-# Show this code for teaching purposes
-```
+- `code-fold: false` is in `_quarto.yml`
+- Users can't toggle code visibility
 
 ---
 
@@ -753,34 +683,6 @@ All indicators should meet these standards:
 - ✅ Charts have alt text
 - ✅ Colour choices work for colorblind readers
 - ✅ Logical heading structure
-
----
-
-## 🎓 Learning Resources
-
-### Git & GitHub
-
-- [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
-- [GitHub Flow Guide](https://docs.github.com/en/get-started/quickstart/github-flow)
-- [Oh Shit, Git!?!](https://ohshitgit.com/) - Fixing common mistakes
-
-### R
-
-- [R for Data Science](https://r4ds.had.co.nz/)
-- [ggplot2 Cheat Sheet](https://rstudio.github.io/cheatsheets/data-visualisation.pdf)
-- [Tidyverse Style Guide](https://style.tidyverse.org/)
-
-### Python
-
-- [Python for Data Analysis](https://wesmckinney.com/book/)
-- [Polars User Guide](https://pola-rs.github.io/polars-book/)
-- [PEP 8 Style Guide](https://pep8.org/)
-
-### Quarto
-
-- [Quarto Guide](https://quarto.org/docs/guide/)
-- [Quarto for Academics](https://quarto.org/docs/manuscripts/)
-- [Quarto Gallery](https://quarto.org/docs/gallery/)
 
 ---
 
