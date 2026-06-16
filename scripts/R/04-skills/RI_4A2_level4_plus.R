@@ -36,7 +36,6 @@ RI_4A2_level4_plus_raw_tbl <- fetch_nomis(
       "West of England LEP" = "West of England"
     )
   )
-glimpse(RI_4A2_level4_plus_raw_tbl)
 
 # Keep the columns needed for plotting, checking and the fact table
 RI_4A2_level4_plus_long_tbl <-
@@ -58,7 +57,6 @@ RI_4A2_level4_plus_long_tbl <-
     period_end >= as.Date("2022-12-31")
   )
 
-glimpse(RI_4A2_level4_plus_long_tbl)
 
 # Check to make sure each area should have one row per available year
 RI_4A2_level4_plus_long_tbl |>
@@ -80,7 +78,6 @@ RI_4A2_level4_plus_plot_tbl <-
     year = lubridate::year(period_end)
   )
 
-View(RI_4A2_level4_plus_plot_tbl)
 
 # Line chart
 RI_4A2_level4_plus_plot <-
@@ -129,11 +126,10 @@ RI_4A2_level4_plus_plot <-
   )
 
 # View line chart
-RI_4A2_level4_plus_plot
+#RI_4A2_level4_plus_plot
 
 # Creating fact table
 # This indicator is annual December data from Nomis.
-# Example: Dec 2022 is stored as period_end = 2022-12-31.
 RI_4A2_level4_plus_fact_tbl <-
   RI_4A2_level4_plus_long_tbl |>
   filter(
@@ -149,13 +145,9 @@ RI_4A2_level4_plus_fact_tbl <-
     value
   )
 
-View(RI_4A2_level4_plus_fact_tbl)
-
 # Save the fact file
 RI_4A2_level4_plus_fact_tbl |>
   build_fact(
     indicator_id = "RI_4A2_level4_plus"
   ) |>
   save_fact()
-
-View(RI_4A2_level4_plus_fact_tbl)

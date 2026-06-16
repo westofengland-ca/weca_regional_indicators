@@ -260,32 +260,6 @@ RI_4B3_neet_16_17_plot
 
 ## NEET 18-24
 Please note: This indicator is currently under development and data is not yet available for reporting. Analysis will be included in a future update of the Regional Indicators report.
-<!--```{r}
-#| label: RI_4B4_neet_18_24_gt
-#| eval: false
-#| code-summary: "RI_4B4_neet_18_24 summary"
-
-indicator_fact_tbl |>
-  format_indicator_summary(
-    "RI_4B4_neet_18_24",
-    title = "NEET 18-24",
-    subtitle = "18-24 year olds not in education, employment or training",
-    units = "%"
-  )
-```
-
-### Overview
-
-Successful transitions into work, education and training are essential for building future skills and economic resilience. This indicator measures the proportion of 18-24 year olds who are not in education, employment or training. Lower levels suggest that more young adults are developing skills, gaining experience and accessing opportunities. Improving outcomes for this group supports both individual prosperity and long-term economic growth.
-
-```{r}
-#| label: RI_4B4_neet_18_24_plot
-#| eval: false
-#| code-summary: "RI_4B4_neet_18_24 line chart"
-
-RI_4B4_neet_18_24_plot
-```
--->
 
 ## Below Living Wage
 
@@ -318,61 +292,9 @@ RI_4B5_below_living_wage_plot
 
 ## Claimant Count in Deprived Wards
 Please note: This indicator is currently under development and data is not yet available for reporting. Analysis will be included in a future update of the Regional Indicators report.
-<!--
-```{r}
-#| label: RI_4B6_claimant_deprived_wards_gt
-#| eval: false
-#| code-summary: "RI_4B6_claimant_deprived_wards summary"
 
-indicator_fact_tbl |>
-  format_indicator_summary(
-    "RI_4B6_claimant_deprived_wards",
-    title = "Claimant Count in Deprived Wards",
-    subtitle = "Claimant count in the most deprived wards as a share of working-age population",
-    units = "%"
-  )
-```
-
-### Overview
-
-Access to employment opportunities can vary significantly between communities. This indicator measures claimant counts in the most deprived wards as a proportion of the working-age population and compares them with the regional average. Higher levels may indicate concentrations of labour market disadvantage and barriers to employment. Monitoring this measure helps identify where targeted skills and employment support may be needed to ensure growth benefits all communities.
-
-```{r}
-#| label: RI_4B6_claimant_deprived_wards_plot
-#| eval: false
-#| code-summary: "RI_4B6_claimant_deprived_wards chart"
-
-RI_4B6_claimant_deprived_wards_plot
-```
--->
 
 ## Skills Gaps
 
 Please note: This indicator is currently under development and data is not yet available for reporting. Analysis will be included in a future update of the Regional Indicators report.
-<!--
-```{r}
-#| label: RI_4C1_skills_gaps_gt
-#| eval: false
-#| code-summary: "RI_4C1_skills_gaps summary"
 
-indicator_fact_tbl |>
-  format_indicator_summary(
-    "RI_4C1_skills_gaps",
-    title = "Skills Gaps",
-    subtitle = "Employers reporting skills gaps in their workforce",
-    units = "%"
-  )
-```
-
-### Overview
-
-Skills shortages can constrain productivity, business growth and investment. This indicator measures the proportion of employers reporting that staff lack the skills required to perform their roles effectively. Lower levels indicate a stronger alignment between workforce skills and employer needs. Understanding skills gaps helps inform workforce development and ensures training provision supports the future needs of the regional economy.
-
-```{r}
-#| label: RI_4C1_skills_gaps_plot
-#| eval: false
-#| code-summary: "RI_4C1_skills_gaps chart"
-
-RI_4C1_skills_gaps_plot
-```
--->

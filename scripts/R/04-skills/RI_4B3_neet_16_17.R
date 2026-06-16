@@ -26,8 +26,6 @@ RI_4B3_neet_16_17_raw_tbl <- read_excel(
     )
   )
 
-glimpse(RI_4B3_neet_16_17_raw_tbl)
-
 # Turning year columns into rows
 RI_4B3_neet_16_17_long_tbl <-
   RI_4B3_neet_16_17_raw_tbl |>
@@ -56,8 +54,6 @@ RI_4B3_neet_16_17_plot_tbl <-
       "West of England"
     )
   )
-
-#View(RI_4B3_neet_16_17_plot_tbl)
 
 # Line chart
 RI_4B3_neet_16_17_plot <-
@@ -90,9 +86,6 @@ RI_4B3_neet_16_17_plot <-
     colour = guide_legend(ncol = 2)
   )
 
-# View line chart
-RI_4B3_neet_16_17_plot
-
 # Creating fact table
 RI_4B3_neet_16_17_fact_tbl <-
   RI_4B3_neet_16_17_long_tbl |>
@@ -111,7 +104,6 @@ RI_4B3_neet_16_17_fact_tbl <-
     value
   )
 
-View(RI_4B3_neet_16_17_fact_tbl)
 
 # Save the fact file
 RI_4B3_neet_16_17_fact_tbl |>
@@ -120,4 +112,3 @@ RI_4B3_neet_16_17_fact_tbl |>
   ) |>
   save_fact()
 
-View(RI_4B3_neet_16_17_fact_tbl)

@@ -26,8 +26,6 @@ RI_4A4_ks4_attainment8_raw_tbl <- read_excel(
     )
   )
 
-glimpse(RI_4A4_ks4_attainment8_raw_tbl)
-
 # Turning year columns into rows
 RI_4A4_ks4_attainment8_long_tbl <-
   RI_4A4_ks4_attainment8_raw_tbl |>
@@ -40,7 +38,6 @@ RI_4A4_ks4_attainment8_long_tbl <-
     value = as.numeric(value)
   )
 
-glimpse(RI_4A4_ks4_attainment8_long_tbl)
 
 # Filtering the areas & dates for the line chart
 RI_4A4_ks4_attainment8_plot_tbl <-
@@ -58,7 +55,6 @@ RI_4A4_ks4_attainment8_plot_tbl <-
     )
   )
 
-View(RI_4A4_ks4_attainment8_plot_tbl)
 
 # Line chart
 RI_4A4_ks4_attainment8_plot <-
@@ -90,7 +86,7 @@ RI_4A4_ks4_attainment8_plot <-
   guides(
     colour = guide_legend(ncol = 2)
   )
-RI_4A4_ks4_attainment8_plot
+
 
 # Creating fact table
 RI_4A4_ks4_attainment8_fact_tbl <-
@@ -110,7 +106,7 @@ RI_4A4_ks4_attainment8_fact_tbl <-
     value
   )
 
-# View(RI_4A4_ks4_attainment8_fact_tbl)
+
 
 # Save the fact file
 RI_4A4_ks4_attainment8_fact_tbl |>
@@ -119,4 +115,3 @@ RI_4A4_ks4_attainment8_fact_tbl |>
   ) |>
   save_fact()
 
-# View(RI_4A4_ks4_attainment8_fact_tbl)

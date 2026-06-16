@@ -26,7 +26,6 @@ RI_4B5_below_living_wage_raw_tbl <- read_excel(
     )
   )
 
-glimpse(RI_4B5_below_living_wage_raw_tbl)
 
 # Turning year columns into rows
 RI_4B5_below_living_wage_long_tbl <-
@@ -42,8 +41,6 @@ RI_4B5_below_living_wage_long_tbl <-
     value = readr::parse_number(value)
   )
 
-glimpse(RI_4B5_below_living_wage_long_tbl)
-
 # Filtering West of England & dates for the bar chart
 RI_4B5_below_living_wage_plot_tbl <-
   RI_4B5_below_living_wage_long_tbl |>
@@ -51,8 +48,6 @@ RI_4B5_below_living_wage_plot_tbl <-
     area == "West of England",
     year >= 2015
   )
-
-View(RI_4B5_below_living_wage_plot_tbl)
 
 # Bar chart
 RI_4B5_below_living_wage_plot <-
@@ -73,7 +68,7 @@ RI_4B5_below_living_wage_plot <-
   )
 
 # View bar chart
-RI_4B5_below_living_wage_plot
+#RI_4B5_below_living_wage_plot
 
 # Creating fact table
 RI_4B5_below_living_wage_fact_tbl <-
@@ -93,8 +88,6 @@ RI_4B5_below_living_wage_fact_tbl <-
     value
   )
 
-View(RI_4B5_below_living_wage_fact_tbl)
-
 # Save the fact file
 RI_4B5_below_living_wage_fact_tbl |>
   build_fact(
@@ -102,4 +95,3 @@ RI_4B5_below_living_wage_fact_tbl |>
   ) |>
   save_fact()
 
-View(RI_4B5_below_living_wage_fact_tbl)

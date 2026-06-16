@@ -39,20 +39,11 @@ RI_4B2_economic_inactivity_long_tbl <-
   RI_4B2_economic_inactivity_raw_tbl |>
   transmute(
     area,
-    
-    # Nomis data are rolling 12-month periods.
-    # DATE is the end month of the period.
     period_end = ceiling_date(ymd(paste0(date, "-01")), "month") - days(1),
-    
-    # Work back 11 months from the end month to get the start of the rolling year.
     period_start = floor_date(period_end %m-% months(11), "month"),
-    
-    # Nomis returns percentages as whole numbers, e.g. 21.4.
-    # Divide by 100 so values are stored as proportions.
     value = obs_value / 100
   )
 
-glimpse(RI_4B2_economic_inactivity_long_tbl)
 
 # Check each area has one row per available period
 RI_4B2_economic_inactivity_long_tbl |>
@@ -68,7 +59,6 @@ RI_4B2_economic_inactivity_plot_tbl <-
     )
   )
 
-View(RI_4B2_economic_inactivity_plot_tbl)
 
 # Line chart
 RI_4B2_economic_inactivity_plot <-
@@ -107,11 +97,8 @@ RI_4B2_economic_inactivity_plot <-
     axis.title.y = element_text(angle = 0, vjust = 0.5)
   )
 
-# View line chart
-RI_4B2_economic_inactivity_plot
 
 # Creating fact table
-# This indicator uses rolling 12-month APS periods.
 RI_4B2_economic_inactivity_fact_tbl <-
   RI_4B2_economic_inactivity_long_tbl |>
   filter(
@@ -126,8 +113,6 @@ RI_4B2_economic_inactivity_fact_tbl <-
     value
   )
 
-View(RI_4B2_economic_inactivity_fact_tbl)
-
 # Save the fact file
 RI_4B2_economic_inactivity_fact_tbl |>
   build_fact(
@@ -135,4 +120,3 @@ RI_4B2_economic_inactivity_fact_tbl |>
   ) |>
   save_fact()
 
-View(RI_4B2_economic_inactivity_fact_tbl)
