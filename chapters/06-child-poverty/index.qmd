@@ -4,69 +4,323 @@ subtitle: "Lifting children and families out of poverty"
 author: "MJ"
 date: last-modified
 execute:
-  echo: true
+  echo: false
   warning: false
   message: false
 ---
 
 ## Context
 
-This chapter tracks indicators related to child poverty and family wellbeing across the West of England. Up to 10 indicators can be included, covering metrics like child poverty rates, free school meals eligibility, household income, access to services, and educational outcomes.
+This chapter tracks indicators related to child poverty, early years development, educational outcomes, health and wellbeing across the West of England. Together these indicators provide insight into the factors that influence children's life chances and help monitor progress towards the West of England Growth Strategy's ambition to lift children and families out of poverty. The indicators cover measures of income, education, childcare, health and wellbeing, helping to understand whether all children have the opportunity to thrive regardless of their background.
 
-## Setup
 
 ```{r}
 #| label: setup
-#| code-summary: "Load required packages"
+#| code-summary: "Load required packages and source files"
+#| include: false
 
-# Load required packages
 library(tidyverse)
 
-# Source shared helpers (theme, helpers, fact_helpers, collate_fact)
 source(here::here("scripts", "R", "_common.R"))
+
+# Sourcing indicators
+source(here::here("scripts", "R", "06-child-poverty", "RI_6A1_child_poverty.R"))
+source(here::here("scripts", "R", "06-child-poverty", "RI_6A2_child_development_u5.R"))
+source(here::here("scripts", "R", "06-child-poverty", "RI_6A3_ks2_expected_standards.R"))
+source(here::here("scripts", "R", "06-child-poverty", "RI_6A4_free_school_meals.R"))
+source(here::here("scripts", "R", "06-child-poverty", "RI_6B1_childcare_places.R"))
+source(here::here("scripts", "R", "06-child-poverty", "RI_6B2_early_years_quality.R"))
+source(here::here("scripts", "R", "06-child-poverty", "RI_6C1_qol_deprived_areas.R"))
+source(here::here("scripts", "R", "06-child-poverty", "RI_6D1_life_satisfaction.R"))
+source(here::here("scripts", "R", "06-child-poverty", "RI_6D2_life_expectancy_gap.R"))
+source(here::here("scripts", "R", "06-child-poverty", "RI_6D3_healthy_life_expectancy.R"))
+source(here::here("scripts", "R", "06-child-poverty", "RI_6D4_child_health_2yr_review.R"))
+source(here::here("scripts", "R", "06-child-poverty", "RI_6D5_pupil_semh_needs.R"))
+
+indicator_fact_tbl <- collate_fact() |>
+  build_reporting_view()
 ```
 
----
+```{r}
+#| label: priority_summary
+#| eval: true
+#| code-summary: Priority 6 indicator summary table
 
-## Indicator 1: [Your Child Poverty Indicator]
+format_priority_summary(
+  indicator_fact_tbl,
+  core_dim_data_tbl,
+  priority = 6,
+  title = "Child Poverty: Indicator Summary"
+)
+```
 
-**Data source:** [Specify source]
-**Last updated:** [Date]
-**Refresh schedule:** [Annual/Quarterly/Monthly]
+All indicators in this section relate to the wider West of England geography, which includes Bath and North East Somerset, Bristol, North Somerset and South Gloucestershire. This geography extends beyond the West of England Combined Authority area to include North Somerset.
+
+## Child Poverty
+
+```{r}
+#| label: RI_6A1_child_poverty_gt
+#| eval: true
+
+indicator_fact_tbl |>
+  format_indicator_summary(
+    "RI_6A1_child_poverty",
+    title = "Child Poverty",
+    subtitle = "Children living in low-income families after housing costs",
+    units = "%"
+  )
+```
+
+### Overview
+Child poverty can have lasting impacts on children's health, educational attainment and future employment opportunities. This indicator measures the proportion of children living in households with incomes below 60% of the national median after housing costs have been taken into account. Higher levels indicate that more children are growing up in financial hardship, which can affect outcomes throughout their lives. Monitoring child poverty helps assess progress towards reducing inequalities and ensuring that all children and families can benefit from economic growth.
+
+```{r}
+#| label: RI_6A1_child_poverty_plot
+#| eval: true
+#| code-summary: "RI_6A1_child_poverty line chart"
+
+RI_6A1_child_poverty_plot
+```
+
+## Children Achieving a Good Level of Development
+
+```{r}
+#| label: RI_6A2_child_development_u5_gt
+#| eval: true
+
+indicator_fact_tbl |>
+  format_indicator_summary(
+    "RI_6A2_good_development_u5",
+    title = "Good Level of Development by Age 5",
+    subtitle = "Children achieving a good level of development",
+    units = "%"
+  )
+```
 
 ### Overview
 
-[Describe what this indicator measures and why it matters for lifting children and families out of poverty]
+Early childhood development plays a crucial role in shaping future educational attainment, health and wellbeing. This indicator measures the proportion of children achieving a good level of development by the end of the Early Years Foundation Stage, typically at age five. A good level of development reflects children's progress across key areas of learning and development, including communication, physical development, literacy and mathematics.
 
 ```{r}
-#| label: indicator-1
-#| eval: false
-#| code-summary: "Indicator 1 analysis"
+#| label: RI_6A2_child_development_u5_plot
+#| eval: true
+#| code-summary: "RI_6A2_child_development_u5 line chart"
 
-# Your code here
-# See chapters/01-economy/index.qmd for a worked example pattern:
-# 1. Load data using load_csv()
-# 2. Process/filter/aggregate data
-# 3. Create visualization with theme_weca()
-# 4. Calculate key statistics using format_number()
+RI_6A2_child_development_u5_plot
 ```
 
-### Findings
+## KS2 Expected Standards
 
-[Your narrative findings here]
+```{r}
+#| label: RI_6A3_ks2_expected_standards_gt
+#| eval: true
 
----
+indicator_fact_tbl |>
+  format_indicator_summary(
+    "RI_6A3_ks2_expected_standards",
+    title = "KS2 Expected Standards",
+    subtitle = "Pupils meeting expected standards in reading, writing and maths",
+    units = "%"
+  )
+```
 
-## Indicator 2: [Your Child Poverty Indicator]
+### Overview
 
-**Data source:**
-**Last updated:**
-**Refresh schedule:**
+Educational attainment during primary school is an important predictor of future educational outcomes. This indicator measures the proportion of pupils meeting expected standards in reading, writing and mathematics at Key Stage 2. Higher attainment levels indicate that more children are developing the knowledge and skills needed for successful progression through education. When interpreting trends over time, it is important to note that data are not available for 2020 and 2021, as Key Stage 2 assessments were cancelled in response to the COVID-19 pandemic.
 
-[Repeat structure - add up to 10 indicators total]
+```{r}
+#| label: RI_6A3_ks2_expected_standards_plot
+#| eval: true
+#| code-summary: "RI_6A3_ks2_expected_standards line chart"
 
----
+RI_6A3_ks2_expected_standards_plot
+```
 
-## Summary
+## Free School Meals Eligibility
+```{r}
+#| label: RI_6A4_free_school_meals_gt
+#| eval: true
 
-[Summary of key findings across all child poverty indicators. What is the overall picture for lifting children and families out of poverty?]
+indicator_fact_tbl |>
+  format_indicator_summary(
+    "RI_6A4_free_school_meals",
+    title = "Free School Meals Eligibility",
+    subtitle = "Pupils eligible for free school meals",
+    units = "%"
+  )
+```
+
+### Overview
+Eligibility for free school meals is widely used as a proxy measure of socioeconomic disadvantage among children and young people. This indicator measures the proportion of pupils known to be eligible for and claiming free school meals. Higher levels may indicate greater levels of financial hardship among families and can help identify communities where additional support may be required. Monitoring this measure provides insight into the scale and distribution of disadvantage across the region.
+
+```{r}
+#| label: RI_6A4_free_school_meals_plot
+#| eval: true
+#| code-summary: "RI_6A4_free_school_meals line chart"
+
+RI_6A4_free_school_meals_plot
+```
+
+## Childcare Places
+```{r}
+#| label: RI_6B1_childcare_places_gt
+#| eval: true
+
+indicator_fact_tbl |>
+  format_indicator_summary(
+    "RI_6B1_childcare_places",
+    title = "Childcare Places",
+    subtitle = "Childcare places relative to the population aged 0-4",
+    units = "%"
+  )
+```
+### Overview
+
+Access to childcare supports children's development while enabling parents and carers to participate in employment and training. This indicator measures the number of childcare places relative to the population of children aged 0-4. Higher levels indicate greater childcare availability and capacity across the region.
+
+```{r}
+#| label: RI_6B1_childcare_places_plot
+#| eval: true
+#| code-summary: "RI_6B1_childcare_places line chart"
+
+RI_6B1_childcare_places_plot
+```
+
+
+
+
+## Early Years Settings Rated Good or Outstanding
+```{r}
+#| label: RI_6B2_early_years_quality_gt
+#| eval: true
+
+indicator_fact_tbl |>
+  format_indicator_summary(
+    "RI_6B2_early_years_quality",
+    title = "Early Years Settings Rated Good or Outstanding",
+    subtitle = "Early years settings judged good or outstanding",
+    units = "%"
+  )
+```
+
+### Overview
+The quality of early years provision plays a significant role in children's development and readiness for school. This indicator measures the proportion of early years settings rated good or outstanding. 
+
+```{r}
+#| label: RI_6B2_early_years_quality_plot
+#| eval: true
+#| code-summary: "RI_6B2_early_years_quality line chart" 
+
+RI_6B2_early_years_quality_plot
+```
+
+## Quality of Life in Deprived Areas
+
+Please note: This indicator is currently under development and data is not yet available for reporting. Analysis will be included in a future update of the Regional Indicators report.
+
+## Happiness and Life Satisfaction
+
+Please note: This indicator is currently under development and data is not yet available for reporting. Analysis will be included in a future update of the Regional Indicators report.
+
+## Life Expectancy Gap
+
+### Overview
+
+Life expectancy gap is a widely used measure of population health and inequality. This indicator measures the gap in life expectancy at birth between residents living in the most deprived and least deprived areas. The size of the gap provides an indication of the extent of health inequalities within the region. A smaller gap suggests that people are experiencing more equal opportunities for a long and healthy life, regardless of where they live. Tracking this measure helps assess progress towards reducing health inequalities and improving outcomes for disadvantaged communities.
+
+```{r}
+#| label: RI_6D2_life_expectancy_gap_female_plot
+#| eval: true
+#| code-summary: "RI_6D2_life_expectancy_gap female line chart"
+
+RI_6D2_life_expectancy_gap_female_plot
+```
+
+```{r}
+#| label: RI_6D2_life_expectancy_gap_male_plot
+#| eval: true
+#| code-summary: "RI_6D2_life_expectancy_gap male line chart"
+
+RI_6D2_life_expectancy_gap_male_plot
+```
+
+
+## Healthy Life Expectancy at Birth
+
+### Overview
+
+Healthy life expectancy is a measure of both the length and quality of life. This indicator estimates the average number of years a person can expect to live in good health from birth, based on current mortality rates and self-reported health status. Higher levels indicate that people are spending more of their lives in good health and experiencing better overall wellbeing. Healthy life expectancy is influenced by a range of social, economic and environmental factors, making it a useful measure for understanding long-term health outcomes and inequalities across the population.
+
+```{r}
+#| label: RI_6D3_healthy_life_expectancy_female_plot
+#| eval: true
+#| code-summary: "RI_6D3_healthy_life_expectancy female line chart"
+
+RI_6D3_healthy_life_expectancy_female_plot
+```
+
+```{r}
+#| label: RI_6D3_healthy_life_expectancy_male_plot
+#| eval: true
+#| code-summary: "RI_6D3_healthy_life_expectancy male line chart"
+
+RI_6D3_healthy_life_expectancy_male_plot
+```
+
+
+## Child Health: Good Level of Development at 2–2.5 Year Review
+
+```{r}
+#| label: RI_6D4_child_health_2yr_review_gt
+#| eval: true
+#| code-summary: "RI_6D4_child_health_2yr_review summary"
+
+indicator_fact_tbl |>
+  format_indicator_summary(
+    "RI_6D4_child_health_2yr_review",
+    title = "Child Health at 2–2.5 Year Review",
+    subtitle = "Children achieving a good level of development at review",
+    units = "%"
+  )
+```
+
+### Overview
+
+The 2 to 2½ year review is an important early assessment of children's development, health and wellbeing. This indicator measures the proportion of children whose development is assessed as being at the expected level across key areas of development at the time of review. Higher levels indicate that more children are developing the skills and capabilities expected for their age, providing a strong foundation for future learning, health and wellbeing. Monitoring this indicator helps identify how well children are progressing in the early years and where additional support may be needed.
+
+```{r}
+#| label: RI_6D4_child_health_2yr_review_plot
+#| eval: true
+#| code-summary: "RI_6D4_child_health_2yr_review line chart"
+
+RI_6D4_child_health_2yr_review_plot
+```
+
+
+## Pupils with Social, Emotional and Mental Health Needs
+
+```{r}
+#| label: RI_6D5_pupil_semh_needs_gt
+#| eval: true
+#| code-summary: "RI_6D5_pupil_semh_needs summary"
+
+indicator_fact_tbl |>
+  format_indicator_summary(
+    "RI_6D5_pupil_semh_needs",
+    title = "Pupils with Social, Emotional and Mental Health Needs",
+    subtitle = "School pupils identified with SEMH needs",
+    units = "%"
+  )
+```
+
+### Overview
+
+Social, emotional and mental health are important factors influencing children's wellbeing, learning and future outcomes. This indicator measures the proportion of pupils whose primary special educational need is identified as Social, Emotional and Mental Health (SEMH). Monitoring this measure helps understand the prevalence of SEMH needs among pupils and supports the planning of appropriate educational, health and support services.
+
+```{r}
+#| label: RI_6D5_pupil_semh_needs_plot
+#| eval: true
+#| code-summary: "RI_6D5_pupil_semh_needs line chart"
+
+RI_6D5_pupil_semh_needs_plot
+```

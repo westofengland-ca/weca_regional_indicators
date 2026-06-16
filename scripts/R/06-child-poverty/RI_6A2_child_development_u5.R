@@ -18,7 +18,6 @@ RI_6A2_child_development_u5_raw_tbl <- read_excel(
 ) |>
   rename(area = 1) |>
   mutate(
-    # Clean area names to ensure filtering and recoding work reliably
     area = str_squish(area),
     area = recode(
       area,
@@ -27,10 +26,7 @@ RI_6A2_child_development_u5_raw_tbl <- read_excel(
     )
   )
 
-glimpse(RI_6A2_child_development_u5_raw_tbl)
-
 # Convert data from wide format, where years are columns,
-# to long format, where year and value are separate columns
 RI_6A2_child_development_u5_long_tbl <-
   RI_6A2_child_development_u5_raw_tbl |>
   mutate(across(-area, as.character)) |>
@@ -42,8 +38,6 @@ RI_6A2_child_development_u5_long_tbl <-
   mutate(
     value = readr::parse_number(value)
   )
-
-glimpse(RI_6A2_child_development_u5_long_tbl)
 
 # Compare local authorities against the West of England average
 RI_6A2_child_development_u5_plot_tbl <-
@@ -60,8 +54,6 @@ RI_6A2_child_development_u5_plot_tbl <-
       "West of England"
     )
   )
-
-View(RI_6A2_child_development_u5_plot_tbl)
 
 # Line chart
 RI_6A2_child_development_u5_plot <-
@@ -102,11 +94,9 @@ RI_6A2_child_development_u5_plot <-
   )
 
 # View line chart
-RI_6A2_child_development_u5_plot
+#RI_6A2_child_development_u5_plot
 
 # Creating fact table
-# Good level of development data are reported by academic year
-# e.g. 2021/22 = 1 September 2021 to 31 August 2022
 RI_6A2_child_development_u5_fact_tbl <-
   RI_6A2_child_development_u5_long_tbl |>
   filter(
@@ -125,13 +115,9 @@ RI_6A2_child_development_u5_fact_tbl <-
     value
   )
 
-View(RI_6A2_child_development_u5_fact_tbl)
-
 # Save the fact file
 RI_6A2_child_development_u5_fact_tbl |>
   build_fact(
     indicator_id = "RI_6A2_good_development_u5"
   ) |>
   save_fact()
-
-View(RI_6A2_child_development_u5_fact_tbl)

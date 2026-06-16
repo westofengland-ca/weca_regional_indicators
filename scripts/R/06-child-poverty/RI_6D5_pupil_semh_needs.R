@@ -19,9 +19,6 @@ RI_6D5_pupil_semh_needs_raw_tbl <- fingertips_data(
     )
   )
 
-glimpse(RI_6D5_pupil_semh_needs_raw_tbl)
-names(RI_6D5_pupil_semh_needs_raw_tbl)
-View(RI_6D5_pupil_semh_needs_raw_tbl)
 # Keep required areas -----------
 RI_6D5_pupil_semh_needs_la_tbl <-
   RI_6D5_pupil_semh_needs_raw_tbl |>
@@ -44,7 +41,6 @@ RI_6D5_pupil_semh_needs_la_tbl <-
     value = value / 100
   ) 
 
-View(RI_6D5_pupil_semh_needs_la_tbl)
 
 # Create West of England figure --
 RI_6D5_pupil_semh_needs_woe_tbl <-
@@ -76,8 +72,6 @@ RI_6D5_pupil_semh_needs_woe_tbl <-
     value
   )
 
-View(RI_6D5_pupil_semh_needs_woe_tbl)
-
 # Combined table ----------------
 RI_6D5_pupil_semh_needs_plot_tbl <-
   bind_rows(
@@ -86,7 +80,6 @@ RI_6D5_pupil_semh_needs_plot_tbl <-
   ) |>
   arrange(timeperiod_sortable, area)
 
-View(RI_6D5_pupil_semh_needs_plot_tbl)
 
 # Bar chart ---------------------
 RI_6D5_pupil_semh_needs_plot <-
@@ -122,8 +115,6 @@ RI_6D5_pupil_semh_needs_plot <-
     )
   )
 
-RI_6D5_pupil_semh_needs_plot
-
 # Creating fact table ------------
 RI_6D5_pupil_semh_needs_fact_tbl <-
   RI_6D5_pupil_semh_needs_woe_tbl |>
@@ -138,8 +129,6 @@ RI_6D5_pupil_semh_needs_fact_tbl <-
     period_end,
     value
   )
-
-View(RI_6D5_pupil_semh_needs_fact_tbl)
 
 # Save the fact file -------------
 RI_6D5_pupil_semh_needs_fact_tbl |>

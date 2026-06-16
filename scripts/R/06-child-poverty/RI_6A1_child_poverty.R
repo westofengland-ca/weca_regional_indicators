@@ -26,8 +26,6 @@ RI_6A1_child_poverty_raw_tbl <- read_excel(
     )
   )
 
-glimpse(RI_6A1_child_poverty_raw_tbl)
-
 # Turning year columns into rows
 RI_6A1_child_poverty_long_tbl <-
   RI_6A1_child_poverty_raw_tbl |>
@@ -41,8 +39,6 @@ RI_6A1_child_poverty_long_tbl <-
     value = readr::parse_number(value) #used parse as it has % in the datasheet
   )
 
-glimpse(RI_6A1_child_poverty_long_tbl)
-
 # Filtering West of England & dates for the bar chart
 RI_6A1_child_poverty_plot_tbl <-
   RI_6A1_child_poverty_long_tbl |>
@@ -50,8 +46,6 @@ RI_6A1_child_poverty_plot_tbl <-
     area == "West of England",
     academic_year >= "2015/16"
   )
-
-View(RI_6A1_child_poverty_plot_tbl)
 
 # Bar chart
 RI_6A1_child_poverty_plot <-
@@ -73,7 +67,7 @@ RI_6A1_child_poverty_plot <-
   )
 
 # View bar chart
-RI_6A1_child_poverty_plot
+#RI_6A1_child_poverty_plot
 
 # Creating fact table
 RI_6A1_child_poverty_fact_tbl <-
@@ -94,8 +88,6 @@ RI_6A1_child_poverty_fact_tbl <-
     value
   )
 
-View(RI_6A1_child_poverty_fact_tbl)
-
 # Save the fact file
 RI_6A1_child_poverty_fact_tbl |>
   build_fact(
@@ -103,4 +95,3 @@ RI_6A1_child_poverty_fact_tbl |>
   ) |>
   save_fact()
 
-View(RI_6A1_child_poverty_fact_tbl)
