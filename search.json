@@ -164,51 +164,128 @@
     "href": "chapters/04-skills/index.html",
     "title": "5  Future-Ready Skills",
     "section": "",
-    "text": "5.1 Context\nThis chapter tracks indicators related to skills development and training across the West of England. Indicators cover metrics like qualification levels, apprenticeships, adult learning participation, skills gaps, and employment outcomes. Indicators were developed to provide high-level insights into regional trends and performance in relation to the West of England’s skills priorities, which are informed by the Growth Strategy.",
+    "text": "5.1 Context\nThis chapter tracks indicators related to skills development and training across the West of England. Indicators cover metrics like qualification levels, apprenticeships, adult learning participation, skills gaps, and employment outcomes. Indicators were developed to provide high-level insights into regional trends and performance in relation to the West of England’s skills priorities, which are informed by the Growth Strategy.\nFuture-Ready Skills: Indicator Summary\n\n\nIndicator\nFrom\nTo\nLatest value\nUnits\n\n\n\n\nProportion of residents (aged 16-64) with no qualifications\n2025-01-01\n2025-12-31\n3.6\nPercentage\n\n\nProportion of residents (aged 16-64) with Level 4 or above qualifications\n2025-01-01\n2025-12-31\n53.2\nPercentage\n\n\nChange in apprenticeship starts from the previous year\n2024-08-01\n2025-07-31\n7,540.0\nPercentage\n\n\nKey Stage 4 attainment 8 data for all state funded schools, local authority maintained schools and academies\n2024-08-01\n2025-07-31\n45.9\nScore out of 100 (no unit)\n\n\nEmployment rate 16-64 year olds\n2025-01-01\n2025-12-31\n79.9\nPercentage\n\n\nProportion of residents aged 16-64 economically inactive\n2025-01-01\n2025-12-31\n17.0\nPercentage\n\n\nProportion of residents aged 16-17 not in employment, education or training (NEETs), inc not known\n2025-01-01\n2025-12-31\n6.3\nPercentage\n\n\nProportion of residents earning less than the Real Living Wage (as defined by the Living Wage Foundation)\n2025-01-01\n2025-12-31\n9.9\nPercentage\nAll indicators in this section relate to the wider West of England geography, which includes Bath and North East Somerset, Bristol, North Somerset and South Gloucestershire. This geography extends beyond the West of England Combined Authority area to include North Somerset.",
     "crumbs": [
       "Skills & Opportunity",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Future-Ready Skills</span>"
     ]
   },
   {
-    "objectID": "chapters/04-skills/index.html#setup",
-    "href": "chapters/04-skills/index.html#setup",
+    "objectID": "chapters/04-skills/index.html#residents-with-no-qualifications",
+    "href": "chapters/04-skills/index.html#residents-with-no-qualifications",
     "title": "5  Future-Ready Skills",
-    "section": "5.2 Setup",
-    "text": "5.2 Setup\n\n\nLoad required packages\n# Load required packages\nlibrary(tidyverse)\n\n# Source shared helpers (theme, helpers, fact_helpers, collate_fact)\nsource(here::here(\"scripts\", \"R\", \"_common.R\"))",
+    "section": "5.2 Residents with No Qualifications",
+    "text": "5.2 Residents with No Qualifications\n\n\n\n\n\n\n\n\n\n\n\n\nResidents with No Qualifications\n\n\nWorking-age population with no formal qualifications\n\n\n\n\nLatest value\n3.6% (2025-12-31)\n\n\nPrevious value\n4.0% (2024-12-31)\n\n\nChange vs previous\n-0.4 ppts\n\n\nFirst value\n5.3% (2022-12-31)\n\n\nChange since first\n-1.7 ppts\n\n\nObservations\n4\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-06-16\n\n\n\n\n\n\n\n\n5.2.1 Overview\nQualifications are a key driver of employment, productivity and economic opportunity. This indicator measures the proportion of working-age residents with no formal qualifications. Lower levels indicate a more skilled workforce and greater access to employment opportunities. Reducing the number of residents without qualifications supports the West of England Growth Strategy’s ambition to equip people with the skills needed to access future jobs, improve productivity and ensure the benefits of economic growth are shared across communities.",
     "crumbs": [
       "Skills & Opportunity",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Future-Ready Skills</span>"
     ]
   },
   {
-    "objectID": "chapters/04-skills/index.html#indicator-1-your-skills-indicator",
-    "href": "chapters/04-skills/index.html#indicator-1-your-skills-indicator",
+    "objectID": "chapters/04-skills/index.html#residents-with-level-4-qualifications",
+    "href": "chapters/04-skills/index.html#residents-with-level-4-qualifications",
     "title": "5  Future-Ready Skills",
-    "section": "5.3 Indicator 1: [Your Skills Indicator]",
-    "text": "5.3 Indicator 1: [Your Skills Indicator]\nData source: [Specify source] Last updated: [Date] Refresh schedule: [Annual/Quarterly/Monthly]\n\n5.3.1 Overview\n[Describe what this indicator measures and why it matters for future-ready skills]\n\n\nIndicator 1 analysis\n# Your code here\n# See chapters/01-economy/index.qmd for a worked example pattern:\n# 1. Load data using load_csv()\n# 2. Process/filter/aggregate data\n# 3. Create visualization with theme_weca()\n# 4. Calculate key statistics using format_number()\n\n\n\n\n5.3.2 Findings\n[Your narrative findings here]",
+    "section": "5.3 Residents with Level 4+ Qualifications",
+    "text": "5.3 Residents with Level 4+ Qualifications\n\n\n\n\n\n\n\n\n\n\n\n\nResidents with Level 4+ Qualifications\n\n\nWorking-age population qualified to Level 4 and above\n\n\n\n\nLatest value\n53.2% (2025-12-31)\n\n\nPrevious value\n56.0% (2024-12-31)\n\n\nChange vs previous\n-2.8 ppts\n\n\nFirst value\n52.5% (2022-12-31)\n\n\nChange since first\n+0.7 ppts\n\n\nObservations\n4\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-06-16\n\n\n\n\n\n\n\n\n5.3.1 Overview\nHigher-level qualifications are an important indicator of workforce capability and economic competitiveness. This indicator measures the proportion of working-age residents qualified to Level 4 and above. (Level 3 qualifications include A levels and equivalent qualifications, this indicator captures qualifications above this level). These include a range of higher education qualifications, from Higher National Certificates and Certificates of Higher Education through to bachelor’s degrees (Level 6) and postgraduate qualifications. Higher levels of attainment support innovation, productivity and growth in knowledge intensive sectors. The indicator reflects the region’s ability to develop and attract the talent needed to support future economic growth.",
     "crumbs": [
       "Skills & Opportunity",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Future-Ready Skills</span>"
     ]
   },
   {
-    "objectID": "chapters/04-skills/index.html#indicator-2-your-skills-indicator",
-    "href": "chapters/04-skills/index.html#indicator-2-your-skills-indicator",
+    "objectID": "chapters/04-skills/index.html#apprenticeship-starts",
+    "href": "chapters/04-skills/index.html#apprenticeship-starts",
     "title": "5  Future-Ready Skills",
-    "section": "5.4 Indicator 2: [Your Skills Indicator]",
-    "text": "5.4 Indicator 2: [Your Skills Indicator]\nData source: Last updated: Refresh schedule:\n[Repeat structure - add up to 10 indicators total]",
+    "section": "5.4 Apprenticeship Starts",
+    "text": "5.4 Apprenticeship Starts\n\n\n\n\n\n\n\n\n\n\n\n\nApprenticeship Starts\n\n\nApprenticeship starts across the region\n\n\n\n\nLatest value\n7,540.0 Starts (2025-07-31)\n\n\nPrevious value\n7,040.0 Starts (2024-07-31)\n\n\nChange vs previous\n+7.1%\n\n\nFirst value\n8,860.0 Starts (2016-07-31)\n\n\nChange since first\n-14.9%\n\n\nObservations\n10\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-06-16\n\n\n\n\n\n\n\n\n5.4.1 Overview\nApprenticeships provide an important route into skilled employment and career progression. This indicator measures participation in apprenticeship programmes across the region. Strong apprenticeship uptake helps employers develop the workforce they need while providing residents with opportunities to gain qualifications and practical experience.",
     "crumbs": [
       "Skills & Opportunity",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Future-Ready Skills</span>"
     ]
   },
   {
-    "objectID": "chapters/04-skills/index.html#summary",
-    "href": "chapters/04-skills/index.html#summary",
+    "objectID": "chapters/04-skills/index.html#ks4-attainment-8",
+    "href": "chapters/04-skills/index.html#ks4-attainment-8",
     "title": "5  Future-Ready Skills",
-    "section": "5.5 Summary",
-    "text": "5.5 Summary\n[Summary of key findings across all skills indicators. What is the overall picture for future-ready skills development?]",
+    "section": "5.5 KS4 Attainment 8",
+    "text": "5.5 KS4 Attainment 8\n\n\n\n\n\n\n\n\n\n\n\n\nKS4 Attainment 8\n\n\nAverage Attainment 8 score at Key Stage 4\n\n\n\n\nLatest value\n45.9 Score (2025-07-31)\n\n\nPrevious value\n45.7 Score (2024-07-31)\n\n\nChange vs previous\n+0.3%\n\n\nFirst value\n45.9 Score (2019-07-31)\n\n\nChange since first\n-0.1%\n\n\nObservations\n7\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-06-16\n\n\n\n\n\n\n\n\n5.5.1 Overview\nEducational attainment provides the foundation for future learning, skills development and employment opportunities. This indicator measures average pupil attainment across a range of subjects at the end of Key Stage 4 (GCSE). Strong educational outcomes help ensure young people are equipped to progress into further education, training and employment. Comparisons over time should be interpreted with some caution, as educational attainment and assessment arrangements were affected by the COVID-19 pandemic, particularly during 2020 and 2021.",
+    "crumbs": [
+      "Skills & Opportunity",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Future-Ready Skills</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-skills/index.html#employment-rate-16-64",
+    "href": "chapters/04-skills/index.html#employment-rate-16-64",
+    "title": "5  Future-Ready Skills",
+    "section": "5.6 Employment Rate 16-64",
+    "text": "5.6 Employment Rate 16-64\n\n\n\n\n\n\n\n\n\n\n\n\nEmployment Rate 16-64\n\n\nProportion of working-age residents in employment\n\n\n\n\nLatest value\n79.9% (2025-12-31)\n\n\nPrevious value\n80.1% (2025-09-30)\n\n\nChange vs previous\n-0.2 ppts\n\n\nFirst value\n75.7% (2015-03-31)\n\n\nChange since first\n+4.2 ppts\n\n\nObservations\n44\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-06-16\n\n\n\n\n\n\n\n\n5.6.1 Overview\nEmployment is a key measure of economic participation and prosperity. This indicator measures the proportion of working-age residents who are in employment. Higher employment rates indicate that residents are benefiting from economic opportunities and contributing their skills within the labour market. Sustaining high employment levels is important for supporting inclusive growth and regional productivity.",
+    "crumbs": [
+      "Skills & Opportunity",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Future-Ready Skills</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-skills/index.html#economic-inactivity",
+    "href": "chapters/04-skills/index.html#economic-inactivity",
+    "title": "5  Future-Ready Skills",
+    "section": "5.7 Economic Inactivity",
+    "text": "5.7 Economic Inactivity\n\n\n\n\n\n\n\n\n\n\n\n\nEconomic Inactivity\n\n\nProportion of working-age residents economically inactive\n\n\n\n\nLatest value\n17.0% (2025-12-31)\n\n\nPrevious value\n17.1% (2025-09-30)\n\n\nChange vs previous\n-0.1 ppts\n\n\nFirst value\n19.5% (2015-03-31)\n\n\nChange since first\n-2.5 ppts\n\n\nObservations\n44\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-06-16\n\n\n\n\n\n\n\n\n5.7.1 Overview\nEconomic inactivity can limit workforce participation and reduce the availability of skills within the labour market. This indicator measures the proportion of working-age residents who are neither employed or actively seeking work. Lower levels of inactivity indicate greater participation in economic activity and access to employment opportunities. Reducing inactivity is an important part of addressing labour shortages and supporting inclusive growth.",
+    "crumbs": [
+      "Skills & Opportunity",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Future-Ready Skills</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-skills/index.html#neet-16-17",
+    "href": "chapters/04-skills/index.html#neet-16-17",
+    "title": "5  Future-Ready Skills",
+    "section": "5.8 NEET 16-17",
+    "text": "5.8 NEET 16-17\n\n\n\n\n\n\n\n\n\n\n\n\nNEET 16-17\n\n\n16-17 year olds not in education, employment or training\n\n\n\n\nLatest value\n6.3% (2025-12-31)\n\n\nPrevious value\n6.7% (2024-12-31)\n\n\nChange vs previous\n-0.4 ppts\n\n\nFirst value\n6.6% (2019-12-31)\n\n\nChange since first\n-0.3 ppts\n\n\nObservations\n7\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-06-16\n\n\n\n\n\n\n\n\n5.8.1 Overview\nParticipation in education, employment or training during the transition from school is important for long-term outcomes. This indicator measures the proportion of 16-17 year olds who are not in education, employment or training (NEET). Lower rates indicate that more young people are progressing into positive destinations and developing the skills needed for future careers. Reducing NEET levels helps strengthen the future workforce and improve social mobility.",
+    "crumbs": [
+      "Skills & Opportunity",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Future-Ready Skills</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-skills/index.html#neet-18-24",
+    "href": "chapters/04-skills/index.html#neet-18-24",
+    "title": "5  Future-Ready Skills",
+    "section": "5.9 NEET 18-24",
+    "text": "5.9 NEET 18-24\nPlease note: This indicator is currently under development and data is not yet available for reporting. Analysis will be included in a future update of the Regional Indicators report.",
+    "crumbs": [
+      "Skills & Opportunity",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Future-Ready Skills</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-skills/index.html#below-living-wage",
+    "href": "chapters/04-skills/index.html#below-living-wage",
+    "title": "5  Future-Ready Skills",
+    "section": "5.10 Below Living Wage",
+    "text": "5.10 Below Living Wage\n\n\n\n\n\n\n\n\n\n\n\n\nBelow Living Wage\n\n\nProportion of employees earning below the Living Wage\n\n\n\n\nLatest value\n9.9% (2025-12-31)\n\n\nPrevious value\n10.6% (2024-12-31)\n\n\nChange vs previous\n-0.7 ppts\n\n\nFirst value\n18.1% (2018-12-31)\n\n\nChange since first\n-8.2 ppts\n\n\nObservations\n8\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-06-16\n\n\n\n\n\n\n\n\n5.10.1 Overview\nThe quality of employment is an important aspect of economic wellbeing. This indicator measures the proportion of employees earning below the Real Living Wage, as defined by the Living Wage Foundation. Lower levels indicate that a greater share of workers are earning wages that better reflect the cost of living. Monitoring this indicator helps assess whether economic growth is translating into improved living standards and the creation of quality employment opportunities. The most recent year of data is provisional and should be interpreted with caution, as revised estimates will be published the following year.",
+    "crumbs": [
+      "Skills & Opportunity",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Future-Ready Skills</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-skills/index.html#claimant-count-in-deprived-wards",
+    "href": "chapters/04-skills/index.html#claimant-count-in-deprived-wards",
+    "title": "5  Future-Ready Skills",
+    "section": "5.11 Claimant Count in Deprived Wards",
+    "text": "5.11 Claimant Count in Deprived Wards\nPlease note: This indicator is currently under development and data is not yet available for reporting. Analysis will be included in a future update of the Regional Indicators report.",
+    "crumbs": [
+      "Skills & Opportunity",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Future-Ready Skills</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-skills/index.html#skills-gaps",
+    "href": "chapters/04-skills/index.html#skills-gaps",
+    "title": "5  Future-Ready Skills",
+    "section": "5.12 Skills Gaps",
+    "text": "5.12 Skills Gaps\nPlease note: This indicator is currently under development and data is not yet available for reporting. Analysis will be included in a future update of the Regional Indicators report.",
     "crumbs": [
       "Skills & Opportunity",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Future-Ready Skills</span>"
@@ -318,51 +395,139 @@
     "href": "chapters/06-child-poverty/index.html",
     "title": "7  Child Poverty",
     "section": "",
-    "text": "7.1 Context\nThis chapter tracks indicators related to child poverty and family wellbeing across the West of England. Up to 10 indicators can be included, covering metrics like child poverty rates, free school meals eligibility, household income, access to services, and educational outcomes.",
+    "text": "7.1 Context\nThis chapter tracks indicators related to child poverty, early years development, educational outcomes, health and wellbeing across the West of England. Together these indicators provide insight into the factors that influence children’s life chances and help monitor progress towards the West of England Growth Strategy’s ambition to lift children and families out of poverty. The indicators cover measures of income, education, childcare, health and wellbeing, helping to understand whether all children have the opportunity to thrive regardless of their background.\nChild Poverty: Indicator Summary\n\n\nIndicator\nFrom\nTo\nLatest value\nUnits\n\n\n\n\nChild poverty – relative income after housing costs / Children in low income families\n2023-04-01\n2024-03-31\n27.4\nPercentage\n\n\nProportion of pupils meeting expected standards of reading / writing / maths at KS2 for state schools, local authority maintained schools and academies\n2024-09-01\n2025-08-31\n61.7\nPercentage\n\n\nProportion of pupils eligible for free school meals\n2024-09-01\n2025-08-31\n21.8\nPercentage\n\n\nProportion of childcare places relative to population of age groups 0-4\n2025-08-31\n2025-08-31\n50.0\nPercentage\n\n\nProportion of early years settings judged good or outstanding\n2025-08-31\n2025-08-31\n98.1\nPercentage\n\n\nChild health: Percentage achieving good level of development at 2-2.5 year review\n2024-04-01\n2025-03-31\n86.6\nPercentage\n\n\nProportion of school pupils with social, emotional and mental health needs\n2024-09-01\n2025-08-31\n5.3\nPercentage\nAll indicators in this section relate to the wider West of England geography, which includes Bath and North East Somerset, Bristol, North Somerset and South Gloucestershire. This geography extends beyond the West of England Combined Authority area to include North Somerset.",
     "crumbs": [
       "Child Poverty",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Child Poverty</span>"
     ]
   },
   {
-    "objectID": "chapters/06-child-poverty/index.html#setup",
-    "href": "chapters/06-child-poverty/index.html#setup",
+    "objectID": "chapters/06-child-poverty/index.html#child-poverty",
+    "href": "chapters/06-child-poverty/index.html#child-poverty",
     "title": "7  Child Poverty",
-    "section": "7.2 Setup",
-    "text": "7.2 Setup\n\n\nLoad required packages\n# Load required packages\nlibrary(tidyverse)\n\n# Source shared helpers (theme, helpers, fact_helpers, collate_fact)\nsource(here::here(\"scripts\", \"R\", \"_common.R\"))",
+    "section": "7.2 Child Poverty",
+    "text": "7.2 Child Poverty\n\n\n\n\n\n\n\n\n\n\n\n\nChild Poverty\n\n\nChildren living in low-income families after housing costs\n\n\n\n\nLatest value\n27.4% (2024-03-31)\n\n\nPrevious value\n25.9% (2023-03-31)\n\n\nChange vs previous\n+1.6 ppts\n\n\nFirst value\n24.6% (2016-03-31)\n\n\nChange since first\n+2.9 ppts\n\n\nObservations\n9\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-06-16\n\n\n\n\n\n\n\n\n7.2.1 Overview\nChild poverty can have lasting impacts on children’s health, educational attainment and future employment opportunities. This indicator measures the proportion of children living in households with incomes below 60% of the national median after housing costs have been taken into account. Higher levels indicate that more children are growing up in financial hardship, which can affect outcomes throughout their lives. Monitoring child poverty helps assess progress towards reducing inequalities and ensuring that all children and families can benefit from economic growth.",
     "crumbs": [
       "Child Poverty",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Child Poverty</span>"
     ]
   },
   {
-    "objectID": "chapters/06-child-poverty/index.html#indicator-1-your-child-poverty-indicator",
-    "href": "chapters/06-child-poverty/index.html#indicator-1-your-child-poverty-indicator",
+    "objectID": "chapters/06-child-poverty/index.html#children-achieving-a-good-level-of-development",
+    "href": "chapters/06-child-poverty/index.html#children-achieving-a-good-level-of-development",
     "title": "7  Child Poverty",
-    "section": "7.3 Indicator 1: [Your Child Poverty Indicator]",
-    "text": "7.3 Indicator 1: [Your Child Poverty Indicator]\nData source: [Specify source] Last updated: [Date] Refresh schedule: [Annual/Quarterly/Monthly]\n\n7.3.1 Overview\n[Describe what this indicator measures and why it matters for lifting children and families out of poverty]\n\n\nIndicator 1 analysis\n# Your code here\n# See chapters/01-economy/index.qmd for a worked example pattern:\n# 1. Load data using load_csv()\n# 2. Process/filter/aggregate data\n# 3. Create visualization with theme_weca()\n# 4. Calculate key statistics using format_number()\n\n\n\n\n7.3.2 Findings\n[Your narrative findings here]",
+    "section": "7.3 Children Achieving a Good Level of Development",
+    "text": "7.3 Children Achieving a Good Level of Development\n\n\n\n\n\n\n\n\n\n\n\n\nGood Level of Development by Age 5\n\n\nChildren achieving a good level of development\n\n\n\n\nLatest value\n71.9% (2025-08-31)\n\n\nPrevious value\n70.7% (2024-08-31)\n\n\nChange vs previous\n+1.2 ppts\n\n\nFirst value\n68.2% (2022-08-31)\n\n\nChange since first\n+3.7 ppts\n\n\nObservations\n4\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-06-16\n\n\n\n\n\n\n\n\n7.3.1 Overview\nEarly childhood development plays a crucial role in shaping future educational attainment, health and wellbeing. This indicator measures the proportion of children achieving a good level of development by the end of the Early Years Foundation Stage, typically at age five. A good level of development reflects children’s progress across key areas of learning and development, including communication, physical development, literacy and mathematics.",
     "crumbs": [
       "Child Poverty",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Child Poverty</span>"
     ]
   },
   {
-    "objectID": "chapters/06-child-poverty/index.html#indicator-2-your-child-poverty-indicator",
-    "href": "chapters/06-child-poverty/index.html#indicator-2-your-child-poverty-indicator",
+    "objectID": "chapters/06-child-poverty/index.html#ks2-expected-standards",
+    "href": "chapters/06-child-poverty/index.html#ks2-expected-standards",
     "title": "7  Child Poverty",
-    "section": "7.4 Indicator 2: [Your Child Poverty Indicator]",
-    "text": "7.4 Indicator 2: [Your Child Poverty Indicator]\nData source: Last updated: Refresh schedule:\n[Repeat structure - add up to 10 indicators total]",
+    "section": "7.4 KS2 Expected Standards",
+    "text": "7.4 KS2 Expected Standards\n\n\n\n\n\n\n\n\n\n\n\n\nKS2 Expected Standards\n\n\nPupils meeting expected standards in reading, writing and maths\n\n\n\n\nLatest value\n61.7% (2025-08-31)\n\n\nPrevious value\n59.2% (2024-08-31)\n\n\nChange vs previous\n+2.5 ppts\n\n\nFirst value\n54.3% (2016-08-31)\n\n\nChange since first\n+7.4 ppts\n\n\nObservations\n10\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-06-16\n\n\n\n\n\n\n\n\n7.4.1 Overview\nEducational attainment during primary school is an important predictor of future educational outcomes. This indicator measures the proportion of pupils meeting expected standards in reading, writing and mathematics at Key Stage 2. Higher attainment levels indicate that more children are developing the knowledge and skills needed for successful progression through education. When interpreting trends over time, it is important to note that data are not available for 2020 and 2021, as Key Stage 2 assessments were cancelled in response to the COVID-19 pandemic.",
     "crumbs": [
       "Child Poverty",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Child Poverty</span>"
     ]
   },
   {
-    "objectID": "chapters/06-child-poverty/index.html#summary",
-    "href": "chapters/06-child-poverty/index.html#summary",
+    "objectID": "chapters/06-child-poverty/index.html#free-school-meals-eligibility",
+    "href": "chapters/06-child-poverty/index.html#free-school-meals-eligibility",
     "title": "7  Child Poverty",
-    "section": "7.5 Summary",
-    "text": "7.5 Summary\n[Summary of key findings across all child poverty indicators. What is the overall picture for lifting children and families out of poverty?]",
+    "section": "7.5 Free School Meals Eligibility",
+    "text": "7.5 Free School Meals Eligibility\n\n\n\n\n\n\n\n\n\n\n\n\nFree School Meals Eligibility\n\n\nPupils eligible for free school meals\n\n\n\n\nLatest value\n21.8% (2025-08-31)\n\n\nPrevious value\n21.3% (2024-08-31)\n\n\nChange vs previous\n+0.6 ppts\n\n\nFirst value\n13.1% (2016-08-31)\n\n\nChange since first\n+8.7 ppts\n\n\nObservations\n10\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-06-16\n\n\n\n\n\n\n\n\n7.5.1 Overview\nEligibility for free school meals is widely used as a proxy measure of socioeconomic disadvantage among children and young people. This indicator measures the proportion of pupils known to be eligible for and claiming free school meals. Higher levels may indicate greater levels of financial hardship among families and can help identify communities where additional support may be required. Monitoring this measure provides insight into the scale and distribution of disadvantage across the region.",
+    "crumbs": [
+      "Child Poverty",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Child Poverty</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-child-poverty/index.html#childcare-places",
+    "href": "chapters/06-child-poverty/index.html#childcare-places",
+    "title": "7  Child Poverty",
+    "section": "7.6 Childcare Places",
+    "text": "7.6 Childcare Places\n\n\n\n\n\n\n\n\n\n\n\n\nChildcare Places\n\n\nChildcare places relative to the population aged 0-4\n\n\n\n\nLatest value\n50.0% (2025-08-31)\n\n\nPrevious value\n48.9% (2025-03-31)\n\n\nChange vs previous\n+1.1 ppts\n\n\nFirst value\n44.1% (2019-12-31)\n\n\nChange since first\n+5.9 ppts\n\n\nObservations\n13\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-06-16\n\n\n\n\n\n\n\n\n7.6.1 Overview\nAccess to childcare supports children’s development while enabling parents and carers to participate in employment and training. This indicator measures the number of childcare places relative to the population of children aged 0-4. Higher levels indicate greater childcare availability and capacity across the region.",
+    "crumbs": [
+      "Child Poverty",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Child Poverty</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-child-poverty/index.html#early-years-settings-rated-good-or-outstanding",
+    "href": "chapters/06-child-poverty/index.html#early-years-settings-rated-good-or-outstanding",
+    "title": "7  Child Poverty",
+    "section": "7.7 Early Years Settings Rated Good or Outstanding",
+    "text": "7.7 Early Years Settings Rated Good or Outstanding\n\n\n\n\n\n\n\n\n\n\n\n\nEarly Years Settings Rated Good or Outstanding\n\n\nEarly years settings judged good or outstanding\n\n\n\n\nLatest value\n98.1% (2025-08-31)\n\n\nPrevious value\n98.5% (2025-03-31)\n\n\nChange vs previous\n-0.3 ppts\n\n\nFirst value\n96.6% (2019-12-31)\n\n\nChange since first\n+1.5 ppts\n\n\nObservations\n13\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-06-16\n\n\n\n\n\n\n\n\n7.7.1 Overview\nThe quality of early years provision plays a significant role in children’s development and readiness for school. This indicator measures the proportion of early years settings rated good or outstanding.",
+    "crumbs": [
+      "Child Poverty",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Child Poverty</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-child-poverty/index.html#quality-of-life-in-deprived-areas",
+    "href": "chapters/06-child-poverty/index.html#quality-of-life-in-deprived-areas",
+    "title": "7  Child Poverty",
+    "section": "7.8 Quality of Life in Deprived Areas",
+    "text": "7.8 Quality of Life in Deprived Areas\nPlease note: This indicator is currently under development and data is not yet available for reporting. Analysis will be included in a future update of the Regional Indicators report.",
+    "crumbs": [
+      "Child Poverty",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Child Poverty</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-child-poverty/index.html#happiness-and-life-satisfaction",
+    "href": "chapters/06-child-poverty/index.html#happiness-and-life-satisfaction",
+    "title": "7  Child Poverty",
+    "section": "7.9 Happiness and Life Satisfaction",
+    "text": "7.9 Happiness and Life Satisfaction\nPlease note: This indicator is currently under development and data is not yet available for reporting. Analysis will be included in a future update of the Regional Indicators report.",
+    "crumbs": [
+      "Child Poverty",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Child Poverty</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-child-poverty/index.html#life-expectancy-gap",
+    "href": "chapters/06-child-poverty/index.html#life-expectancy-gap",
+    "title": "7  Child Poverty",
+    "section": "7.10 Life Expectancy Gap",
+    "text": "7.10 Life Expectancy Gap\n\n7.10.1 Overview\nLife expectancy gap is a widely used measure of population health and inequality. This indicator measures the gap in life expectancy at birth between residents living in the most deprived and least deprived areas. The size of the gap provides an indication of the extent of health inequalities within the region. A smaller gap suggests that people are experiencing more equal opportunities for a long and healthy life, regardless of where they live. Tracking this measure helps assess progress towards reducing health inequalities and improving outcomes for disadvantaged communities.",
+    "crumbs": [
+      "Child Poverty",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Child Poverty</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-child-poverty/index.html#healthy-life-expectancy-at-birth",
+    "href": "chapters/06-child-poverty/index.html#healthy-life-expectancy-at-birth",
+    "title": "7  Child Poverty",
+    "section": "7.11 Healthy Life Expectancy at Birth",
+    "text": "7.11 Healthy Life Expectancy at Birth\n\n7.11.1 Overview\nHealthy life expectancy is a measure of both the length and quality of life. This indicator estimates the average number of years a person can expect to live in good health from birth, based on current mortality rates and self-reported health status. Higher levels indicate that people are spending more of their lives in good health and experiencing better overall wellbeing. Healthy life expectancy is influenced by a range of social, economic and environmental factors, making it a useful measure for understanding long-term health outcomes and inequalities across the population.",
+    "crumbs": [
+      "Child Poverty",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Child Poverty</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-child-poverty/index.html#child-health-good-level-of-development-at-22.5-year-review",
+    "href": "chapters/06-child-poverty/index.html#child-health-good-level-of-development-at-22.5-year-review",
+    "title": "7  Child Poverty",
+    "section": "7.12 Child Health: Good Level of Development at 2–2.5 Year Review",
+    "text": "7.12 Child Health: Good Level of Development at 2–2.5 Year Review\n\n\n\n\n\n\n\n\n\n\n\n\nChild Health at 2–2.5 Year Review\n\n\nChildren achieving a good level of development at review\n\n\n\n\nLatest value\n86.6% (2025-03-31)\n\n\nPrevious value\n86.5% (2024-03-31)\n\n\nChange vs previous\n+0.2 ppts\n\n\nFirst value\n83.8% (2022-03-31)\n\n\nChange since first\n+2.9 ppts\n\n\nObservations\n4\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-06-16\n\n\n\n\n\n\n\n\n7.12.1 Overview\nThe 2 to 2½ year review is an important early assessment of children’s development, health and wellbeing. This indicator measures the proportion of children whose development is assessed as being at the expected level across key areas of development at the time of review. Higher levels indicate that more children are developing the skills and capabilities expected for their age, providing a strong foundation for future learning, health and wellbeing. Monitoring this indicator helps identify how well children are progressing in the early years and where additional support may be needed.",
+    "crumbs": [
+      "Child Poverty",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Child Poverty</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-child-poverty/index.html#pupils-with-social-emotional-and-mental-health-needs",
+    "href": "chapters/06-child-poverty/index.html#pupils-with-social-emotional-and-mental-health-needs",
+    "title": "7  Child Poverty",
+    "section": "7.13 Pupils with Social, Emotional and Mental Health Needs",
+    "text": "7.13 Pupils with Social, Emotional and Mental Health Needs\n\n\n\n\n\n\n\n\n\n\n\n\nPupils with Social, Emotional and Mental Health Needs\n\n\nSchool pupils identified with SEMH needs\n\n\n\n\nLatest value\n5.3% (2025-08-31)\n\n\nPrevious value\n4.7% (2024-08-31)\n\n\nChange vs previous\n+0.6 ppts\n\n\nFirst value\n2.4% (2016-08-31)\n\n\nChange since first\n+2.9 ppts\n\n\nObservations\n10\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-06-16\n\n\n\n\n\n\n\n\n7.13.1 Overview\nSocial, emotional and mental health are important factors influencing children’s wellbeing, learning and future outcomes. This indicator measures the proportion of pupils whose primary special educational need is identified as Social, Emotional and Mental Health (SEMH). Monitoring this measure helps understand the prevalence of SEMH needs among pupils and supports the planning of appropriate educational, health and support services.",
     "crumbs": [
       "Child Poverty",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Child Poverty</span>"
