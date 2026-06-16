@@ -25,6 +25,8 @@ library(tidyverse)
 source(here::here("scripts", "R", "_common.R"))
 # source(here::here("scripts", "R", "load_pins.R"))
 source(here::here("scripts", "R", "01-economy", "RI_1D1_broadband_coverage.R"))
+source(here::here("scripts", "R", "01-economy", "RI_1E2_population_change.R"))
+source(here::here("scripts", "R", "01-economy", "RI_1E3_area_satisfaction.R"))
 
 indicator_fact_tbl <- collate_fact() |>
   build_reporting_view()
@@ -56,6 +58,66 @@ Regional broadband coverage for residential and commercial premises. This tracks
 #| eval: true
 #| code-summary: "RI_1D1_broadband_coverage analysis"
 RI_1D1_plot
+```
+
+---
+
+---
+
+## Population change
+
+```{r}
+#| label: RI_1E2_population_change
+#| eval: true
+#| code-summary: "RI_1E2_population_change KPI summary"
+indicator_fact_tbl |>
+format_indicator_summary(
+  "RI_1E2_population_change",
+  title = "Total population change (cumulative)",
+  subtitle = "West of England",
+  units = "percent"
+)
+```
+
+### Overview
+
+Cumulative population change between 2016 and 2025 in the West of England, including constituent authorities and North Somerset. This tracks the rate of change in the region's total population.
+
+```{r}
+#| label: RI_1E2_population_change_plot
+#| eval: true
+#| code-summary: "RI_1E2_population_change analysis"
+RI_1E2_plot
+```
+
+---
+
+---
+
+## Satisfaction with local area as a place to live
+
+```{r}
+#| label: RI_1E3_area_satisfaction
+#| eval: true
+#| code-summary: "RI_1E3_area_satisfaction KPI summary"
+indicator_fact_tbl |>
+format_indicator_summary(
+  "RI_1E3_area_satisfaction",
+  title = "Satisfaction with local area as a place to live",
+  subtitle = "Bristol only - see plot for all constituent authorities and North Somerset",
+  units = "percent"
+)
+```
+
+### Overview
+
+Respondent satisfaction with their local area as a place to live as reported by the Community Life Survey. These results are published by the Department for Culture, Media and Sport. These data track respondent satisfaction with their local area as a place to live at unitary authority level.
+
+```{r}
+#| label: RI_1E3_area_satisfaction_plot
+#| eval: true
+#| code-summary: "RI_1E3_area_satisfaction analysis"
+RI_1E3_plot
 ```
 
 ---
