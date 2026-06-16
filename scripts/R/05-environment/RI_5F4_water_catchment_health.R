@@ -18,7 +18,6 @@ RI_5F4_fact_tbl <- RI_5F4_raw_tbl |>
 
 RI_5F4_start_year <- min(year(RI_5F4_fact_tbl$period_start))
 RI_5F4_end_year <- max(year(RI_5F4_fact_tbl$period_start))
-
 RI_5F4_plot <- RI_5F4_fact_tbl |>
   transmute(year = year(period_start), value) |>
   ggplot(aes(x = year, y = value)) +
@@ -38,6 +37,7 @@ RI_5F4_plot <- RI_5F4_fact_tbl |>
   ) +
   theme_weca() +
   theme(axis.title.y = element_text(angle = 0, vjust = 0.5))
+
 
 RI_5F4_fact_tbl |>
   build_fact("RI_5F4_water_catchment_health") |>

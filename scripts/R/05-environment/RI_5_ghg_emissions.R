@@ -2,7 +2,7 @@
 pacman::p_load(httr2, jsonlite, tidyverse, glue, janitor, here)
 source(here::here("scripts", "R", "_common.R"))
 
-# Get the data from the open data portal using httr2 and the ODS API --------------
+# Get the data from the open data portal using httr2 and the ODS API ----------
 RI_5_base_url <- "https://opendata.westofengland-ca.gov.uk/api/explore/v2.1/catalog/datasets"
 RI_5_endpoint <- "records"
 RI_5_indicator_id <- "RI_5_ghg_emissions"

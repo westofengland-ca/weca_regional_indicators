@@ -4,7 +4,7 @@
 # It manages the R package environment using renv for reproducibility.
 
 # Activate renv FIRST so all subsequent package loads use the project library.
-# (vscode-R init below loads languageserver/httpgd which pull in rlang — if
+# (vscode-R init below loads languageserver/httpgd which pull in rlang - if
 # renv isn't active yet, they load from the system library and pin the wrong
 # rlang namespace for the whole session.)
 source("renv/activate.R")
@@ -27,12 +27,12 @@ if (interactive() && Sys.getenv("RSTUDIO") == "") {
 
   # vsc options: control where panels open and what the workspace viewer shows
   options(
-    vsc.helpPanel      = "Two",    # help opens in editor group 2
-    vsc.view           = "Two",    # View() opens in editor group 2
-    vsc.viewer         = "Two",    # htmlwidgets open in editor group 2
-    vsc.str.max.level  = 2,        # show nested list/df structure in workspace viewer
-    vsc.show_object_size = TRUE,   # show object size in workspace viewer tooltips
-    vsc.use_httpgd     = TRUE      # consistent with r.plot.useHttpgd: true in settings
+    vsc.helpPanel = "Two", # help opens in editor group 2
+    vsc.view = "Two", # View() opens in editor group 2
+    vsc.viewer = "Two", # htmlwidgets open in editor group 2
+    vsc.str.max.level = 2, # show nested list/df structure in workspace viewer
+    vsc.show_object_size = TRUE, # show object size in workspace viewer tooltips
+    vsc.use_httpgd = TRUE # consistent with r.plot.useHttpgd: true in settings
   )
 }
 
@@ -88,27 +88,18 @@ options(show.error.locations = TRUE)
 
 # Configure ragg graphics device for proper font support (R 4.3+)
 # ragg integrates with systemfonts to automatically find system fonts
-suppressPackageStartupMessages({
+if (interactive()) suppressPackageStartupMessages({
   if (requireNamespace("ragg", quietly = TRUE)) {
-    # Set ragg as the default graphics device for interactive sessions.
-    # dev: ragg_png is set globally in _quarto.yml for rendering.
     options(bitmapType = "cairo")
-
-    if (interactive()) {
-      cat("[OK] Graphics: Using ragg device with systemfonts\n")
-
-      # List available fonts (for debugging)
-      if (requireNamespace("systemfonts", quietly = TRUE)) {
-        all_fonts <- systemfonts::system_fonts()
-        weca_fonts <- all_fonts[
-          grepl("(Open Sans|Trebuchet)", all_fonts$family, ignore.case = TRUE),
-        ]
-        if (nrow(weca_fonts) > 0) {
-          cat("[OK] WECA fonts detected:\n")
-          for (font in unique(weca_fonts$family)) {
-            cat("  -", font, "\n")
-          }
-        }
+    cat("[OK] Graphics: Using ragg device with systemfonts\n")
+    if (requireNamespace("systemfonts", quietly = TRUE)) {
+      all_fonts <- systemfonts::system_fonts()
+      weca_fonts <- all_fonts[
+        grepl("(Open Sans|Trebuchet)", all_fonts$family, ignore.case = TRUE),
+      ]
+      if (nrow(weca_fonts) > 0) {
+        cat("[OK] WECA fonts detected:\n")
+        for (font in unique(weca_fonts$family)) cat("  -", font, "\n")
       }
     }
   }

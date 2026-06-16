@@ -3,11 +3,10 @@
 # totals plus photovoltaics and households for RI_5A2_domestic_renewable
 
 # libraries ---------------------
-pacman::p_load(tidyverse, janitor, glue, tidyxl, readxl, sf)
-# connect to the POSTGIS database - imports a connection object "con" into the environment
-source(here::here("scripts", "R", "db_connect.R"))
+pacman::p_load(tidyverse, janitor, glue, tidyxl, readxl)
 source(here::here("scripts", "R", "_common.R"))
-# spreadsheet https://assets.publishing.service.gov.uk/media/68da76d2c487360cc70c9e9d/Renewable_electricity_by_local_authority_2014_-_2024.xlsx
+# spreadsheet
+# https://assets.publishing.service.gov.uk/media/68da76d2c487360cc70c9e9d/Renewable_electricity_by_local_authority_2014_-_2024.xlsx
 
 RI_5A1_current_spreadsheet <- "Renewable_electricity_by_local_authority_2014_-_2024.xlsx"
 period_years <- 10
@@ -199,15 +198,8 @@ RI_5A1_weca_renewable_tbl <- RI_5A1_renewable_tbl |>
     year >= (max(year) - period_years + 1)
   )
 
-# Get the area in KM^2 for the RI_5A2_domestic_renewable indicator
-
-lep_area_km2 <- as.integer(
-  (st_read(con, query = "SELECT * FROM os.bdline_ua_lep_diss") |>
-    st_area(lep_bound)) /
-    (1e6)
-)
-
-dbDisconnect(con)
+# West of England LEP area (4 UAs dissolved), derived from os.bdline_ua_lep_diss
+lep_area_km2 <- 1390L
 
 # Make the plot for  RI_5A1
 RI_5A1_renewable_plot <- RI_5A1_weca_renewable_tbl |>
