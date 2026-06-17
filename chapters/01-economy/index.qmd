@@ -4,7 +4,7 @@ subtitle: "Contributing to national economic growth"
 author: "SN"
 date: last-modified
 execute:
-  echo: true
+  echo: false
   warning: false
   message: false
 ---
