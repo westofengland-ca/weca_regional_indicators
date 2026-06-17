@@ -271,3 +271,4 @@ Thumbs.db
 *~
 
 **/*.quarto_ipynb
+.vscode/
