@@ -54,7 +54,47 @@
     "href": "chapters/01-economy/index.html",
     "title": "2  Economic Growth",
     "section": "",
-    "text": "2.1 Context\nThis chapter tracks regional indicators related to the West of England’s contribution to national economic growth. It includes indicators related to business growth, productivity, and innovation. The chapter draws on a range of national and local data sources to provide a high-level overview of regional trends and performance in relation to economic growth. Indicators were defined as part of the development of our Growth Strategy and are intended to provide a high-level overview of regional trends and performance in relation to economic growth.",
+    "text": "2.1 Context\nThis indicator summary tracks regional indicators related to the West of England’s contribution to national economic growth. It includes indicators related to business growth, productivity, and innovation. The chapter draws on a range of national and local data sources to provide a high-level overview of regional trends and performance in relation to economic growth. Indicators were defined as part of the development of our Growth Strategy and are intended to provide a high-level overview of regional trends and performance in relation to economic growth.\nEconomic Growth: Indicator Summary\n\n\nIndicator\nFrom\nTo\nLatest value\nUnits\n\n\n\n\nReal GDP growth rate\n2023-01-01\n2023-12-31\n2.8\nIndex\n\n\nGVA per hour\n2023-01-01\n2023-12-31\n65,202.1\n£/hour\n\n\nEmployment level and growth for priority sectors\n2024-01-01\n2024-12-31\n96,115.0\nNumber\n\n\nGross median monthly pay\n2026-05-01\n2026-05-31\n2,661.8\n£\n\n\nHigh speed broadband coverage in the region\n2025-07-01\n2025-12-31\n97.0\nPercent\n\n\nChange in total population\n2024-01-01\n2024-12-31\n9.7\nPercent\n\n\nProportion of people who are satisfied with their local area as a place to live\n2025-01-01\n2025-12-31\n75.0\nPercent",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Economic Growth</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-economy/index.html#employment-level-and-growth-for-priority-sectors",
+    "href": "chapters/01-economy/index.html#employment-level-and-growth-for-priority-sectors",
+    "title": "2  Economic Growth",
+    "section": "2.2 Employment level and growth for priority sectors",
+    "text": "2.2 Employment level and growth for priority sectors\n\n\n\n\n\n\n\n\n\n\n\n\nPriority sector employment\n\n\nWest of England\n\n\n\n\nLatest value\n96,115.0 jobs (2024-12-31)\n\n\nPrevious value\n94,030.0 jobs (2023-12-31)\n\n\nChange vs previous\n↑ +2.2%\n\n\nFirst value\n69,540.0 jobs (2015-12-31)\n\n\nChange since first\n↑ +38.2%\n\n\nObservations\n10\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-07-27\n\n\n\n\n\n\n\n\nOverview\nTotal employment in priority sectors, excluding clean energy. This tracks the region’s progress in relation to its aim of increasing employment in priority sectors by 72,000 jobs over 10 years. Clean energy is excluded from this total as the priority sectors are measured using Standard Industry Classification codes (SICs) and there are no SICs for clean energy.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Economic Growth</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-economy/index.html#real-gdp-growth-rate",
+    "href": "chapters/01-economy/index.html#real-gdp-growth-rate",
+    "title": "2  Economic Growth",
+    "section": "2.3 Real GDP growth rate",
+    "text": "2.3 Real GDP growth rate\n\n\n\n\n\n\n\n\n\n\n\n\nGDP growth since 2013\n\n\nReal GDP (excluding inflation) for the West of England\n\n\n\n\nLatest value\n2.8 percent (2023-12-31)\n\n\nPrevious value\n3.9 percent (2022-12-31)\n\n\nChange vs previous\n↓ -27.7%\n\n\nFirst value\n0.0 percent (2013-12-31)\n\n\nChange since first\n↓ -7077.8%\n\n\nObservations\n11\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-07-27\n\n\n\n\n\n\n\n\nOverview\nGrowth in Gross Domestic Product (GDP) since 2013. This tracks the region’s progress in relation to its aim of increasing GDP by 28% over 10 years.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Economic Growth</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-economy/index.html#gva-per-job",
+    "href": "chapters/01-economy/index.html#gva-per-job",
+    "title": "2  Economic Growth",
+    "section": "2.4 GVA per job",
+    "text": "2.4 GVA per job\n\n\n\n\n\n\n\n\n\n\n\n\nAnnual GVA per job, 2013-2023\n\n\nCurrent price GVA (including inflation) per job for the West of England\n\n\n\n\nLatest value\n65,202.1 pounds (2023-12-31)\n\n\nPrevious value\n62,985.8 pounds (2022-12-31)\n\n\nChange vs previous\n↑ +3.5%\n\n\nFirst value\n48,471.0 pounds (2013-12-31)\n\n\nChange since first\n↑ +34.5%\n\n\nObservations\n11\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-07-27\n\n\n\n\n\n\n\n\nOverview\nCurrent price GVA per job is a measure of productivity. It provides insights into how much a worker can produce in their job and it is a key measure of economic growth.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Economic Growth</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-economy/index.html#gross-monthly-median-wage",
+    "href": "chapters/01-economy/index.html#gross-monthly-median-wage",
+    "title": "2  Economic Growth",
+    "section": "2.5 Gross monthly median wage",
+    "text": "2.5 Gross monthly median wage\n\n\n\n\n\n\n\n\n\n\n\n\nAnnual GVA per job, 2013-2023\n\n\nCurrent price GVA (including inflation) per job for the West of England\n\n\n\n\nLatest value\n2,661.8 pounds (2026-05-31)\n\n\nPrevious value\n2,662.1 pounds (2026-04-30)\n\n\nChange vs previous\n↓ -0.0%\n\n\nFirst value\n1,669.3 pounds (2016-06-30)\n\n\nChange since first\n↑ +59.5%\n\n\nObservations\n120\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-07-27\n\n\n\n\n\n\n\n\nOverview\nGross monthly median wage provides an indication of how wages are changing across the region. The median relates to the person in the middle of the distribution, so it is more reliable than a mean average, which can be skewed upwards by those on very high wages. Whilst a rising median wage is a good thing, the measure takes no account of how wages are changing across the distribution. For example, those on very low wages might see their pay change at a different rate to those in other pay brackets, but this is not reflected in the median.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Economic Growth</span>"
     ]
@@ -63,8 +103,8 @@
     "objectID": "chapters/01-economy/index.html#broadband-coverage",
     "href": "chapters/01-economy/index.html#broadband-coverage",
     "title": "2  Economic Growth",
-    "section": "2.2 Broadband coverage",
-    "text": "2.2 Broadband coverage\n\n\n\n\n\n\n\n\n\n\n\n\nSuperfast coverage\n\n\nResidential and commercial premises\n\n\n\n\nLatest value\n97.0 percent (2025-07-01)\n\n\nPrevious value\n97.0 percent (2025-01-01)\n\n\nChange vs previous\n↑ +0.0%\n\n\nFirst value\n94.5 percent (2020-09-01)\n\n\nChange since first\n↑ +2.6%\n\n\nObservations\n11\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-07-08\n\n\n\n\n\n\n\n\nOverview\nRegional broadband coverage for residential and commercial premises. This tracks the region’s progress in relation to superfast broadband coverage (30mbps+) and gigabit broadband coverage (1000mbps+).",
+    "section": "2.6 Broadband coverage",
+    "text": "2.6 Broadband coverage\n\n\n\n\n\n\n\n\n\n\n\n\nSuperfast coverage\n\n\nResidential and commercial premises\n\n\n\n\nLatest value\n97.0 percent (2025-12-31)\n\n\nPrevious value\n97.0 percent (2025-06-30)\n\n\nChange vs previous\n↑ +0.0%\n\n\nFirst value\n94.5 percent (2020-12-31)\n\n\nChange since first\n↑ +2.6%\n\n\nObservations\n11\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-07-27\n\n\n\n\n\n\n\n\nOverview\nRegional broadband coverage for residential and commercial premises. This tracks the region’s progress in relation to superfast broadband coverage (30mbps+) and gigabit broadband coverage (1000mbps+).",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Economic Growth</span>"
     ]
@@ -73,8 +113,8 @@
     "objectID": "chapters/01-economy/index.html#population-change",
     "href": "chapters/01-economy/index.html#population-change",
     "title": "2  Economic Growth",
-    "section": "2.3 Population change",
-    "text": "2.3 Population change\n\n\n\n\n\n\n\n\n\n\n\n\nTotal population change (cumulative)\n\n\nWest of England\n\n\n\n\nLatest value\n9.7 percent (2024-06-30)\n\n\nPrevious value\n8.0 percent (2023-06-30)\n\n\nChange vs previous\n↑ +20.4%\n\n\nFirst value\n0.0 percent (2015-06-30)\n\n\nChange since first\n↑ +Inf%\n\n\nObservations\n10\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-07-08\n\n\n\n\n\n\n\n\nOverview\nCumulative population change between 2016 and 2025 in the West of England, including constituent authorities and North Somerset. This tracks the rate of change in the region’s total population.",
+    "section": "2.7 Population change",
+    "text": "2.7 Population change\n\n\n\n\n\n\n\n\n\n\n\n\nTotal population change (cumulative)\n\n\nWest of England\n\n\n\n\nLatest value\n9.7 percent (2024-12-31)\n\n\nPrevious value\n8.0 percent (2023-12-31)\n\n\nChange vs previous\n↑ +20.4%\n\n\nFirst value\n0.0 percent (2015-12-31)\n\n\nChange since first\n↑ +Inf%\n\n\nObservations\n10\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-07-27\n\n\n\n\n\n\n\n\nOverview\nCumulative population change between 2016 and 2025 in the West of England, including constituent authorities and North Somerset. This tracks the rate of change in the region’s total population.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Economic Growth</span>"
     ]
@@ -83,8 +123,8 @@
     "objectID": "chapters/01-economy/index.html#satisfaction-with-local-area-as-a-place-to-live",
     "href": "chapters/01-economy/index.html#satisfaction-with-local-area-as-a-place-to-live",
     "title": "2  Economic Growth",
-    "section": "2.4 Satisfaction with local area as a place to live",
-    "text": "2.4 Satisfaction with local area as a place to live\n\n\n\n\n\n\n\n\n\n\n\n\nSatisfaction with local area as a place to live\n\n\nBristol only - see plot for all constituent authorities and North Somerset\n\n\n\n\nLatest value\n75.0 percent (2025-06-30)\n\n\nPrevious value\n73.0 percent (2024-06-30)\n\n\nChange vs previous\n↑ +2.7%\n\n\nFirst value\n73.0 percent (2024-06-30)\n\n\nChange since first\n↑ +2.7%\n\n\nObservations\n2\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-07-08\n\n\n\n\n\n\n\n\nOverview\nRespondent satisfaction with their local area as a place to live as reported by the Community Life Survey. These results are published by the Department for Culture, Media and Sport. These data track respondent satisfaction with their local area as a place to live at unitary authority level.",
+    "section": "2.8 Satisfaction with local area as a place to live",
+    "text": "2.8 Satisfaction with local area as a place to live\n\n\n\n\n\n\n\n\n\n\n\n\nSatisfaction with local area as a place to live\n\n\nBristol only - see plot for all constituent authorities and North Somerset\n\n\n\n\nLatest value\n75.0 percent (2025-12-31)\n\n\nPrevious value\n73.0 percent (2024-12-31)\n\n\nChange vs previous\n↑ +2.7%\n\n\nFirst value\n73.0 percent (2024-12-31)\n\n\nChange since first\n↑ +2.7%\n\n\nObservations\n2\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-07-27\n\n\n\n\n\n\n\n\nOverview\nRespondent satisfaction with their local area as a place to live as reported by the Community Life Survey. These results are published by the Department for Culture, Media and Sport. These data track respondent satisfaction with their local area as a place to live at unitary authority level.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Economic Growth</span>"
     ]
