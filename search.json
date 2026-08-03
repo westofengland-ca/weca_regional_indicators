@@ -214,7 +214,7 @@
     "href": "chapters/02-transport/index.html#public-transport-connectivity",
     "title": "2  Public Transport Connectivity",
     "section": "2.8 Public Transport Connectivity",
-    "text": "2.8 Public Transport Connectivity\n\n\n\n\n\n\n\n\n\n\n\n\nPublic Transport Connectivity\n\n\nPeak hour journey times to education, employment, health and retail\n\n\n\n\nLatest value\n6,550 Score (2025-12-31)\n\n\nPrevious value\n6,511 Score (2024-12-31)\n\n\nChange vs previous\n↑ +0.6%\n\n\nFirst value\n7,060 Score (2019-12-31)\n\n\nChange since first\n↓ -7.2%\n\n\nObservations\n5\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-08-03\n\n\n\n\n\n\n\n\nOverview\nPublic transport connectivity has been modelled using the Combined Authority’s Connectivity Tool. It models journey times to key education, employment, health and retail amenities.\nConnectivity may change due to changes in public transport service timetables, new infrastructure or new facilities being built. Public transport services are more financially viable in areas with denser population, so these areas are more likely to see improvements in connectivity. Areas with an aging population, where people make less trips and are more likely to own cars, or where facilities close down, may see reductions in connectivity. It is often easier to increase patronage in areas of good connectivity by measures such as making public transport more affordable, extending service opening hours or improving journey planning information.",
+    "text": "2.8 Public Transport Connectivity\n\n\n\n\n\n\n\n\n\n\n\n\nPublic Transport Connectivity\n\n\nPeak hour journey times to education, employment, health and retail\n\n\n\n\nLatest value\n6,550 Score (2025-12-31)\n\n\nPrevious value\n6,511 Score (2024-12-31)\n\n\nChange vs previous\n↑ +0.6%\n\n\nFirst value\n7,060 Score (2019-12-31)\n\n\nChange since first\n↓ -7.2%\n\n\nObservations\n5\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-08-03\n\n\n\n\n\n\n\n\nOverview\nPublic transport connectivity has been modelled using the Combined Authority’s Connectivity Tool. It models journey times to key education, employment, health and retail amenities.\nConnectivity may change due to changes in public transport service timetables, new infrastructure or new facilities being built. Public transport services are more financially viable in areas with denser population, so these areas are more likely to see improvements in connectivity. Areas with an ageing population, where people make less trips and are more likely to own cars, or where facilities close down, may see reductions in connectivity. It is often easier to increase patronage in areas of good connectivity by measures such as making public transport more affordable, extending service opening hours or improving journey planning information.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Public Transport Connectivity</span>"
     ]
@@ -244,7 +244,27 @@
     "href": "chapters/03-place/index.html",
     "title": "3  Affordable and Sustainable Homes",
     "section": "",
-    "text": "3.1 Context\nThis chapter tracks indicators related to housing affordability and sustainability across the West of England. Indicators cover metrics like housing completions, affordability ratios, energy efficiency, social housing supply, and planning permissions. Indicators were developed to provide high-level insights into regional trends and performance in relation to the West of England’s housing priorities as outlined in our Growth Strategy.",
+    "text": "3.1 Context\nThis chapter tracks indicators related to housing affordability and sustainability across the West of England. Indicators cover metrics like housing completions, affordability ratios, energy efficiency, social housing supply, and planning permissions. Indicators were developed to provide high-level insights into regional trends and performance in relation to the West of England’s housing priorities as outlined in our Growth Strategy.\nAffordable and Sustainable Homes: Indicator Summary\n\n\nIndicator\nFrom\nTo\nLatest value\nUnits\n\n\n\n\nAnnual net increase in the number of dwellings\n2024-04-01\n2025-03-31\n3,024\nNumber of dwellings\n\n\nProportion of non - decent homes\n2024-04-01\n2025-03-31\n13\n%\n\n\nProportion of homes with an Energy Performance Certificate rating C or above\n2026-06-01\n2026-06-30\n52\n%\n\n\nHouse price to workplace-based earnings ratio\n2024-01-01\n2024-12-31\n9\nRatio\n\n\nPrivate monthly rental prices\n2023-07-01\n2024-06-30\n1,425\n£\n\n\nNumber and rate in temporary accommodation\n2025-01-01\n2025-12-31\n168\nNo. of households\n\n\nRegional CO2 emissions from domestic sector\n2024-01-01\n2024-12-31\n451\nkilotonnes CO2e",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Affordable and Sustainable Homes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-place/index.html#net-additional-dwellings",
+    "href": "chapters/03-place/index.html#net-additional-dwellings",
+    "title": "3  Affordable and Sustainable Homes",
+    "section": "3.2 Net Additional Dwellings",
+    "text": "3.2 Net Additional Dwellings\n\n\n\n\n\n\n\n\n\n\n\n\nNet Additional Dwellings\n\n\nAnnual net increase in the number of dwellings\n\n\n\n\nLatest value\n3,024 Number of dwellings (2025-03-31)\n\n\nPrevious value\n4,529 Number of dwellings (2024-03-31)\n\n\nChange vs previous\n↓ -33.2%\n\n\nFirst value\n4,240 Number of dwellings (2015-03-31)\n\n\nChange since first\n↓ -28.7%\n\n\nObservations\n11\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-08-03\n\n\n\n\n\n\n\n\nOverview\nThis indicator reports the annual net increase in the number of dwellings across the West of England. It is based on DLUHC’s Net Additional Dwellings statistics (Live Table 122), which capture the total change in the housing stock each year. Net additions include new build completions, conversions, changes of use, and other gains, minus demolitions and other losses.\nThe indicator provides a consistent measure of housing delivery over time and helps assess whether the region is expanding its housing stock at a pace aligned with growth ambitions and local need. The WECA figure is calculated by summing net additions across the four unitary authorities.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Affordable and Sustainable Homes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-place/index.html#non-decent-homes",
+    "href": "chapters/03-place/index.html#non-decent-homes",
+    "title": "3  Affordable and Sustainable Homes",
+    "section": "3.3 Non-decent homes",
+    "text": "3.3 Non-decent homes\n\n\n\n\n\n\n\n\n\n\n\n\nNon-decent Homes\n\n\nProportion of dwellings failing the Decent Homes Standard\n\n\n\n\nLatest value\n13% (2025-03-31)\n\n\nPrevious value\n13% (2024-03-31)\n\n\nChange vs previous\n↑ +0.0 ppt\n\n\nFirst value\n20% (2010-03-31)\n\n\nChange since first\n↓ -7.5 ppt\n\n\nObservations\n16\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-08-03\n\n\n\n\n\n\n\n\nOverview\nThis indicator tracks the proportion of dwellings in each local authority area that do not meet the Decent Homes Standard. The series is derived from the EHS LA Stock Condition Modelling dataset and provides a time series from 2009/10 to 2024/25. The values represent the estimated share of homes that fall below the standard in each year. A lower percentage indicates better housing quality and a smaller proportion of non-decent homes.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Affordable and Sustainable Homes</span>"
     ]
@@ -253,18 +273,48 @@
     "objectID": "chapters/03-place/index.html#energy-performance-of-homes",
     "href": "chapters/03-place/index.html#energy-performance-of-homes",
     "title": "3  Affordable and Sustainable Homes",
-    "section": "3.2 Energy Performance of Homes",
-    "text": "3.2 Energy Performance of Homes\n\n\n\n\n\n\n\n\n\n\n\n\nEnergy Performance of Homes\n\n\nProportion of homes with EPC rating of C or above\n\n\n\n\nLatest value\n52.3% (2026-05-31)\n\n\nPrevious value\n52.3% (2026-04-30)\n\n\nChange vs previous\n↑ +0.1 ppt\n\n\nFirst value\n37.7% (2016-05-31)\n\n\nChange since first\n↑ +14.6 ppt\n\n\nObservations\n121\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-07-06\n\n\n\n\n\n\n\n\nOverview\nThis indicator tracks the proportion of homes in the West of England with an Energy Performance Certificate (EPC) rating of C or above. A higher proportion indicates better energy efficiency and sustainability in the housing stock. Only about 70% of homes have an EPC, so this indicator is based on the subset of homes with an EPC, which may not be fully representative of all homes in the region. This dataset is from MHCLG and is based on the recently revised scheme for EPC.",
+    "section": "3.4 Energy Performance of Homes",
+    "text": "3.4 Energy Performance of Homes\n\n\n\n\n\n\n\n\n\n\n\n\nEnergy Performance of Homes\n\n\nProportion of homes with EPC rating of C or above\n\n\n\n\nLatest value\n52% (2026-06-30)\n\n\nPrevious value\n52% (2026-05-31)\n\n\nChange vs previous\n↑ +0.1 ppt\n\n\nFirst value\n38% (2016-06-30)\n\n\nChange since first\n↑ +14.6 ppt\n\n\nObservations\n121\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-08-03\n\n\n\n\n\n\n\n\nOverview\nThis indicator tracks the proportion of homes in the West of England with an Energy Performance Certificate (EPC) rating of C or above. A higher proportion indicates better energy efficiency and sustainability in the housing stock. Only about 70% of homes have an EPC, so this indicator is based on the subset of homes with an EPC, which may not be fully representative of all homes in the region. This dataset is from MHCLG and is based on the recently revised scheme for EPC.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Affordable and Sustainable Homes</span>"
     ]
   },
   {
-    "objectID": "chapters/03-place/index.html#summary",
-    "href": "chapters/03-place/index.html#summary",
+    "objectID": "chapters/03-place/index.html#house-price-to-earnings-ratio",
+    "href": "chapters/03-place/index.html#house-price-to-earnings-ratio",
     "title": "3  Affordable and Sustainable Homes",
-    "section": "3.3 Summary",
-    "text": "3.3 Summary\n[Summary of key findings across all housing indicators. What is the overall picture for affordable and sustainable homes?]",
+    "section": "3.5 House Price to Earnings Ratio",
+    "text": "3.5 House Price to Earnings Ratio\n\n\n\n\n\n\n\n\n\n\n\n\nHouse Price to Earnings Ratio\n\n\nRatio of median house price to median gross annual wage\n\n\n\n\nLatest value\n9 Ratio (2024-12-31)\n\n\nPrevious value\n10 Ratio (2023-12-31)\n\n\nChange vs previous\n↓ -7.9%\n\n\nFirst value\n8 Ratio (2015-12-31)\n\n\nChange since first\n↑ +9.4%\n\n\nObservations\n10\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-08-03\n\n\n\n\n\n\n\n\nOverview\nThis indicator tracks the ratio of median house prices to median gross annual workplace‑based earnings across the West of England. A higher ratio indicates that house prices are rising faster than local earnings, making homes less affordable for people working in the region. Because the measure uses workplace‑based earnings rather than residence‑based earnings, it reflects the affordability pressures faced by workers in each local authority.\nThe dataset is sourced from the ONS Housing Affordability Statistics, specifically the House price to workplace‑based earnings ratio (Table 5c). The ratio is calculated by dividing median house prices from Land Registry data by median full‑time earnings from the Annual Survey of Hours and Earnings (ASHE). While comprehensive, the dataset can be influenced by year‑to‑year volatility in earnings estimates, particularly in smaller labour markets.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Affordable and Sustainable Homes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-place/index.html#rental-affordability",
+    "href": "chapters/03-place/index.html#rental-affordability",
+    "title": "3  Affordable and Sustainable Homes",
+    "section": "3.6 Rental Affordability",
+    "text": "3.6 Rental Affordability\n\n\n\n\n\n\n\n\n\n\n\n\nRental Affordability\n\n\nMedian monthly private rent (£)\n\n\n\n\nLatest value\n1,425 £ (2024-06-30)\n\n\nPrevious value\n1,340 £ (2023-06-30)\n\n\nChange vs previous\n↑ +6.3%\n\n\nFirst value\n942 £ (2016-06-30)\n\n\nChange since first\n↑ +51.2%\n\n\nObservations\n9\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-08-03\n\n\n\n\n\n\n\n\nOverview\nThis indicator reports median monthly private rents across the West of England. It provides a simple measure of rental costs faced by households in each local authority. Higher values indicate increased pressure on affordability, particularly for lower‑income renters and households without access to social housing.\nThe indicator draws on Valuation Office Agency (VOA) private rental market statistics. The WECA figure is calculated as a median across the four unitary authorities, providing a consistent regional view of rental market trends.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Affordable and Sustainable Homes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-place/index.html#temporary-accommodation-q4-total-households",
+    "href": "chapters/03-place/index.html#temporary-accommodation-q4-total-households",
+    "title": "3  Affordable and Sustainable Homes",
+    "section": "3.7 Temporary Accommodation (Q4 total households)",
+    "text": "3.7 Temporary Accommodation (Q4 total households)\n\n\n\n\n\n\n\n\n\n\n\n\nHouseholds in Temporary Accomodation\n\n\nQ4\n\n\n\n\nLatest value\n168 No. of households (2025-12-31)\n\n\nPrevious value\n122 No. of households (2024-12-31)\n\n\nChange vs previous\n↑ +38.1%\n\n\nFirst value\n281 No. of households (2019-12-31)\n\n\nChange since first\n↓ -40.0%\n\n\nObservations\n7\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-08-03\n\n\n\n\n\n\n\n\nOverview\nThis indicator reports the total number of households in temporary accommodation across the West of England, based on the Q4 statutory homelessness return submitted by each local authority. Temporary accommodation includes placements such as bed and breakfast hotels, hostels, nightly‑paid accommodation, and private sector leasing arrangements. Because the measure uses the Q4 snapshot, it provides a consistent annual reference point for monitoring changes in demand for temporary accommodation over time.\nThe dataset is sourced from the DLUHC Statutory Homelessness Statistics. These tables report the number of households accommodated under homelessness duties at the end of each quarter. While comprehensive, the data can be influenced by short‑term operational pressures, changes in the availability of suitable accommodation, and fluctuations in the number of households presenting with acute housing need.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Affordable and Sustainable Homes</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-place/index.html#domestic-co₂-emissions",
+    "href": "chapters/03-place/index.html#domestic-co₂-emissions",
+    "title": "3  Affordable and Sustainable Homes",
+    "section": "3.8 Domestic CO₂ Emissions",
+    "text": "3.8 Domestic CO₂ Emissions\n\n\n\n\n\n\n\n\n\n\n\n\nDomestic CO₂ Emissions\n\n\nDESNZ\n\n\n\n\nLatest value\n451 kilotonnes CO2e (2024-12-31)\n\n\nPrevious value\n455 kilotonnes CO2e (2023-12-31)\n\n\nChange vs previous\n↓ -0.9%\n\n\nFirst value\n552 kilotonnes CO2e (2015-12-31)\n\n\nChange since first\n↓ -18.3%\n\n\nObservations\n10\n\n\nTrend\n\n\n\n\n\nLast updated\n2026-08-03\n\n\n\n\n\n\n\n\nOverview\nThis indicator tracks domestic carbon dioxide (CO₂) emissions from homes in the West of England. Lower emissions indicate improved energy efficiency, reduced fossil‑fuel use, and progress towards decarbonising the residential sector. Domestic CO₂ reflects household energy consumption — primarily electricity and gas — and is influenced by insulation levels, heating systems, occupant behaviour, and the carbon intensity of the national electricity grid.\nThe dataset is sourced from the DESNZ Local Authority CO₂ Emissions Statistics These figures are reported on an end‑user basis, meaning emissions are allocated to the point of consumption rather than generation. While comprehensive, the dataset models some off‑grid fuels (such as heating oil) through the national greenhouse gas inventory, which may introduce uncertainty for rural areas with higher off‑grid usage.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Affordable and Sustainable Homes</span>"
     ]
