@@ -4,6 +4,11 @@ Units and percentage handling flow through three files, and there's a key
 distinction between an indicator's **own units** and the **units of its
 period-over-period change**.
 
+This document describes how it works today, after the migration to a
+declared `unit_type` column — see
+[`unit-type-migration.md`](unit-type-migration.md) for how it got here and
+the list of indicators with ambiguous or wrong units still to resolve.
+
 ## 1. Where units come from
 
 `units` is a plain string per indicator in
@@ -23,17 +28,31 @@ pct_change = (latest_value / previous_value - 1) * 100
 ```
 
 But that's only actually used for non-percentage indicators. In
-`format_overall_summary()` (`scripts/R/summary_tables.R:353-360`), the code
-branches on the indicator's own units:
+`format_overall_summary()`, the code branches on the indicator's declared
+`unit_type` (`data/common_project_data/indicators-master.xlsx`, joined in via
+`get_dim_priority()` / `get_dim_all()`):
 
 ```r
-is_percent = (units == "%"),
+is_percent = (unit_type == "percent"),
 change_raw = dplyr::if_else(
   is_percent,
   latest_value - previous_value,   # simple point difference
   pct_change                       # relative % change from build_reporting_view()
 )
 ```
+
+`format_indicator_summary()` (`scripts/R/reporting_table.R`) does the same
+thing, looking up `unit_type` (and `units`, for the value suffix) from
+`core_dim_data_tbl` by `indicator_id` via `get_dim_indicator()`
+(`scripts/R/dim_data.R`) rather than taking a hand-typed `units` argument.
+
+`unit_type` is a closed enum (`percent`, `count`, `currency`, `rate`,
+`index`, `score`, `ratio`), validated at load time in `dim_data.R` — a typo
+fails the render rather than silently picking the wrong branch, which is
+exactly what happened under the old string-matching approach (indicators-
+master.xlsx spelled the unit `"Percent"`, but the test was a literal
+`units == "%"`, so all 33 percentage indicators silently rendered a
+*relative* change: employment 74.8 -> 75.2 as `+0.5%` instead of `+0.4 ppt`).
 
 The reasoning: if an indicator is already a percentage (e.g. employment rate
 74.8% -> 75.2%), the meaningful change is the **percentage-point difference**
@@ -43,16 +62,20 @@ misleading and rarely what a reader wants. For a non-percentage indicator
 
 ## 3. Formatting the suffix
 
-`.fmt_change()` (`scripts/R/summary_tables.R:31-49`) picks the suffix to
+`.fmt_change()` (`scripts/R/summary_tables.R`) picks the suffix to
 match which branch was taken:
 
 ```r
 suffix <- dplyr::if_else(is_percent, " ppt", "%")
 ```
 
-So confusingly-but-consistently: `units == "%"` indicators get a `" ppt"`
+So confusingly-but-consistently: percentage indicators get a `" ppt"`
 suffix on their change column, and everything else gets `"%"` (because their
 `change_raw` already *is* a relative percentage).
+
+`format_indicator_summary()` additionally uses the same `unit_type` check to
+pick the *value* suffix: percentage indicators render `74.8%`, everything
+else ` <units>` (`4,410 kt CO2e`).
 
 ## 4. Arrow direction and colour are independent of the above
 

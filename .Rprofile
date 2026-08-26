@@ -25,6 +25,24 @@ if (interactive() && Sys.getenv("RSTUDIO") == "") {
     if (file.exists(init_script)) source(init_script)
   })
 
+  # vscode-R binds its Workspace panel to one session, and only when that
+  # session sends its `attach` request at startup. A second R session steals
+  # the binding; closing a session, or reloading the VS Code window, clears it
+  # for good. The console keeps its objects but the panel goes empty. There is
+  # no rediscovery on the extension side, so re-attach by hand: reattach().
+  local({
+    tools <- new.env()
+    tools$reattach <- function() {
+      if (!"tools:vscode" %in% search()) {
+        message("vscode-R session watcher is not attached in this session.")
+        return(invisible(FALSE))
+      }
+      get(".vsc.attach", pos = "tools:vscode")()
+      invisible(TRUE)
+    }
+    attach(tools, name = "tools:weca", warn.conflicts = FALSE)
+  })
+
   # vsc options: control where panels open and what the workspace viewer shows
   options(
     vsc.helpPanel = "Two", # help opens in editor group 2
@@ -88,22 +106,26 @@ options(show.error.locations = TRUE)
 
 # Configure ragg graphics device for proper font support (R 4.3+)
 # ragg integrates with systemfonts to automatically find system fonts
+# local() keeps all_fonts/weca_fonts/font out of the global environment - they
+# would otherwise show up as junk in the VS Code workspace viewer.
 if (interactive()) {
-  suppressPackageStartupMessages({
-    if (requireNamespace("ragg", quietly = TRUE)) {
-      options(bitmapType = "cairo")
-      cat("[OK] Graphics: Using ragg device with systemfonts\n")
-      if (requireNamespace("systemfonts", quietly = TRUE)) {
-        all_fonts <- systemfonts::system_fonts()
-        weca_fonts <- all_fonts[
-          grepl("(Open Sans|Trebuchet)", all_fonts$family, ignore.case = TRUE),
-        ]
-        if (nrow(weca_fonts) > 0) {
-          cat("[OK] WECA fonts detected:\n")
-          for (font in unique(weca_fonts$family)) cat("  -", font, "\n")
+  local({
+    suppressPackageStartupMessages({
+      if (requireNamespace("ragg", quietly = TRUE)) {
+        options(bitmapType = "cairo")
+        cat("[OK] Graphics: Using ragg device with systemfonts\n")
+        if (requireNamespace("systemfonts", quietly = TRUE)) {
+          all_fonts <- systemfonts::system_fonts()
+          weca_fonts <- all_fonts[
+            grepl("(Open Sans|Trebuchet)", all_fonts$family, ignore.case = TRUE),
+          ]
+          if (nrow(weca_fonts) > 0) {
+            cat("[OK] WECA fonts detected:\n")
+            for (font in unique(weca_fonts$family)) cat("  -", font, "\n")
+          }
         }
       }
-    }
+    })
   })
 }
 

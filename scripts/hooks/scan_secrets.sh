@@ -22,7 +22,7 @@ echo "Target: $TARGET_DIR | Mode: $MODE"
 
 # Check for .env files in staging area
 if [[ "$MODE" == "--staged" ]] && git rev-parse --git-dir > /dev/null 2>&1; then
-    ENV_FILES=$(git diff --cached --name-only --diff-filter=ACM 2>/dev/null | grep -E '^\.env$|\.env\.')
+    ENV_FILES=$(git diff --cached --name-only --diff-filter=ACM 2>/dev/null | grep -E '^\.env$|\.env\.' | grep -vE '\.env\.(example|sample)$')
     if [[ -n "$ENV_FILES" ]]; then
         FOUND_SECRET=1
         echo ""
