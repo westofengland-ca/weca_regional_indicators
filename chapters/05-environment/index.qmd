@@ -144,7 +144,7 @@ This indicator tracks the number of heat associated deaths per million populatio
 #|   million population on a scale from 0 to 50; the x-axis shows year. Two
 #|   data points are shown: approximately 33 deaths per million in 2024 rising
 #|   to around 35 in 2025. The small increase is consistent with the
-#|   continuing rise in ambient temperatures from a warming climate.
+#|   continuing rise in temperatures from a warming climate.
 RI_5E1_heat_stress_deaths_plot
 ```
 ## Flood Warnings Intensity
