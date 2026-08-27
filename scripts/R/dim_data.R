@@ -33,10 +33,12 @@ get_dim_priority <- function(dim_data_tbl, priority) {
   p_str <- as.character(priority)
   dim_data_tbl |>
     filter(priority |> str_extract("\\d") == p_str) |>
+    mutate(priority = str_extract(priority, "\\d")) |>
     select(
       indicator_id,
       indicator_summary,
       units,
+      priority,
       polarity,
       priority_description,
       order_within_priority,

@@ -124,6 +124,8 @@ format_priority_summary(rv, core_dim_data_tbl, priority = 3)
 format_overall_summary(rv, core_dim_data_tbl)
 ```
 
+Both go through one renderer, `.build_priority_gt()`, so a chapter's table is that priority's landing-page sub-table (green priority band, Change column, shared column widths) with a title and subtitle added. Change the renderer and both move together.
+
 See [`docs/summary-table-units.md`](docs/summary-table-units.md) for how `units` and the change column handle percentages vs. percentage points.
 
 **Sparkline note:** `format_indicator_summary()` generates SVG strings directly (not via `svglite`). Never use device rendering for inline GT sparklines — browsers fill `fill`-less polylines black.

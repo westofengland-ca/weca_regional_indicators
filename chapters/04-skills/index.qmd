@@ -68,7 +68,8 @@ format_priority_summary(
   indicator_fact_tbl,
   core_dim_data_tbl,
   priority = 4,
-  title = "Future-Ready Skills: Indicator Summary"
+  title = "Future-Ready Skills: Indicator Summary",
+  subtitle = "Latest published value per indicator"
 )
 ```
 

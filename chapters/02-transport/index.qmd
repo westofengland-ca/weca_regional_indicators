@@ -79,7 +79,8 @@ format_priority_summary(
   indicator_fact_tbl,
   core_dim_data_tbl,
   priority = 2,
-  title = "Transport: Indicator Summary"
+  title = "Transport: Indicator Summary",
+  subtitle = "Latest published value per indicator"
 )
 ```
 
