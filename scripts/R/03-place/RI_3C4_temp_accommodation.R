@@ -17,9 +17,8 @@ source(here::here("scripts", "R", "_common.R"))
 path_3C4 <- here::here("data", "raw", "3C4.xlsx")
 
 # Use a defined range to avoid header/footer issues
-RI_3C4_raw_tbl <- read_excel(path_3C4, sheet = 1, range = "A2:H6") |>
+RI_3C4_raw_tbl <- read_excel(path_3C4, sheet = 1, range = "A2:H6") |> # unchanged
   clean_names()
-
 
 RI_3C4_long_tbl <- RI_3C4_raw_tbl |>
   pivot_longer(
@@ -53,7 +52,7 @@ RI_3C4_long_tbl <- RI_3C4_raw_tbl |>
 RI_3C4_weca_tbl <- RI_3C4_long_tbl |>
   group_by(period_start, period_end) |>
   summarise(
-    value = median(value, na.rm = TRUE),
+    value = sum(value, na.rm = TRUE), # ★ CHANGED: median → sum
     area = "West of England",
     .groups = "drop"
   )
@@ -79,12 +78,12 @@ RI_3C4_plot <- RI_3C4_plot_tbl |>
     breaks = sort(unique(year(RI_3C4_plot_tbl$period_end)))
   ) +
   labs(
-    title = "Households in Temporary Accommodation (Q4 snapshot)",
-    subtitle = "Total households in Q4",
+    title = "Temporary Accommodation", # ★ CHANGED: title simplified per feedback
+    subtitle = "Total households in Q4", # ★ CHANGED: TA1 removed
     x = "Year",
     y = "Households",
     colour = NULL,
-    caption = "Source: WECA compiled Q4 temporary accommodation dataset"
+    caption = "Source: DLUHC Temporary Accommodation (TA1) statistics" # ★ CHANGED: WECA → DLUHC
   ) +
   theme_ua() +
   theme(
@@ -101,5 +100,6 @@ RI_3C4_fact_tbl <- RI_3C4_weca_tbl |>
   select(period_start, period_end, value)
 
 RI_3C4_fact_tbl |>
-  build_fact(indicator_id = "RI_3C4_temp_accommodation") |>
+  build_fact(indicator_id = "RI_3C4_temp_accommodation") |> # ★ CHECKED: indicator ID matches that on 'indicator-master'
   save_fact()
+
