@@ -84,9 +84,15 @@ sign of `change_raw` and the indicator's `polarity` (+1 = up is good, -1 = up
 is bad, from indicators-master.xlsx) — it doesn't care whether the underlying
 number was ppt or %.
 
-## Caveat
+## Both summary tables share one code path
 
-`format_priority_summary()` (the per-chapter table) doesn't do any of this —
-it has no `change` column at all, just latest value + units verbatim. The
-ppt/% distinction only applies to `format_overall_summary()` on the landing
-page.
+`format_priority_summary()` (the per-chapter table) and
+`format_overall_summary()` (the landing page) both run their joined rows
+through `.prepare_summary_rows()` and render them with `.build_priority_gt()`,
+so the ppt/% distinction, the polarity colouring and the green priority band
+behave identically in a chapter and on the landing page. A chapter's table is
+that priority's landing-page sub-table with a title and subtitle added.
+
+One consequence: `format_priority_summary()` now requires `previous_value` and
+`pct_change` on the reporting view it is given, not just `latest_value`. Any
+reporting view built with `build_reporting_view()` has them.

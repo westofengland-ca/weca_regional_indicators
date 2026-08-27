@@ -65,15 +65,72 @@
   )
 }
 
+#' Internal: derive the display columns shared by every summary table
+#'
+#' Adds the change column (percentage-point difference for percentage
+#' indicators, relative % change otherwise), its polarity-driven colour, the
+#' formatted period bounds, and the "Priority N: description" band label.
+#'
+#' @param tbl A DIM/reporting-view join. Must contain `unit_type`,
+#'   `latest_value`, `previous_value`, `pct_change`, `polarity`,
+#'   `latest_period_start`, `latest_period_end`, `priority`,
+#'   `priority_description`.
+#' @return `tbl` with `is_percent`, `change_raw`, `change`, `change_color`,
+#'   `period_start`, `period_end`, and a relabelled `priority`.
+#' @keywords internal
+.prepare_summary_rows <- function(tbl) {
+  tbl |>
+    dplyr::mutate(
+      is_percent = (unit_type == "percent"),
+      change_raw = dplyr::if_else(
+        is_percent,
+        latest_value - previous_value,
+        pct_change
+      ),
+      change = .fmt_change(change_raw, is_percent),
+      change_color = .change_colour(change_raw, polarity),
+      period_start = format(latest_period_start),
+      period_end = format(latest_period_end),
+      priority = paste0("Priority ", priority, ": ", priority_description)
+    )
+}
+
+# Columns every summary table needs from the reporting view.
+.required_rv_cols <- c(
+  "indicator_id",
+  "latest_period_start",
+  "latest_period_end",
+  "latest_value",
+  "previous_value",
+  "pct_change"
+)
+
+#' Internal: stop if the reporting view is missing required columns
+#' @keywords internal
+.check_reporting_view <- function(reporting_view) {
+  missing_rv <- setdiff(.required_rv_cols, names(reporting_view))
+  if (length(missing_rv) > 0L) {
+    stop(
+      "`reporting_view` is missing columns: ",
+      paste(missing_rv, collapse = ", "),
+      call. = FALSE
+    )
+  }
+  invisible(reporting_view)
+}
+
 #' Per-chapter priority summary GT table
 #'
 #' One row per indicator within the given priority, showing the latest
-#' observed value, its period, and units. Only indicators that have FACT
-#' data are included (inner join on indicator_id).
+#' observed value, its period, units, and period-over-period change. Only
+#' indicators that have FACT data are included (inner join on indicator_id).
 #'
-#' @param reporting_view A tibble produced by `build_reporting_view()`. Must
-#'   contain `indicator_id`, `latest_period_start`, `latest_period_end`,
-#'   `latest_value`.
+#' Renders through the same `.build_priority_gt()` used by
+#' `format_overall_summary()`, so a chapter's table is visually identical to
+#' that priority's sub-table on the landing page (green priority band and
+#' all), with an added title and subtitle.
+#'
+#' @param reporting_view A tibble produced by `build_reporting_view()`.
 #' @param dim_tbl The core DIM data tibble (e.g. `core_dim_data_tbl`).
 #' @param priority Priority number (1-6) or character. Passed to
 #'   `get_dim_priority()`.
@@ -104,20 +161,7 @@ format_priority_summary <- function(
     stop("`priority` must be a single non-NA value.", call. = FALSE)
   }
 
-  required_rv <- c(
-    "indicator_id",
-    "latest_period_start",
-    "latest_period_end",
-    "latest_value"
-  )
-  missing_rv <- setdiff(required_rv, names(reporting_view))
-  if (length(missing_rv) > 0L) {
-    stop(
-      "`reporting_view` is missing columns: ",
-      paste(missing_rv, collapse = ", "),
-      call. = FALSE
-    )
-  }
+  .check_reporting_view(reporting_view)
 
   dim_priority <- get_dim_priority(dim_tbl, priority)
 
@@ -126,22 +170,6 @@ format_priority_summary <- function(
     reporting_view,
     by = dplyr::join_by(indicator_id)
   )
-
-  check_order_within_priority(tbl)
-
-  tbl <- tbl |>
-    dplyr::arrange(order_within_priority) |>
-    dplyr::mutate(
-      period_start = format(latest_period_start),
-      period_end = format(latest_period_end)
-    ) |>
-    dplyr::select(
-      indicator_summary,
-      period_start,
-      period_end,
-      value = latest_value,
-      units
-    )
 
   if (nrow(tbl) == 0L) {
     stop(
@@ -152,42 +180,21 @@ format_priority_summary <- function(
     )
   }
 
-  gt::gt(tbl) |>
-    gt::tab_header(
-      title = title %||% paste0("Priority ", priority, " "),
-      subtitle = subtitle
-    ) |>
-    gt::cols_label(
-      indicator_summary = "Indicator",
-      period_start = "From",
-      period_end = "To",
-      value = "Latest value",
-      units = "Units"
-    ) |>
-    gt::cols_align(align = "left", columns = c("indicator_summary", "units")) |>
-    gt::cols_align(align = "right", columns = "value") |>
-    gt::cols_align(
-      align = "center",
-      columns = c("period_start", "period_end")
-    ) |>
-    gt::fmt_number(columns = "value", decimals = 0, use_seps = TRUE) |>
-    gt::cols_width(indicator_summary ~ gt::px(360)) |>
-    gt::tab_style(
-      style = gt::cell_text(weight = "bold"),
-      locations = gt::cells_body(columns = "indicator_summary")
-    ) |>
-    gt::tab_style(
-      style = gt::cell_text(weight = "bold"),
-      locations = gt::cells_column_labels()
-    ) |>
-    gt::tab_options(table.width = gt::pct(100))
+  check_order_within_priority(tbl)
+
+  tbl <- tbl |>
+    .prepare_summary_rows() |>
+    dplyr::arrange(order_within_priority)
+
+  .build_priority_gt(tbl, title = title, subtitle = subtitle)
 }
 
 # Column widths as percentages of table width. Shared by every per-priority
-# sub-table so the stacked tables in the gt_group line up vertically. Percentages
-# (not px) let each table fill its container exactly, avoiding gt's horizontal
-# scroll container. Must sum to 100.
-.overall_col_pct <- c(
+# table -- the chapter tables and the stacked sub-tables in the landing-page
+# gt_group -- so they all line up vertically. Percentages (not px) let each
+# table fill its container exactly, avoiding gt's horizontal scroll container.
+# Must sum to 100.
+.summary_col_pct <- c(
   indicator_summary = 40,
   period_start = 10,
   period_end = 10,
@@ -196,17 +203,21 @@ format_priority_summary <- function(
   change = 13
 )
 
-#' Internal: build one per-priority gt table for the overall summary
+#' Internal: build one per-priority gt table
 #'
-#' Renders a single priority's indicators as a self-contained gt table. The
-#' priority label is carried by a full-width column spanner (styled as a green
-#' band) so that every table in the group is labelled consistently. The overall
-#' report title/subtitle are attached to the first table only.
+#' The single renderer behind both summary tables: one chapter's table
+#' (`format_priority_summary()`) and one stacked sub-table on the landing page
+#' (`format_overall_summary()`). Renders a single priority's indicators as a
+#' self-contained gt table. The priority label is carried by a full-width
+#' column spanner (styled as a green band) so that every table is labelled
+#' consistently.
 #'
-#' @param grp A tibble for one priority. Must contain the display columns plus
+#' @param grp A tibble for one priority, already through
+#'   `.prepare_summary_rows()`. Must contain the display columns plus
 #'   `priority` (label) and `change_color`.
-#' @param title Overall report title (first table only; NULL otherwise).
-#' @param subtitle Overall report subtitle (first table only; NULL otherwise).
+#' @param title Optional table title. On the landing page this is attached to
+#'   the first table only.
+#' @param subtitle Optional table subtitle.
 #' @return A `gt_tbl` object.
 #' @keywords internal
 .build_priority_gt <- function(grp, title = NULL, subtitle = NULL) {
@@ -241,12 +252,12 @@ format_priority_summary <- function(
     ) |>
     gt::fmt_number(columns = "value", decimals = 0, use_seps = TRUE) |>
     gt::cols_width(
-      indicator_summary ~ gt::pct(.overall_col_pct[["indicator_summary"]]),
-      period_start ~ gt::pct(.overall_col_pct[["period_start"]]),
-      period_end ~ gt::pct(.overall_col_pct[["period_end"]]),
-      value ~ gt::pct(.overall_col_pct[["value"]]),
-      units ~ gt::pct(.overall_col_pct[["units"]]),
-      change ~ gt::pct(.overall_col_pct[["change"]])
+      indicator_summary ~ gt::pct(.summary_col_pct[["indicator_summary"]]),
+      period_start ~ gt::pct(.summary_col_pct[["period_start"]]),
+      period_end ~ gt::pct(.summary_col_pct[["period_end"]]),
+      value ~ gt::pct(.summary_col_pct[["value"]]),
+      units ~ gt::pct(.summary_col_pct[["units"]]),
+      change ~ gt::pct(.summary_col_pct[["change"]])
     ) |>
     gt::tab_style(
       style = gt::cell_text(weight = "bold"),
@@ -324,22 +335,7 @@ format_overall_summary <- function(
     )
   }
 
-  required_rv <- c(
-    "indicator_id",
-    "latest_period_start",
-    "latest_period_end",
-    "latest_value",
-    "previous_value",
-    "pct_change"
-  )
-  missing_rv <- setdiff(required_rv, names(reporting_view))
-  if (length(missing_rv) > 0L) {
-    stop(
-      "`reporting_view` is missing columns: ",
-      paste(missing_rv, collapse = ", "),
-      call. = FALSE
-    )
-  }
+  .check_reporting_view(reporting_view)
 
   dim_all <- get_dim_all(dim_tbl)
 
@@ -352,19 +348,7 @@ format_overall_summary <- function(
   check_order_within_priority(tbl)
 
   tbl <- tbl |>
-    dplyr::mutate(
-      is_percent = (unit_type == "percent"),
-      change_raw = dplyr::if_else(
-        is_percent,
-        latest_value - previous_value,
-        pct_change
-      ),
-      change = .fmt_change(change_raw, is_percent),
-      change_color = .change_colour(change_raw, polarity),
-      period_start = format(latest_period_start),
-      period_end = format(latest_period_end),
-      priority = paste0("Priority ", priority, ": ", priority_description)
-    ) |>
+    .prepare_summary_rows() |>
     dplyr::arrange(priority, order_within_priority)
 
   if (nrow(tbl) == 0L) {

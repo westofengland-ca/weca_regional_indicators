@@ -62,7 +62,8 @@ format_priority_summary(
   indicator_fact_tbl,
   core_dim_data_tbl,
   priority = 5,
-  title = "Green Jobs and Growth: Indicator Summary"
+  title = "Green Jobs and Growth: Indicator Summary",
+  subtitle = "Latest published value per indicator"
 )
 ```
 ## Greenhouse Gas Emissions

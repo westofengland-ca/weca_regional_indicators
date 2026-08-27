@@ -48,7 +48,8 @@ format_priority_summary(
   indicator_fact_tbl,
   core_dim_data_tbl,
   priority = 1,
-  title = "Economic Growth: Indicator Summary"
+  title = "Economic Growth: Indicator Summary",
+  subtitle = "Latest published value per indicator"
 )
 ```
 ## Real GDP growth rate
