@@ -14,6 +14,8 @@ foundations: a style guide, a data contract, shared functions and an automated p
 pipeline. That is a real Minimum Viable Product (MVP) and the foundations are worth
 retaining.
 
+This review is a combination of my insights from the process and the outputs of structured interviews with other contributing analysts.
+
 Several areas of potential improvement have been identified through this review process.
 
 - **Skills are weakly embedded.** R analysis worked. Git, version control and the
@@ -29,7 +31,8 @@ Several areas of potential improvement have been identified through this review 
   of six chapters, are mine. One analyst states outright that she could not have done it
   without individual support, and asks for that to be recorded.
 - **Audience and purpose are defined only as "residents".** The analysts do not agree on
-  what the product is for, and they cannot resolve that disagreement themselves.
+  what the product is for, and they cannot resolve that disagreement themselves. A clear understanding of the purpose and audience has not been communicated
+- **Several indicators could not be implemented due to data availability and other issues** These indicators should be removed or changed before the next round.
 - **Scope is shallow.** Quarto supports far more than the report uses: interactive charts,
   data downloads, cross-indicator analysis. Early internal feedback from Stewart Grey
   already asks for depth the current product does not provide.
@@ -49,7 +52,7 @@ These are for the commissioning manager, not the analysts.
 ### D1. Does this continue, and on what cycle?
 
 Four of five analysts raised it unprompted. Tom asks for it outright, because the answer changes how he plans other
-work. As the architect of the project, I also need to know so that I can plan the support for analysts and technical development.
+work. As the architect of the project, I also need to know as soon as possible so that I can plan the support for analysts and technical development.
 
 Analysts expressed concern about effort expended with no long term prospects of continuation. Stuart's "Disagree" on overall satisfaction is not a verdict on the product. He closed the interview with *"well done on this, Steve... I think it is a really good piece of work"*. What he objects to is investing 25 days in something he has watched happen before: *"there  was a big push on dashboards when I first started and that kind of dropped away and it's been replaced by this."*
 
@@ -78,18 +81,18 @@ it done."* Stuart never got the daily hour that would have helped. He prioritise
 IBB requests above the indicators because he judged them more important to the region, a
 rational choice given the signals he was receiving.
 
-Neither the analysts nor I can grant protected time. It requires line managers to put the
+Delivering protected time requires that line managers put the
 project into people's priorities explicitly and defend allocated time against competing priorities.
 
-The demand for protected time is real but currently unquantified. More work is needed to understand how much time is required for a repeated exercise.
+The demand for protected time is currently unquantified. More work is needed to understand how much time is required for a repeated exercise.
 
 ### D4. AI tooling. Procure it or prohibit it
 
 Three analysts are personally funding, or about to fund, a consumer AI subscription that the delivery depended on. Megan funds hers through her partner's company, and has already
 raised the data-privacy limits of a consumer tier when pasting branded organisational
-code - even though no private data are shared. Stuart is considering paying himself because *"the organisation is a little slow on doing that"*. He switched from Mistral to Claude, knowingly trading the GDPR position for model quality. Steve has GitHub copilot funded by the MCA but also pays for Claude Pro due to its enhanced capabilities. The MCA does currently have M365 copilot but this is currently not capable enough for code generation or support.
+code - even though no private data are shared. Stuart is considering paying himself because *"the organisation is a little slow on doing that"*. He switched from Mistral to Claude, knowingly trading the GDPR position for model quality. Steve has GitHub copilot funded by the MCA but also pays for Claude Pro due to its enhanced capabilities. The MCA does currently have M365 copilot but this is currently not capable enough for code generation or support for this type of project.
 
-This is unmanaged data handling on organisational work, funded off the books. It is a
+This is unmanaged data handling on organisational work, funded off the books aka "shadow" AI. It is a
 governance risk whatever one's view of AI in analysis, and it needs a management decision
 and a route into the Digital and Data Strategy.
 
@@ -105,19 +108,21 @@ There is a wider point about the need and rationale for two similar analysis pro
 ### D6. Corporate provision of the development environment
 
 There is no standard corporate provision of R, an IDE, or AI services. Two of four
-learners lost the training window to this. Significant effort was expended in supporting the local installation of R, Rstudio, renv and Git. Normalising the corporate provisioning of coding environments will reduce friction and delay.
+learners lost the training window to this. Significant effort was expended in supporting the local installation of R, Rstudio, renv and Git. Normalising the corporate provisioning of coding environments will reduce friction and delay for this exercise and allow for a coherent process for new analysts across the MCA.
+
+### D7. Confirm requirement for high frequency reporting of indicators
+
+A stated requirement was for frequent reporting (i.e. more frequent than annual) for indicators where possible. It is understood that this was a desireable feature to showcase the indicators report as a data lab project. There are only a small number of indicators that use data published at monthly or quarterly cadences and these will be dwarfed by the much higher number of annual indicators. Higher frequency reporting greatly increases the complexity and fragility of the process. Is this a real requirement for delivering business insight, or a cosmetic requirement to show capability?
 
 ---
 
 ## 3. Background
 
-The requirement for a public-facing report on regional indicators emerged from the work to define an outcomes framework for MCA projects. One component of that framework was a set
-of regional indicators: metrics not directly influenced by MCA projects, but giving an
-overview of the region across the six priorities in the Growth Strategy.
+The requirement for a public-facing report on regional indicators emerged from the work to define an outcomes framework for MCA projects. One component of that framework was a set of regional indicators: metrics not directly influenced by MCA projects, but giving an overview of the region across the six priorities in the Growth Strategy.
 
-Discovery work identified Quarto as the publishing platform. It supports literate
-programming, publishes to a wide range of formats, and works with version control. That
-choice has been validated.
+Discovery work identified Quarto as the optimal publishing platform. It supports literate programming, interactivity and publishes to a wide range of formats, and works with version control.
+
+I proposed a [project to deliver the training and indicators](https://westofenglandca.sharepoint.com/:w:/s/PolicyStrategy/IQA25MyDGpIUSZzOlZ25r_hGAXF36uOTqMbqyr6-v_vjllg?e=UXf477) report in February 2026. A template of the report was produced in April 2026 and [further requirements](https://westofenglandca.sharepoint.com/:w:/s/PolicyStrategy/IQDT2EnUXrHKSaIQFkMBRO7PAXiOn_y8gQ8TJ2cAFSi6gj4?e=Dsx82A) added in late April.
 
 ---
 
@@ -178,10 +183,8 @@ and security scanning.
 
 ### 5.2 Training delivered
 
-I developed training materials for [R and Quarto
-learning](https://r-quarto-learning.vercel.app/) against an explicit
-[pedagogy](https://r-quarto-learning.vercel.app/overview/pedagogy.html) for new learners
-of code-first analysis, and delivered them in weekly sessions from April to July 2026.
+I developed training materials for [R and Quarto learning](https://r-quarto-learning.vercel.app/) against an explicit
+[pedagogy](https://r-quarto-learning.vercel.app/overview/pedagogy.html) for new learners of code-first analysis, and delivered them in weekly sessions from April to July 2026.
 
 ### 5.3 What the interviews show
 
@@ -236,7 +239,7 @@ without being talked through it step by step. A written Git guide existed and di
 work: *"I think you did do a step by step kind of guide for it. But yeah, I had to keep
 asking ChatGPT what were these things meant."*
 
-Simon needed no help with R at all, and names the same gap as his hardest thing and as his
+Simon needed no help with R at all, and cites the same gap as his hardest thing and as his
 single ask: more exposure to *"using repos, maintaining that sort of thing."*
 
 The emphasis on R basics produced output, not autonomy. The people who can now write the
@@ -245,12 +248,12 @@ analysis still cannot version-control and publish it.
 #### Copying a colleague's finished work was the main teaching mechanism
 
 All four learners said this. Megan copied a worked indicator for graph structure and
-branding, and calls it the thing that made it go smoothly. Tom read a colleague's
+branding, and says it was the thing that made it go smoothly. Tom read a colleague's
 completed scripts and could immediately see where he was going wrong. Stuart copied
 Megan's template. Heather read every other analyst's chapter and took both tone and prose
 from them.
 
-The examples taught more than the documentation did. Next cycle should lead with a
+The examples taught more than the documentation did. The next cycle should lead with a
 complete worked chapter rather than with reference material.
 
 #### Heather only learned what she was aiming at by accident
@@ -325,7 +328,7 @@ Two secondary findings are worth acting on.
 - `publish.yml` changed 14 times and `renv.lock` 16 times. The CI pipeline and the R
   environment both needed repeated correction rather than being right once. Environment
   management is a recurring cost, not a setup cost.
-- Nobody used the GitHub issue tracker. Two issues exist, both bot-filed. Day-to-day
+- Nobody used the GitHub issue tracker. Two issues exist, both for specific alerting purposes. Day-to-day
   coordination happened verbally or in Teams and left no durable record. That is why this
   review had to be reconstructed from interviews.
 
@@ -415,14 +418,14 @@ The mental health item needs a management view, not an analytical one.
 Tom wanted workflows connecting related indicators across chapters, both for analysis and
 for communications, and flags the Spatial Development Strategy as the obvious overlap. The
 current architecture works against this: one chapter per analyst, deliberately isolated to
-prevent merge conflicts. That was the right trade for cycle 1, and should be revisited if
+prevent merge conflicts. That was the right decision for cycle 1, and should be revisited if
 D2 lands on a cross-cutting narrative.
 
 ---
 
 ## 9. Risks
 
-**Key person dependency.** The most serious structural risk. 76% of commits, all
+**Key person dependency.** This is the most serious structural risk. 76% of commits, all
 boilerplate functions, all training material and all publishing infrastructure sit with
 one person. Megan attributes her entire capability to individual support, and asked for it
 to be recorded: *"I would have never done this without you... And I think that needs to be
@@ -452,8 +455,7 @@ analyst's assessment of whether to invest next cycle.
   concentrate on domain work.
 - Worked examples as the primary teaching device. This outperformed written documentation
   by a wide margin, and should be the deliberate strategy next time.
-- Analyst ownership of a priority. Nobody objected to owning a chapter. The objections are
-  all about time, sequencing and continuation.
+- Analyst ownership of a priority. Nobody objected to owning a chapter - and in fact Megan owned two. The concerns are all about time, sequencing and continuation.
 - The style guide, report structure and indicator definitions. Reusable assets that do not
   need rebuilding.
 
@@ -470,7 +472,7 @@ These assume D1 is answered affirmatively.
 3. **Close the Git and publishing gap explicitly.** It is the one skill that did not land,
    and it is what makes analysts independent of me. Treat it as the primary training
    objective rather than a follow-on from R.
-4. **Lead with a complete worked chapter.** Ship the exemplar before the documentation.
+4. **Lead with a complete worked chapter.** Show the example before the documentation.
 5. **Stagger the deadlines and add a peer review window** after the last chapter is
    drafted.
 6. **Invest in automated data updates**, starting with the indicators Stuart and Tom
@@ -491,9 +493,8 @@ These assume D1 is answered affirmatively.
 
 These are stated so the report's limits are visible.
 
-**Quantification.** Only one ask in the entire review carries a number, and it is hedged
-twice. Everything else is *"a bit more time"*, *"as and when"*, *"don't teach us too much
-too quickly"*. Several asks are withdrawn pre-emptively. Megan hedges her blocked-day
+**Quantification.** Only one ask in the entire review is quantified by an analyst, and it is hedged
+twice. Everything else is *"a bit more time"*, *"as and when"*, *"don't teach us too much too quickly"*. Several asks are withdrawn pre-emptively. Megan hedges her blocked-day
 request against my capacity, and drops the wellbeing survey idea on the grounds that she
 has not researched it. The demand for protected time and training is real and unmeasured.
 It needs quantifying well before the next exercise begins, and it needs a time-recording
@@ -502,8 +503,7 @@ approach rather than retrospective estimates.
 **Time recording.** Three of five day-count figures are unreliable (§7). My own time is
 not recorded at all. The true cost of cycle 1 is unknown.
 
-**What Stuart dropped to find 25 days was never asked.** This is the sentence that lands
-hardest with a commissioning manager, and it is missing. Needs follow-up.
+**What Stuart dropped to find 25 days was never asked.** This is significant, and it is missing. Needs follow-up.
 
 **Megan's "Neutral" overall rating is unexplained.** She is warm throughout, and nothing
 she volunteers accounts for it. The nearest candidates are that the report *"isn't very
@@ -512,11 +512,7 @@ time-series format does not tell a story for some of her indicators.
 
 **No client or user evidence exists.** This review is entirely producer-side: five
 analysts and one architect. Nobody has asked a resident, a member, a unitary authority or
-a policy-maker whether the product is useful. `review/questionnaire-clients.md` was
-drafted and not run. Until it is, we are answering D2 without the people it concerns.
-
-**No baseline for the skills claim.** Confidence before and after is described
-anecdotally. There is no instrument that would let cycle 2 demonstrate improvement.
+a policy-maker whether the product is useful - and tested that response by asking for examples of use. Until users' needs are understood, we cannot truthfully answer D2.
 
 **Commit history has limited reach as evidence.** Conventional Commit compliance is 30%,
 and commit counts measure workflow participation rather than authored work (§6).
