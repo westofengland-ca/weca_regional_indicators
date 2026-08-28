@@ -8,12 +8,9 @@
 
 ## 1. Executive summary
 
-The Regional Indicators report was delivered to deadline. A public-facing Quarto site now covers all
-six Growth Strategy priorities, each chapter owned by an analyst, built on reusable
-foundations: a style guide, a data contract, shared functions and an automated publishing
-pipeline. It is a Minimum Viable Product (MVP) and the foundations are there for repeated work.
+The Regional Indicators report was delivered to deadline. A public-facing Quarto site now covers all six Growth Strategy priorities, each chapter owned by an analyst, built on reusable foundations: a style guide, a structured quarto template, a data contract, shared functions and an automated publishing pipeline. It is a Minimum Viable Product (MVP) and the foundations exist for repeated work.
 
-This review is a combination of my insights from the process and the outputs of structured interviews with other contributing analysts.
+This review is a combination of my insights from the process and the outputs of structured interviews with other contributing analysts. It contains some recommendations to improve the process for the next cycle.
 
 Several areas of potential improvement have been identified through this review process.
 
@@ -32,13 +29,8 @@ Several areas of potential improvement have been identified through this review 
 - **Audience and purpose are defined only as "residents".** The analysts do not agree on
   what the product is for, and they cannot resolve that disagreement themselves. A clear understanding of the purpose and audience has not been communicated.
 - **Several indicators could not be implemented due to data availability and other issues** These indicators should be removed or changed before the next round.
-- **Scope is shallow.** Quarto supports far more than the report uses: interactive charts,
-  data downloads, cross-indicator analysis. Early internal feedback from Stewart Grey
-  already asks for depth the current product does not provide.
-- **Continuation is unresolved, and it is blocking people.** Four of five analysts want to
-  know whether this runs again. One says the answer changes how he prioritises everything
-  else. Another's dissatisfaction rests almost entirely on having watched a comparable
-  initiative, the dashboards programme, get built and then abandoned.
+- **Scope is shallow.** Quarto supports far more than the report uses: interactive charts, data downloads, cross-indicator analysis. Early internal feedback already asks for depth the current product does not provide.
+- **Continuation is unresolved, and it is blocking people.** Four of five analysts want to know whether this runs again. One says the answer changes how he prioritises everything else. Another's dissatisfaction rests almost entirely on having watched a comparable initiative, the dashboards programme, get built and then abandoned.
 
 Section 2 sets out the decisions needed. Everything after it is the evidence.
 
@@ -50,8 +42,7 @@ These are for the commissioning manager(s), not the analysts.
 
 ### D1. Does this continue, and on what cycle?
 
-Four of five analysts raised it unprompted. Tom asks for it outright, because the answer changes how he plans other
-work. As the architect of the project, I also need to know as soon as possible so that I can plan the support for analysts and technical development.
+Four of five analysts raised it unprompted. Tom asks for it outright, because the answer changes how he plans other work. As the architect of the project, I also need to know as soon as possible so that I can plan the support for analysts and technical development.
 
 Analysts expressed concern about effort expended with no long term prospects of continuation. Stuart's "Disagree" on overall satisfaction is not a verdict on the product. He closed the interview with *"well done on this, Steve... I think it is a really good piece of work"*. What he objects to is investing 25 days in something he has watched happen before: *"there  was a big push on dashboards when I first started and that kind of dropped away and it's been replaced by this."*
 
@@ -59,9 +50,7 @@ A stated commitment to continuation or abandonment is necessary to enable effect
 
 ### D2. What is the report for, and who reads it?
 
-The audience is currently understood to be "residents", which is not a usable definition. The analysts
-disagree on the product, and the disagreement is legitimate. They cannot settle it at
-their level. The table summarises the opinions of those analysts who spoke about the future direction of the report.
+The audience is currently understood to be "residents", which is not a usable definition. The analysts disagree on the product, and the disagreement is legitimate. They cannot settle it at their level. The table summarises the opinions of those analysts who spoke about the future direction of the report.
 
 | Position | Held by | Implication |
 | --- | --- | --- |
@@ -75,7 +64,7 @@ The team currently publishes two similar products. The State of the Region power
 
 Every analyst who struggled cites fragmentation rather than volume as the constraint. Megan puts it in the strongest terms in any transcript: *"you just need some designated time where you don't answer your team, so you don't look at your emails and you just get it done."* Stuart never got the daily hour that would have helped. He prioritised urgent IBB requests above the indicators because he judged them more important to the region, a rational choice given the signals he was receiving.
 
-Delivering protected time requires that line managers put the project into people's priorities explicitly and support defending allocated time against competing priorities.
+Delivering protected time requires that line managers put the project into people's priorities explicitly and support defending allocated time against competing priorities. One potential way of formalising allocated time would be data analyst apprenticeships where the projects and portfolio are aligned to work which supports regional indicator work.
 
 The demand for protected time is currently unquantified. More work is needed to understand how much time is required for a repeated exercise.
 
@@ -83,7 +72,7 @@ The demand for protected time is currently unquantified. More work is needed to 
 
 Three analysts are personally funding, or about to fund, a consumer AI subscription that the delivery depended on. Megan funds hers through her partner's company, and has already raised the data-privacy limits of a consumer tier when pasting branded organisational code - even though no private data are shared. Stuart is considering paying himself because *"the organisation is a little slow on doing that"*. He switched from Mistral to Claude. Steve has GitHub copilot funded by the MCA but also pays for Claude Pro due to its enhanced capabilities. The MCA does currently have M365 copilot but this is currently not capable enough for code generation or support for this type of project.
 
-This is unmanaged data handling on organisational work, funded off the books aka "shadow" AI. It is a governance risk whatever one's view of AI in analysis, and it needs a management decision and a route into the Digital and Data Strategy.
+This is unmanaged data handling on organisational work, funded off the books aka "shadow" AI. It is a governance risk whatever one's view of AI in analysis, and it needs a management decision and a route into the Digital and Data Strategy. As a starting point GitHub copilot could be trialled for analysts at a relatively low cost of ~£8 per month.
 
 ### D5. Do not run the next cycle concurrently with the State of the Region
 
@@ -117,15 +106,13 @@ I proposed a [project to deliver the training and indicators](https://westofengl
 
 Indicators were defined consultatively with the MCA's lead economist, senior analysts and the relevant business area leads. At the time they were defined, the decision to publish them had not been made, so the shape of the published indicator was undefined even though the broad description of each metric was known.
 
-We considered comparison against a "similar" area and rejected it. ONS work on nearest statistical neighbours exists, but nearness depends on the topic being compared, and the requirement to include North Somerset makes those analyses unusable, because they exclude it (North Somerset is not, at the time of writing, a constituent Unitary Authority). New MSAs and MCAs are being planned so it is a shifting landscape of potential comparators.
+We considered comparison against a "similar" area and rejected it. ONS work on nearest statistical neighbours exists, but "nearness" depends on the topic being compared and so leads to inconsistency in comparators. The requirement to include North Somerset makes prepared analyses from ONS unusable, because they exclude it (North Somerset is not, at the time of writing, a constituent Unitary Authority). New MSAs and MCAs are being planned so it is a shifting landscape of potential comparators.
 
-The indicators were ultimately defined as time series: a unique identifier, period start, period end and value. This supports a standard approach to summary tables and visualisation, and tracks regional progress over time.
+The indicators were ultimately defined as time series: a unique identifier, period start, period end and value. This supports a standard approach to summary tables and visualisation, and tracks regional progress over time. Indicators can be broken down by UA where appropriate, but this is done in narrative and charts rather than the reported indicator value.
 
-**The FACT contract works.** Each analyst writes their indicator to `data/fact/{indicator_id}.csv` and the report collates at render time. Nobody found it conceptually hard. Tom: *"No, not at all."* Simon picked it up quickly. Megan understood it. Heather did not understand it initially and endorses it now.
+**The FACT contract works.** FACT tables (the time series data derived by analysis) are used to create the summary tables, trends and change statistics. Each analyst writes their indicator to `data/fact/{indicator_id}.csv` and the report collates at render time. Nobody found it conceptually hard. Tom: *"No, not at all."* Simon picked it up quickly. Megan understood it. Heather did not understand it initially and endorses it now.
 
-The one failure was communication, not design. Stuart missed the instruction entirely and
-discovered FACT tables were required only through Megan, while resolving a duplicate
-indicator. Once he copied Megan's template it was straightforward.
+The one failure was communication, not design. Stuart missed the instruction entirely and discovered FACT tables were required only through Megan, while resolving a duplicate indicator. Once he copied Megan's template it was straightforward.
 
 ### Learnings
 
@@ -133,10 +120,8 @@ indicator. Once he copied Megan's template it was straightforward.
   cheaply.
 - Including North Somerset removed many pre-computed open datasets from use and forced
   bespoke analysis. This may change now inclusion has been agreed.
-- I did not consider polarity and unit type at the outset, and had to retrofit both
-  mid-way through.
-- A design being sound is not the same as it being *communicated*. One analyst never
-  received the instruction.
+- I did not consider polarity, order and unit type at the outset, and had to retrofit both mid-way through.
+- This key component could have been better communicated. One analyst never received the instruction.
 
 ---
 
@@ -144,17 +129,19 @@ indicator. Once he copied Megan's template it was straightforward.
 
 ### 5.1 What the workflow demands
 
-Contributing requires an analyst to install and configure non-standard software, write
-analysis code in R, use Git and GitHub for version control, mix code and prose in Quarto,
-and use command-line tools to configure R and manage the project.
+Contributing requires an analyst to install and configure non-standard software, write analysis code in R, use Git and GitHub for version control, mix code and prose in Quarto, and use command-line tools to configure R and manage the project.
 
 For three analysts this was an entirely new way of working. Two others had some exposure, but not on a project of this complexity. Learning R, Quarto and the command line is demanding. Confidence in R alone takes years. The analysts have done well to reach the outcomes they have.
 
-To reduce that load, I wrote boilerplate functions so analysts could concentrate on business logic and domain knowledge: chart formatting, publishing workflow, summary tables and security scanning.
+To reduce that load, I wrote boilerplate functions for chart formatting, publishing workflow, summary tables and security scanning so analysts could concentrate on business logic and domain knowledge.
 
 ### 5.2 Training delivered
 
-I developed training materials for [R and Quarto learning](https://r-quarto-learning.vercel.app/) against an explicit [pedagogy](https://r-quarto-learning.vercel.app/overview/pedagogy.html) for new learners of code-first analysis, and delivered them in weekly sessions from April to July 2026.
+I developed training materials for [R and Quarto learning](https://r-quarto-learning.vercel.app/) against an explicit [pedagogy](https://r-quarto-learning.vercel.app/overview/pedagogy.html) for new learners of code-first analysis, and delivered them in weekly sessions from April to July 2026. I also provided on demand support and created specific learning materials for components of the work.
+
+- [Contributing via Git workflow](https://stevecrawshaw.github.io/demos/weca-workflow/)
+- [Git playground](https://r-quarto-learning.vercel.app/playgrounds/git-learning-playground.html)
+- [Bash playground](https://r-quarto-learning.vercel.app/playgrounds/bash-learning-playground.html)
 
 ### 5.3 What the interviews show
 
@@ -219,13 +206,14 @@ She saw the rendered website posted in a chat after she missed a meeting, and th
 - Teaching focused heavily on R scripting and analysis. That was the right emphasis for getting learners to visible output, but see the autonomy gap above.
 - Quarto work was largely templated, so analysts could copy and adapt an existing `index.qmd`. The step from Quarto document to published page was not understood.
 - Git was taught through bash rather than a GUI. A GUI exists in RStudio, but it is slow, and without an understanding of the fundamentals it neither improves the workflow nor embeds the underlying concepts. This remains the right call. The sequencing needs work.
-- Analysts used AI support to varying degrees. An MVP in this timescale was probably not   achievable without it. The risk is that reliance on AI is embedded where learning is not.   Verifying AI-written code is impossible unless you understand the code. Stuart used it heavily and shifted from debugging to writing code as time ran out, and says he would have learnt more without it - but at the cost of time.
+- Analysts used AI support to varying degrees. An MVP in this timescale was probably not achievable without it. The risk is that reliance on AI is embedded where learning is not. Verifying AI-written code is impossible unless you understand the code. Stuart used it heavily and shifted from debugging to writing code as time ran out, and says he would have learnt more without it - but at the cost of time.
+Rather than using AI tools simply to do the analysis work, a better approach would have been to use AI as a learning tool to embed a deep understanding of the architecture and code. The unplanned and disparate nature of AI provision meant that this opportunity could not be taken in this cycle.
 
 ---
 
 ## 6. Delivery evidence from the repository
 
-161 commits between 2026-02-16 and 2026-08-07. This corroborates two interview findings, with an important limitation stated at the end.
+Analysis was undertaken of the commit history in the GitHub repository. 161 commits between 2026-02-16 and 2026-08-07. This corroborates two interview findings, with an important limitation stated at the end.
 
 **Cadence was bursty, not steady.** Four multi-week silent stretches (Feb–Mar, May, late June, late July), each followed by a burst of a dozen or more commits in one week. The two biggest weeks, 19 and 30 commits, sit immediately before deadline points. This is the fragmented-time pattern the analysts describe.
 
@@ -346,27 +334,18 @@ Tom wanted workflows connecting related indicators across chapters, both for ana
 
 These assume D1 is answered affirmatively.
 
-1. **Working machines with R, an IDE and Git installed before any training begins.** Owned
-   by IT, confirmed by a named date.
-2. **Teach at the point of need, not up front.** Block out the rest of the day after each
-   session for hands-on work.
-3. **Close the Git and publishing gap explicitly.** It is the one skill that did not land,
-   and it is what makes analysts independent of me. Treat it as the primary training
-   objective rather than a follow-on from R.
+1. **Working machines with R, an IDE and Git installed before any training begins.** Owned by IT, confirmed by a named date.
+2. **Teach at the point of need, not up front.** Block out the rest of the day after each session for hands-on work.
+3. **Close the Git and publishing gap explicitly.** It is the one skill that did not land, and it is what makes analysts independent of me. Treat it as the primary training objective rather than a follow-on from R.
 4. **Lead with a complete worked chapter.** Show the example before the documentation.
-5. **Stagger the deadlines and add a peer review window** after the last chapter is
-   drafted.
-6. **Invest in automated data updates**, starting with the indicators Stuart and Tom
-   identify. It is the only change with a quantified return.
-7. **Involve analysts in indicator selection.** Tom asks for this directly. It also
-   distributes ownership of the definitions.
-8. **Use the issue tracker** for blockers and decisions, so the next review does not have
-   to be reconstructed from interviews.
-9. **Talk to the Brunel Centre and to the unitary authorities** before building anything
-   further, on duplication and on what they would reuse.
-10. **Add an introduction explaining why these indicators were chosen.** This is Heather's
-    ask, it is cheap to do, and it addresses the weakest point in the current site.
+5. **Stagger the deadlines and add a peer review window** after the last chapter is drafted.
+6. **Invest in automated data updates via API**, starting with the indicators Stuart and Tom identify. It is the only change with a quantified return.
+7. **Involve analysts in indicator selection.** Tom asks for this directly. It also distributes ownership of the definitions.
+8. **Use the issue tracker** for blockers and decisions, so the next review does not have to be reconstructed from interviews.
+9. **Talk to the Brunel Centre and to the unitary authorities** before building anything further, on duplication and on what they would reuse.
+10. **Add an introduction explaining why these indicators were chosen.** This is Heather's ask, it is cheap to do, and it addresses the weakest point in the current site.
 11. **Store source data in Azure Blob Store** The current approach does not work when multiple analysts work on a single chapter. A single blob store fixes this. In train.
+12. **A greater focus on end to end analysis pipelines in code is needed** All the analysts relied to some degree on pre - processing data in Excel. This prevents reproducibility and automation. The implication is that more time will be needed to implement a code first approach in the next cycle, but that investment in time will pay of for subsequent cycles.
 
 ---
 
