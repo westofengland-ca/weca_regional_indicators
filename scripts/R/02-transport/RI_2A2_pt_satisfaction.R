@@ -11,14 +11,11 @@ RI_2A2_pt_satisfaction <- read_excel(
   sheet = "Satisfaction",
   skip = 2
 ) |>
-
   clean_names() |>
-
   mutate(
     period_start = as.Date(glue("{year}-01-01")),
     period_end = as.Date(glue("{year}-12-31"))
   ) |>
-
   select(period_start, period_end, overall_satisfaction, satisfaction_england)
 
 RI_2A2_pt_satisfaction_plot_tbl <- RI_2A2_pt_satisfaction |>
@@ -28,7 +25,6 @@ RI_2A2_pt_satisfaction_plot_tbl <- RI_2A2_pt_satisfaction |>
     overall_satisfaction,
     satisfaction_england
   ) |>
-
   pivot_longer(
     cols = c(overall_satisfaction, satisfaction_england),
     names_to = "satisfaction_type",
@@ -43,7 +39,7 @@ RI_2A2_pt_satisfaction_plot_tbl <- RI_2A2_pt_satisfaction |>
   )
 
 
-satisfaction_colours <- weca_colors[1:2]
+satisfaction_colours <- weca_colors[5:4]
 
 sat_colors_named <-
   satisfaction_colours |>
@@ -60,7 +56,6 @@ RI_2A2_plot <-
     y = "%",
     fill = "Area"
   ) +
-
   scale_fill_manual(values = sat_colors_named) +
   theme_weca() +
   theme(axis.title.y = element_text(angle = 0, vjust = 0.5))

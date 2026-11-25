@@ -54,6 +54,9 @@ RI_2A1_bus_rail_plot_tbl <- RI_2A1_bus_rail_trips |>
     )
   )
 
+#mode_type==  "bus_per_head_england"~ "bus England",
+#mode_type== "rail_per_head_england" ~  "rail England",
+#mode_type== "public_transport_england" ~"public transport England"
 
 bus_rail_colours <- weca_colors[1:3]
 
@@ -76,9 +79,9 @@ RI_2A1_plot <-
   # note how to split text over lines with \n
   labs(
     title = "Public transport patronage",
-    subtitle = "Department for Transport and Office of Rail Regulator estimates",
+    subtitle = "Trips per person per year",
     x = "Financial year end",
-    y = "Trips per\nperson per\nyear",
+    y = "Trips",
     fill = "Mode"
   ) +
 
@@ -88,7 +91,7 @@ RI_2A1_plot <-
   # justified at halfway on axis
   theme(axis.title.y = element_text(angle = 0, vjust = 0.5))
 
-RI_2A1_plot
+# RI_2A1_plot
 
 # This is the bit that writes the fact table which is used to make the nice tables in the quarto report
 RI_2A1_bus_rail_plot_tbl |>
