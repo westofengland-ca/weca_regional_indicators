@@ -10,16 +10,12 @@ RI_2_mode_share <- read_excel(
   path = here("data", "raw", "TransportIndicators_Mode.xlsx"),
   sheet = "NTS percent chart"
 ) |>
-
   clean_names() |>
-
   mutate(
     period_start = as.Date(glue("{str_sub(year,1,4)}-01-01")),
     period_end = as.Date(glue("{str_sub(year,9,12)}-12-31"))
   ) |>
-
   select(period_start, period_end, walking, cycling, car, bus, rail, other) |>
-
   filter(!is.na(car))
 
 max_year <- year(max(RI_2_mode_share$period_start))
@@ -46,13 +42,12 @@ RI_2_plot <-
   ggplot(aes(x = period_start, y = value, fill = mode_type)) +
   geom_col(position = "stack") +
   labs(
-    title = "Mode Share in the West of England",
-    subtitle = "Department for Transport: National Travel Survey",
+    title = "Active Travel and Public Transport Mode Share in the West of England",
+    subtitle = "DfT: National Travel Survey",
     x = "Two year period start",
     y = "%",
     fill = "Mode"
   ) +
-
   scale_fill_manual(values = mode_colours_named) +
   theme_weca() +
   theme(axis.title.y = element_text(angle = 0, vjust = 0.5))

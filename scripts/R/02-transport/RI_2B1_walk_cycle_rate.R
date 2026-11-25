@@ -11,9 +11,7 @@ RI_2B1_walk_cycle_rate <- read_excel(
   sheet = "TransposedData",
   skip = 3
 ) |>
-
   clean_names() |>
-
   mutate(
     period_start = make_date(year(survey_date), 4, 1),
     period_end = make_date(year(survey_date) + 1, 3, 31),
@@ -24,7 +22,6 @@ RI_2B1_walk_cycle_rate <- read_excel(
     active_WofE = 100 * active_travel_wof_e,
     active_England = 100 * active_travel_england
   ) |>
-
   select(
     period_start,
     period_end,
@@ -51,9 +48,7 @@ RI_2B1_walk_cycle_rate_plot_tbl <- RI_2B1_walk_cycle_rate |>
     active_WofE,
     active_England
   ) |>
-
   filter(year(period_start) >= start_year) |>
-
   pivot_longer(
     cols = c(cycle, walk, active_WofE),
     names_to = "mode_type",
@@ -67,6 +62,9 @@ RI_2B1_walk_cycle_rate_plot_tbl <- RI_2B1_walk_cycle_rate |>
     )
   )
 
+#mode_type== "active_England" ~ "Active Travel England"
+# mode_type== "walk_England" ~ "Walk England",
+# mode_type== "cycle_England" ~ "Cycle England",
 
 walk_cycle_colours <- weca_colors[1:3]
 

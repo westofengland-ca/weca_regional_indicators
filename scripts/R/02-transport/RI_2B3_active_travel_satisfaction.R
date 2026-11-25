@@ -9,7 +9,7 @@ source(here::here("scripts", "R", "_common.R"))
 RI_2B3_active_travel_satisfaction <- read_excel(
   path = here("data", "raw", "Authority Result download 2025 - WoECA.xlsx"),
   sheet = "Indicator",
-  skip = 2
+  range = "A3:O21" #explicitly define the range to be imported to avoid NAs
 ) |>
 
   clean_names() |>
@@ -40,7 +40,6 @@ RI_2B3_active_travel_satisfaction_plot_tbl <- RI_2B3_active_travel_satisfaction 
     wof_e_walking_cycling
   ) |>
   filter(year(period_start) >= start_year) |>
-
   pivot_longer(
     cols = c(wof_e_walking, wof_e_cycling, wof_e_walking_cycling),
     names_to = "mode_type",
@@ -67,12 +66,11 @@ RI_2B3_plot <-
   geom_col(position = "dodge") +
   labs(
     title = "Active Travel Satisfaction",
-    subtitle = "% of people surveyed by National Highways and Transport",
+    subtitle = "% of people satisfied",
     x = "Year",
     y = "%",
     fill = "Mode"
   ) +
-
   scale_fill_manual(values = at_sat_colours_named) +
   theme_weca() +
   theme(axis.title.y = element_text(angle = 0, vjust = 0.5))

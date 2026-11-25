@@ -10,9 +10,7 @@ RI_2B2_ebike_escooter_usage <- read_excel(
   path = here("data", "raw", "MicromobilityTrips.xlsx"),
   sheet = "Annual"
 ) |>
-
   clean_names() |>
-
   mutate(
     period_start = as.Date(glue("{year}-01-01")),
     period_end = as.Date(glue("{year}-12-31"))
@@ -44,14 +42,14 @@ ehire_colours_named <-
 RI_2B2_plot <-
   RI_2B2_ebike_escooter_usage_plot_tbl |>
   ggplot(aes(
-    x = period_end,
+    x = period_start,
     y = value,
     fill = fct_relevel(mode_type, c("e-hire", "e-scooter", "e-bike"))
   )) +
   geom_col(position = "dodge") +
   labs(
-    title = "WESTscoot and WESTbike patronage",
-    caption = "Operated by Voi (Oct 24 - Aug 23), Tier (Sept 23- Aug 24), Dott (Sept 24 - present)",
+    title = "e-scooter and e-bike hire patronage",
+    subtitle = "Operated by Voi (Oct 22 - Aug 23), Tier (Sept 23- Aug 24), Dott (Sept 24 - present)",
     x = "Year",
     y = "Trips",
     fill = "Mode"
