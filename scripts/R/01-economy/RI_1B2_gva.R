@@ -1,16 +1,16 @@
 # pacman loads common (i.e. across the project) packages we are using
 # source(here::here) puts the scripts we are using into the correct location
-library(tidyverse)
-library(glue)
-library(janitor)
-library(here)
-library(readxl)
-library(scales)
-source(here::here("scripts", "R", "_common.R"))
+library("tidyverse")
+library("glue")
+library("janitor")
+library("here")
+library("readxl")
+library("scales")
+source(here("scripts", "R", "_common.R"))
 
 # read in data
 RI_1B2_raw_pub_prod_tbl <- read_excel(
-  here::here("data", "raw", "labourproductivitylad1.xls"),
+  here("data", "raw", "labourproductivitylad1.xls"),
   sheet = "B3",
   skip = 4
 )
@@ -46,24 +46,24 @@ weca_pub_prod_data_clean <- weca_pub_prod_data |>
     year = str_remove(year, "pounds_"),
     Date = glue("{year}-01-01") |>
       as.Date()
-  ) ##|>
-##glimpse()
+  ) #|>
+#glimpse()
 
 # read in data
 RI_1B2_raw_pub_jobs_tbl <- read_excel(
-  here::here("data", "raw", "labourproductivitylad1.xls"),
+  here("data", "raw", "labourproductivitylad1.xls"),
   sheet = "Productivity Jobs",
   skip = 4
-) ##|>
-##glimpse()
+) #|>
+#glimpse()
 
 # creates variable weca_data_jobs_data
 # clean_names makes everything lower-case snake string;
 # filter separates our UAs from all others in la_name;
 weca_pub_jobs_data <- RI_1B2_raw_pub_jobs_tbl |>
   clean_names() |>
-  filter(lad_name %in% weca_la_codes) ##|>
-####glimpse()
+  filter(lad_name %in% weca_la_codes) #|>
+#glimpse()
 
 # creates variable weca_pub_jobs_data_clean;
 # selects just relevant UAs and years;
@@ -80,8 +80,8 @@ weca_pub_jobs_data_clean <- weca_pub_jobs_data |>
     year = str_remove(year, "jobs_"),
     Date = glue("{year}-01-01") |>
       as.Date()
-  ) ##|>
-####glimpse()
+  ) #|>
+#glimpse()
 
 # creates variable weca_prod_data;
 # joins jobs and gva data frames with inner_join;
@@ -103,8 +103,8 @@ RI_1B2_gva_per_job_tbl <- weca_pub_jobs_data_clean |>
     weca_prod = weca_gva / weca_jobs
   ) |>
   mutate(period_start = Date, period_end = Date + years(1) - days(1)) |>
-  select(period_start, period_end, value = weca_prod) ##|>
-####glimpse()
+  select(period_start, period_end, value = weca_prod) #|>
+#glimpse()
 
 #create upper and lower limits
 #function applies the approach and ceiling rounds x up

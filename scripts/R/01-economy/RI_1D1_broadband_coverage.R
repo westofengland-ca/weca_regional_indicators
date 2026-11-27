@@ -1,11 +1,11 @@
-library(tidyverse)
-library(here)
-source(here::here("scripts", "R", "_common.R"))
+library("tidyverse")
+library("here")
+source(here("scripts", "R", "_common.R"))
 
 # RI_1D1_broadband_coverage
 
 RI_1D1_raw_tbl <- read_csv(
-  here::here(
+  here(
     "data",
     "raw",
     "broadband_coverage_weighted.csv"

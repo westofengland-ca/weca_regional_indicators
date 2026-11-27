@@ -4,7 +4,7 @@ library("janitor")
 library("readxl")
 library("glue")
 
-source(here::here("scripts", "R", "_common.R"))
+source(here("scripts", "R", "_common.R"))
 
 RI_2B2_ebike_escooter_usage <- read_excel(
   path = here("data", "raw", "MicromobilityTrips.xlsx"),
@@ -15,7 +15,8 @@ RI_2B2_ebike_escooter_usage <- read_excel(
     period_start = as.Date(glue("{year}-01-01")),
     period_end = as.Date(glue("{year}-12-31"))
   ) |>
-  select(period_start, period_end, escooter, ebike, ehire)
+  select(period_start, period_end, escooter, ebike, ehire) |>
+  na.omit()
 
 RI_2B2_ebike_escooter_usage_plot_tbl <- RI_2B2_ebike_escooter_usage |>
   select(period_start, period_end, escooter, ebike, ehire) |>
@@ -54,12 +55,11 @@ RI_2B2_plot <-
     y = "Trips",
     fill = "Mode"
   ) +
-
   scale_fill_manual(values = ehire_colours_named) +
   theme_weca() +
   theme(axis.title.y = element_text(angle = 0, vjust = 0.5))
 
-# RI_2B2_plot
+RI_2B2_plot
 
 # This is the bit that writes the fact table which is used to make the nice tables in the quarto report
 RI_2B2_ebike_escooter_usage_plot_tbl |>

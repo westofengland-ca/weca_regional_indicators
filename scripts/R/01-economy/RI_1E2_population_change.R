@@ -1,13 +1,13 @@
-library(tidyverse)
-library(janitor)
-library(here)
+library("tidyverse")
+library("janitor")
+library("here")
 
-source(here::here("scripts", "R", "_common.R"))
+source(here("scripts", "R", "_common.R"))
 
 # RI_1E2_population_change
 
 RI_1E2_raw_tbl <- read_csv(
-  here::here(
+  here(
     "data",
     "raw",
     "pop_change_long_summary.csv"
