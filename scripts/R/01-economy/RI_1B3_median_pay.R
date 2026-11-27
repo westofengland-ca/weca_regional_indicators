@@ -1,16 +1,15 @@
 # pacman loads common (i.e. across the project) packages we are using
 # source(here::here) puts the scripts we are using into the correct location
-library(tidyverse)
-library(glue)
-library(janitor)
-library(here)
-library(readxl)
-library(scales)
+library("tidyverse")
+library("janitor")
+library("here")
+library("readxl")
+library("scales")
 source(here::here("scripts", "R", "_common.R"))
 
 # read in median wage data
 RI_1B3_raw <- read_excel(
-  here::here("data", "raw", "rtinsajun2026.xlsx"),
+  here("data", "raw", "rtinsajun2026.xlsx"),
   sheet = "20. Median pay (LA)",
   skip = 7
 )
@@ -35,7 +34,7 @@ la_med_wage_data <- RI_1B3_raw |>
 
 # read in employee data for weights
 RI_1B3_raw_employees <- read_excel(
-  here::here("data", "raw", "rtinsajun2026.xlsx"),
+  here("data", "raw", "rtinsajun2026.xlsx"),
   sheet = "19. Employees (LA)",
   skip = 7
 )
@@ -128,7 +127,7 @@ RI_1B3_plot <- ggplot(la_estimate_10_years, aes(x = date, y = estimated_wage)) +
   ) +
   scale_y_continuous(
     limits = c(lower_limit, upper_limit),
-    labels = scales::label_currency(prefix = "£")
+    labels = label_currency(prefix = "£")
   ) +
   theme_weca() +
   theme(

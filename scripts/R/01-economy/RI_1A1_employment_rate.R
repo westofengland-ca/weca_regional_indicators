@@ -1,5 +1,8 @@
 # libraries ---------------------
-pacman::p_load(tidyverse, janitor, glue, here, nomisdata, lubridate)
+library("tidyverse")
+library("janitor")
+library("here")
+library("nomisdata")
 
 source(here::here("scripts", "R", "_common.R"))
 

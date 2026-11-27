@@ -1,6 +1,10 @@
 # libraries ---------------------
-pacman::p_load(tidyverse, janitor, glue, here, lubridate)
-source(here::here("scripts", "R", "_common.R"))
+library("glue")
+library("here")
+library("janitor")
+library("tidyverse")
+
+source(here("scripts", "R", "_common.R"))
 
 # RI_1A2_employment_priority_sectors
 
@@ -133,4 +137,4 @@ RI_1A2_employment_priority_sectors_plot <-
   )
 
 # View chart
-##RI_1A2_employment_priority_sectors_plot
+# RI_1A2_employment_priority_sectors_plot

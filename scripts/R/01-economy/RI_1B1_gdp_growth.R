@@ -1,5 +1,10 @@
 # Load packages and source scripts
-pacman::p_load(tidyverse, glue, janitor, here, readxl)
+library("tidyverse")
+library("glue")
+library("janitor")
+library("here")
+library("readxl")
+
 source(here::here("scripts", "R", "_common.R"))
 
 # Read in cvm data
@@ -132,7 +137,7 @@ RI_1B1_plot <- ggplot(weca_cvm_series, aes(x = period_start, y = cvm_value)) +
   )
 
 # Display the plot
-# RI_1B1_plot
+RI_1B1_plot
 
 # Select columns for the table
 RI_1B1_gdp_growth_tbl <- weca_cvm_series |>
